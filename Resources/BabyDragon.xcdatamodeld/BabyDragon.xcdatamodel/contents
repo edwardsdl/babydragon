@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AbilityData" representedClassName="AbilityData" parentEntity="BaseData" syncable="YES">
+        <attribute name="cost" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="effectSprite" attributeType="String" minValueString="1" syncable="YES"/>
+        <attribute name="effectType" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="elementType" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="iconSprite" attributeType="String" minValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="1" syncable="YES"/>
+        <attribute name="targetType" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <relationship name="monster" maxCount="1" deletionRule="Nullify" destinationEntity="MonsterData" inverseName="abilities" inverseEntity="MonsterData" syncable="YES"/>
+    </entity>
+    <entity name="AcquisitionData" representedClassName="AcquisitionData" isAbstract="YES" parentEntity="BaseData" syncable="YES">
+        <attribute name="barcode" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BaseData" representedClassName="BaseData" isAbstract="YES" syncable="YES">
+        <attribute name="dateCreated" attributeType="Date" syncable="YES"/>
+        <attribute name="dateUpdated" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="DefaultMonsterData" representedClassName="DefaultMonsterData" parentEntity="BaseData" syncable="YES">
+        <attribute name="abilityPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="abilityPointsLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="courage" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="courageLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="defense" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="defenseLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="healthPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="healthPointsLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="intellect" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="intellectLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="isTranslucent" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="probability" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="speed" attributeType="Integer 32" minValueString="1" defaultValueString="1" syncable="YES"/>
+        <attribute name="speedLevelMultiplier" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="strength" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="strengthLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="willpower" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="willpowerLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="EnhancementData" representedClassName="EnhancementData" parentEntity="AcquisitionData" syncable="YES"/>
+    <entity name="EquipmentData" representedClassName="EquipmentData" parentEntity="AcquisitionData" syncable="YES">
+        <attribute name="type" attributeType="String" minValueString="1" syncable="YES"/>
+    </entity>
+    <entity name="GoldData" representedClassName="GoldData" parentEntity="AcquisitionData" syncable="YES">
+        <attribute name="amount" attributeType="Integer 32" minValueString="1" defaultValueString="1" syncable="YES"/>
+    </entity>
+    <entity name="ItemData" representedClassName="ItemData" parentEntity="BaseData" syncable="YES">
+        <attribute name="type" attributeType="String" minValueString="1" syncable="YES"/>
+    </entity>
+    <entity name="MonsterData" representedClassName="MonsterData" parentEntity="AcquisitionData" syncable="YES">
+        <attribute name="abilityPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="courage" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="defense" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="elementType" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="experiencePoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="healthPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="intellect" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="isTranslucent" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="Integer 32" minValueString="1" defaultValueString="1" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="1" syncable="YES"/>
+        <attribute name="paletteIndex" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="strength" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="traits" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="type" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="willpower" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <relationship name="abilities" optional="YES" toMany="YES" minCount="1" deletionRule="Cascade" destinationEntity="AbilityData" inverseName="monster" inverseEntity="AbilityData" syncable="YES"/>
+        <relationship name="parties" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="PartyData" inverseName="monsters" inverseEntity="PartyData" syncable="YES"/>
+    </entity>
+    <entity name="PartyData" representedClassName="PartyData" parentEntity="BaseData" syncable="YES">
+        <attribute name="name" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
+        <relationship name="monsters" toMany="YES" minCount="1" maxCount="3" deletionRule="Nullify" destinationEntity="MonsterData" inverseName="parties" inverseEntity="MonsterData" syncable="YES"/>
+    </entity>
+    <entity name="SinglePlayerContentData" representedClassName="SinglePlayerContentData" parentEntity="AcquisitionData" syncable="YES"/>
+    <fetchRequest name="GetDefaultMonsterAttributesForType" entity="DefaultMonsterData" predicateString="type == $TYPE" fetchLimit="1"/>
+    <fetchRequest name="GetPartyWithName" entity="PartyData" predicateString="name == $NAME"/>
+    <elements>
+        <element name="AbilityData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AcquisitionData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="BaseData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DefaultMonsterData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="EnhancementData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="EquipmentData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GoldData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ItemData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MonsterData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PartyData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SinglePlayerContentData" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
