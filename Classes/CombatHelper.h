@@ -19,4 +19,6 @@
 
 +(AbilityResult*) RunAbility:(AbilityData*) ability ofMonster:(CombatMonsterEntity*) owner onMonster:(CombatMonsterEntity*) target;
 
++(int) GetXpNeededForLevel:(int) level;
+
 @end

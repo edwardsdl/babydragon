@@ -40,19 +40,6 @@
         finalDamage = 1;
     
     return finalDamage;
-    
-    /*float damage = [attacker.monsterData trueStrength];
-    
-    float defensePercentage = ((arc4random() % 20) + 20.0f) / 100.0f;
-    defensePercentage = defensePercentage - ((attacker.monsterData.level - defender.monsterData.level) * 0.05f);
-    
-    damage = damage - ([defender.monsterData trueDefense] * defensePercentage);
-    damage = damage * multiplier;
-    
-    if (damage < 1.0f)
-        damage = 1.0f;
-    
-    return damage;*/
 }
 
 +(int) CalculateFightDamageWithAttacker:(CombatMonsterEntity*) attacker andDefender:(CombatMonsterEntity*) defender
@@ -78,6 +65,11 @@
     }
     
     return result;
+}
+
++(int) GetXpNeededForLevel:(int) level
+{
+    return 0;
 }
 
 @end
