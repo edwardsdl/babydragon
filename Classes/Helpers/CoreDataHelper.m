@@ -266,7 +266,7 @@
     //--------------------------------------------------------------------
     //Wisp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Wisp"];
-    //[monster setElementType:Forest];
+    [monster setElementType:Forest];
     [monster setProbability:uncommon];
     
     [monster setHealthPoints:18];
