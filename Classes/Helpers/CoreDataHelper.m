@@ -130,7 +130,7 @@
     //--------------------------------------------------------------------
     //Marblu
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Marblu"];
-    //[monster setElementType:Light];
+    [monster setElementType:Light];
     [monster setProbability:common];
     
     [monster setHealthPoints:18];
@@ -157,7 +157,7 @@
     //--------------------------------------------------------------------
     //Rat
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Rat"];
-    //[monster setElementType:Darkness];
+    [monster setElementType:Darkness];
     [monster setProbability:common];
     
     [monster setHealthPoints:19];
@@ -184,7 +184,7 @@
     //--------------------------------------------------------------------
     //Hard Shell
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard Shell"];
-    //[monster setElementType:Water];
+    [monster setElementType:Water];
     [monster setProbability:uncommon];
     
     [monster setHealthPoints:23];
@@ -215,7 +215,7 @@
     //--------------------------------------------------------------------
     //Baby Dragon
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Baby_Dragon"];
-    //[monster setElementType:Fire];
+    [monster setElementType:Fire];
     [monster setProbability:uncommon];
     
     [monster setHealthPoints:21];
@@ -242,7 +242,7 @@
     //--------------------------------------------------------------------
     //Ghost
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Ghost"];
-    //[monster setElementType:Darkness];
+    [monster setElementType:Darkness];
     [monster setProbability:uncommon];
     
     [monster setHealthPoints:19];
@@ -273,7 +273,7 @@
     //--------------------------------------------------------------------
     //Angler
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Angler"];
-    //[monster setElementType:Water];
+    [monster setElementType:Water];
     [monster setProbability:rare];
     
     [monster setHealthPoints:20];
@@ -300,7 +300,7 @@
     //--------------------------------------------------------------------
     //Fire Elemental
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Fire_Elemental"];
-    //[monster setElementType:Fire];
+    [monster setElementType:Fire];
     [monster setProbability:rare];
     
     [monster setHealthPoints:19];
