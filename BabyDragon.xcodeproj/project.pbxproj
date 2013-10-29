@@ -190,6 +190,9 @@
 		D71B8FE9180B3C8800ABBCCE /* Rat_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE6180B3C8800ABBCCE /* Rat_KO.png */; };
 		D71B8FEA180B3C8800ABBCCE /* Rat_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE7180B3C8800ABBCCE /* Rat_Standing.png */; };
 		D72156EE180EF83200DBC48F /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = D72156ED180EF83200DBC48F /* MonsterData.m */; };
+		D722770618201E2600864928 /* Wisp_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770318201E2600864928 /* Wisp_Fighting.png */; };
+		D722770718201E2600864928 /* Wisp_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770418201E2600864928 /* Wisp_KO.png */; };
+		D722770818201E2600864928 /* Wisp_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770518201E2600864928 /* Wisp_Standing.png */; };
 		D726F52F181DAAC700569947 /* Fire_Elemental_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D726F52C181DAAC700569947 /* Fire_Elemental_Fighting.png */; };
 		D726F530181DAAC700569947 /* Fire_Elemental_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D726F52D181DAAC700569947 /* Fire_Elemental_KO.png */; };
 		D726F531181DAAC700569947 /* Fire_Elemental_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D726F52E181DAAC700569947 /* Fire_Elemental_Standing.png */; };
@@ -640,6 +643,9 @@
 		D71B8FE7180B3C8800ABBCCE /* Rat_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_Standing.png; path = Monsters/Rat_Standing.png; sourceTree = "<group>"; };
 		D72156EC180EF83200DBC48F /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
 		D72156ED180EF83200DBC48F /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
+		D722770318201E2600864928 /* Wisp_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wisp_Fighting.png; path = Monsters/Wisp_Fighting.png; sourceTree = "<group>"; };
+		D722770418201E2600864928 /* Wisp_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wisp_KO.png; path = Monsters/Wisp_KO.png; sourceTree = "<group>"; };
+		D722770518201E2600864928 /* Wisp_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wisp_Standing.png; path = Monsters/Wisp_Standing.png; sourceTree = "<group>"; };
 		D726F52C181DAAC700569947 /* Fire_Elemental_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fire_Elemental_Fighting.png; path = Monsters/Fire_Elemental_Fighting.png; sourceTree = "<group>"; };
 		D726F52D181DAAC700569947 /* Fire_Elemental_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fire_Elemental_KO.png; path = Monsters/Fire_Elemental_KO.png; sourceTree = "<group>"; };
 		D726F52E181DAAC700569947 /* Fire_Elemental_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fire_Elemental_Standing.png; path = Monsters/Fire_Elemental_Standing.png; sourceTree = "<group>"; };
@@ -1490,6 +1496,9 @@
 		D7D6D47D17E633C200D2ADB7 /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				D722770318201E2600864928 /* Wisp_Fighting.png */,
+				D722770418201E2600864928 /* Wisp_KO.png */,
+				D722770518201E2600864928 /* Wisp_Standing.png */,
 				D726F52C181DAAC700569947 /* Fire_Elemental_Fighting.png */,
 				D726F52D181DAAC700569947 /* Fire_Elemental_KO.png */,
 				D726F52E181DAAC700569947 /* Fire_Elemental_Standing.png */,
@@ -1619,6 +1628,7 @@
 				D71B8FE8180B3C8800ABBCCE /* Rat_Fighting.png in Resources */,
 				BCAF47F717E559AE001A9B76 /* Default-568h@2x.png in Resources */,
 				BCAF47F817E559AE001A9B76 /* Default-Landscape~ipad.png in Resources */,
+				D722770818201E2600864928 /* Wisp_Standing.png in Resources */,
 				D72ED1D51811C0B9005C98CD /* Angler_KO.png in Resources */,
 				BCAF47F917E559AE001A9B76 /* Default.png in Resources */,
 				D744B38517F0A8100034A5E5 /* Hard_Shell_KO.png in Resources */,
@@ -1627,6 +1637,7 @@
 				BCAF47FA17E559AE001A9B76 /* Default@2x.png in Resources */,
 				BCAF47FB17E559AE001A9B76 /* Icon-72.png in Resources */,
 				BCAF47FC17E559AE001A9B76 /* Icon-Small-50.png in Resources */,
+				D722770718201E2600864928 /* Wisp_KO.png in Resources */,
 				BCAF47FD17E559AE001A9B76 /* Icon-Small.png in Resources */,
 				BCAF47FE17E559AE001A9B76 /* Icon-Small@2x.png in Resources */,
 				D71B8FE9180B3C8800ABBCCE /* Rat_KO.png in Resources */,
@@ -1667,6 +1678,7 @@
 				D72ED1D81811C268005C98CD /* Angler_Fighting.png in Resources */,
 				D7F2CDF917EA94F700F34A49 /* AbilityIcon.png in Resources */,
 				D726F52F181DAAC700569947 /* Fire_Elemental_Fighting.png in Resources */,
+				D722770618201E2600864928 /* Wisp_Fighting.png in Resources */,
 				D7F2CDFA17EA94F700F34A49 /* FightIcon.png in Resources */,
 				D7F2CDFB17EA94F700F34A49 /* ItemIcon.png in Resources */,
 			);

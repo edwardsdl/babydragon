@@ -263,6 +263,30 @@
     [monster setStrengthLevelMultiplier:0.8];
     [monster setWillpowerLevelMultiplier:1.1];
     
+    //--------------------------------------------------------------------
+    //Wisp
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Wisp"];
+    //[monster setElementType:Forest];
+    [monster setProbability:uncommon];
+    
+    [monster setHealthPoints:18];
+    [monster setAbilityPoints:23];
+    [monster setCourage:11];
+    [monster setDefense:8];
+    [monster setIntellect:14];
+    [monster setSpeed:11];
+    [monster setStrength:8];
+    [monster setWillpower:12];
+    
+    [monster setHealthPointsLevelMultiplier:1.8];
+    [monster setAbilityPointsLevelMultiplier:2.3];
+    [monster setCourageLevelMultiplier:1.1];
+    [monster setDefenseLevelMultiplier:0.8];
+    [monster setIntellectLevelMultiplier:1.4];
+    [monster setSpeedLevelMultiplier:1.1];
+    [monster setStrengthLevelMultiplier:0.8];
+    [monster setWillpowerLevelMultiplier:1.1];
+    
     [monster setIsTranslucent:NO];
     //--------------------------------------------------------------------
     
@@ -352,6 +376,7 @@
     [MonsterData insertMonsterWithType:@"Marblu" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Angler" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Fire_Elemental" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Wisp" barcode:@"No Barcode"];
     
     NSError *error = nil; 
     [_managedObjectContext save:&error];
@@ -400,7 +425,7 @@
     [PartyData removeAll];
     
     NSArray *monsters = @[[MonsterData monsterWithName:@"Baby Dragon"],
-                          [MonsterData monsterWithName:@"Angler"],
+                          [MonsterData monsterWithName:@"Wisp"],
                           [MonsterData monsterWithName:@"Fire Elemental"]];
     
     [PartyData insertPartyWithName:@"Default Party" monsters:monsters];
