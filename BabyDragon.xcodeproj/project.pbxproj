@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC07D37318161E350053C630 /* DefaultMonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC07D37218161E350053C630 /* DefaultMonsterData.m */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */; };
 		BC20AC0B17EB8E9E0095B125 /* BarcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0A17EB8E9E0095B125 /* BarcodeHelper.m */; };
@@ -166,6 +165,7 @@
 		BCAF49C617E55ECB001A9B76 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = BCAF494F17E55ECB001A9B76 /* zbar-help.html */; };
 		BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */; };
 		BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495117E55ECB001A9B76 /* zbar-samples.png */; };
+		BCD80F0F18201CFF002DD288 /* DefaultMonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD80F0E18201CFF002DD288 /* DefaultMonsterData.m */; };
 		BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */; };
 		BCEEEA8F180A848F00BC20E9 /* FLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8C180A848F00BC20E9 /* FLButton.m */; };
 		BCEEEA90180A848F00BC20E9 /* FLRadialMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8E180A848F00BC20E9 /* FLRadialMenuItem.m */; };
@@ -257,8 +257,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BC07D37118161E350053C630 /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
-		BC07D37218161E350053C630 /* DefaultMonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMonsterData.m; sourceTree = "<group>"; };
 		BC0C754B17F912D10070D5BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProbabilityCollection.h; sourceTree = "<group>"; };
 		BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbabilityCollection.m; sourceTree = "<group>"; };
@@ -598,6 +596,8 @@
 		BCAF494F17E55ECB001A9B76 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		BCAF495117E55ECB001A9B76 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		BCD80F0D18201CFF002DD288 /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
+		BCD80F0E18201CFF002DD288 /* DefaultMonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMonsterData.m; sourceTree = "<group>"; };
 		BCE563E718030C5C001A744B /* ElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementType.h; sourceTree = "<group>"; };
 		BCEEEA88180A81BE00BC20E9 /* NSData+ByteUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ByteUtilities.h"; sourceTree = "<group>"; };
 		BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ByteUtilities.m"; sourceTree = "<group>"; };
@@ -1383,7 +1383,7 @@
 				BCEEEADC180BA86700BC20E9 /* AbilityData.h */,
 				BCEEEAE2180BA86700BC20E9 /* AcquisitionData.h */,
 				BCEEEAEE180C2F9600BC20E9 /* BaseData.h */,
-				BC07D37118161E350053C630 /* DefaultMonsterData.h */,
+				BCD80F0D18201CFF002DD288 /* DefaultMonsterData.h */,
 				BCEEEAE5180BA86700BC20E9 /* EnhancementData.h */,
 				BCEEEACA180BA86600BC20E9 /* EquipmentData.h */,
 				BCEEEAD0180BA86700BC20E9 /* GoldData.h */,
@@ -1394,7 +1394,7 @@
 				BCEEEADD180BA86700BC20E9 /* AbilityData.m */,
 				BCEEEAE3180BA86700BC20E9 /* AcquisitionData.m */,
 				BCEEEAEF180C2F9600BC20E9 /* BaseData.m */,
-				BC07D37218161E350053C630 /* DefaultMonsterData.m */,
+				BCD80F0E18201CFF002DD288 /* DefaultMonsterData.m */,
 				BCEEEAE6180BA86700BC20E9 /* EnhancementData.m */,
 				BCEEEACB180BA86600BC20E9 /* EquipmentData.m */,
 				BCEEEAD1180BA86700BC20E9 /* GoldData.m */,
@@ -1725,6 +1725,7 @@
 				BCAF477717E559AE001A9B76 /* AppDelegate.m in Sources */,
 				BCAF477917E559AE001A9B76 /* CombatLayer.m in Sources */,
 				BCAF477A17E559AE001A9B76 /* IntroLayer.m in Sources */,
+				BCD80F0F18201CFF002DD288 /* DefaultMonsterData.m in Sources */,
 				BCAF477B17E559AE001A9B76 /* MainMenuLayer.m in Sources */,
 				BC9B23C0180A661200D1ECEF /* SinglePlayerContentFactory.m in Sources */,
 				BCAF477C17E559AE001A9B76 /* ScanAcquisitionLayer.m in Sources */,
@@ -1800,7 +1801,6 @@
 				BCAF498617E55ECB001A9B76 /* CCSpriteBatchNode.m in Sources */,
 				BCAF498717E55ECB001A9B76 /* CCSpriteFrame.m in Sources */,
 				BCEEEAE7180BA86700BC20E9 /* EnhancementData.m in Sources */,
-				BC07D37318161E350053C630 /* DefaultMonsterData.m in Sources */,
 				BCEEEACC180BA86600BC20E9 /* EquipmentData.m in Sources */,
 				BCAF498817E55ECB001A9B76 /* CCSpriteFrameCache.m in Sources */,
 				BCAF498917E55ECB001A9B76 /* CCTexture2D.m in Sources */,
