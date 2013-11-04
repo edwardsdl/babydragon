@@ -182,31 +182,167 @@
     //--------------------------------------------------------------------
     
     //--------------------------------------------------------------------
-    //Hard Shell
-    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard Shell"];
-    [monster setElementType:Water];
-    [monster setProbability:uncommon];
+    //Imp
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Imp"];
+    [monster setElementType:Fire];
+    [monster setProbability:common];
     
-    [monster setHealthPoints:23];
+    [monster setHealthPoints:19];
+    [monster setAbilityPoints:22];
+    [monster setCourage:9];
+    [monster setDefense:9];
+    [monster setIntellect:12];
+    [monster setSpeed:13];
+    [monster setStrength:11];
+    [monster setWillpower:9];
+    
+    [monster setHealthPointsLevelMultiplier:1.9];
+    [monster setAbilityPointsLevelMultiplier:2.2];
+    [monster setCourageLevelMultiplier:0.9];
+    [monster setDefenseLevelMultiplier:0.9];
+    [monster setIntellectLevelMultiplier:1.2];
+    [monster setSpeedLevelMultiplier:1.2];
+    [monster setStrengthLevelMultiplier:1.1];
+    [monster setWillpowerLevelMultiplier:0.9];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Firebat
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Firebat"];
+    [monster setElementType:Fire];
+    [monster setProbability:common];
+    
+    [monster setHealthPoints:18];
     [monster setAbilityPoints:21];
     [monster setCourage:10];
-    [monster setDefense:14];
+    [monster setDefense:8];
     [monster setIntellect:11];
-    [monster setSpeed:8];
-    [monster setStrength:9];
-    [monster setWillpower:11];
+    [monster setSpeed:13];
+    [monster setStrength:10];
+    [monster setWillpower:9];
     
-    [monster setHealthPointsLevelMultiplier:2.3];
+    [monster setHealthPointsLevelMultiplier:1.8];
     [monster setAbilityPointsLevelMultiplier:2.1];
-    [monster setCourageLevelMultiplier:0.9];
-    [monster setDefenseLevelMultiplier:1.4];
+    [monster setCourageLevelMultiplier:1.0];
+    [monster setDefenseLevelMultiplier:0.8];
     [monster setIntellectLevelMultiplier:1.1];
+    [monster setSpeedLevelMultiplier:1.3];
+    [monster setStrengthLevelMultiplier:1.1];
+    [monster setWillpowerLevelMultiplier:0.9];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Scorpion
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Scorpion"];
+    [monster setElementType:Forest];
+    [monster setProbability:common];
+    
+    [monster setHealthPoints:19];
+    [monster setAbilityPoints:22];
+    [monster setCourage:12];
+    [monster setDefense:10];
+    [monster setIntellect:12];
+    [monster setSpeed:13];
+    [monster setStrength:8];
+    [monster setWillpower:10];
+    
+    [monster setHealthPointsLevelMultiplier:1.9];
+    [monster setAbilityPointsLevelMultiplier:2.2];
+    [monster setCourageLevelMultiplier:1.2];
+    [monster setDefenseLevelMultiplier:0.8];
+    [monster setIntellectLevelMultiplier:1.2];
+    [monster setSpeedLevelMultiplier:1.3];
+    [monster setStrengthLevelMultiplier:0.7];
+    [monster setWillpowerLevelMultiplier:1.0];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Skeleton
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Skeleton"];
+    [monster setElementType:Darkness];
+    [monster setProbability:common];
+    
+    [monster setHealthPoints:20];
+    [monster setAbilityPoints:21];
+    [monster setCourage:13];
+    [monster setDefense:10];
+    [monster setIntellect:13];
+    [monster setSpeed:8];
+    [monster setStrength:7];
+    [monster setWillpower:13];
+    
+    [monster setHealthPointsLevelMultiplier:2.0];
+    [monster setAbilityPointsLevelMultiplier:2.1];
+    [monster setCourageLevelMultiplier:1.3];
+    [monster setDefenseLevelMultiplier:0.9];
+    [monster setIntellectLevelMultiplier:1.3];
     [monster setSpeedLevelMultiplier:0.8];
-    [monster setStrengthLevelMultiplier:0.9];
+    [monster setStrengthLevelMultiplier:0.7];
     [monster setWillpowerLevelMultiplier:1.2];
     
     [monster setIsTranslucent:NO];
     //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Caterpillar
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Caterpillar"];
+    [monster setElementType:Light];
+    [monster setProbability:common];
+    
+    [monster setHealthPoints:17];
+    [monster setAbilityPoints:23];
+    [monster setCourage:9];
+    [monster setDefense:8];
+    [monster setIntellect:14];
+    [monster setSpeed:11];
+    [monster setStrength:7];
+    [monster setWillpower:13];
+    
+    [monster setHealthPointsLevelMultiplier:1.7];
+    [monster setAbilityPointsLevelMultiplier:2.3];
+    [monster setCourageLevelMultiplier:0.9];
+    [monster setDefenseLevelMultiplier:0.8];
+    [monster setIntellectLevelMultiplier:1.4];
+    [monster setSpeedLevelMultiplier:1.1];
+    [monster setStrengthLevelMultiplier:0.7];
+    [monster setWillpowerLevelMultiplier:1.3];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Crab
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Crab"];
+    [monster setElementType:Water];
+    [monster setProbability:common];
+    
+    [monster setHealthPoints:22];
+    [monster setAbilityPoints:19];
+    [monster setCourage:11];
+    [monster setDefense:15];
+    [monster setIntellect:9];
+    [monster setSpeed:10];
+    [monster setStrength:9];
+    [monster setWillpower:11];
+    
+    [monster setHealthPointsLevelMultiplier:2.2];
+    [monster setAbilityPointsLevelMultiplier:1.9];
+    [monster setCourageLevelMultiplier:1.1];
+    [monster setDefenseLevelMultiplier:1.3];
+    [monster setIntellectLevelMultiplier:0.9];
+    [monster setSpeedLevelMultiplier:1.0];
+    [monster setStrengthLevelMultiplier:0.9];
+    [monster setWillpowerLevelMultiplier:1.0];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+
     
     //--------------------------------------------------------------------
     // **** UNCOMMON ****
@@ -235,6 +371,33 @@
     [monster setSpeedLevelMultiplier:1.1];
     [monster setStrengthLevelMultiplier:1.4];
     [monster setWillpowerLevelMultiplier:1.0];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Hard Shell
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard Shell"];
+    [monster setElementType:Water];
+    [monster setProbability:uncommon];
+    
+    [monster setHealthPoints:23];
+    [monster setAbilityPoints:21];
+    [monster setCourage:10];
+    [monster setDefense:14];
+    [monster setIntellect:11];
+    [monster setSpeed:8];
+    [monster setStrength:9];
+    [monster setWillpower:11];
+    
+    [monster setHealthPointsLevelMultiplier:2.3];
+    [monster setAbilityPointsLevelMultiplier:2.1];
+    [monster setCourageLevelMultiplier:0.9];
+    [monster setDefenseLevelMultiplier:1.4];
+    [monster setIntellectLevelMultiplier:1.1];
+    [monster setSpeedLevelMultiplier:0.8];
+    [monster setStrengthLevelMultiplier:0.9];
+    [monster setWillpowerLevelMultiplier:1.2];
     
     [monster setIsTranslucent:NO];
     //--------------------------------------------------------------------
@@ -377,6 +540,12 @@
     [MonsterData insertMonsterWithType:@"Angler" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Fire_Elemental" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Wisp" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Imp" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Firebat" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Scorpion" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Skeleton" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Caterpillar" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Crab" barcode:@"No Barcode"];
     
     NSError *error = nil; 
     [_managedObjectContext save:&error];
@@ -425,7 +594,7 @@
     [PartyData removeAll];
     
     NSArray *monsters = @[[MonsterData monsterWithName:@"Baby Dragon"],
-                          [MonsterData monsterWithName:@"Wisp"],
+                          [MonsterData monsterWithName:@"Crab"],
                           [MonsterData monsterWithName:@"Fire Elemental"]];
     
     [PartyData insertPartyWithName:@"Default Party" monsters:monsters];

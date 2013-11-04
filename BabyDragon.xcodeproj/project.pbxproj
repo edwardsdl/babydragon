@@ -189,6 +189,24 @@
 		D71B8FE8180B3C8800ABBCCE /* Rat_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE5180B3C8800ABBCCE /* Rat_Fighting.png */; };
 		D71B8FE9180B3C8800ABBCCE /* Rat_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE6180B3C8800ABBCCE /* Rat_KO.png */; };
 		D71B8FEA180B3C8800ABBCCE /* Rat_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE7180B3C8800ABBCCE /* Rat_Standing.png */; };
+		D71EBA3E182735220029A494 /* Imp_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA3B182735220029A494 /* Imp_Fighting.png */; };
+		D71EBA3F182735220029A494 /* Imp_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA3C182735220029A494 /* Imp_KO.png */; };
+		D71EBA40182735220029A494 /* Imp_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA3D182735220029A494 /* Imp_Standing.png */; };
+		D71EBA44182736410029A494 /* Firebat_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA41182736410029A494 /* Firebat_Fighting.png */; };
+		D71EBA45182736410029A494 /* Firebat_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA42182736410029A494 /* Firebat_KO.png */; };
+		D71EBA46182736410029A494 /* Firebat_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA43182736410029A494 /* Firebat_Standing.png */; };
+		D71EBA4B1827381A0029A494 /* Scorpion_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA481827381A0029A494 /* Scorpion_KO.png */; };
+		D71EBA4C1827381A0029A494 /* Scorpion_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA491827381A0029A494 /* Scorpion_Standing.png */; };
+		D71EBA4E182739880029A494 /* Scorpion_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA4D182739880029A494 /* Scorpion_Fighting.png */; };
+		D71EBA5218273AD30029A494 /* Skeleton_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA4F18273AD30029A494 /* Skeleton_Fighting.png */; };
+		D71EBA5318273AD30029A494 /* Skeleton_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5018273AD30029A494 /* Skeleton_KO.png */; };
+		D71EBA5418273AD30029A494 /* Skeleton_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5118273AD30029A494 /* Skeleton_Standing.png */; };
+		D71EBA5818273C2D0029A494 /* Caterpillar_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5518273C2D0029A494 /* Caterpillar_Fighting.png */; };
+		D71EBA5918273C2D0029A494 /* Caterpillar_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5618273C2D0029A494 /* Caterpillar_KO.png */; };
+		D71EBA5A18273C2D0029A494 /* Caterpillar_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5718273C2D0029A494 /* Caterpillar_Standing.png */; };
+		D71EBA5E18273D8F0029A494 /* Crab_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5B18273D8F0029A494 /* Crab_Fighting.png */; };
+		D71EBA5F18273D8F0029A494 /* Crab_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5C18273D8F0029A494 /* Crab_KO.png */; };
+		D71EBA6018273D8F0029A494 /* Crab_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5D18273D8F0029A494 /* Crab_Standing.png */; };
 		D72156EE180EF83200DBC48F /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = D72156ED180EF83200DBC48F /* MonsterData.m */; };
 		D722770618201E2600864928 /* Wisp_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770318201E2600864928 /* Wisp_Fighting.png */; };
 		D722770718201E2600864928 /* Wisp_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770418201E2600864928 /* Wisp_KO.png */; };
@@ -641,6 +659,24 @@
 		D71B8FE5180B3C8800ABBCCE /* Rat_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_Fighting.png; path = Monsters/Rat_Fighting.png; sourceTree = "<group>"; };
 		D71B8FE6180B3C8800ABBCCE /* Rat_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_KO.png; path = Monsters/Rat_KO.png; sourceTree = "<group>"; };
 		D71B8FE7180B3C8800ABBCCE /* Rat_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_Standing.png; path = Monsters/Rat_Standing.png; sourceTree = "<group>"; };
+		D71EBA3B182735220029A494 /* Imp_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Imp_Fighting.png; path = Monsters/Imp_Fighting.png; sourceTree = "<group>"; };
+		D71EBA3C182735220029A494 /* Imp_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Imp_KO.png; path = Monsters/Imp_KO.png; sourceTree = "<group>"; };
+		D71EBA3D182735220029A494 /* Imp_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Imp_Standing.png; path = Monsters/Imp_Standing.png; sourceTree = "<group>"; };
+		D71EBA41182736410029A494 /* Firebat_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Firebat_Fighting.png; path = Monsters/Firebat_Fighting.png; sourceTree = "<group>"; };
+		D71EBA42182736410029A494 /* Firebat_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Firebat_KO.png; path = Monsters/Firebat_KO.png; sourceTree = "<group>"; };
+		D71EBA43182736410029A494 /* Firebat_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Firebat_Standing.png; path = Monsters/Firebat_Standing.png; sourceTree = "<group>"; };
+		D71EBA481827381A0029A494 /* Scorpion_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scorpion_KO.png; path = Monsters/Scorpion_KO.png; sourceTree = "<group>"; };
+		D71EBA491827381A0029A494 /* Scorpion_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scorpion_Standing.png; path = Monsters/Scorpion_Standing.png; sourceTree = "<group>"; };
+		D71EBA4D182739880029A494 /* Scorpion_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scorpion_Fighting.png; path = Monsters/Scorpion_Fighting.png; sourceTree = "<group>"; };
+		D71EBA4F18273AD30029A494 /* Skeleton_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skeleton_Fighting.png; path = Monsters/Skeleton_Fighting.png; sourceTree = "<group>"; };
+		D71EBA5018273AD30029A494 /* Skeleton_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skeleton_KO.png; path = Monsters/Skeleton_KO.png; sourceTree = "<group>"; };
+		D71EBA5118273AD30029A494 /* Skeleton_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skeleton_Standing.png; path = Monsters/Skeleton_Standing.png; sourceTree = "<group>"; };
+		D71EBA5518273C2D0029A494 /* Caterpillar_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Caterpillar_Fighting.png; path = Monsters/Caterpillar_Fighting.png; sourceTree = "<group>"; };
+		D71EBA5618273C2D0029A494 /* Caterpillar_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Caterpillar_KO.png; path = Monsters/Caterpillar_KO.png; sourceTree = "<group>"; };
+		D71EBA5718273C2D0029A494 /* Caterpillar_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Caterpillar_Standing.png; path = Monsters/Caterpillar_Standing.png; sourceTree = "<group>"; };
+		D71EBA5B18273D8F0029A494 /* Crab_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crab_Fighting.png; path = Monsters/Crab_Fighting.png; sourceTree = "<group>"; };
+		D71EBA5C18273D8F0029A494 /* Crab_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crab_KO.png; path = Monsters/Crab_KO.png; sourceTree = "<group>"; };
+		D71EBA5D18273D8F0029A494 /* Crab_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crab_Standing.png; path = Monsters/Crab_Standing.png; sourceTree = "<group>"; };
 		D72156EC180EF83200DBC48F /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
 		D72156ED180EF83200DBC48F /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
 		D722770318201E2600864928 /* Wisp_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wisp_Fighting.png; path = Monsters/Wisp_Fighting.png; sourceTree = "<group>"; };
@@ -1496,6 +1532,24 @@
 		D7D6D47D17E633C200D2ADB7 /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				D71EBA5B18273D8F0029A494 /* Crab_Fighting.png */,
+				D71EBA5C18273D8F0029A494 /* Crab_KO.png */,
+				D71EBA5D18273D8F0029A494 /* Crab_Standing.png */,
+				D71EBA5518273C2D0029A494 /* Caterpillar_Fighting.png */,
+				D71EBA5618273C2D0029A494 /* Caterpillar_KO.png */,
+				D71EBA5718273C2D0029A494 /* Caterpillar_Standing.png */,
+				D71EBA4F18273AD30029A494 /* Skeleton_Fighting.png */,
+				D71EBA5018273AD30029A494 /* Skeleton_KO.png */,
+				D71EBA5118273AD30029A494 /* Skeleton_Standing.png */,
+				D71EBA4D182739880029A494 /* Scorpion_Fighting.png */,
+				D71EBA481827381A0029A494 /* Scorpion_KO.png */,
+				D71EBA491827381A0029A494 /* Scorpion_Standing.png */,
+				D71EBA41182736410029A494 /* Firebat_Fighting.png */,
+				D71EBA42182736410029A494 /* Firebat_KO.png */,
+				D71EBA43182736410029A494 /* Firebat_Standing.png */,
+				D71EBA3B182735220029A494 /* Imp_Fighting.png */,
+				D71EBA3C182735220029A494 /* Imp_KO.png */,
+				D71EBA3D182735220029A494 /* Imp_Standing.png */,
 				D722770318201E2600864928 /* Wisp_Fighting.png */,
 				D722770418201E2600864928 /* Wisp_KO.png */,
 				D722770518201E2600864928 /* Wisp_Standing.png */,
@@ -1622,10 +1676,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71EBA5318273AD30029A494 /* Skeleton_KO.png in Resources */,
+				D71EBA4C1827381A0029A494 /* Scorpion_Standing.png in Resources */,
+				D71EBA3E182735220029A494 /* Imp_Fighting.png in Resources */,
 				D70D099F17F67FED0006C9EF /* HIt.png in Resources */,
 				D744B38617F0A8100034A5E5 /* Hard_Shell_Standing.png in Resources */,
 				D71B8FEA180B3C8800ABBCCE /* Rat_Standing.png in Resources */,
 				D71B8FE8180B3C8800ABBCCE /* Rat_Fighting.png in Resources */,
+				D71EBA4B1827381A0029A494 /* Scorpion_KO.png in Resources */,
 				BCAF47F717E559AE001A9B76 /* Default-568h@2x.png in Resources */,
 				BCAF47F817E559AE001A9B76 /* Default-Landscape~ipad.png in Resources */,
 				D722770818201E2600864928 /* Wisp_Standing.png in Resources */,
@@ -1633,17 +1691,25 @@
 				BCAF47F917E559AE001A9B76 /* Default.png in Resources */,
 				D744B38517F0A8100034A5E5 /* Hard_Shell_KO.png in Resources */,
 				D7437DD9180E26900023FA73 /* Marblu_Fighting.png in Resources */,
+				D71EBA5A18273C2D0029A494 /* Caterpillar_Standing.png in Resources */,
 				D744B38217F0A8100034A5E5 /* Baby_Dragon_KO.png in Resources */,
 				BCAF47FA17E559AE001A9B76 /* Default@2x.png in Resources */,
 				BCAF47FB17E559AE001A9B76 /* Icon-72.png in Resources */,
+				D71EBA3F182735220029A494 /* Imp_KO.png in Resources */,
 				BCAF47FC17E559AE001A9B76 /* Icon-Small-50.png in Resources */,
+				D71EBA5418273AD30029A494 /* Skeleton_Standing.png in Resources */,
 				D722770718201E2600864928 /* Wisp_KO.png in Resources */,
+				D71EBA46182736410029A494 /* Firebat_Standing.png in Resources */,
+				D71EBA5218273AD30029A494 /* Skeleton_Fighting.png in Resources */,
 				BCAF47FD17E559AE001A9B76 /* Icon-Small.png in Resources */,
 				BCAF47FE17E559AE001A9B76 /* Icon-Small@2x.png in Resources */,
 				D71B8FE9180B3C8800ABBCCE /* Rat_KO.png in Resources */,
+				D71EBA4E182739880029A494 /* Scorpion_Fighting.png in Resources */,
 				D726F531181DAAC700569947 /* Fire_Elemental_Standing.png in Resources */,
+				D71EBA5818273C2D0029A494 /* Caterpillar_Fighting.png in Resources */,
 				BCAF47FF17E559AE001A9B76 /* Icon.png in Resources */,
 				D77E1F5617FF83CD00D182AD /* Button_254x74.png in Resources */,
+				D71EBA5918273C2D0029A494 /* Caterpillar_KO.png in Resources */,
 				BCAF480017E559AE001A9B76 /* Icon@2x.png in Resources */,
 				BCAF480117E559AE001A9B76 /* iTunesArtwork in Resources */,
 				BCAF480217E559AE001A9B76 /* MenuBackground.png in Resources */,
@@ -1655,11 +1721,13 @@
 				D726F530181DAAC700569947 /* Fire_Elemental_KO.png in Resources */,
 				BCAF49B217E55ECB001A9B76 /* README.md in Resources */,
 				BCAF49B417E55ECB001A9B76 /* LICENSE_Kazmath.txt in Resources */,
+				D71EBA44182736410029A494 /* Firebat_Fighting.png in Resources */,
 				BCAF49B617E55ECB001A9B76 /* ChangeLog in Resources */,
 				BCAF49B717E55ECB001A9B76 /* CMakeLists.txt in Resources */,
 				D744B38117F0A8100034A5E5 /* Baby_Dragon_Fighting.png in Resources */,
 				D744B38417F0A8100034A5E5 /* Hard_Shell_Fighting.png in Resources */,
 				BCAF49C517E55ECB001A9B76 /* zbar-back.png in Resources */,
+				D71EBA5F18273D8F0029A494 /* Crab_KO.png in Resources */,
 				BCAF49C617E55ECB001A9B76 /* zbar-help.html in Resources */,
 				D744B38317F0A8100034A5E5 /* Baby_Dragon_Standing.png in Resources */,
 				BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */,
@@ -1670,16 +1738,20 @@
 				D7E20F4B17F1349F005AFB2C /* Ghost_Fighting.png in Resources */,
 				D7D6D48D17E6459C00D2ADB7 /* HealthBarFull.png in Resources */,
 				D7D6D49017E648F700D2ADB7 /* ActionBarFull.png in Resources */,
+				D71EBA6018273D8F0029A494 /* Crab_Standing.png in Resources */,
 				D7437DDA180E26900023FA73 /* Marblu_KO.png in Resources */,
 				D7DE49DB17F506FD00479BC5 /* MonsterShadow.png in Resources */,
 				D7F6ACD717F1F4F6002EFBCB /* StatusBarBackground.png in Resources */,
 				D7D6D49117E648F700D2ADB7 /* TurnBarFull.png in Resources */,
+				D71EBA45182736410029A494 /* Firebat_KO.png in Resources */,
 				D7437DDB180E26900023FA73 /* Marblu_Standing.png in Resources */,
 				D72ED1D81811C268005C98CD /* Angler_Fighting.png in Resources */,
+				D71EBA40182735220029A494 /* Imp_Standing.png in Resources */,
 				D7F2CDF917EA94F700F34A49 /* AbilityIcon.png in Resources */,
 				D726F52F181DAAC700569947 /* Fire_Elemental_Fighting.png in Resources */,
 				D722770618201E2600864928 /* Wisp_Fighting.png in Resources */,
 				D7F2CDFA17EA94F700F34A49 /* FightIcon.png in Resources */,
+				D71EBA5E18273D8F0029A494 /* Crab_Fighting.png in Resources */,
 				D7F2CDFB17EA94F700F34A49 /* ItemIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
