@@ -26,7 +26,7 @@
 		BCA9E0441809DF4A00FB3EFE /* MonsterDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA9E03F1809DE6E00FB3EFE /* MonsterDataTests.m */; };
 		BCA9E0451809DF5800FB3EFE /* DefaultMonsterDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA9E03E1809DE6E00FB3EFE /* DefaultMonsterDataTests.m */; };
 		BCAF477717E559AE001A9B76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464217E559AD001A9B76 /* AppDelegate.m */; };
-		BCAF477917E559AE001A9B76 /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464917E559AD001A9B76 /* CombatLayer.m */; };
+		BCAF477917E559AE001A9B76 /* OldCombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464917E559AD001A9B76 /* OldCombatLayer.m */; };
 		BCAF477A17E559AE001A9B76 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464B17E559AD001A9B76 /* IntroLayer.m */; };
 		BCAF477B17E559AE001A9B76 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464D17E559AD001A9B76 /* MainMenuLayer.m */; };
 		BCAF477C17E559AE001A9B76 /* ScanAcquisitionLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464F17E559AD001A9B76 /* ScanAcquisitionLayer.m */; };
@@ -319,8 +319,8 @@
 		BCA9E0471809F95000FB3EFE /* TargetType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetType.h; sourceTree = "<group>"; };
 		BCAF464117E559AD001A9B76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCAF464217E559AD001A9B76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BCAF464817E559AD001A9B76 /* CombatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombatLayer.h; sourceTree = "<group>"; };
-		BCAF464917E559AD001A9B76 /* CombatLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CombatLayer.m; sourceTree = "<group>"; };
+		BCAF464817E559AD001A9B76 /* OldCombatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldCombatLayer.h; sourceTree = "<group>"; };
+		BCAF464917E559AD001A9B76 /* OldCombatLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldCombatLayer.m; sourceTree = "<group>"; };
 		BCAF464A17E559AD001A9B76 /* IntroLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		BCAF464B17E559AD001A9B76 /* IntroLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		BCAF464C17E559AD001A9B76 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
@@ -930,13 +930,13 @@
 			isa = PBXGroup;
 			children = (
 				BC07D36D18158DA30053C630 /* Party Layer */,
-				BCAF464817E559AD001A9B76 /* CombatLayer.h */,
+				BCAF464817E559AD001A9B76 /* OldCombatLayer.h */,
 				BCAF464A17E559AD001A9B76 /* IntroLayer.h */,
 				BCAF464C17E559AD001A9B76 /* MainMenuLayer.h */,
 				BC303069180CF9AA0014F64E /* RosterLayer.h */,
 				BCAF464E17E559AD001A9B76 /* ScanAcquisitionLayer.h */,
 				BCAF465017E559AD001A9B76 /* ScanMenuLayer.h */,
-				BCAF464917E559AD001A9B76 /* CombatLayer.m */,
+				BCAF464917E559AD001A9B76 /* OldCombatLayer.m */,
 				BCAF464B17E559AD001A9B76 /* IntroLayer.m */,
 				BCAF464D17E559AD001A9B76 /* MainMenuLayer.m */,
 				BC30306A180CF9AA0014F64E /* RosterLayer.m */,
@@ -1831,7 +1831,7 @@
 				BCEEEAC0180BA73800BC20E9 /* DefaultMonsterData+Management.m in Sources */,
 				BCEEEAC1180BA73800BC20E9 /* MonsterData+Management.m in Sources */,
 				BCAF477717E559AE001A9B76 /* AppDelegate.m in Sources */,
-				BCAF477917E559AE001A9B76 /* CombatLayer.m in Sources */,
+				BCAF477917E559AE001A9B76 /* OldCombatLayer.m in Sources */,
 				BCAF477A17E559AE001A9B76 /* IntroLayer.m in Sources */,
 				BCD80F0F18201CFF002DD288 /* DefaultMonsterData.m in Sources */,
 				BCAF477B17E559AE001A9B76 /* MainMenuLayer.m in Sources */,
