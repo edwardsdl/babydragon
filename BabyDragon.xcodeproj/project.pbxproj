@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706729E182FFC5500C1E5AA /* FLMenuBackground.png */; };
+		070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 070672A2182FFD2300C1E5AA /* FLMenu.m */; };
+		07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7A182C86C200ABF08B /* CombatLayer.m */; };
+		07746E7E182C8A2B00ABF08B /* CombatMonsterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */; };
+		07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 07746E7F182C9AFA00ABF08B /* BarBackground.png */; };
+		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
+		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */; };
 		BC20AC0B17EB8E9E0095B125 /* BarcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0A17EB8E9E0095B125 /* BarcodeHelper.m */; };
@@ -284,6 +291,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0706729E182FFC5500C1E5AA /* FLMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FLMenuBackground.png; path = "UI Elements/FLMenuBackground.png"; sourceTree = "<group>"; };
+		070672A1182FFD2300C1E5AA /* FLMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMenu.h; path = UI/FLMenu.h; sourceTree = "<group>"; };
+		070672A2182FFD2300C1E5AA /* FLMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMenu.m; path = UI/FLMenu.m; sourceTree = "<group>"; };
+		07746E79182C86C200ABF08B /* CombatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatLayer.h; path = "Combat Layer/CombatLayer.h"; sourceTree = "<group>"; };
+		07746E7A182C86C200ABF08B /* CombatLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatLayer.m; path = "Combat Layer/CombatLayer.m"; sourceTree = "<group>"; };
+		07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMonsterNode.h; path = "Combat Layer/CombatMonsterNode.h"; sourceTree = "<group>"; };
+		07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMonsterNode.m; path = "Combat Layer/CombatMonsterNode.m"; sourceTree = "<group>"; };
+		07746E7F182C9AFA00ABF08B /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Combat/BarBackground.png; sourceTree = "<group>"; };
+		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
+		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
+		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
 		BC0C754B17F912D10070D5BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProbabilityCollection.h; sourceTree = "<group>"; };
 		BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbabilityCollection.m; sourceTree = "<group>"; };
@@ -797,6 +815,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070672A0182FFC8D00C1E5AA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				070672A1182FFD2300C1E5AA /* FLMenu.h */,
+				070672A2182FFD2300C1E5AA /* FLMenu.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		0774C1D6182C84F500CBA9D5 /* Combat Layer */ = {
+			isa = PBXGroup;
+			children = (
+				07FEE6441830288600FA6F5A /* CombatInfoNode.h */,
+				07746E79182C86C200ABF08B /* CombatLayer.h */,
+				07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */,
+				07FEE6451830288600FA6F5A /* CombatInfoNode.m */,
+				07746E7A182C86C200ABF08B /* CombatLayer.m */,
+				07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */,
+			);
+			name = "Combat Layer";
+			sourceTree = "<group>";
+		};
 		BC07D36D18158DA30053C630 /* Party Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -882,6 +922,7 @@
 				BCAF464617E559AD001A9B76 /* Helpers */,
 				BCAF464717E559AD001A9B76 /* Layers */,
 				BCAF465217E559AD001A9B76 /* Models */,
+				070672A0182FFC8D00C1E5AA /* UI */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -929,6 +970,7 @@
 		BCAF464717E559AD001A9B76 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				0774C1D6182C84F500CBA9D5 /* Combat Layer */,
 				BC07D36D18158DA30053C630 /* Party Layer */,
 				BCAF464817E559AD001A9B76 /* OldCombatLayer.h */,
 				BCAF464A17E559AD001A9B76 /* IntroLayer.h */,
@@ -1542,6 +1584,8 @@
 		D77E1F5417FF839300D182AD /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				07FEE6471830313200FA6F5A /* IconFrame.png */,
+				0706729E182FFC5500C1E5AA /* FLMenuBackground.png */,
 				D77E1F5517FF83CD00D182AD /* Button_254x74.png */,
 			);
 			name = "UI Elements";
@@ -1608,6 +1652,7 @@
 		D7D6D48017E635BC00D2ADB7 /* Combat */ = {
 			isa = PBXGroup;
 			children = (
+				07746E7F182C9AFA00ABF08B /* BarBackground.png */,
 				D70D099E17F67FED0006C9EF /* HIt.png */,
 				D7DE49DA17F506FD00479BC5 /* MonsterShadow.png */,
 				D7F6ACD617F1F4F6002EFBCB /* StatusBarBackground.png */,
@@ -1713,6 +1758,7 @@
 				D71EBA4B1827381A0029A494 /* Scorpion_KO.png in Resources */,
 				BCAF47F717E559AE001A9B76 /* Default-568h@2x.png in Resources */,
 				D75CFA3B1829613C0077F814 /* Small_Blob_KO.png in Resources */,
+				07FEE6481830313200FA6F5A /* IconFrame.png in Resources */,
 				BCAF47F817E559AE001A9B76 /* Default-Landscape~ipad.png in Resources */,
 				D722770818201E2600864928 /* Wisp_Standing.png in Resources */,
 				D72ED1D51811C0B9005C98CD /* Angler_KO.png in Resources */,
@@ -1745,6 +1791,7 @@
 				D72ED1D61811C0B9005C98CD /* Angler_Standing.png in Resources */,
 				BCAF499617E55ECB001A9B76 /* LICENSE_cocos2d.txt in Resources */,
 				D75CFA3C1829613C0077F814 /* Small_Blob_Standing.png in Resources */,
+				0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */,
 				BCAF49B117E55ECB001A9B76 /* LICENSE_CocosDenshion.txt in Resources */,
 				D7E20F4D17F1349F005AFB2C /* Ghost_Standing.png in Resources */,
 				D7E20F4C17F1349F005AFB2C /* Ghost_KO.png in Resources */,
@@ -1763,6 +1810,7 @@
 				D744B38317F0A8100034A5E5 /* Baby_Dragon_Standing.png in Resources */,
 				BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */,
 				BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */,
+				07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */,
 				D7D6D48417E635EF00D2ADB7 /* BattleBackground_Test.png in Resources */,
 				D7D6D48517E635EF00D2ADB7 /* Monster_Selection.png in Resources */,
 				D7D6D48817E63E1700D2ADB7 /* BarsBackground.png in Resources */,
@@ -1846,6 +1894,7 @@
 				BCAF495317E55ECB001A9B76 /* CCActionCamera.m in Sources */,
 				BCAF495417E55ECB001A9B76 /* CCActionCatmullRom.m in Sources */,
 				BCAF495517E55ECB001A9B76 /* CCActionEase.m in Sources */,
+				07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */,
 				BCAF495617E55ECB001A9B76 /* CCActionGrid.m in Sources */,
 				BCAF495717E55ECB001A9B76 /* CCActionGrid3D.m in Sources */,
 				BCAF495817E55ECB001A9B76 /* CCActionInstant.m in Sources */,
@@ -1879,6 +1928,7 @@
 				BCAF496F17E55ECB001A9B76 /* CCLabelAtlas.m in Sources */,
 				BCAF497017E55ECB001A9B76 /* CCLabelBMFont.m in Sources */,
 				BCEEEADB180BA86700BC20E9 /* PartyData.m in Sources */,
+				070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */,
 				BCEEEADE180BA86700BC20E9 /* AbilityData.m in Sources */,
 				BCAF497117E55ECB001A9B76 /* CCLabelTTF.m in Sources */,
 				BCAF497217E55ECB001A9B76 /* CCLayer.m in Sources */,
@@ -1910,6 +1960,8 @@
 				BCAF498717E55ECB001A9B76 /* CCSpriteFrame.m in Sources */,
 				BCEEEAE7180BA86700BC20E9 /* EnhancementData.m in Sources */,
 				BCEEEACC180BA86600BC20E9 /* EquipmentData.m in Sources */,
+				07746E7E182C8A2B00ABF08B /* CombatMonsterNode.m in Sources */,
+				07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */,
 				BCAF498817E55ECB001A9B76 /* CCSpriteFrameCache.m in Sources */,
 				BCAF498917E55ECB001A9B76 /* CCTexture2D.m in Sources */,
 				BCAF498A17E55ECB001A9B76 /* CCTextureAtlas.m in Sources */,

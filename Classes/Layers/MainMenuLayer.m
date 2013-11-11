@@ -7,7 +7,7 @@
 //
 
 #import "MainMenuLayer.h"
-#import "OldCombatLayer.h"
+#import "CombatLayer.h"
 #import "AppDelegate.h"
 #import "RosterLayer.h"
 #import "ScanMenuLayer.h"
@@ -89,7 +89,7 @@
     PartyData *partyTwo = [PartyData partyWithName:@"AI Party"];
     
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0
-                                                                                 scene:[OldCombatLayer sceneWithPartyOne:partyOne
+                                                                                 scene:[CombatLayer sceneWithPartyOne:partyOne
                                                                                                           andPartyTwo:partyTwo
                                                                                                   withBackgroundNamed:@"Test"]]];
 }
