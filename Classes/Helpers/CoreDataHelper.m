@@ -677,7 +677,7 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData monsterWithName:@"Baby Dragon"],
+    NSArray *monsters = @[[MonsterData monsterWithName:@"Caterpillar"],
                           [MonsterData monsterWithName:@"Viper"],
                           [MonsterData monsterWithName:@"Fire Elemental"]];
     
