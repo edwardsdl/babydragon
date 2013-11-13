@@ -14,7 +14,7 @@
 #import "CombatMenu.h"
 #import "AbilityData.h"
 
-@interface CombatLayer : CCLayer
+@interface OldCombatLayer : CCLayer
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,

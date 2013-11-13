@@ -6,7 +6,7 @@
 //  Copyright 2013 First Light Games. All rights reserved.
 //
 
-#import "CombatLayer.h"
+#import "OldCombatLayer.h"
 #import "PartyData.h"
 #import "MonsterData.h"
 #import "CombatMonsterEntity.h"
@@ -19,12 +19,12 @@
 #import "TargetType.h"
 
 
-@implementation CombatLayer
+@implementation OldCombatLayer
 
 +(CCScene *) sceneWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName
 {
 	CCScene *scene = [CCScene node];
-	CombatLayer *layer = [[CombatLayer alloc] initWithPartyOne: party1 andPartyTwo: party2 withBackgroundNamed:backgroundName];
+	OldCombatLayer *layer = [[OldCombatLayer alloc] initWithPartyOne: party1 andPartyTwo: party2 withBackgroundNamed:backgroundName];
 	[scene addChild: layer];
 	return scene;
 }

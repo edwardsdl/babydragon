@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706729E182FFC5500C1E5AA /* FLMenuBackground.png */; };
+		070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 070672A2182FFD2300C1E5AA /* FLMenu.m */; };
+		07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7A182C86C200ABF08B /* CombatLayer.m */; };
+		07746E7E182C8A2B00ABF08B /* CombatMonsterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */; };
+		07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 07746E7F182C9AFA00ABF08B /* BarBackground.png */; };
+		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
+		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */; };
 		BC20AC0B17EB8E9E0095B125 /* BarcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0A17EB8E9E0095B125 /* BarcodeHelper.m */; };
@@ -26,7 +33,7 @@
 		BCA9E0441809DF4A00FB3EFE /* MonsterDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA9E03F1809DE6E00FB3EFE /* MonsterDataTests.m */; };
 		BCA9E0451809DF5800FB3EFE /* DefaultMonsterDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA9E03E1809DE6E00FB3EFE /* DefaultMonsterDataTests.m */; };
 		BCAF477717E559AE001A9B76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464217E559AD001A9B76 /* AppDelegate.m */; };
-		BCAF477917E559AE001A9B76 /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464917E559AD001A9B76 /* CombatLayer.m */; };
+		BCAF477917E559AE001A9B76 /* OldCombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464917E559AD001A9B76 /* OldCombatLayer.m */; };
 		BCAF477A17E559AE001A9B76 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464B17E559AD001A9B76 /* IntroLayer.m */; };
 		BCAF477B17E559AE001A9B76 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464D17E559AD001A9B76 /* MainMenuLayer.m */; };
 		BCAF477C17E559AE001A9B76 /* ScanAcquisitionLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464F17E559AD001A9B76 /* ScanAcquisitionLayer.m */; };
@@ -236,6 +243,15 @@
 		D74E973317DA438E00DC8A74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E973217DA438E00DC8A74 /* CoreGraphics.framework */; };
 		D74E973517DA438E00DC8A74 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E973417DA438E00DC8A74 /* CoreText.framework */; };
 		D74E973717DA438E00DC8A74 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E973617DA438E00DC8A74 /* GameKit.framework */; };
+		D75CFA3A1829613C0077F814 /* Small_Blob_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA371829613C0077F814 /* Small_Blob_Fighting.png */; };
+		D75CFA3B1829613C0077F814 /* Small_Blob_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA381829613C0077F814 /* Small_Blob_KO.png */; };
+		D75CFA3C1829613C0077F814 /* Small_Blob_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA391829613C0077F814 /* Small_Blob_Standing.png */; };
+		D75CFA401829649B0077F814 /* Viper_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA3D1829649B0077F814 /* Viper_Fighting.png */; };
+		D75CFA411829649B0077F814 /* Viper_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA3E1829649B0077F814 /* Viper_KO.png */; };
+		D75CFA421829649B0077F814 /* Viper_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA3F1829649B0077F814 /* Viper_Standing.png */; };
+		D75CFA461829695D0077F814 /* Bear_Cub_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA431829695D0077F814 /* Bear_Cub_Fighting.png */; };
+		D75CFA471829695D0077F814 /* Bear_Cub_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA441829695D0077F814 /* Bear_Cub_KO.png */; };
+		D75CFA481829695D0077F814 /* Bear_Cub_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA451829695D0077F814 /* Bear_Cub_Standing.png */; };
 		D76BDC8817EB7D8E008DFBB3 /* MathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D76BDC8717EB7D8E008DFBB3 /* MathHelpers.m */; };
 		D76BDC8C17EB7E08008DFBB3 /* CombatMonsterEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D76BDC8B17EB7E08008DFBB3 /* CombatMonsterEntity.m */; };
 		D76DC53B17EB6D3800E71B07 /* FLRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D76DC53A17EB6D3800E71B07 /* FLRadialMenu.m */; };
@@ -275,6 +291,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0706729E182FFC5500C1E5AA /* FLMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FLMenuBackground.png; path = "UI Elements/FLMenuBackground.png"; sourceTree = "<group>"; };
+		070672A1182FFD2300C1E5AA /* FLMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMenu.h; path = UI/FLMenu.h; sourceTree = "<group>"; };
+		070672A2182FFD2300C1E5AA /* FLMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMenu.m; path = UI/FLMenu.m; sourceTree = "<group>"; };
+		07746E79182C86C200ABF08B /* CombatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatLayer.h; path = "Combat Layer/CombatLayer.h"; sourceTree = "<group>"; };
+		07746E7A182C86C200ABF08B /* CombatLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatLayer.m; path = "Combat Layer/CombatLayer.m"; sourceTree = "<group>"; };
+		07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMonsterNode.h; path = "Combat Layer/CombatMonsterNode.h"; sourceTree = "<group>"; };
+		07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMonsterNode.m; path = "Combat Layer/CombatMonsterNode.m"; sourceTree = "<group>"; };
+		07746E7F182C9AFA00ABF08B /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Combat/BarBackground.png; sourceTree = "<group>"; };
+		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
+		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
+		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
 		BC0C754B17F912D10070D5BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProbabilityCollection.h; sourceTree = "<group>"; };
 		BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbabilityCollection.m; sourceTree = "<group>"; };
@@ -310,8 +337,8 @@
 		BCA9E0471809F95000FB3EFE /* TargetType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetType.h; sourceTree = "<group>"; };
 		BCAF464117E559AD001A9B76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCAF464217E559AD001A9B76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BCAF464817E559AD001A9B76 /* CombatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombatLayer.h; sourceTree = "<group>"; };
-		BCAF464917E559AD001A9B76 /* CombatLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CombatLayer.m; sourceTree = "<group>"; };
+		BCAF464817E559AD001A9B76 /* OldCombatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldCombatLayer.h; sourceTree = "<group>"; };
+		BCAF464917E559AD001A9B76 /* OldCombatLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldCombatLayer.m; sourceTree = "<group>"; };
 		BCAF464A17E559AD001A9B76 /* IntroLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		BCAF464B17E559AD001A9B76 /* IntroLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		BCAF464C17E559AD001A9B76 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
@@ -708,6 +735,15 @@
 		D74E973217DA438E00DC8A74 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D74E973417DA438E00DC8A74 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		D74E973617DA438E00DC8A74 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		D75CFA371829613C0077F814 /* Small_Blob_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Small_Blob_Fighting.png; path = Monsters/Small_Blob_Fighting.png; sourceTree = "<group>"; };
+		D75CFA381829613C0077F814 /* Small_Blob_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Small_Blob_KO.png; path = Monsters/Small_Blob_KO.png; sourceTree = "<group>"; };
+		D75CFA391829613C0077F814 /* Small_Blob_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Small_Blob_Standing.png; path = Monsters/Small_Blob_Standing.png; sourceTree = "<group>"; };
+		D75CFA3D1829649B0077F814 /* Viper_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Viper_Fighting.png; path = Monsters/Viper_Fighting.png; sourceTree = "<group>"; };
+		D75CFA3E1829649B0077F814 /* Viper_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Viper_KO.png; path = Monsters/Viper_KO.png; sourceTree = "<group>"; };
+		D75CFA3F1829649B0077F814 /* Viper_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Viper_Standing.png; path = Monsters/Viper_Standing.png; sourceTree = "<group>"; };
+		D75CFA431829695D0077F814 /* Bear_Cub_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Cub_Fighting.png; path = Monsters/Bear_Cub_Fighting.png; sourceTree = "<group>"; };
+		D75CFA441829695D0077F814 /* Bear_Cub_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Cub_KO.png; path = Monsters/Bear_Cub_KO.png; sourceTree = "<group>"; };
+		D75CFA451829695D0077F814 /* Bear_Cub_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Cub_Standing.png; path = Monsters/Bear_Cub_Standing.png; sourceTree = "<group>"; };
 		D76BDC8617EB7D8E008DFBB3 /* MathHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathHelpers.h; sourceTree = "<group>"; };
 		D76BDC8717EB7D8E008DFBB3 /* MathHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathHelpers.m; sourceTree = "<group>"; };
 		D76BDC8A17EB7E08008DFBB3 /* CombatMonsterEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMonsterEntity.h; path = Combat/CombatMonsterEntity.h; sourceTree = "<group>"; };
@@ -779,6 +815,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070672A0182FFC8D00C1E5AA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				070672A1182FFD2300C1E5AA /* FLMenu.h */,
+				070672A2182FFD2300C1E5AA /* FLMenu.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		0774C1D6182C84F500CBA9D5 /* Combat Layer */ = {
+			isa = PBXGroup;
+			children = (
+				07FEE6441830288600FA6F5A /* CombatInfoNode.h */,
+				07746E79182C86C200ABF08B /* CombatLayer.h */,
+				07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */,
+				07FEE6451830288600FA6F5A /* CombatInfoNode.m */,
+				07746E7A182C86C200ABF08B /* CombatLayer.m */,
+				07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */,
+			);
+			name = "Combat Layer";
+			sourceTree = "<group>";
+		};
 		BC07D36D18158DA30053C630 /* Party Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +922,7 @@
 				BCAF464617E559AD001A9B76 /* Helpers */,
 				BCAF464717E559AD001A9B76 /* Layers */,
 				BCAF465217E559AD001A9B76 /* Models */,
+				070672A0182FFC8D00C1E5AA /* UI */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -911,14 +970,15 @@
 		BCAF464717E559AD001A9B76 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				0774C1D6182C84F500CBA9D5 /* Combat Layer */,
 				BC07D36D18158DA30053C630 /* Party Layer */,
-				BCAF464817E559AD001A9B76 /* CombatLayer.h */,
+				BCAF464817E559AD001A9B76 /* OldCombatLayer.h */,
 				BCAF464A17E559AD001A9B76 /* IntroLayer.h */,
 				BCAF464C17E559AD001A9B76 /* MainMenuLayer.h */,
 				BC303069180CF9AA0014F64E /* RosterLayer.h */,
 				BCAF464E17E559AD001A9B76 /* ScanAcquisitionLayer.h */,
 				BCAF465017E559AD001A9B76 /* ScanMenuLayer.h */,
-				BCAF464917E559AD001A9B76 /* CombatLayer.m */,
+				BCAF464917E559AD001A9B76 /* OldCombatLayer.m */,
 				BCAF464B17E559AD001A9B76 /* IntroLayer.m */,
 				BCAF464D17E559AD001A9B76 /* MainMenuLayer.m */,
 				BC30306A180CF9AA0014F64E /* RosterLayer.m */,
@@ -1524,6 +1584,8 @@
 		D77E1F5417FF839300D182AD /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				07FEE6471830313200FA6F5A /* IconFrame.png */,
+				0706729E182FFC5500C1E5AA /* FLMenuBackground.png */,
 				D77E1F5517FF83CD00D182AD /* Button_254x74.png */,
 			);
 			name = "UI Elements";
@@ -1532,6 +1594,15 @@
 		D7D6D47D17E633C200D2ADB7 /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				D75CFA431829695D0077F814 /* Bear_Cub_Fighting.png */,
+				D75CFA441829695D0077F814 /* Bear_Cub_KO.png */,
+				D75CFA451829695D0077F814 /* Bear_Cub_Standing.png */,
+				D75CFA3D1829649B0077F814 /* Viper_Fighting.png */,
+				D75CFA3E1829649B0077F814 /* Viper_KO.png */,
+				D75CFA3F1829649B0077F814 /* Viper_Standing.png */,
+				D75CFA371829613C0077F814 /* Small_Blob_Fighting.png */,
+				D75CFA381829613C0077F814 /* Small_Blob_KO.png */,
+				D75CFA391829613C0077F814 /* Small_Blob_Standing.png */,
 				D71EBA5B18273D8F0029A494 /* Crab_Fighting.png */,
 				D71EBA5C18273D8F0029A494 /* Crab_KO.png */,
 				D71EBA5D18273D8F0029A494 /* Crab_Standing.png */,
@@ -1581,6 +1652,7 @@
 		D7D6D48017E635BC00D2ADB7 /* Combat */ = {
 			isa = PBXGroup;
 			children = (
+				07746E7F182C9AFA00ABF08B /* BarBackground.png */,
 				D70D099E17F67FED0006C9EF /* HIt.png */,
 				D7DE49DA17F506FD00479BC5 /* MonsterShadow.png */,
 				D7F6ACD617F1F4F6002EFBCB /* StatusBarBackground.png */,
@@ -1685,6 +1757,8 @@
 				D71B8FE8180B3C8800ABBCCE /* Rat_Fighting.png in Resources */,
 				D71EBA4B1827381A0029A494 /* Scorpion_KO.png in Resources */,
 				BCAF47F717E559AE001A9B76 /* Default-568h@2x.png in Resources */,
+				D75CFA3B1829613C0077F814 /* Small_Blob_KO.png in Resources */,
+				07FEE6481830313200FA6F5A /* IconFrame.png in Resources */,
 				BCAF47F817E559AE001A9B76 /* Default-Landscape~ipad.png in Resources */,
 				D722770818201E2600864928 /* Wisp_Standing.png in Resources */,
 				D72ED1D51811C0B9005C98CD /* Angler_KO.png in Resources */,
@@ -1711,13 +1785,17 @@
 				D77E1F5617FF83CD00D182AD /* Button_254x74.png in Resources */,
 				D71EBA5918273C2D0029A494 /* Caterpillar_KO.png in Resources */,
 				BCAF480017E559AE001A9B76 /* Icon@2x.png in Resources */,
+				D75CFA411829649B0077F814 /* Viper_KO.png in Resources */,
 				BCAF480117E559AE001A9B76 /* iTunesArtwork in Resources */,
 				BCAF480217E559AE001A9B76 /* MenuBackground.png in Resources */,
 				D72ED1D61811C0B9005C98CD /* Angler_Standing.png in Resources */,
 				BCAF499617E55ECB001A9B76 /* LICENSE_cocos2d.txt in Resources */,
+				D75CFA3C1829613C0077F814 /* Small_Blob_Standing.png in Resources */,
+				0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */,
 				BCAF49B117E55ECB001A9B76 /* LICENSE_CocosDenshion.txt in Resources */,
 				D7E20F4D17F1349F005AFB2C /* Ghost_Standing.png in Resources */,
 				D7E20F4C17F1349F005AFB2C /* Ghost_KO.png in Resources */,
+				D75CFA401829649B0077F814 /* Viper_Fighting.png in Resources */,
 				D726F530181DAAC700569947 /* Fire_Elemental_KO.png in Resources */,
 				BCAF49B217E55ECB001A9B76 /* README.md in Resources */,
 				BCAF49B417E55ECB001A9B76 /* LICENSE_Kazmath.txt in Resources */,
@@ -1732,15 +1810,18 @@
 				D744B38317F0A8100034A5E5 /* Baby_Dragon_Standing.png in Resources */,
 				BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */,
 				BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */,
+				07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */,
 				D7D6D48417E635EF00D2ADB7 /* BattleBackground_Test.png in Resources */,
 				D7D6D48517E635EF00D2ADB7 /* Monster_Selection.png in Resources */,
 				D7D6D48817E63E1700D2ADB7 /* BarsBackground.png in Resources */,
 				D7E20F4B17F1349F005AFB2C /* Ghost_Fighting.png in Resources */,
 				D7D6D48D17E6459C00D2ADB7 /* HealthBarFull.png in Resources */,
 				D7D6D49017E648F700D2ADB7 /* ActionBarFull.png in Resources */,
+				D75CFA3A1829613C0077F814 /* Small_Blob_Fighting.png in Resources */,
 				D71EBA6018273D8F0029A494 /* Crab_Standing.png in Resources */,
 				D7437DDA180E26900023FA73 /* Marblu_KO.png in Resources */,
 				D7DE49DB17F506FD00479BC5 /* MonsterShadow.png in Resources */,
+				D75CFA481829695D0077F814 /* Bear_Cub_Standing.png in Resources */,
 				D7F6ACD717F1F4F6002EFBCB /* StatusBarBackground.png in Resources */,
 				D7D6D49117E648F700D2ADB7 /* TurnBarFull.png in Resources */,
 				D71EBA45182736410029A494 /* Firebat_KO.png in Resources */,
@@ -1749,9 +1830,12 @@
 				D71EBA40182735220029A494 /* Imp_Standing.png in Resources */,
 				D7F2CDF917EA94F700F34A49 /* AbilityIcon.png in Resources */,
 				D726F52F181DAAC700569947 /* Fire_Elemental_Fighting.png in Resources */,
+				D75CFA471829695D0077F814 /* Bear_Cub_KO.png in Resources */,
 				D722770618201E2600864928 /* Wisp_Fighting.png in Resources */,
+				D75CFA421829649B0077F814 /* Viper_Standing.png in Resources */,
 				D7F2CDFA17EA94F700F34A49 /* FightIcon.png in Resources */,
 				D71EBA5E18273D8F0029A494 /* Crab_Fighting.png in Resources */,
+				D75CFA461829695D0077F814 /* Bear_Cub_Fighting.png in Resources */,
 				D7F2CDFB17EA94F700F34A49 /* ItemIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1795,7 +1879,7 @@
 				BCEEEAC0180BA73800BC20E9 /* DefaultMonsterData+Management.m in Sources */,
 				BCEEEAC1180BA73800BC20E9 /* MonsterData+Management.m in Sources */,
 				BCAF477717E559AE001A9B76 /* AppDelegate.m in Sources */,
-				BCAF477917E559AE001A9B76 /* CombatLayer.m in Sources */,
+				BCAF477917E559AE001A9B76 /* OldCombatLayer.m in Sources */,
 				BCAF477A17E559AE001A9B76 /* IntroLayer.m in Sources */,
 				BCD80F0F18201CFF002DD288 /* DefaultMonsterData.m in Sources */,
 				BCAF477B17E559AE001A9B76 /* MainMenuLayer.m in Sources */,
@@ -1810,6 +1894,7 @@
 				BCAF495317E55ECB001A9B76 /* CCActionCamera.m in Sources */,
 				BCAF495417E55ECB001A9B76 /* CCActionCatmullRom.m in Sources */,
 				BCAF495517E55ECB001A9B76 /* CCActionEase.m in Sources */,
+				07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */,
 				BCAF495617E55ECB001A9B76 /* CCActionGrid.m in Sources */,
 				BCAF495717E55ECB001A9B76 /* CCActionGrid3D.m in Sources */,
 				BCAF495817E55ECB001A9B76 /* CCActionInstant.m in Sources */,
@@ -1843,6 +1928,7 @@
 				BCAF496F17E55ECB001A9B76 /* CCLabelAtlas.m in Sources */,
 				BCAF497017E55ECB001A9B76 /* CCLabelBMFont.m in Sources */,
 				BCEEEADB180BA86700BC20E9 /* PartyData.m in Sources */,
+				070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */,
 				BCEEEADE180BA86700BC20E9 /* AbilityData.m in Sources */,
 				BCAF497117E55ECB001A9B76 /* CCLabelTTF.m in Sources */,
 				BCAF497217E55ECB001A9B76 /* CCLayer.m in Sources */,
@@ -1874,6 +1960,8 @@
 				BCAF498717E55ECB001A9B76 /* CCSpriteFrame.m in Sources */,
 				BCEEEAE7180BA86700BC20E9 /* EnhancementData.m in Sources */,
 				BCEEEACC180BA86600BC20E9 /* EquipmentData.m in Sources */,
+				07746E7E182C8A2B00ABF08B /* CombatMonsterNode.m in Sources */,
+				07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */,
 				BCAF498817E55ECB001A9B76 /* CCSpriteFrameCache.m in Sources */,
 				BCAF498917E55ECB001A9B76 /* CCTexture2D.m in Sources */,
 				BCAF498A17E55ECB001A9B76 /* CCTextureAtlas.m in Sources */,

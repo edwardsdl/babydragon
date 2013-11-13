@@ -342,6 +342,33 @@
     
     [monster setIsTranslucent:NO];
     //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Small Blob
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Small_Blob"];
+    [monster setElementType:Forest];
+    [monster setProbability:common];
+    
+    [monster setHealthPoints:23];
+    [monster setAbilityPoints:19];
+    [monster setCourage:9];
+    [monster setDefense:14];
+    [monster setIntellect:12];
+    [monster setSpeed:8];
+    [monster setStrength:8];
+    [monster setWillpower:12];
+    
+    [monster setHealthPointsLevelMultiplier:2.3];
+    [monster setAbilityPointsLevelMultiplier:1.9];
+    [monster setCourageLevelMultiplier:0.9];
+    [monster setDefenseLevelMultiplier:1.4];
+    [monster setIntellectLevelMultiplier:1.1];
+    [monster setSpeedLevelMultiplier:0.8];
+    [monster setStrengthLevelMultiplier:0.8];
+    [monster setWillpowerLevelMultiplier:1.2];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
 
     
     //--------------------------------------------------------------------
@@ -377,7 +404,7 @@
     
     //--------------------------------------------------------------------
     //Hard Shell
-    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard Shell"];
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard_Shell"];
     [monster setElementType:Water];
     [monster setProbability:uncommon];
     
@@ -454,6 +481,33 @@
     //--------------------------------------------------------------------
     
     //--------------------------------------------------------------------
+    //Viper
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Viper"];
+    [monster setElementType:Forest];
+    [monster setProbability:uncommon];
+    
+    [monster setHealthPoints:19];
+    [monster setAbilityPoints:22];
+    [monster setCourage:11];
+    [monster setDefense:8];
+    [monster setIntellect:12];
+    [monster setSpeed:12];
+    [monster setStrength:8];
+    [monster setWillpower:11];
+    
+    [monster setHealthPointsLevelMultiplier:1.9];
+    [monster setAbilityPointsLevelMultiplier:2.2];
+    [monster setCourageLevelMultiplier:1.1];
+    [monster setDefenseLevelMultiplier:0.8];
+    [monster setIntellectLevelMultiplier:1.2];
+    [monster setSpeedLevelMultiplier:1.3];
+    [monster setStrengthLevelMultiplier:0.8];
+    [monster setWillpowerLevelMultiplier:1.1];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
     // **** RARE ****
     //--------------------------------------------------------------------
     
@@ -516,6 +570,33 @@
     //--------------------------------------------------------------------
 
     //--------------------------------------------------------------------
+    //Bear Cub
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Bear_Cub"];
+    [monster setElementType:Forest];
+    [monster setProbability:superRare];
+    
+    [monster setHealthPoints:24];
+    [monster setAbilityPoints:17];
+    [monster setCourage:13];
+    [monster setDefense:14];
+    [monster setIntellect:7];
+    [monster setSpeed:8];
+    [monster setStrength:12];
+    [monster setWillpower:11];
+    
+    [monster setHealthPointsLevelMultiplier:2.4];
+    [monster setAbilityPointsLevelMultiplier:1.7];
+    [monster setCourageLevelMultiplier:1.3];
+    [monster setDefenseLevelMultiplier:1.4];
+    [monster setIntellectLevelMultiplier:0.7];
+    [monster setSpeedLevelMultiplier:0.8];
+    [monster setStrengthLevelMultiplier:1.2];
+    [monster setWillpowerLevelMultiplier:1.1];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
     // **** ULTRA RARE ****
     //--------------------------------------------------------------------
     
@@ -546,6 +627,9 @@
     [MonsterData insertMonsterWithType:@"Skeleton" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Caterpillar" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Crab" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Small_Blob" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Viper" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Bear_Cub" barcode:@"No Barcode"];
     
     NSError *error = nil; 
     [_managedObjectContext save:&error];
@@ -593,11 +677,17 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData monsterWithName:@"Baby Dragon"],
-                          [MonsterData monsterWithName:@"Crab"],
+    NSArray *monsters = @[[MonsterData monsterWithName:@"Caterpillar"],
+                          [MonsterData monsterWithName:@"Viper"],
                           [MonsterData monsterWithName:@"Fire Elemental"]];
     
-    [PartyData insertPartyWithName:@"Default Party" monsters:monsters];
+    [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
+    
+    monsters = @[[MonsterData monsterWithName:@"Wisp"],
+                 [MonsterData monsterWithName:@"Small Blob"],
+                 [MonsterData monsterWithName:@"Hard Shell"]];
+    
+    [PartyData insertPartyWithName:@"AI Party" monsters:monsters];
     
     NSError *error = nil;
     [_managedObjectContext save:&error];
