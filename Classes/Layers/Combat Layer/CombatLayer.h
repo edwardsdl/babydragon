@@ -11,6 +11,7 @@
 #import "PartyData.h"
 #import "CombatMonsterNode.h"
 #import "CombatInfoNode.h"
+#import "CombatMenuNOde.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,
@@ -32,6 +33,7 @@ typedef NS_ENUM(NSInteger, CombatState) {
     CombatState state;
     
     CombatInfoNode *combatInfo;
+    CombatMenuNode *combatMenu;
 }
 
 +(CCScene *) sceneWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName;

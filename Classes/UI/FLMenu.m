@@ -23,6 +23,7 @@
         [self addChild:self->backgroundSprite];
         
         self->dimensions = dim;
+        _opacity = 255;
     }
     return self;
 }
@@ -31,7 +32,7 @@
 {
     [super draw];
     
-    ccDrawColor4B(0, 0, 0, 255);
+    ccDrawColor4B(0, 0, 0, _opacity);
     glLineWidth(2.0f);
     
     //Determine corner points
@@ -71,6 +72,38 @@
 {
     [super removeAllChildren];
     [self addChild:self->backgroundSprite];
+}
+
+-(void) resizeTo:(CGSize) newDimensions
+{
+    //Update the variable and resize the background sprite
+    self->dimensions = newDimensions;
+    self->backgroundSprite.scaleX = self->dimensions.width / self->backgroundSprite.contentSize.width;
+    self->backgroundSprite.scaleY = self->dimensions.height / self->backgroundSprite.contentSize.height;
+}
+
+-(void) setOpacity:(float)opacity
+{
+    if (_opacity == opacity)
+        return;
+    
+    _opacity = opacity;
+    
+    self->backgroundSprite.opacity = 150 * (opacity / 255.0);
+    
+    //Update opacity on each sprite (label is a sprite too!) relative to the given opacity of that sprite
+    for (CCNode* node in self.children)
+    {
+        if ([node isKindOfClass:[CCSprite class]] && node != self->backgroundSprite)
+        {
+            ((CCSprite*)node).opacity = opacity;
+        }
+    }
+}
+
+-(float) opacity
+{
+    return _opacity;
 }
 
 @end

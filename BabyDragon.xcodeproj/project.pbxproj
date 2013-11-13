@@ -12,6 +12,9 @@
 		07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7A182C86C200ABF08B /* CombatLayer.m */; };
 		07746E7E182C8A2B00ABF08B /* CombatMonsterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */; };
 		07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 07746E7F182C9AFA00ABF08B /* BarBackground.png */; };
+		07908911183310D200FC3D8C /* CombatMenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07908910183310D200FC3D8C /* CombatMenuNode.m */; };
+		079089141833116700FC3D8C /* CombatMenuButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 079089131833116700FC3D8C /* CombatMenuButtonNode.m */; };
+		0790891618331E2200FC3D8C /* RightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0790891518331E2200FC3D8C /* RightArrow.png */; };
 		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
 		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
@@ -256,7 +259,7 @@
 		D76BDC8C17EB7E08008DFBB3 /* CombatMonsterEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D76BDC8B17EB7E08008DFBB3 /* CombatMonsterEntity.m */; };
 		D76DC53B17EB6D3800E71B07 /* FLRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D76DC53A17EB6D3800E71B07 /* FLRadialMenu.m */; };
 		D77E1F5617FF83CD00D182AD /* Button_254x74.png in Resources */ = {isa = PBXBuildFile; fileRef = D77E1F5517FF83CD00D182AD /* Button_254x74.png */; };
-		D77E1F5917FF845100D182AD /* CombatMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D77E1F5817FF845100D182AD /* CombatMenu.m */; };
+		D77E1F5917FF845100D182AD /* OldCombatMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D77E1F5817FF845100D182AD /* OldCombatMenu.m */; };
 		D7BDE7D81806376B00BB0D7A /* AbilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BDE7D71806376B00BB0D7A /* AbilityResult.m */; };
 		D7D2A52A17F9EA48001F39BF /* CombatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2A52917F9EA48001F39BF /* CombatHelper.m */; };
 		D7D6D48417E635EF00D2ADB7 /* BattleBackground_Test.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6D48117E635EF00D2ADB7 /* BattleBackground_Test.png */; };
@@ -299,6 +302,11 @@
 		07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMonsterNode.h; path = "Combat Layer/CombatMonsterNode.h"; sourceTree = "<group>"; };
 		07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMonsterNode.m; path = "Combat Layer/CombatMonsterNode.m"; sourceTree = "<group>"; };
 		07746E7F182C9AFA00ABF08B /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Combat/BarBackground.png; sourceTree = "<group>"; };
+		0790890F183310D200FC3D8C /* CombatMenuNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMenuNode.h; path = "Combat Layer/CombatMenuNode.h"; sourceTree = "<group>"; };
+		07908910183310D200FC3D8C /* CombatMenuNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMenuNode.m; path = "Combat Layer/CombatMenuNode.m"; sourceTree = "<group>"; };
+		079089121833116700FC3D8C /* CombatMenuButtonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMenuButtonNode.h; path = "Combat Layer/CombatMenuButtonNode.h"; sourceTree = "<group>"; };
+		079089131833116700FC3D8C /* CombatMenuButtonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMenuButtonNode.m; path = "Combat Layer/CombatMenuButtonNode.m"; sourceTree = "<group>"; };
+		0790891518331E2200FC3D8C /* RightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RightArrow.png; path = "UI Elements/RightArrow.png"; sourceTree = "<group>"; };
 		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
 		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
 		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
@@ -751,8 +759,8 @@
 		D76DC53917EB6D3800E71B07 /* FLRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLRadialMenu.h; path = Classes/Core/FLRadialMenu.h; sourceTree = SOURCE_ROOT; };
 		D76DC53A17EB6D3800E71B07 /* FLRadialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLRadialMenu.m; path = Classes/Core/FLRadialMenu.m; sourceTree = SOURCE_ROOT; };
 		D77E1F5517FF83CD00D182AD /* Button_254x74.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button_254x74.png; path = "UI Elements/Button_254x74.png"; sourceTree = "<group>"; };
-		D77E1F5717FF845100D182AD /* CombatMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombatMenu.h; sourceTree = "<group>"; };
-		D77E1F5817FF845100D182AD /* CombatMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CombatMenu.m; sourceTree = "<group>"; };
+		D77E1F5717FF845100D182AD /* OldCombatMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldCombatMenu.h; sourceTree = "<group>"; };
+		D77E1F5817FF845100D182AD /* OldCombatMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldCombatMenu.m; sourceTree = "<group>"; };
 		D7BDE7D61806376B00BB0D7A /* AbilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbilityResult.h; sourceTree = "<group>"; };
 		D7BDE7D71806376B00BB0D7A /* AbilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbilityResult.m; sourceTree = "<group>"; };
 		D7D2A52817F9EA48001F39BF /* CombatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombatHelper.h; sourceTree = "<group>"; };
@@ -829,9 +837,13 @@
 			children = (
 				07FEE6441830288600FA6F5A /* CombatInfoNode.h */,
 				07746E79182C86C200ABF08B /* CombatLayer.h */,
+				079089121833116700FC3D8C /* CombatMenuButtonNode.h */,
+				0790890F183310D200FC3D8C /* CombatMenuNode.h */,
 				07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */,
 				07FEE6451830288600FA6F5A /* CombatInfoNode.m */,
 				07746E7A182C86C200ABF08B /* CombatLayer.m */,
+				079089131833116700FC3D8C /* CombatMenuButtonNode.m */,
+				07908910183310D200FC3D8C /* CombatMenuNode.m */,
 				07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */,
 			);
 			name = "Combat Layer";
@@ -1571,11 +1583,11 @@
 			children = (
 				D7BDE7D61806376B00BB0D7A /* AbilityResult.h */,
 				D7D2A52817F9EA48001F39BF /* CombatHelper.h */,
-				D77E1F5717FF845100D182AD /* CombatMenu.h */,
+				D77E1F5717FF845100D182AD /* OldCombatMenu.h */,
 				D76BDC8A17EB7E08008DFBB3 /* CombatMonsterEntity.h */,
 				D7BDE7D71806376B00BB0D7A /* AbilityResult.m */,
 				D7D2A52917F9EA48001F39BF /* CombatHelper.m */,
-				D77E1F5817FF845100D182AD /* CombatMenu.m */,
+				D77E1F5817FF845100D182AD /* OldCombatMenu.m */,
 				D76BDC8B17EB7E08008DFBB3 /* CombatMonsterEntity.m */,
 			);
 			name = Combat;
@@ -1584,6 +1596,7 @@
 		D77E1F5417FF839300D182AD /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				0790891518331E2200FC3D8C /* RightArrow.png */,
 				07FEE6471830313200FA6F5A /* IconFrame.png */,
 				0706729E182FFC5500C1E5AA /* FLMenuBackground.png */,
 				D77E1F5517FF83CD00D182AD /* Button_254x74.png */,
@@ -1810,6 +1823,7 @@
 				D744B38317F0A8100034A5E5 /* Baby_Dragon_Standing.png in Resources */,
 				BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */,
 				BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */,
+				0790891618331E2200FC3D8C /* RightArrow.png in Resources */,
 				07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */,
 				D7D6D48417E635EF00D2ADB7 /* BattleBackground_Test.png in Resources */,
 				D7D6D48517E635EF00D2ADB7 /* Monster_Selection.png in Resources */,
@@ -1964,6 +1978,7 @@
 				07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */,
 				BCAF498817E55ECB001A9B76 /* CCSpriteFrameCache.m in Sources */,
 				BCAF498917E55ECB001A9B76 /* CCTexture2D.m in Sources */,
+				079089141833116700FC3D8C /* CombatMenuButtonNode.m in Sources */,
 				BCAF498A17E55ECB001A9B76 /* CCTextureAtlas.m in Sources */,
 				BCAF498B17E55ECB001A9B76 /* CCTextureCache.m in Sources */,
 				BCAF498C17E55ECB001A9B76 /* CCTexturePVR.m in Sources */,
@@ -1984,7 +1999,7 @@
 				BCAF499917E55ECB001A9B76 /* CCGLView.m in Sources */,
 				BCAF499A17E55ECB001A9B76 /* CCTouchDispatcher.m in Sources */,
 				BCAF499B17E55ECB001A9B76 /* CCTouchHandler.m in Sources */,
-				D77E1F5917FF845100D182AD /* CombatMenu.m in Sources */,
+				D77E1F5917FF845100D182AD /* OldCombatMenu.m in Sources */,
 				BCAF499C17E55ECB001A9B76 /* CCDirectorMac.m in Sources */,
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,
 				BCAF499E17E55ECB001A9B76 /* CCGLView.m in Sources */,
@@ -1999,6 +2014,7 @@
 				BCAF49A517E55ECB001A9B76 /* ccUtils.c in Sources */,
 				BCAF49A617E55ECB001A9B76 /* CCVertex.m in Sources */,
 				BCEEEAC2180BA73800BC20E9 /* NSManagedObjectContext+Management.m in Sources */,
+				07908911183310D200FC3D8C /* CombatMenuNode.m in Sources */,
 				BCAF49A717E55ECB001A9B76 /* CGPointExtension.m in Sources */,
 				BC30306B180CF9AA0014F64E /* RosterLayer.m in Sources */,
 				BCAF49A817E55ECB001A9B76 /* NSThread+performBlock.m in Sources */,

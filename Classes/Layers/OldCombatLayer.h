@@ -11,7 +11,7 @@
 #import "MonsterData.h"
 #import "CombatMonsterEntity.h"
 #import "FLRadialMenu.h"
-#import "CombatMenu.h"
+#import "OldCombatMenu.h"
 #import "AbilityData.h"
 
 @interface OldCombatLayer : CCLayer
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, CombatState) {
 
 @property (nonatomic, retain) AbilityData *selectedAbility;
 
-@property (nonatomic, retain) CombatMenu *combatMenu;
+@property (nonatomic, retain) OldCombatMenu *combatMenu;
 
 @property (nonatomic, retain) CCSprite *statusBarBackgroundSprite;
 

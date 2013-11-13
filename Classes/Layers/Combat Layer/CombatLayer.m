@@ -48,8 +48,13 @@
         
         //Create and hide the combat info node
         self->combatInfo = [CombatInfoNode Create];
-        self->combatInfo.position = ccp(self->winSize.width/2, self->winSize.height/2);
+        self->combatInfo.position = ccp(self->winSize.width/2, (self->winSize.height/2) + 90);
         [self addChild:self->combatInfo];
+        
+        //Create and hide the combat menu node
+        self->combatMenu = [CombatMenuNode Create];
+        self->combatMenu.position = ccp(self->winSize.width/2 - 112.5, (self->winSize.height/2) + (90 - 37.5 - 5));
+        [self addChild:self->combatMenu];
         
         //Begin a game loop
         [self schedule:@selector(update:) interval:0];
@@ -151,6 +156,7 @@
         //If the monster is in party one then the player is going to take action
         if ([self isMonster:self->activeMonster inParty:1])
         {
+            [self->combatMenu resetPositions];
             [self setNewInfoMonster:self->activeMonster];
             
             //Update the state
@@ -203,6 +209,10 @@
 
 -(void) setNewInfoMonster:(CombatMonsterNode*) monster
 {
+    //Same monster, no change
+    if (monster == self->infoMonster)
+        return;
+    
     //Stop any monster pulse
     if (self->infoMonster != nil)
         [self->infoMonster endPulse];
@@ -213,6 +223,12 @@
     //Show the combat info menu
     self->combatInfo.visible = true;
     [self->combatInfo showInfoForMonster:self->infoMonster];
+    
+    //Show the combat menu?
+    if (self->infoMonster == self->activeMonster)
+        [self->combatMenu openMenu];
+    else
+        [self->combatMenu closeMenu];
     
     //Pulse the new info monster
     [self->infoMonster beginPulse];

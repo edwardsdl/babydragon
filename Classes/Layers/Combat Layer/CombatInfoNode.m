@@ -13,7 +13,7 @@
 
 +(CombatInfoNode*) Create
 {
-    CombatInfoNode *node = [[CombatInfoNode alloc] initWithDimensions:CGSizeMake(225, 250)];
+    CombatInfoNode *node = [[CombatInfoNode alloc] initWithDimensions:CGSizeMake(225, 75)];
     node.visible = NO;
     return node;
 }
@@ -21,7 +21,6 @@
 -(void) showInfoForMonster:(CombatMonsterNode*) monster
 {
     [self removeAllChildren];
-    //NSLog([NSString stringWithFormat:@"%lu",(unsigned long)[self.children count]]);
     self->currentMonster = monster;
     
     //Show the icon frame
@@ -39,17 +38,23 @@
     //Name
     [self addLabel:self->currentMonster.monsterData.name color:ccc3(255, 255, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 10 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 22) size:18];
     
+    //Level
+    [self addLabel:@"Level" color:ccc3(255, 255, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 10 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 38) size:14];
+    
+    //Level value
+    [self addLabel:[NSString stringWithFormat:@"%d", self->currentMonster.monsterData.level] color:ccc3(255, 255, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 75 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 38) size:14];
+    
     //Health
-    [self addLabel:@"Health" color:ccc3(175, 255, 175) position:ccp(((self->dimensions.width / 2)  * -1) + 10 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 40) size:14];
+    [self addLabel:@"Health" color:ccc3(190, 255, 190) position:ccp(((self->dimensions.width / 2)  * -1) + 10 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 54) size:14];
     
     //Health value
-    [self addLabel:[NSString stringWithFormat:@"%d / %d", self->currentMonster.currentHealthPoints, self->currentMonster.monsterData.healthPoints] color:ccc3(175, 255, 175) position:ccp(((self->dimensions.width / 2)  * -1) + 75 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 40) size:14];
+    [self addLabel:[NSString stringWithFormat:@"%d / %d", self->currentMonster.currentHealthPoints, self->currentMonster.monsterData.healthPoints] color:ccc3(190, 255, 190) position:ccp(((self->dimensions.width / 2)  * -1) + 75 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 54) size:14];
     
     //Ability
-    [self addLabel:@"Action" color:ccc3(175, 175, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 10 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 56) size:14];
+    [self addLabel:@"Ability" color:ccc3(190, 190, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 10 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 70) size:14];
     
     //Ability value
-    [self addLabel:[NSString stringWithFormat:@"%d / %d", self->currentMonster.currentAbilityPoints, self->currentMonster.monsterData.abilityPoints] color:ccc3(175, 175, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 75 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 56) size:14];
+    [self addLabel:[NSString stringWithFormat:@"%d / %d", self->currentMonster.currentAbilityPoints, self->currentMonster.monsterData.abilityPoints] color:ccc3(190, 190, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 75 + iconFrameSprite.boundingBox.size.width, (self->dimensions.height / 2) - 70) size:14];
 }
 
 
