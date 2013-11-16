@@ -31,4 +31,6 @@
 
 -(void) resetPositions;
 
+-(void) buttonWasTouched:(CombatMenuButtonNode*) button;
+
 @end

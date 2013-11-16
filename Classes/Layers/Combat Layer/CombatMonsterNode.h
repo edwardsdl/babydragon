@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "MonsterData.h"
+#import "MathHelpers.h"
 
 @interface CombatMonsterNode : CCNode <CCTouchOneByOneDelegate>
 {
@@ -22,6 +23,8 @@
     CCProgressTimer *turnBar;
     
     int turnCounter;
+    
+    float yShadowOffset;
 };
 
 @property (nonatomic, retain) MonsterData *monsterData;
@@ -43,6 +46,10 @@
 -(void) beginPulse;
 
 -(void) endPulse;
+
+-(void) jumpTo:(CGPoint) newPosition;
+
+-(void) jumpBack;
 
 -(void) resetTurnCounter;
 

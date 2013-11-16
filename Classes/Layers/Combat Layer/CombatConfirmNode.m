@@ -1,37 +1,30 @@
 //
-//  CombatMenuButton.m
+//  CombatConfirmNode.m
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 11/12/13.
+//  Created by Eric Stenborg on 11/13/13.
 //  Copyright 2013 First Light Games. All rights reserved.
 //
 
-#import "CombatMenuButtonNode.h"
-#import "CombatMenuNode.h"
+#import "CombatConfirmNode.h"
+#import "CombatLayer.h"
 
-@class CombatMenuNode;
-@implementation CombatMenuButtonNode
+@class CombatLayer;
+@implementation CombatConfirmNode
 
-+(CombatMenuButtonNode*) CreateWithLabel:(NSString*) label isParentButton:(BOOL) isParentButton
++(CombatConfirmNode*) Create;
 {
-    CombatMenuButtonNode *node = [[CombatMenuButtonNode alloc] initWithDimensions:CGSizeMake(110, 25) andLabel:label isParentButton:isParentButton];
+    CombatConfirmNode *node = [[CombatConfirmNode alloc] initWithDimensions:CGSizeMake(110, 25)];
+    node.visible = NO;
     return node;
 }
 
--(id) initWithDimensions:(CGSize) dim andLabel:(NSString*) label isParentButton:(BOOL) isParentButton
+-(id) initWithDimensions:(CGSize) dim
 {
     if( (self=[super initWithDimensions:dim]))
     {
         //Create a label for the button
-        [self addLabel:label color:ccc3(255, 255, 255) position:ccp(-48, -7) size:14 centerAnchor:NO];
-        
-        //Draw an arrow is we need it
-        if (isParentButton)
-        {
-            CCSprite* arrowSprite = [CCSprite spriteWithFile:@"RightArrow.png"];
-            arrowSprite.position = ccp(42, 0);
-            [self addChild:arrowSprite];
-        }
+        [self addLabel:@"Confirm" color:ccc3(255, 255, 255) position:ccp(0, 0) size:14 centerAnchor:YES];
         
         //Determine bounding box
         self->_boundingBox = CGRectMake((self->dimensions.width / 2) * -1, (self->dimensions.height / 2) * -1, self->dimensions.width, self->dimensions.height);
@@ -52,14 +45,17 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    if (self.visible == NO)
+        return NO;
+    
     //Get touch position
     CGPoint position = [self convertTouchToNodeSpace:touch];
     
     //Ignore if not in the bounding box of the button
     if (CGRectContainsPoint(self->_boundingBox, position))
     {
-        CombatMenuNode* parentLayer = (CombatMenuNode*)self.parent;
-        [parentLayer buttonWasTouched:self];
+        CombatLayer* parentLayer = (CombatLayer*)self.parent;
+        [parentLayer confirmWasTouched];
         
         return YES;
     }
