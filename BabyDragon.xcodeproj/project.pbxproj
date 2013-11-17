@@ -27,6 +27,10 @@
 		BC4A9EE917E7D038008EDA70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E973017DA438E00DC8A74 /* Foundation.framework */; };
 		BC4A9F1B17E7D1CF008EDA70 /* ProbabilityCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */; };
 		BC4A9F2117E7D1DB008EDA70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC4A9F1F17E7D1DB008EDA70 /* InfoPlist.strings */; };
+		BC629E9B18386A8B00D35C55 /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629E9A18386A8B00D35C55 /* MonsterData.m */; };
+		BC629E9E18386A8B00D35C55 /* PartyData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629E9D18386A8B00D35C55 /* PartyData.m */; };
+		BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA018386AFD00D35C55 /* UUIDHelper.m */; };
+		BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA218386E3700D35C55 /* UUIDHelperTests.m */; };
 		BC98602417F0DA0900F9E159 /* BabyDragon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC98602217F0DA0900F9E159 /* BabyDragon.xcdatamodeld */; };
 		BC9B23BD180A661200D1ECEF /* AcquisitionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B23B6180A661200D1ECEF /* AcquisitionFactory.m */; };
 		BC9B23BE180A661200D1ECEF /* GoldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B23B8180A661200D1ECEF /* GoldFactory.m */; };
@@ -188,7 +192,6 @@
 		BCEEEACC180BA86600BC20E9 /* EquipmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEACB180BA86600BC20E9 /* EquipmentData.m */; };
 		BCEEEAD2180BA86700BC20E9 /* GoldData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAD1180BA86700BC20E9 /* GoldData.m */; };
 		BCEEEAD5180BA86700BC20E9 /* ItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAD4180BA86700BC20E9 /* ItemData.m */; };
-		BCEEEADB180BA86700BC20E9 /* PartyData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEADA180BA86700BC20E9 /* PartyData.m */; };
 		BCEEEADE180BA86700BC20E9 /* AbilityData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEADD180BA86700BC20E9 /* AbilityData.m */; };
 		BCEEEAE1180BA86700BC20E9 /* SinglePlayerContentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAE0180BA86700BC20E9 /* SinglePlayerContentData.m */; };
 		BCEEEAE4180BA86700BC20E9 /* AcquisitionData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAE3180BA86700BC20E9 /* AcquisitionData.m */; };
@@ -217,7 +220,6 @@
 		D71EBA5E18273D8F0029A494 /* Crab_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5B18273D8F0029A494 /* Crab_Fighting.png */; };
 		D71EBA5F18273D8F0029A494 /* Crab_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5C18273D8F0029A494 /* Crab_KO.png */; };
 		D71EBA6018273D8F0029A494 /* Crab_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D71EBA5D18273D8F0029A494 /* Crab_Standing.png */; };
-		D72156EE180EF83200DBC48F /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = D72156ED180EF83200DBC48F /* MonsterData.m */; };
 		D722770618201E2600864928 /* Wisp_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770318201E2600864928 /* Wisp_Fighting.png */; };
 		D722770718201E2600864928 /* Wisp_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770418201E2600864928 /* Wisp_KO.png */; };
 		D722770818201E2600864928 /* Wisp_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D722770518201E2600864928 /* Wisp_Standing.png */; };
@@ -326,6 +328,13 @@
 		BC4A9F1817E7D1CF008EDA70 /* BabyDragonTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BabyDragonTests-Info.plist"; sourceTree = "<group>"; };
 		BC4A9F1A17E7D1CF008EDA70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BC4A9F2017E7D1DB008EDA70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		BC629E9918386A8B00D35C55 /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
+		BC629E9A18386A8B00D35C55 /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
+		BC629E9C18386A8B00D35C55 /* PartyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyData.h; sourceTree = "<group>"; };
+		BC629E9D18386A8B00D35C55 /* PartyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyData.m; sourceTree = "<group>"; };
+		BC629E9F18386AFD00D35C55 /* UUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDHelper.h; sourceTree = "<group>"; };
+		BC629EA018386AFD00D35C55 /* UUIDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelper.m; sourceTree = "<group>"; };
+		BC629EA218386E3700D35C55 /* UUIDHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelperTests.m; sourceTree = "<group>"; };
 		BC98602317F0DA0900F9E159 /* BabyDragon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BabyDragon.xcdatamodel; sourceTree = "<group>"; };
 		BC9B23B4180A661200D1ECEF /* Acquiring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acquiring.h; sourceTree = "<group>"; };
 		BC9B23B5180A661200D1ECEF /* AcquisitionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionFactory.h; sourceTree = "<group>"; };
@@ -677,8 +686,6 @@
 		BCEEEAD1180BA86700BC20E9 /* GoldData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldData.m; sourceTree = "<group>"; };
 		BCEEEAD3180BA86700BC20E9 /* ItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemData.h; sourceTree = "<group>"; };
 		BCEEEAD4180BA86700BC20E9 /* ItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemData.m; sourceTree = "<group>"; };
-		BCEEEAD9180BA86700BC20E9 /* PartyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyData.h; sourceTree = "<group>"; };
-		BCEEEADA180BA86700BC20E9 /* PartyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyData.m; sourceTree = "<group>"; };
 		BCEEEADC180BA86700BC20E9 /* AbilityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbilityData.h; sourceTree = "<group>"; };
 		BCEEEADD180BA86700BC20E9 /* AbilityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbilityData.m; sourceTree = "<group>"; };
 		BCEEEADF180BA86700BC20E9 /* SinglePlayerContentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayerContentData.h; sourceTree = "<group>"; };
@@ -712,8 +719,6 @@
 		D71EBA5B18273D8F0029A494 /* Crab_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crab_Fighting.png; path = Monsters/Crab_Fighting.png; sourceTree = "<group>"; };
 		D71EBA5C18273D8F0029A494 /* Crab_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crab_KO.png; path = Monsters/Crab_KO.png; sourceTree = "<group>"; };
 		D71EBA5D18273D8F0029A494 /* Crab_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crab_Standing.png; path = Monsters/Crab_Standing.png; sourceTree = "<group>"; };
-		D72156EC180EF83200DBC48F /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
-		D72156ED180EF83200DBC48F /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
 		D722770318201E2600864928 /* Wisp_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wisp_Fighting.png; path = Monsters/Wisp_Fighting.png; sourceTree = "<group>"; };
 		D722770418201E2600864928 /* Wisp_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wisp_KO.png; path = Monsters/Wisp_KO.png; sourceTree = "<group>"; };
 		D722770518201E2600864928 /* Wisp_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wisp_Standing.png; path = Monsters/Wisp_Standing.png; sourceTree = "<group>"; };
@@ -867,6 +872,7 @@
 				BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */,
 				BC4A9F1517E7D1CF008EDA70 /* Other Sources */,
 				BC4A9F1717E7D1CF008EDA70 /* Resources */,
+				BC629EA218386E3700D35C55 /* UUIDHelperTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -972,9 +978,11 @@
 				BC20AC0917EB8E9E0095B125 /* BarcodeHelper.h */,
 				BCA9E03B1809DE4B00FB3EFE /* CoreDataHelper.h */,
 				D76BDC8617EB7D8E008DFBB3 /* MathHelpers.h */,
+				BC629E9F18386AFD00D35C55 /* UUIDHelper.h */,
 				BC20AC0A17EB8E9E0095B125 /* BarcodeHelper.m */,
 				BCA9E03C1809DE4B00FB3EFE /* CoreDataHelper.m */,
 				D76BDC8717EB7D8E008DFBB3 /* MathHelpers.m */,
+				BC629EA018386AFD00D35C55 /* UUIDHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1488,6 +1496,10 @@
 		BCEEEA92180BA73800BC20E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				BC629E9C18386A8B00D35C55 /* PartyData.h */,
+				BC629E9D18386A8B00D35C55 /* PartyData.m */,
+				BC629E9918386A8B00D35C55 /* MonsterData.h */,
+				BC629E9A18386A8B00D35C55 /* MonsterData.m */,
 				BCEEEADC180BA86700BC20E9 /* AbilityData.h */,
 				BCEEEAE2180BA86700BC20E9 /* AcquisitionData.h */,
 				BCEEEAEE180C2F9600BC20E9 /* BaseData.h */,
@@ -1496,8 +1508,6 @@
 				BCEEEACA180BA86600BC20E9 /* EquipmentData.h */,
 				BCEEEAD0180BA86700BC20E9 /* GoldData.h */,
 				BCEEEAD3180BA86700BC20E9 /* ItemData.h */,
-				D72156EC180EF83200DBC48F /* MonsterData.h */,
-				BCEEEAD9180BA86700BC20E9 /* PartyData.h */,
 				BCEEEADF180BA86700BC20E9 /* SinglePlayerContentData.h */,
 				BCEEEADD180BA86700BC20E9 /* AbilityData.m */,
 				BCEEEAE3180BA86700BC20E9 /* AcquisitionData.m */,
@@ -1507,8 +1517,6 @@
 				BCEEEACB180BA86600BC20E9 /* EquipmentData.m */,
 				BCEEEAD1180BA86700BC20E9 /* GoldData.m */,
 				BCEEEAD4180BA86700BC20E9 /* ItemData.m */,
-				D72156ED180EF83200DBC48F /* MonsterData.m */,
-				BCEEEADA180BA86700BC20E9 /* PartyData.m */,
 				BCEEEAE0180BA86700BC20E9 /* SinglePlayerContentData.m */,
 				BCEEEAA3180BA73800BC20E9 /* Management */,
 			);
@@ -1881,6 +1889,7 @@
 				BC20AC0F17EC055C0095B125 /* AcquisitionFactoryTests.m in Sources */,
 				BCA9E0441809DF4A00FB3EFE /* MonsterDataTests.m in Sources */,
 				BCEF361C17F1FE8A008F7688 /* MonsterFactoryTests.m in Sources */,
+				BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */,
 				BCA9E0451809DF5800FB3EFE /* DefaultMonsterDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1940,8 +1949,8 @@
 				BCAF496D17E55ECB001A9B76 /* CCGrabber.m in Sources */,
 				BCAF496E17E55ECB001A9B76 /* CCGrid.m in Sources */,
 				BCAF496F17E55ECB001A9B76 /* CCLabelAtlas.m in Sources */,
+				BC629E9B18386A8B00D35C55 /* MonsterData.m in Sources */,
 				BCAF497017E55ECB001A9B76 /* CCLabelBMFont.m in Sources */,
-				BCEEEADB180BA86700BC20E9 /* PartyData.m in Sources */,
 				070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */,
 				BCEEEADE180BA86700BC20E9 /* AbilityData.m in Sources */,
 				BCAF497117E55ECB001A9B76 /* CCLabelTTF.m in Sources */,
@@ -2001,6 +2010,7 @@
 				BCAF499B17E55ECB001A9B76 /* CCTouchHandler.m in Sources */,
 				D77E1F5917FF845100D182AD /* OldCombatMenu.m in Sources */,
 				BCAF499C17E55ECB001A9B76 /* CCDirectorMac.m in Sources */,
+				BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */,
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,
 				BCAF499E17E55ECB001A9B76 /* CCGLView.m in Sources */,
 				BCAF499F17E55ECB001A9B76 /* CCWindow.m in Sources */,
@@ -2030,6 +2040,7 @@
 				BC303080180F81FB0014F64E /* CCScene+Utilities.m in Sources */,
 				BCAF49B517E55ECB001A9B76 /* aabb.c in Sources */,
 				BCAF49B817E55ECB001A9B76 /* mat4stack.c in Sources */,
+				BC629E9E18386A8B00D35C55 /* PartyData.m in Sources */,
 				BCAF49B917E55ECB001A9B76 /* matrix.c in Sources */,
 				BCAF49BA17E55ECB001A9B76 /* mat3.c in Sources */,
 				BCAF49BB17E55ECB001A9B76 /* mat4.c in Sources */,
@@ -2046,7 +2057,6 @@
 				D76DC53B17EB6D3800E71B07 /* FLRadialMenu.m in Sources */,
 				D76BDC8817EB7D8E008DFBB3 /* MathHelpers.m in Sources */,
 				D76BDC8C17EB7E08008DFBB3 /* CombatMonsterEntity.m in Sources */,
-				D72156EE180EF83200DBC48F /* MonsterData.m in Sources */,
 				BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */,
 				D7BDE7D81806376B00BB0D7A /* AbilityResult.m in Sources */,
 				BC20AC0B17EB8E9E0095B125 /* BarcodeHelper.m in Sources */,
