@@ -11,7 +11,7 @@
 #import "CCLayer.h"
 #import "MonsterData.h"
 
-@interface CombatMenu : NSObject
+@interface OldCombatMenu : NSObject
 
 @property (nonatomic, retain) NSArray *tier1Buttons;
 

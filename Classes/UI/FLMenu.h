@@ -13,14 +13,17 @@
 {
     CCSprite *backgroundSprite;
     CGSize dimensions;
+    float _opacity;
 };
 
-//@property int visible;
+@property float opacity;
 
 -(id) initWithDimensions:(CGSize) dimensions;
 
--(void) addLabel:(NSString*) text color:(ccColor3B) color position:(CGPoint) position size:(int) size;
+-(void) addLabel:(NSString*) text color:(ccColor3B) color position:(CGPoint) position size:(int) size centerAnchor:(BOOL) centerAnchor;
 
 -(void) removeAllChildren;
+
+-(void) resizeTo:(CGSize) newDimensions;
 
 @end

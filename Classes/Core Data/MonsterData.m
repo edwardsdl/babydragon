@@ -2,7 +2,7 @@
 //  MonsterData.m
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 10/16/13.
+//  Created by Dallas Edwards on 11/16/13.
 //  Copyright (c) 2013 First Light Games. All rights reserved.
 //
 
@@ -29,6 +29,7 @@
 @dynamic traits;
 @dynamic type;
 @dynamic willpower;
+@dynamic uuid;
 @dynamic abilities;
 @dynamic parties;
 

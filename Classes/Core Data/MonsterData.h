@@ -2,7 +2,7 @@
 //  MonsterData.h
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 10/16/13.
+//  Created by Dallas Edwards on 11/16/13.
 //  Copyright (c) 2013 First Light Games. All rights reserved.
 //
 
@@ -30,6 +30,7 @@
 @property (nonatomic, retain) id traits;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic) float willpower;
+@property (nonatomic, retain) NSString * uuid;
 @property (nonatomic, retain) NSSet *abilities;
 @property (nonatomic, retain) NSSet *parties;
 @end

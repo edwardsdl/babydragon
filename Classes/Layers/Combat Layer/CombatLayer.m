@@ -46,10 +46,30 @@
         for (MonsterData *monsterData in party2.monsters)
             [self createMonsterNode:monsterData monsterIndex:[[party2.monsters allObjects] indexOfObject:monsterData] partyNumber:2];
         
-        //Create and hide the combat info node
+        //Create the combat info node
         self->combatInfo = [CombatInfoNode Create];
-        self->combatInfo.position = ccp(self->winSize.width/2, self->winSize.height/2);
+        self->combatInfo.position = ccp(self->winSize.width/2, (self->winSize.height/2) + 90);
         [self addChild:self->combatInfo];
+        
+        //Create the combat menu node
+        self->combatMenu = [CombatMenuNode Create];
+        self->combatMenu.position = ccp(self->winSize.width/2 - 112.5, (self->winSize.height/2) + (90 - 37.5 - 5));
+        [self addChild:self->combatMenu];
+        
+        //Create the combat status node
+        self->combatStatus = [CombatStatusNode Create];
+        self->combatStatus.position = ccp(self->winSize.width/2, (self->winSize.height/2) - 120);
+        [self addChild:self->combatStatus];
+        
+        //Create the confirm button
+        self->combatConfirm = [CombatConfirmNode Create];
+        self->combatConfirm.position = ccp(self->winSize.width / 2, self->winSize.height / 2);
+        [self addChild:self->combatConfirm];
+        
+        //Create the hit sprite
+        self->hitSprite = [CCSprite spriteWithFile:@"HIt.png"];
+        self->hitSprite.visible = NO;
+        [self addChild:self->hitSprite];
         
         //Begin a game loop
         [self schedule:@selector(update:) interval:0];
@@ -132,7 +152,7 @@
     //PlayerSelectingAction - poke monsters for info and choose action for active monster
     else if (self->state == PlayerSelectingAction)
     {
-        
+        //Nothing to do but wait...
     }
 }
 
@@ -151,6 +171,7 @@
         //If the monster is in party one then the player is going to take action
         if ([self isMonster:self->activeMonster inParty:1])
         {
+            [self->combatMenu resetPositions];
             [self setNewInfoMonster:self->activeMonster];
             
             //Update the state
@@ -173,6 +194,23 @@
     [self->monstersReadyForTurn removeObject:self->activeMonster];
 }
 
+-(void) performFightAction
+{
+    //Close up the menu and the info panel
+    self->combatInfo.visible = false;
+    [self->combatMenu closeMenu];
+    [self->infoMonster endPulse];
+    
+    //Show a status message
+    [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"Tap a monster for %@ to fight...", self->activeMonster.monsterData.name]];
+    
+    //Store that the player selected fight
+    self->actionSelected = Fight;
+    
+    //Update the state
+    self->state = PlayerSelectingEnemy;
+}
+
 //-----------------------------------------------------------------------
 // Input Methods
 //-----------------------------------------------------------------------
@@ -182,6 +220,75 @@
     if (self->state == PlayerSelectingAction)
     {
         [self setNewInfoMonster:monster];
+    }
+    if (self->state == PlayerSelectingEnemy)
+    {
+        if ([self isMonster:monster inParty:2])
+        {
+            [self setNewInfoMonster:monster];
+            
+            //Update the target monster
+            self->targetMonster = monster;
+            
+            //Show the confirm button
+            self->combatConfirm.visible = YES;
+        }
+    }
+}
+
+-(void) confirmWasTouched
+{
+    if (self->state == PlayerSelectingEnemy)
+    {
+        self->state = ActionInProgress;
+        
+        //Close up UI elements
+        self->combatInfo.visible = NO;
+        [self->combatStatus close];
+        self->combatConfirm.visible = NO;
+        [self->targetMonster endPulse];
+        
+        if (self->actionSelected == Fight)
+        {
+            //Setup a sequence to perform the fight
+            CCCallBlock* jumpOut = [CCCallBlock actionWithBlock:^
+            {
+                [self->activeMonster jumpTo:ccp(self->winSize.width / 2, self->winSize.height / 2)];
+            }];
+            
+            CCDelayTime *delay1 = [CCDelayTime actionWithDuration:0.3f];
+            
+            CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
+            {
+                int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster andDefender:self->targetMonster];
+                [self->targetMonster updateHealthByValue:damage * -1];
+                [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
+                [self showHitSprite:self->targetMonster.position];
+                [self sendUpNumbers:damage position:self->targetMonster.position color:ccc3(255, 255, 255)];
+                
+            }];
+            
+            CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
+            
+            CCCallBlock* jumpBack = [CCCallBlock actionWithBlock:^
+            {
+                [self->activeMonster jumpBack];
+                [self hideHitSprite];
+                [self->combatStatus close];
+                
+            }];
+            
+            CCDelayTime *delay3 = [CCDelayTime actionWithDuration:0.3f];
+            
+            CCCallBlock *resumeProcessingTurns = [CCCallBlock actionWithBlock:^
+            {
+                [self->activeMonster updateTurnCounter];
+                self->state = ProcessingTurns;
+            }];
+            
+            CCSequence* fightSequence = [CCSequence actions:jumpOut, delay1, assignDamage, delay2, jumpBack, delay3, resumeProcessingTurns, nil];
+            [self runAction:fightSequence];
+        }
     }
 }
 
@@ -203,6 +310,10 @@
 
 -(void) setNewInfoMonster:(CombatMonsterNode*) monster
 {
+    //Same monster, no change
+    if (monster == self->infoMonster)
+        return;
+    
     //Stop any monster pulse
     if (self->infoMonster != nil)
         [self->infoMonster endPulse];
@@ -214,8 +325,59 @@
     self->combatInfo.visible = true;
     [self->combatInfo showInfoForMonster:self->infoMonster];
     
+    //Show the combat menu?
+    if (self->infoMonster == self->activeMonster)
+        [self->combatMenu openMenu];
+    else
+        [self->combatMenu closeMenu];
+    
     //Pulse the new info monster
     [self->infoMonster beginPulse];
+}
+
+-(void) showHitSprite:(CGPoint) position
+{
+    self->hitSprite.position = position;
+    self->hitSprite.visible = YES;
+}
+
+-(void) hideHitSprite
+{
+    self->hitSprite.visible = NO;
+}
+
+-(void) sendUpNumbers:(int) value position:(CGPoint) position color:(ccColor3B) color
+{
+    CCLabelTTF *numbersLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", value] fontName:@"Georgia" fontSize:14];
+    numbersLabel.color = color;
+    numbersLabel.position = position;
+    [self addChild:numbersLabel z:100];
+    
+    CCLabelTTF *numbersLabelShadow = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", value] fontName:@"Georgia" fontSize:14];
+    numbersLabelShadow.color = ccc3(0, 0, 0);
+    numbersLabelShadow.position = ccp(position.x + 1, position.y -1);
+    [self addChild:numbersLabelShadow z:99];
+    
+    ccBezierConfig bezier;
+    bezier.endPosition = position;
+    bezier.controlPoint_1 = ccp(position.x, position.y + 25);
+    bezier.controlPoint_2 = bezier.controlPoint_1;
+    CCBezierTo *bezierJump = [CCBezierTo actionWithDuration:0.5 bezier:bezier];
+    
+    ccBezierConfig bezierShadow;
+    bezierShadow.endPosition = ccp(position.x + 1, position.y -1);
+    bezierShadow.controlPoint_1 = ccp(bezierShadow.endPosition.x, bezierShadow.endPosition.y + 25);
+    bezierShadow.controlPoint_2 = bezier.controlPoint_1;
+    CCBezierTo *bezierJumpShadow = [CCBezierTo actionWithDuration:0.5 bezier:bezierShadow];
+    
+    CCDelayTime *delay = [CCDelayTime actionWithDuration:0.75];
+    
+    CCCallBlock *removeNumbers = [CCCallBlock actionWithBlock:^{ [self removeChild:numbersLabel]; [self removeChild:numbersLabelShadow]; }];
+    
+    CCSequence *sequence = [CCSequence actions:bezierJump, delay, removeNumbers, nil];
+    [numbersLabel runAction:sequence];
+
+    [numbersLabelShadow runAction:bezierJumpShadow];
 }
 
 @end

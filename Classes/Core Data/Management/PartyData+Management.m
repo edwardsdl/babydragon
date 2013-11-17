@@ -1,6 +1,7 @@
 #import "CoreDataHelper.h"
 #import "NSManagedObjectContext+Management.h"
 #import "PartyData+Management.h"
+#import "UUIDHelper.h"
 
 @implementation PartyData (Management)
 
@@ -20,6 +21,8 @@ static NSString *entityName = @"PartyData";
     PartyData *partyData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                          inManagedObjectContext:managedObjectContext];
     [partyData setName:name];
+    [partyData setUuid:[UUIDHelper createUUIDString]];
+    
     [partyData addMonsters:[NSSet setWithArray:monsters]];
     
     return partyData;

@@ -2,6 +2,7 @@
 #import "DefaultMonsterData+Management.h"
 #import "NSManagedObjectContext+Management.h"
 #import "MonsterData+Management.h"
+#import "UUIDHelper.h"
 
 @implementation MonsterData (Management)
 
@@ -42,6 +43,7 @@ static NSString *entityName = @"MonsterData";
     [monsterData setStrength:[defaultMonsterData strength]];
     // TODO: Set traits
     [monsterData setType:type];
+    [monsterData setUuid:[UUIDHelper createUUIDString]];
     // TODO: Set updated
     [monsterData setWillpower:[defaultMonsterData willpower]];
     

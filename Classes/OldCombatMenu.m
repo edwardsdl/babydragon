@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 First Light Games. All rights reserved.
 //
 
-#import "CombatMenu.h"
+#import "OldCombatMenu.h"
 #import "FLButton.h"
 #import "CCLayer.h"
 #import "cocos2d.h"
 #import "MonsterData.h"
 #import "AbilityData.h"
 
-@implementation CombatMenu
+@implementation OldCombatMenu
 
 -(id) initWithLayer:(CCLayer*) parentLayer fightSelector:(SEL) fightSelector abilitySelector:(SEL) abilitySelector
 {

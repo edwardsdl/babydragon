@@ -65,7 +65,7 @@
             [self addMonster:[party2.monsters.allObjects objectAtIndex:2] toParty:self.partyTwoMonsters];
         
         //Setup the combat menu
-        self.combatMenu = [[CombatMenu alloc] initWithLayer:self fightSelector:@selector(performFightAction) abilitySelector:@selector(performAbilityWithIndex:)];
+        self.combatMenu = [[OldCombatMenu alloc] initWithLayer:self fightSelector:@selector(performFightAction) abilitySelector:@selector(performAbilityWithIndex:)];
         
         //Setup state info
         self.state = TurnCounting;

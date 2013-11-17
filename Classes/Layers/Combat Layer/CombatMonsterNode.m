@@ -18,7 +18,7 @@
     {
         float yBarBorderOffset = -40.0;
         float yBarSpacing = -5.5;
-        float yShadowOffset = -37;
+        self->yShadowOffset = -37.5;
         
         self.monsterData = data;
         self->partyNumber = partyNum;
@@ -165,6 +165,51 @@
 {
     self->monsterSprite.color = ccc3(255, 255, 255);
     [self->monsterSprite stopAllActions];
+}
+
+-(void) jumpTo:(CGPoint) newPosition
+{
+    //Convert to node space
+    newPosition = [self convertToNodeSpace:newPosition];
+    
+    //Setup bezier curve
+    ccBezierConfig bezierTo;
+    bezierTo.endPosition = newPosition;
+    
+    //Determine bezier control points
+    float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));
+    if (self->partyNumber == 2)
+        angle += [MathHelpers degreesToRadians:180.0f];
+    CGPoint midpoint = [MathHelpers calcMidpointOfLinrWithPointOone:self->monsterSprite.position andPointTwp:bezierTo.endPosition];
+    bezierTo.controlPoint_1 = ccp(midpoint.x + (40 * cos(angle)), midpoint.y + (40 * sin(angle)));
+    bezierTo.controlPoint_2 = bezierTo.controlPoint_1;
+    
+    //Run the bezier movement
+    [self->monsterSprite runAction:[CCBezierTo actionWithDuration:0.3 bezier:bezierTo]];
+    
+    //Also move the shadow
+    [self->shadowSprite runAction:[CCMoveTo actionWithDuration:0.3 position:ccp(newPosition.x, newPosition.y + self->yShadowOffset)]];
+}
+
+-(void) jumpBack
+{
+    //Setup bezier curve
+    ccBezierConfig bezierTo;
+    bezierTo.endPosition = ccp(0, 0);
+    
+    //Determine bezier control points
+    float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));
+    if (self->partyNumber == 1)
+        angle += [MathHelpers degreesToRadians:180.0f];
+    CGPoint midpoint = [MathHelpers calcMidpointOfLinrWithPointOone:self->monsterSprite.position andPointTwp:bezierTo.endPosition];
+    bezierTo.controlPoint_1 = ccp(midpoint.x + (40 * cos(angle)), midpoint.y + (40 * sin(angle)));
+    bezierTo.controlPoint_2 = bezierTo.controlPoint_1;
+    
+    //Run the bezier movement
+    [self->monsterSprite runAction:[CCBezierTo actionWithDuration:0.3 bezier:bezierTo]];
+    
+    //Also move the shadow
+    [self->shadowSprite runAction:[CCMoveTo actionWithDuration:0.3 position:ccp(0, self->yShadowOffset)]];
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event

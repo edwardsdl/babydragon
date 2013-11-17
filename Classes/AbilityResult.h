@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CombatMonsterEntity.h"
+#import "CombatMonsterNode.h"
 #import "AbilityData.h"
 #import "EffectType.h"
 
 @interface AbilityResult : NSObject
 
-@property (nonatomic, retain) CombatMonsterEntity *targetMonster;
+@property (nonatomic, retain) CombatMonsterNode *targetMonster;
 
 @property EffectType effectType;
 
