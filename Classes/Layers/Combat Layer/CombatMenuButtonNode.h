@@ -10,9 +10,9 @@
 #import "cocos2d.h"
 #import "FLMenu.h"
 
-@interface CombatMenuButtonNode : FLMenu
+@interface CombatMenuButtonNode : FLMenu <CCTouchOneByOneDelegate>
 {
-    
+    CGRect _boundingBox;
 };
 
 +(CombatMenuButtonNode*) CreateWithLabel:(NSString*) label isParentButton:(BOOL) isParentButton;

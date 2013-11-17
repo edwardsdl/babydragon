@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CombatMonsterEntity.h"
+#import "CombatMonsterNode.h"
 #import "AbilityData.h"
 #import "AbilityResult.h"
 
 @interface CombatHelper : NSObject
 
-+(int) CalculatePhysicalDamageWithAttacker:(CombatMonsterEntity*) attacker andDefender:(CombatMonsterEntity*) defender andMultiplier:(float) multiplier;
++(int) CalculatePhysicalDamageWithAttacker:(CombatMonsterNode*) attacker andDefender:(CombatMonsterNode*) defender andMultiplier:(float) multiplier;
 
-+(int) CalculateFightDamageWithAttacker:(CombatMonsterEntity*) attacker andDefender:(CombatMonsterEntity*) defender;
++(int) CalculateFightDamageWithAttacker:(CombatMonsterNode*) attacker andDefender:(CombatMonsterNode*) defender;
 
-+(AbilityResult*) RunAbility:(AbilityData*) ability ofMonster:(CombatMonsterEntity*) owner onMonster:(CombatMonsterEntity*) target;
++(AbilityResult*) RunAbility:(AbilityData*) ability ofMonster:(CombatMonsterNode*) owner onMonster:(CombatMonsterNode*) target;
 
 +(int) GetXpNeededForLevel:(int) level;
 

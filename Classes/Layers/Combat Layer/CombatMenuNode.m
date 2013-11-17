@@ -7,11 +7,13 @@
 //
 
 #import "CombatMenuNode.h"
+#import "CombatLayer.h"
 
 //----------------------------------------------------------------------------------------------------------------
 //NOTE: The combat menu has 0, 0 in the top right corner so that it can easily line up with the combat info menu
 //----------------------------------------------------------------------------------------------------------------
 
+@class CombatLayer;
 @implementation CombatMenuNode
 
 +(CombatMenuNode*) Create
@@ -73,6 +75,19 @@
 -(CGPoint) getPointForButtonInRow:(int) row andColumn:(int) column
 {
     return ccp(55 + (115 * column), -13.5 - (30 * row));
+}
+
+-(void) buttonWasTouched:(CombatMenuButtonNode*) button
+{
+    if (self.isOpen == NO)
+        return;
+    
+    CombatLayer* combatLayer = (CombatLayer*)self.parent;
+    
+    if (button == fightButton)
+    {
+        [combatLayer performFightAction];
+    }
 }
 
 @end

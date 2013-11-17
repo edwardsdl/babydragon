@@ -48,7 +48,7 @@
     ccDrawLine(ccp(xMin, yMax), ccp(xMin, yMin));
 }
 
--(void) addLabel:(NSString*) text color:(ccColor3B) color position:(CGPoint) position size:(int) size
+-(void) addLabel:(NSString*) text color:(ccColor3B) color position:(CGPoint) position size:(int) size centerAnchor:(BOOL) centerAnchor
 {
     CCLabelTTF* label;
     
@@ -56,14 +56,16 @@
     label = [CCLabelTTF labelWithString:text fontName:@"Georgia" fontSize:size];
     label.color = ccc3(0, 0, 0);
     label.opacity = 150;
-    label.anchorPoint = CGPointZero;
+    if (!centerAnchor)
+        label.anchorPoint = CGPointZero;
     label.position = ccp(position.x + 1, position.y - 1);
     [self addChild:label];
     
     //Draw the real label
     label = [CCLabelTTF labelWithString:text fontName:@"Georgia" fontSize:size];
     label.color = color;
-    label.anchorPoint = CGPointZero;
+    if (!centerAnchor)
+        label.anchorPoint = CGPointZero;
     label.position = position;
     [self addChild:label];
 }

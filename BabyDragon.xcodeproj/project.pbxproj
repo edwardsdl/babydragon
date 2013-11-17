@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070326561833F1EA00685CD3 /* CombatStatusNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 070326551833F1EA00685CD3 /* CombatStatusNode.m */; };
+		070326591833F89900685CD3 /* CombatConfirmNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 070326581833F89900685CD3 /* CombatConfirmNode.m */; };
 		0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706729E182FFC5500C1E5AA /* FLMenuBackground.png */; };
 		070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 070672A2182FFD2300C1E5AA /* FLMenu.m */; };
 		07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7A182C86C200ABF08B /* CombatLayer.m */; };
@@ -296,6 +298,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070326541833F1EA00685CD3 /* CombatStatusNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatStatusNode.h; path = "Combat Layer/CombatStatusNode.h"; sourceTree = "<group>"; };
+		070326551833F1EA00685CD3 /* CombatStatusNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatStatusNode.m; path = "Combat Layer/CombatStatusNode.m"; sourceTree = "<group>"; };
+		070326571833F89900685CD3 /* CombatConfirmNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatConfirmNode.h; path = "Combat Layer/CombatConfirmNode.h"; sourceTree = "<group>"; };
+		070326581833F89900685CD3 /* CombatConfirmNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatConfirmNode.m; path = "Combat Layer/CombatConfirmNode.m"; sourceTree = "<group>"; };
 		0706729E182FFC5500C1E5AA /* FLMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FLMenuBackground.png; path = "UI Elements/FLMenuBackground.png"; sourceTree = "<group>"; };
 		070672A1182FFD2300C1E5AA /* FLMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMenu.h; path = UI/FLMenu.h; sourceTree = "<group>"; };
 		070672A2182FFD2300C1E5AA /* FLMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMenu.m; path = UI/FLMenu.m; sourceTree = "<group>"; };
@@ -840,16 +846,20 @@
 		0774C1D6182C84F500CBA9D5 /* Combat Layer */ = {
 			isa = PBXGroup;
 			children = (
+				070326571833F89900685CD3 /* CombatConfirmNode.h */,
 				07FEE6441830288600FA6F5A /* CombatInfoNode.h */,
 				07746E79182C86C200ABF08B /* CombatLayer.h */,
 				079089121833116700FC3D8C /* CombatMenuButtonNode.h */,
 				0790890F183310D200FC3D8C /* CombatMenuNode.h */,
 				07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */,
+				070326541833F1EA00685CD3 /* CombatStatusNode.h */,
+				070326581833F89900685CD3 /* CombatConfirmNode.m */,
 				07FEE6451830288600FA6F5A /* CombatInfoNode.m */,
 				07746E7A182C86C200ABF08B /* CombatLayer.m */,
 				079089131833116700FC3D8C /* CombatMenuButtonNode.m */,
 				07908910183310D200FC3D8C /* CombatMenuNode.m */,
 				07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */,
+				070326551833F1EA00685CD3 /* CombatStatusNode.m */,
 			);
 			name = "Combat Layer";
 			sourceTree = "<group>";
@@ -2031,6 +2041,7 @@
 				BCAF49A917E55ECB001A9B76 /* TGAlib.m in Sources */,
 				BCAF49AA17E55ECB001A9B76 /* TransformUtils.m in Sources */,
 				BCAF49AB17E55ECB001A9B76 /* ZipUtils.m in Sources */,
+				070326591833F89900685CD3 /* CombatConfirmNode.m in Sources */,
 				BCAF49AC17E55ECB001A9B76 /* CDAudioManager.m in Sources */,
 				BCAF49AD17E55ECB001A9B76 /* CDOpenALSupport.m in Sources */,
 				BCAF49AE17E55ECB001A9B76 /* CDXMacOSXSupport.m in Sources */,
@@ -2055,6 +2066,7 @@
 				BCAF49C317E55ECB001A9B76 /* vec4.c in Sources */,
 				D7E0179117EB691E00221E9B /* FLEntity.m in Sources */,
 				D76DC53B17EB6D3800E71B07 /* FLRadialMenu.m in Sources */,
+				070326561833F1EA00685CD3 /* CombatStatusNode.m in Sources */,
 				D76BDC8817EB7D8E008DFBB3 /* MathHelpers.m in Sources */,
 				D76BDC8C17EB7E08008DFBB3 /* CombatMonsterEntity.m in Sources */,
 				BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */,

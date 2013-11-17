@@ -11,12 +11,21 @@
 #import "PartyData.h"
 #import "CombatMonsterNode.h"
 #import "CombatInfoNode.h"
-#import "CombatMenuNOde.h"
+#import "CombatMenuNode.h"
+#import "CombatStatusNode.h"
+#import "CombatConfirmNode.h"
+#import "CombatHelper.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,
     ProcessingTurns,
-    PlayerSelectingAction
+    PlayerSelectingAction,
+    PlayerSelectingEnemy,
+    ActionInProgress
+};
+
+typedef NS_ENUM(NSInteger, ActionSelected) {
+    Fight
 };
 
 @interface CombatLayer : CCLayer
@@ -31,15 +40,24 @@ typedef NS_ENUM(NSInteger, CombatState) {
     CombatMonsterNode *targetMonster;
     
     CombatState state;
+    ActionSelected actionSelected;
+    
+    CCSprite* hitSprite;
     
     CombatInfoNode *combatInfo;
     CombatMenuNode *combatMenu;
+    CombatStatusNode *combatStatus;
+    CombatConfirmNode *combatConfirm;
 }
 
 +(CCScene *) sceneWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName;
 
 -(id) initWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName;
 
+-(void) performFightAction;
+
 -(void) monsterWasTouched:(CombatMonsterNode*) monster;
+
+-(void) confirmWasTouched;
 
 @end
