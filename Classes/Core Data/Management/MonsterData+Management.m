@@ -28,9 +28,8 @@ static NSString *entityName = @"MonsterData";
     [monsterData setAbilityPoints:[defaultMonsterData abilityPoints]];
     [monsterData setBarcode:barcode];
     [monsterData setCourage:[defaultMonsterData courage]];
-    // TODO: Set created
     [monsterData setDefense:[defaultMonsterData defense]];
-    // TODO: Set element type
+    [monsterData setElementType:[defaultMonsterData elementType]];
     [monsterData setExperiencePoints:0];
     [monsterData setHealthPoints:[defaultMonsterData healthPoints]];
     [monsterData setIntellect:[defaultMonsterData intellect]];
@@ -44,7 +43,6 @@ static NSString *entityName = @"MonsterData";
     // TODO: Set traits
     [monsterData setType:type];
     [monsterData setUuid:[UUIDHelper createUUIDString]];
-    // TODO: Set updated
     [monsterData setWillpower:[defaultMonsterData willpower]];
     
     return monsterData;
