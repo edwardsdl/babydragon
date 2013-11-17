@@ -51,6 +51,8 @@
 
 -(void) jumpBack;
 
+-(void) changeSprite:(NSString*) spriteName;
+
 -(void) resetTurnCounter;
 
 @end

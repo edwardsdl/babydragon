@@ -54,7 +54,7 @@
         self->actionBar.type = kCCProgressTimerTypeBar;
         self->actionBar.midpoint = ccp(0, 0);
         self->actionBar.barChangeRate = ccp(1, 0);
-        self->actionBar.percentage = 0;
+        self->actionBar.percentage = 100;
         self->actionBar.position = ccp(0, yBarBorderOffset + yBarSpacing);
         [self addChild:self->actionBar];
         
@@ -122,10 +122,9 @@
     
     if ([self isKoed])
     {
-        CCTexture2D* tex = [[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"%@_KO.png", self.monsterData.type]];
-        [self->monsterSprite setTexture: tex];
+        [self changeSprite:@"KO"];
         
-        self->turnCounter = 0;
+        [self setTurnCounter:0];
     }
     
     self->healthBar.percentage = ((float)self.currentHealthPoints / self.monsterData.healthPoints) * 100.0f;
@@ -134,16 +133,21 @@
 -(void) updateTurnCounter
 {
     //Increment the turn counter by the monster speed
-    self->turnCounter += self.monsterData.speed;
-    
-    //Update the turn bar
-    self->turnBar.percentage = (self->turnCounter / 1000.0f) * 100.0f;
+    [self setTurnCounter:self->turnCounter + self.monsterData.speed];
     
     //Don't let the counter go over 1000
     if (self->turnCounter > 1000)
     {
         self->turnCounter = 1000;
     }
+}
+
+-(void) setTurnCounter:(int) newValue
+{
+    self->turnCounter = newValue;
+    
+    //Update the turn bar
+    self->turnBar.percentage = (self->turnCounter / 1000.0f) * 100.0f;
 }
 
 -(void) resetTurnCounter
@@ -210,6 +214,12 @@
     
     //Also move the shadow
     [self->shadowSprite runAction:[CCMoveTo actionWithDuration:0.3 position:ccp(0, self->yShadowOffset)]];
+}
+
+-(void) changeSprite:(NSString*) spriteName
+{
+    CCTexture2D* tex = [[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"%@_%@.png", self.monsterData.type, spriteName]];
+    [self->monsterSprite setTexture: tex];
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
