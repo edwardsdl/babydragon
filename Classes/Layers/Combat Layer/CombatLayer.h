@@ -15,6 +15,7 @@
 #import "CombatStatusNode.h"
 #import "CombatConfirmNode.h"
 #import "CombatHelper.h"
+#import "MainMenuLayer.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,
@@ -54,7 +55,7 @@ typedef NS_ENUM(NSInteger, ActionSelected) {
 
 -(id) initWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName;
 
--(void) performFightAction;
+-(void) beginPlayerSelectingEnemy;
 
 -(void) monsterWasTouched:(CombatMonsterNode*) monster;
 

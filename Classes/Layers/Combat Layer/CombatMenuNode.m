@@ -86,7 +86,7 @@
     
     if (button == fightButton)
     {
-        [combatLayer performFightAction];
+        [combatLayer beginPlayerSelectingEnemy];
     }
 }
 

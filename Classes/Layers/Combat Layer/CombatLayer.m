@@ -113,6 +113,10 @@
 
 -(void) update:(ccTime)dt
 {
+    //If either team is KOed then end the combat
+    if ([self checkForAllKo:1] || [self checkForAllKo:2])
+        [self endCombat];
+    
     //TurnCounting - adding to each monsters turn counter
     if (self->state == TurnCounting)
     {
@@ -125,9 +129,6 @@
                 
                 if ([monster isReadyForTurn])
                 {
-                    //Reset counter
-                    [monster resetTurnCounter];
-                    
                     //Add this monster to the list of monsters who are ready for turn
                     [self->monstersReadyForTurn addObject:monster];
                     
@@ -180,13 +181,14 @@
         //Otherwise the AI will take action
         else
         {
-            /*self.targetMonster = [self.partyOneMonsters objectAtIndex:0];
-            if ([self.targetMonster isKoed])
-                self.targetMonster = [self.partyOneMonsters objectAtIndex:1];
-            if ([self.targetMonster isKoed])
-                self.targetMonster = [self.partyOneMonsters objectAtIndex:2];
+            self->targetMonster = [self->monsters objectAtIndex:0];
+            if ([self->targetMonster isKoed])
+                self->targetMonster = [self->monsters objectAtIndex:1];
+            if ([self->targetMonster isKoed])
+                self->targetMonster = [self->monsters objectAtIndex:2];
             
-            [self completeFightAction];*/
+            [self runFight];
+            [self->activeMonster resetTurnCounter];
         }
     }
     
@@ -194,7 +196,7 @@
     [self->monstersReadyForTurn removeObject:self->activeMonster];
 }
 
--(void) performFightAction
+-(void) beginPlayerSelectingEnemy
 {
     //Close up the menu and the info panel
     self->combatInfo.visible = false;
@@ -223,7 +225,7 @@
     }
     if (self->state == PlayerSelectingEnemy)
     {
-        if ([self isMonster:monster inParty:2])
+        if ([self isMonster:monster inParty:2] && [monster isKoed] == NO)
         {
             [self setNewInfoMonster:monster];
             
@@ -240,56 +242,68 @@
 {
     if (self->state == PlayerSelectingEnemy)
     {
-        self->state = ActionInProgress;
-        
         //Close up UI elements
         self->combatInfo.visible = NO;
         [self->combatStatus close];
         self->combatConfirm.visible = NO;
         [self->targetMonster endPulse];
         
+        //Reset counter
+        [self->activeMonster resetTurnCounter];
+        
         if (self->actionSelected == Fight)
         {
-            //Setup a sequence to perform the fight
-            CCCallBlock* jumpOut = [CCCallBlock actionWithBlock:^
-            {
-                [self->activeMonster jumpTo:ccp(self->winSize.width / 2, self->winSize.height / 2)];
-            }];
-            
-            CCDelayTime *delay1 = [CCDelayTime actionWithDuration:0.3f];
-            
-            CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
-            {
-                int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster andDefender:self->targetMonster];
-                [self->targetMonster updateHealthByValue:damage * -1];
-                [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
-                [self showHitSprite:self->targetMonster.position];
-                [self sendUpNumbers:damage position:self->targetMonster.position color:ccc3(255, 255, 255)];
-                
-            }];
-            
-            CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
-            
-            CCCallBlock* jumpBack = [CCCallBlock actionWithBlock:^
-            {
-                [self->activeMonster jumpBack];
-                [self hideHitSprite];
-                [self->combatStatus close];
-                
-            }];
-            
-            CCDelayTime *delay3 = [CCDelayTime actionWithDuration:0.3f];
-            
-            CCCallBlock *resumeProcessingTurns = [CCCallBlock actionWithBlock:^
-            {
-                [self->activeMonster updateTurnCounter];
-                self->state = ProcessingTurns;
-            }];
-            
-            CCSequence* fightSequence = [CCSequence actions:jumpOut, delay1, assignDamage, delay2, jumpBack, delay3, resumeProcessingTurns, nil];
-            [self runAction:fightSequence];
+            [self runFight];
         }
     }
+}
+
+//-----------------------------------------------------------------------
+// Action Methods
+//-----------------------------------------------------------------------
+
+-(void) runFight
+{
+    self->state = ActionInProgress;
+    
+    //Setup a sequence to perform the fight
+    CCCallBlock* jumpOut = [CCCallBlock actionWithBlock:^
+    {
+        [self->activeMonster changeSprite:@"Fighting"];
+        [self->activeMonster jumpTo:ccp(self->winSize.width / 2, self->winSize.height / 2)];
+    }];
+    
+    CCDelayTime *delay1 = [CCDelayTime actionWithDuration:0.3f];
+    
+    CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
+    {
+        int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster andDefender:self->targetMonster];
+        [self->targetMonster updateHealthByValue:damage * -1];
+        [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
+        [self showHitSprite:self->targetMonster.position];
+        [self sendUpNumbers:damage position:self->targetMonster.position color:ccc3(255, 255, 255)];
+    }];
+    
+    CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
+    
+    CCCallBlock* jumpBack = [CCCallBlock actionWithBlock:^
+    {
+        [self->activeMonster jumpBack];
+        [self hideHitSprite];
+        [self->combatStatus close];
+    }];
+    
+    CCDelayTime *delay3 = [CCDelayTime actionWithDuration:0.3f];
+    
+    CCCallBlock *resumeProcessingTurns = [CCCallBlock actionWithBlock:^
+    {
+        [self->activeMonster changeSprite:@"Standing"];
+        [self->activeMonster updateTurnCounter];
+        self->state = ProcessingTurns;
+    }];
+    
+    CCSequence* fightSequence = [CCSequence actions:jumpOut, delay1, assignDamage, delay2, jumpBack, delay3, resumeProcessingTurns, nil];
+    [self runAction:fightSequence];
 }
 
 //-----------------------------------------------------------------------
@@ -378,6 +392,20 @@
     [numbersLabel runAction:sequence];
 
     [numbersLabelShadow runAction:bezierJumpShadow];
+}
+
+-(BOOL) checkForAllKo:(int) partyNumber
+{
+    if (partyNumber == 1)
+        return ((CombatMonsterNode*)[self->monsters objectAtIndex:0]).isKoed && ((CombatMonsterNode*)[self->monsters objectAtIndex:1]).isKoed && ((CombatMonsterNode*)[self->monsters objectAtIndex:2]).isKoed;
+    else
+        return ((CombatMonsterNode*)[self->monsters objectAtIndex:3]).isKoed && ((CombatMonsterNode*)[self->monsters objectAtIndex:4]).isKoed && ((CombatMonsterNode*)[self->monsters objectAtIndex:5]).isKoed;
+}
+
+-(void) endCombat
+{
+    [self pauseSchedulerAndActions];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MainMenuLayer scene] ]];
 }
 
 @end
