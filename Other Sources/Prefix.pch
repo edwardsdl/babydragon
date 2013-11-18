@@ -13,4 +13,5 @@
 #import <Foundation/Foundation.h>
 #import "ZBarSDK.h"
 #import <CoreData/CoreData.h>
+#import "cocos2d.h"
 #endif

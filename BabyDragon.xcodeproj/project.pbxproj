@@ -33,6 +33,7 @@
 		BC629E9E18386A8B00D35C55 /* PartyData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629E9D18386A8B00D35C55 /* PartyData.m */; };
 		BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA018386AFD00D35C55 /* UUIDHelper.m */; };
 		BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA218386E3700D35C55 /* UUIDHelperTests.m */; };
+		BC629EAD18399AE200D35C55 /* TouchableNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EAC18399AE200D35C55 /* TouchableNode.m */; };
 		BC98602417F0DA0900F9E159 /* BabyDragon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC98602217F0DA0900F9E159 /* BabyDragon.xcdatamodeld */; };
 		BC9B23BD180A661200D1ECEF /* AcquisitionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B23B6180A661200D1ECEF /* AcquisitionFactory.m */; };
 		BC9B23BE180A661200D1ECEF /* GoldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B23B8180A661200D1ECEF /* GoldFactory.m */; };
@@ -341,6 +342,8 @@
 		BC629E9F18386AFD00D35C55 /* UUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDHelper.h; sourceTree = "<group>"; };
 		BC629EA018386AFD00D35C55 /* UUIDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelper.m; sourceTree = "<group>"; };
 		BC629EA218386E3700D35C55 /* UUIDHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelperTests.m; sourceTree = "<group>"; };
+		BC629EAB18399AE200D35C55 /* TouchableNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchableNode.h; path = UI/TouchableNode.h; sourceTree = "<group>"; };
+		BC629EAC18399AE200D35C55 /* TouchableNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchableNode.m; path = UI/TouchableNode.m; sourceTree = "<group>"; };
 		BC98602317F0DA0900F9E159 /* BabyDragon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BabyDragon.xcdatamodel; sourceTree = "<group>"; };
 		BC9B23B4180A661200D1ECEF /* Acquiring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acquiring.h; sourceTree = "<group>"; };
 		BC9B23B5180A661200D1ECEF /* AcquisitionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionFactory.h; sourceTree = "<group>"; };
@@ -837,6 +840,8 @@
 		070672A0182FFC8D00C1E5AA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BC629EAB18399AE200D35C55 /* TouchableNode.h */,
+				BC629EAC18399AE200D35C55 /* TouchableNode.m */,
 				070672A1182FFD2300C1E5AA /* FLMenu.h */,
 				070672A2182FFD2300C1E5AA /* FLMenu.m */,
 			);
@@ -1931,6 +1936,7 @@
 				BCAF495617E55ECB001A9B76 /* CCActionGrid.m in Sources */,
 				BCAF495717E55ECB001A9B76 /* CCActionGrid3D.m in Sources */,
 				BCAF495817E55ECB001A9B76 /* CCActionInstant.m in Sources */,
+				BC629EAD18399AE200D35C55 /* TouchableNode.m in Sources */,
 				BCAF495917E55ECB001A9B76 /* CCActionInterval.m in Sources */,
 				BCEEEA90180A848F00BC20E9 /* FLRadialMenuItem.m in Sources */,
 				BCEEEAF0180C2F9600BC20E9 /* BaseData.m in Sources */,
