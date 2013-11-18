@@ -202,6 +202,7 @@
 		BCEEEAF0180C2F9600BC20E9 /* BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAEF180C2F9600BC20E9 /* BaseData.m */; };
 		BCEF361C17F1FE8A008F7688 /* MonsterFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEF361B17F1FE8A008F7688 /* MonsterFactoryTests.m */; };
 		BCFA7B331839A9400055C73C /* CCDirector+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFA7B321839A9400055C73C /* CCDirector+Utilities.m */; };
+		BCFA7B361839BD8B0055C73C /* CGSizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFA7B351839BD8B0055C73C /* CGSizeHelper.m */; };
 		D70D099F17F67FED0006C9EF /* HIt.png in Resources */ = {isa = PBXBuildFile; fileRef = D70D099E17F67FED0006C9EF /* HIt.png */; };
 		D71B8FE8180B3C8800ABBCCE /* Rat_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE5180B3C8800ABBCCE /* Rat_Fighting.png */; };
 		D71B8FE9180B3C8800ABBCCE /* Rat_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE6180B3C8800ABBCCE /* Rat_KO.png */; };
@@ -709,6 +710,8 @@
 		BCEF361B17F1FE8A008F7688 /* MonsterFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterFactoryTests.m; sourceTree = "<group>"; };
 		BCFA7B311839A9400055C73C /* CCDirector+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCDirector+Utilities.h"; sourceTree = "<group>"; };
 		BCFA7B321839A9400055C73C /* CCDirector+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCDirector+Utilities.m"; sourceTree = "<group>"; };
+		BCFA7B341839BD8B0055C73C /* CGSizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSizeHelper.h; sourceTree = "<group>"; };
+		BCFA7B351839BD8B0055C73C /* CGSizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGSizeHelper.m; sourceTree = "<group>"; };
 		D70D099E17F67FED0006C9EF /* HIt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HIt.png; path = Combat/HIt.png; sourceTree = "<group>"; };
 		D71B8FE5180B3C8800ABBCCE /* Rat_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_Fighting.png; path = Monsters/Rat_Fighting.png; sourceTree = "<group>"; };
 		D71B8FE6180B3C8800ABBCCE /* Rat_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_KO.png; path = Monsters/Rat_KO.png; sourceTree = "<group>"; };
@@ -996,10 +999,12 @@
 			isa = PBXGroup;
 			children = (
 				BC20AC0917EB8E9E0095B125 /* BarcodeHelper.h */,
+				BCFA7B341839BD8B0055C73C /* CGSizeHelper.h */,
 				BCA9E03B1809DE4B00FB3EFE /* CoreDataHelper.h */,
 				D76BDC8617EB7D8E008DFBB3 /* MathHelpers.h */,
 				BC629E9F18386AFD00D35C55 /* UUIDHelper.h */,
 				BC20AC0A17EB8E9E0095B125 /* BarcodeHelper.m */,
+				BCFA7B351839BD8B0055C73C /* CGSizeHelper.m */,
 				BCA9E03C1809DE4B00FB3EFE /* CoreDataHelper.m */,
 				D76BDC8717EB7D8E008DFBB3 /* MathHelpers.m */,
 				BC629EA018386AFD00D35C55 /* UUIDHelper.m */,
@@ -1979,6 +1984,7 @@
 				BCAF497217E55ECB001A9B76 /* CCLayer.m in Sources */,
 				BCAF497317E55ECB001A9B76 /* CCMenu.m in Sources */,
 				BCEEEABF180BA73800BC20E9 /* BaseData+Management.m in Sources */,
+				BCFA7B361839BD8B0055C73C /* CGSizeHelper.m in Sources */,
 				BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */,
 				BCAF497417E55ECB001A9B76 /* CCMenuItem.m in Sources */,
 				BCAF497517E55ECB001A9B76 /* CCMotionStreak.m in Sources */,
