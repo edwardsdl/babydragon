@@ -183,6 +183,8 @@
 		BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */; };
 		BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495117E55ECB001A9B76 /* zbar-samples.png */; };
 		BCD80F0F18201CFF002DD288 /* DefaultMonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD80F0E18201CFF002DD288 /* DefaultMonsterData.m */; };
+		BCD80F141828496F002DD288 /* PartyIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD80F111828496F002DD288 /* PartyIcon.m */; };
+		BCD80F151828496F002DD288 /* PartyLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD80F131828496F002DD288 /* PartyLayer.m */; };
 		BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */; };
 		BCEEEA8F180A848F00BC20E9 /* FLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8C180A848F00BC20E9 /* FLButton.m */; };
 		BCEEEA90180A848F00BC20E9 /* FLRadialMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8E180A848F00BC20E9 /* FLRadialMenuItem.m */; };
@@ -671,6 +673,11 @@
 		BCAF495117E55ECB001A9B76 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
 		BCD80F0D18201CFF002DD288 /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
 		BCD80F0E18201CFF002DD288 /* DefaultMonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMonsterData.m; sourceTree = "<group>"; };
+		BCD80F101828496F002DD288 /* PartyIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyIcon.h; sourceTree = "<group>"; };
+		BCD80F111828496F002DD288 /* PartyIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyIcon.m; sourceTree = "<group>"; };
+		BCD80F121828496F002DD288 /* PartyLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyLayer.h; sourceTree = "<group>"; };
+		BCD80F131828496F002DD288 /* PartyLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyLayer.m; sourceTree = "<group>"; };
+		BCD80F1618296596002DD288 /* PartyIconDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyIconDelegate.h; sourceTree = "<group>"; };
 		BCE563E718030C5C001A744B /* ElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementType.h; sourceTree = "<group>"; };
 		BCEEEA88180A81BE00BC20E9 /* NSData+ByteUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ByteUtilities.h"; sourceTree = "<group>"; };
 		BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ByteUtilities.m"; sourceTree = "<group>"; };
@@ -878,6 +885,11 @@
 		BC07D36D18158DA30053C630 /* Party Layer */ = {
 			isa = PBXGroup;
 			children = (
+				BCD80F101828496F002DD288 /* PartyIcon.h */,
+				BCD80F111828496F002DD288 /* PartyIcon.m */,
+				BCD80F1618296596002DD288 /* PartyIconDelegate.h */,
+				BCD80F121828496F002DD288 /* PartyLayer.h */,
+				BCD80F131828496F002DD288 /* PartyLayer.m */,
 			);
 			path = "Party Layer";
 			sourceTree = "<group>";
@@ -1957,6 +1969,7 @@
 				BCAF495D17E55ECB001A9B76 /* CCActionTiledGrid.m in Sources */,
 				BCAF495E17E55ECB001A9B76 /* CCActionTween.m in Sources */,
 				BCAF495F17E55ECB001A9B76 /* CCAnimation.m in Sources */,
+				BCD80F141828496F002DD288 /* PartyIcon.m in Sources */,
 				BCEEEAE4180BA86700BC20E9 /* AcquisitionData.m in Sources */,
 				BCAF496017E55ECB001A9B76 /* CCAnimationCache.m in Sources */,
 				BCAF496117E55ECB001A9B76 /* CCAtlasNode.m in Sources */,
@@ -2042,6 +2055,7 @@
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,
 				BCAF499E17E55ECB001A9B76 /* CCGLView.m in Sources */,
 				BCAF499F17E55ECB001A9B76 /* CCWindow.m in Sources */,
+				BCD80F151828496F002DD288 /* PartyLayer.m in Sources */,
 				BCEEEAE1180BA86700BC20E9 /* SinglePlayerContentData.m in Sources */,
 				BCAF49A017E55ECB001A9B76 /* base64.c in Sources */,
 				BCAF49A117E55ECB001A9B76 /* CCArray.m in Sources */,

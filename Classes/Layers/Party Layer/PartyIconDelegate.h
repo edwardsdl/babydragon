@@ -2,6 +2,6 @@
 
 @protocol PartyIconDelegate <NSObject>
 
-- (void)clickedIconWithLabelText:(NSString *)label;
+- (void)clickedIconPartyUUID:(NSString *)uuid;
 
 @end

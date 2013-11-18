@@ -9,6 +9,7 @@
 #import "MainMenuLayer.h"
 #import "CombatLayer.h"
 #import "AppDelegate.h"
+#import "PartyLayer.h"
 #import "RosterLayer.h"
 #import "ScanMenuLayer.h"
 #import "Player.h"
@@ -46,7 +47,7 @@
         scanNowMenuItem.fontSize = 16;
         scanNowMenuItem.fontName = @"Arial Rounded MT Bold";
         
-        CCMenuItemFont *singlePlayerMenuItem = [CCMenuItemFont itemWithString:@"Roster" target:self selector:@selector(goToRoster)];
+        CCMenuItemFont *singlePlayerMenuItem = [CCMenuItemFont itemWithString:@"Party" target:self selector:@selector(goToPartyScene)];
         singlePlayerMenuItem.fontSize = 16;
         singlePlayerMenuItem.fontName = @"Arial Rounded MT Bold";
         
@@ -77,9 +78,9 @@
 
 }
 
--(void) goToRoster
+-(void) goToPartyScene
 {
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[RosterLayer scene] ]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[PartyLayer scene]]];
     
 }
 
