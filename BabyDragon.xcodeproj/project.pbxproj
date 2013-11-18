@@ -201,6 +201,7 @@
 		BCEEEAE7180BA86700BC20E9 /* EnhancementData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAE6180BA86700BC20E9 /* EnhancementData.m */; };
 		BCEEEAF0180C2F9600BC20E9 /* BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAEF180C2F9600BC20E9 /* BaseData.m */; };
 		BCEF361C17F1FE8A008F7688 /* MonsterFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEF361B17F1FE8A008F7688 /* MonsterFactoryTests.m */; };
+		BCFA7B331839A9400055C73C /* CCDirector+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFA7B321839A9400055C73C /* CCDirector+Utilities.m */; };
 		D70D099F17F67FED0006C9EF /* HIt.png in Resources */ = {isa = PBXBuildFile; fileRef = D70D099E17F67FED0006C9EF /* HIt.png */; };
 		D71B8FE8180B3C8800ABBCCE /* Rat_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE5180B3C8800ABBCCE /* Rat_Fighting.png */; };
 		D71B8FE9180B3C8800ABBCCE /* Rat_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D71B8FE6180B3C8800ABBCCE /* Rat_KO.png */; };
@@ -706,6 +707,8 @@
 		BCEEEAEE180C2F9600BC20E9 /* BaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseData.h; sourceTree = "<group>"; };
 		BCEEEAEF180C2F9600BC20E9 /* BaseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseData.m; sourceTree = "<group>"; };
 		BCEF361B17F1FE8A008F7688 /* MonsterFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterFactoryTests.m; sourceTree = "<group>"; };
+		BCFA7B311839A9400055C73C /* CCDirector+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCDirector+Utilities.h"; sourceTree = "<group>"; };
+		BCFA7B321839A9400055C73C /* CCDirector+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCDirector+Utilities.m"; sourceTree = "<group>"; };
 		D70D099E17F67FED0006C9EF /* HIt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HIt.png; path = Combat/HIt.png; sourceTree = "<group>"; };
 		D71B8FE5180B3C8800ABBCCE /* Rat_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_Fighting.png; path = Monsters/Rat_Fighting.png; sourceTree = "<group>"; };
 		D71B8FE6180B3C8800ABBCCE /* Rat_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat_KO.png; path = Monsters/Rat_KO.png; sourceTree = "<group>"; };
@@ -937,11 +940,13 @@
 		BCAF463F17E559AD001A9B76 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BCFA7B311839A9400055C73C /* CCDirector+Utilities.h */,
 				BC30307E180F81FB0014F64E /* CCScene+Utilities.h */,
 				BCEEEA88180A81BE00BC20E9 /* NSData+ByteUtilities.h */,
 				BCAF465717E559AD001A9B76 /* Player.h */,
 				BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */,
 				BCAF465917E559AD001A9B76 /* TraitData.h */,
+				BCFA7B321839A9400055C73C /* CCDirector+Utilities.m */,
 				BC30307F180F81FB0014F64E /* CCScene+Utilities.m */,
 				BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */,
 				BCAF465817E559AD001A9B76 /* Player.m */,
@@ -1939,6 +1944,7 @@
 				BC629EAD18399AE200D35C55 /* TouchableNode.m in Sources */,
 				BCAF495917E55ECB001A9B76 /* CCActionInterval.m in Sources */,
 				BCEEEA90180A848F00BC20E9 /* FLRadialMenuItem.m in Sources */,
+				BCFA7B331839A9400055C73C /* CCDirector+Utilities.m in Sources */,
 				BCEEEAF0180C2F9600BC20E9 /* BaseData.m in Sources */,
 				BCAF495A17E55ECB001A9B76 /* CCActionManager.m in Sources */,
 				BCAF495B17E55ECB001A9B76 /* CCActionPageTurn3D.m in Sources */,
