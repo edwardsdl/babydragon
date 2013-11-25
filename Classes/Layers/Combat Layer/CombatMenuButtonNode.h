@@ -19,4 +19,6 @@
 
 -(id) initWithDimensions:(CGSize) dim andLabel:(NSString*) label isParentButton:(BOOL) isParentButton;
 
+- (void) updateLabel:(NSString*) newLabel;
+
 @end

@@ -27,6 +27,17 @@
 {
     if( (self=[super init]))
     {
+        //Create the ability sub buttons for later use
+        self->abilitiesSubButtons = [NSMutableArray array];
+        for (int i = 0; i < 4; i++)
+        {
+            CombatMenuButtonNode* button = [CombatMenuButtonNode CreateWithLabel:@"" isParentButton:NO];
+            button.position = [self getPointForButtonInRow:1 andColumn:0];
+            button.visible = NO;
+            [self->abilitiesSubButtons addObject:button];
+            [self addChild:button];
+        }
+        
         //Create the fight button
         self->fightButton = [CombatMenuButtonNode CreateWithLabel:@"Fight" isParentButton:NO];
         
@@ -45,6 +56,7 @@
         
         self.isOpen = NO;
         self.isActive = NO;
+        self->abilitiesMenuOpen = NO;
     }
     return self;
 }
@@ -65,6 +77,25 @@
     self.IsOpen = NO;
 }
 
+-(void) loadAbilities:(MonsterData*) monsterData
+{
+    for (int i = 0; i < [self->abilitiesSubButtons count]; i++)
+    {
+        CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
+        
+        if ([monsterData.abilities count] > i)
+        {
+            [button updateLabel:((AbilityData*)[monsterData.abilities.allObjects objectAtIndex:i]).name];
+            button.opacity = 255;
+        }
+        else
+        {
+            [button updateLabel:@""];
+            button.opacity = 100;
+        }
+    }
+}
+
 -(void) resetPositions
 {
     self->fightButton.position = [self getPointForButtonInRow:0 andColumn:0];
@@ -77,6 +108,40 @@
     return ccp(55 + (115 * column), -13.5 - (30 * row));
 }
 
+-(void) openAbilitiesSubMenu
+{
+    for (int i = 0; i < 4; i++)
+    {
+        CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
+        button.visible = YES;
+        CCSequence * sequence = [CCSequence actions:
+                                 [CCMoveTo actionWithDuration:0.15 position:[self getPointForButtonInRow:1 andColumn:1]],
+                                 [CCMoveTo actionWithDuration:0.15 position:[self getPointForButtonInRow:(i+1) andColumn:1]],
+                                 nil];
+        [button runAction:sequence];
+    }
+    
+    self->fightButton.opacity = 100;
+    self->backpackButton.opacity = 100;
+    
+    self->abilitiesMenuOpen = YES;
+}
+
+-(void) closeAbilitiesSubMenu
+{
+    for (int i = 0; i < 4; i++)
+    {
+        CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
+        button.visible = NO;
+        button.position = [self getPointForButtonInRow:1 andColumn:0];
+    }
+    
+    self->fightButton.opacity = 255;
+    self->backpackButton.opacity = 255;
+    
+    self->abilitiesMenuOpen = NO;
+}
+
 -(void) buttonWasTouched:(CombatMenuButtonNode*) button
 {
     if (self.isOpen == NO)
@@ -87,6 +152,13 @@
     if (button == fightButton)
     {
         [combatLayer beginPlayerSelectingEnemy];
+    }
+    else if (button == abilitiesButton)
+    {
+        if (self->abilitiesMenuOpen)
+            [self closeAbilitiesSubMenu];
+        else
+            [self openAbilitiesSubMenu];
     }
 }
 

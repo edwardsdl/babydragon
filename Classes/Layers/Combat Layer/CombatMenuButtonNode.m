@@ -50,6 +50,17 @@
     [super onExit];
 }
 
+- (void) updateLabel:(NSString*) newLabel
+{
+    for (CCNode* node in self.children)
+    {
+        if ([node isKindOfClass:[CCLabelTTF class]])
+        {
+            [((CCLabelTTF*)node) setString:newLabel];
+        }
+    }
+}
+
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     //Get touch position

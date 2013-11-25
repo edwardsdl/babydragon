@@ -175,6 +175,9 @@
             [self->combatMenu resetPositions];
             [self setNewInfoMonster:self->activeMonster];
             
+            //Tell the combat menu about the the new abilities list
+            [self->combatMenu loadAbilities:self->activeMonster.monsterData];
+            
             //Update the state
             self->state = PlayerSelectingAction;
         }

@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "CombatMenuButtonNode.h"
+#import "MonsterData.h"
 
 @interface CombatMenuNode : CCNode
 {
     CombatMenuButtonNode* fightButton;
     CombatMenuButtonNode* abilitiesButton;
     CombatMenuButtonNode* backpackButton;
+    
+    NSMutableArray* abilitiesSubButtons;
+    
+    BOOL abilitiesMenuOpen;
 };
 
 @property BOOL isOpen;
@@ -28,6 +33,8 @@
 -(void) openMenu;
 
 -(void) closeMenu;
+
+-(void) loadAbilities:(MonsterData*) monsterData;
 
 -(void) resetPositions;
 
