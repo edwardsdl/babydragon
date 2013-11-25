@@ -1,7 +1,9 @@
-#import "CCLayer.h"
+#import "PartyData.h"
+#import "PartyIconDelegate.h"
+#import "TouchableNode.h"
 
-@interface PartyIcon : CCLayer
+@interface PartyIcon : TouchableNode
 
-- (id)initWithDelegate:(id)delegate;
+- (id)initWithPartyData:(PartyData *)partyData delegate:(id<PartyIconDelegate>)delegate;
 
 @end
