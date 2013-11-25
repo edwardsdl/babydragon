@@ -677,15 +677,15 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData monsterWithName:@"Caterpillar"],
+    NSArray *monsters = @[[MonsterData monsterWithName:@"Baby Dragon"],
                           [MonsterData monsterWithName:@"Viper"],
-                          [MonsterData monsterWithName:@"Fire Elemental"]];
+                          [MonsterData monsterWithName:@"Skeleton"]];
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     
     monsters = @[[MonsterData monsterWithName:@"Wisp"],
-                 [MonsterData monsterWithName:@"Small Blob"],
-                 [MonsterData monsterWithName:@"Hard Shell"]];
+                 [MonsterData monsterWithName:@"Scorpion"],
+                 [MonsterData monsterWithName:@"Crab"]];
     
     [PartyData insertPartyWithName:@"AI Party" monsters:monsters];
     
