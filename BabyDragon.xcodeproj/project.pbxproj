@@ -1533,10 +1533,6 @@
 		BCEEEA92180BA73800BC20E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				BC629E9C18386A8B00D35C55 /* PartyData.h */,
-				BC629E9D18386A8B00D35C55 /* PartyData.m */,
-				BC629E9918386A8B00D35C55 /* MonsterData.h */,
-				BC629E9A18386A8B00D35C55 /* MonsterData.m */,
 				BCEEEADC180BA86700BC20E9 /* AbilityData.h */,
 				BCEEEAE2180BA86700BC20E9 /* AcquisitionData.h */,
 				BCEEEAEE180C2F9600BC20E9 /* BaseData.h */,
@@ -1545,6 +1541,8 @@
 				BCEEEACA180BA86600BC20E9 /* EquipmentData.h */,
 				BCEEEAD0180BA86700BC20E9 /* GoldData.h */,
 				BCEEEAD3180BA86700BC20E9 /* ItemData.h */,
+				BC629E9918386A8B00D35C55 /* MonsterData.h */,
+				BC629E9C18386A8B00D35C55 /* PartyData.h */,
 				BCEEEADF180BA86700BC20E9 /* SinglePlayerContentData.h */,
 				BCEEEADD180BA86700BC20E9 /* AbilityData.m */,
 				BCEEEAE3180BA86700BC20E9 /* AcquisitionData.m */,
@@ -1554,6 +1552,8 @@
 				BCEEEACB180BA86600BC20E9 /* EquipmentData.m */,
 				BCEEEAD1180BA86700BC20E9 /* GoldData.m */,
 				BCEEEAD4180BA86700BC20E9 /* ItemData.m */,
+				BC629E9A18386A8B00D35C55 /* MonsterData.m */,
+				BC629E9D18386A8B00D35C55 /* PartyData.m */,
 				BCEEEAE0180BA86700BC20E9 /* SinglePlayerContentData.m */,
 				BCEEEAA3180BA73800BC20E9 /* Management */,
 			);

@@ -86,8 +86,20 @@
 
 -(void) goToDebugBattle
 {
-    PartyData *partyOne = [PartyData partyWithName:@"Player Party"];
-    PartyData *partyTwo = [PartyData partyWithName:@"AI Party"];
+    PartyData *partyOne;
+    PartyData *partyTwo;
+    
+    for (PartyData *partyData in [PartyData allParties])
+    {
+        if ([[partyData name] isEqualToString:@"Player Party"])
+        {
+            partyOne = partyData;
+        }
+        else
+        {
+            partyTwo = partyData;
+        }
+    }
     
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0
                                                                                  scene:[CombatLayer sceneWithPartyOne:partyOne

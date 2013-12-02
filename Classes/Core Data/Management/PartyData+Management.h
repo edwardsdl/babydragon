@@ -4,7 +4,7 @@
 
 + (NSArray *)allParties;
 + (PartyData *)insertPartyWithName:(NSString *)name monsters:(NSArray *) monsters;
-+ (PartyData *)partyWithName:(NSString *) name;
++ (PartyData *)partyWithUUID:(NSString *) uuid;
 + (void)removeAll;
 
 @end

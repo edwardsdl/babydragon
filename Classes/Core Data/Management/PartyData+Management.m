@@ -28,12 +28,12 @@ static NSString *entityName = @"PartyData";
     return partyData;
 }
 
-+ (PartyData *)partyWithName:(NSString *) name
++ (PartyData *)partyWithUUID:(NSString *)uuid
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     
-    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetPartyWithName"
-                                                                substitutionVariables:@{@"NAME": name}];
+    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetPartyWithUUID"
+                                                                substitutionVariables:@{@"UUID": uuid}];
     
     return [results count] > 0
         ? (PartyData *)[results objectAtIndex:0]

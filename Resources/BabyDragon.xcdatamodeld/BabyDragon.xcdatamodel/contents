@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AbilityData" representedClassName="AbilityData" parentEntity="BaseData" syncable="YES">
         <attribute name="cost" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="effectSprite" attributeType="String" minValueString="1" syncable="YES"/>
@@ -80,7 +80,7 @@
     </entity>
     <entity name="SinglePlayerContentData" representedClassName="SinglePlayerContentData" parentEntity="AcquisitionData" syncable="YES"/>
     <fetchRequest name="GetDefaultMonsterAttributesForType" entity="DefaultMonsterData" predicateString="type == $TYPE" fetchLimit="1"/>
-    <fetchRequest name="GetPartyWithName" entity="PartyData" predicateString="name == $NAME"/>
+    <fetchRequest name="GetPartyWithUUID" entity="PartyData" predicateString="uuid == $UUID"/>
     <elements>
         <element name="AbilityData" positionX="0" positionY="0" width="0" height="0"/>
         <element name="AcquisitionData" positionX="0" positionY="0" width="0" height="0"/>
