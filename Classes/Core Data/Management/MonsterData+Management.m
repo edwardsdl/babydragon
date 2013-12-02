@@ -15,6 +15,18 @@ static NSString *entityName = @"MonsterData";
     return [managedObjectContext objectsForEntityName:entityName];
 }
 
++ (MonsterData *)anyMonsterWithName:(NSString *)name
+{
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    
+    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetAnyMonsterWithName"
+                                                                substitutionVariables:@{@"NAME": name}];
+    
+    return [results count] > 0
+        ? (MonsterData *)[results objectAtIndex:0]
+        : nil;
+}
+
 + (MonsterData *)insertMonsterWithType:(NSString *)type barcode:(NSString *)barcode
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
@@ -48,12 +60,16 @@ static NSString *entityName = @"MonsterData";
     return monsterData;
 }
 
-+ (MonsterData *)monsterWithName:(NSString *)name
++ (MonsterData *)monsterWithUUID:(NSString *)uuid
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     
-    NSArray *monsters = [managedObjectContext objectsForEntityName:entityName withExpression:@"name == %@", name];
-    return (MonsterData *)[monsters objectAtIndex:0];
+    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetMonsterWithUUID"
+                                                                substitutionVariables:@{@"UUID": uuid}];
+    
+    return [results count] > 0
+        ? (MonsterData *)[results objectAtIndex:0]
+        : nil;
 }
 
 + (void)removeAll

@@ -3,8 +3,9 @@
 @interface MonsterData (Management)
 
 + (NSArray *)allMonsters;
++ (MonsterData *)anyMonsterWithName:(NSString *)name;
 + (MonsterData *)insertMonsterWithType:(NSString *)type barcode:(NSString *)barcode;
-+ (MonsterData *)monsterWithName:(NSString *)name;
++ (MonsterData *)monsterWithUUID:(NSString *)uuid;
 + (void)removeAll;
 
 - (int) trueCourage;

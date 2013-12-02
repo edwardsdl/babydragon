@@ -79,7 +79,10 @@
         <relationship name="monsters" toMany="YES" minCount="1" maxCount="3" deletionRule="Nullify" destinationEntity="MonsterData" inverseName="parties" inverseEntity="MonsterData" syncable="YES"/>
     </entity>
     <entity name="SinglePlayerContentData" representedClassName="SinglePlayerContentData" parentEntity="AcquisitionData" syncable="YES"/>
+    <fetchRequest name="GetAnyMonsterWithName" entity="MonsterData" predicateString="name == $NAME"/>
+    <fetchRequest name="GetAnyPartyWithName" entity="PartyData" predicateString="name == $NAME"/>
     <fetchRequest name="GetDefaultMonsterAttributesForType" entity="DefaultMonsterData" predicateString="type == $TYPE" fetchLimit="1"/>
+    <fetchRequest name="GetMonsterWithUUID" entity="MonsterData" predicateString="uuid == $UUID"/>
     <fetchRequest name="GetPartyWithUUID" entity="PartyData" predicateString="uuid == $UUID"/>
     <elements>
         <element name="AbilityData" positionX="0" positionY="0" width="0" height="0"/>

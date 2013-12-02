@@ -14,6 +14,18 @@ static NSString *entityName = @"PartyData";
     return [managedObjectContext objectsForEntityName:entityName];
 }
 
++ (PartyData *)anyPartyWithName:(NSString *)name
+{
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    
+    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetAnyPartyWithName"
+                                                                substitutionVariables:@{@"NAME": name}];
+    
+    return [results count] > 0
+        ? (PartyData *)[results objectAtIndex:0]
+        : nil;
+}
+
 + (PartyData *)insertPartyWithName:(NSString *)name monsters:(NSArray *) monsters
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];

@@ -644,7 +644,7 @@
 {
     [AbilityData removeAll];
     
-    AbilityData *hardShellAbility = [AbilityData insertAbilityForMonster:[MonsterData monsterWithName:@"Caterpillar"]];
+    AbilityData *hardShellAbility = [AbilityData insertAbilityForMonster:[MonsterData anyMonsterWithName:@"Caterpillar"]];
     [hardShellAbility setCost:8];
     [hardShellAbility setEffectSprite:@"No Sprite"];
     [hardShellAbility setEffectType:Heal];
@@ -654,7 +654,7 @@
     [hardShellAbility setTargetType:SingleFriendly];
     [hardShellAbility setValue:15];
     
-    AbilityData *babyDragonAbility = [AbilityData insertAbilityForMonster:[MonsterData monsterWithName:@"Baby Dragon"]];
+    AbilityData *babyDragonAbility = [AbilityData insertAbilityForMonster:[MonsterData anyMonsterWithName:@"Baby Dragon"]];
     [babyDragonAbility setCost:8];
     [babyDragonAbility setEffectSprite:@"No Sprite"];
     [babyDragonAbility setEffectType:Damage];
@@ -677,15 +677,15 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData monsterWithName:@"Baby Dragon"],
-                          [MonsterData monsterWithName:@"Viper"],
-                          [MonsterData monsterWithName:@"Skeleton"]];
+    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Baby Dragon"],
+                          [MonsterData anyMonsterWithName:@"Viper"],
+                          [MonsterData anyMonsterWithName:@"Skeleton"]];
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     
-    monsters = @[[MonsterData monsterWithName:@"Wisp"],
-                 [MonsterData monsterWithName:@"Scorpion"],
-                 [MonsterData monsterWithName:@"Crab"]];
+    monsters = @[[MonsterData anyMonsterWithName:@"Wisp"],
+                 [MonsterData anyMonsterWithName:@"Scorpion"],
+                 [MonsterData anyMonsterWithName:@"Crab"]];
     
     [PartyData insertPartyWithName:@"AI Party" monsters:monsters];
     
