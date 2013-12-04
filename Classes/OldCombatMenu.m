@@ -102,7 +102,7 @@
     for (int i = 0; i < [self.abilityButtons count]; i++)
     {
         if ([monsterData.abilities count] > i)
-            ((FLButton*)[self.abilityButtons objectAtIndex:i]).label.string = ((AbilityData*)[monsterData.abilities.allObjects objectAtIndex:i]).name;
+            ((FLButton*)[self.abilityButtons objectAtIndex:i]).label.string = ((AbilityData*)[monsterData.abilities objectAtIndex:i]).name;
         else
             ((FLButton*)[self.abilityButtons objectAtIndex:i]).label.string = @"";
     }

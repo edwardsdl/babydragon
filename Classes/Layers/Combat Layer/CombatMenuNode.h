@@ -17,6 +17,8 @@
     CombatMenuButtonNode* abilitiesButton;
     CombatMenuButtonNode* backpackButton;
     
+    NSOrderedSet* monsterAbilities;
+    
     NSMutableArray* abilitiesSubButtons;
     
     BOOL abilitiesMenuOpen;

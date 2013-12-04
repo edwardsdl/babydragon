@@ -17,6 +17,7 @@
 		07908911183310D200FC3D8C /* CombatMenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07908910183310D200FC3D8C /* CombatMenuNode.m */; };
 		079089141833116700FC3D8C /* CombatMenuButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 079089131833116700FC3D8C /* CombatMenuButtonNode.m */; };
 		0790891618331E2200FC3D8C /* RightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0790891518331E2200FC3D8C /* RightArrow.png */; };
+		07EFC9A7184E518100B6D693 /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFC9A6184E518100B6D693 /* MonsterData.m */; };
 		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
 		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
@@ -29,7 +30,6 @@
 		BC4A9EE917E7D038008EDA70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E973017DA438E00DC8A74 /* Foundation.framework */; };
 		BC4A9F1B17E7D1CF008EDA70 /* ProbabilityCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */; };
 		BC4A9F2117E7D1DB008EDA70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC4A9F1F17E7D1DB008EDA70 /* InfoPlist.strings */; };
-		BC629E9B18386A8B00D35C55 /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629E9A18386A8B00D35C55 /* MonsterData.m */; };
 		BC629E9E18386A8B00D35C55 /* PartyData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629E9D18386A8B00D35C55 /* PartyData.m */; };
 		BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA018386AFD00D35C55 /* UUIDHelper.m */; };
 		BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA218386E3700D35C55 /* UUIDHelperTests.m */; };
@@ -320,6 +320,8 @@
 		079089121833116700FC3D8C /* CombatMenuButtonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMenuButtonNode.h; path = "Combat Layer/CombatMenuButtonNode.h"; sourceTree = "<group>"; };
 		079089131833116700FC3D8C /* CombatMenuButtonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMenuButtonNode.m; path = "Combat Layer/CombatMenuButtonNode.m"; sourceTree = "<group>"; };
 		0790891518331E2200FC3D8C /* RightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RightArrow.png; path = "UI Elements/RightArrow.png"; sourceTree = "<group>"; };
+		07EFC9A5184E518100B6D693 /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
+		07EFC9A6184E518100B6D693 /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
 		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
 		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
 		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
@@ -339,8 +341,6 @@
 		BC4A9F1817E7D1CF008EDA70 /* BabyDragonTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BabyDragonTests-Info.plist"; sourceTree = "<group>"; };
 		BC4A9F1A17E7D1CF008EDA70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BC4A9F2017E7D1DB008EDA70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		BC629E9918386A8B00D35C55 /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
-		BC629E9A18386A8B00D35C55 /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
 		BC629E9C18386A8B00D35C55 /* PartyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyData.h; sourceTree = "<group>"; };
 		BC629E9D18386A8B00D35C55 /* PartyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyData.m; sourceTree = "<group>"; };
 		BC629E9F18386AFD00D35C55 /* UUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDHelper.h; sourceTree = "<group>"; };
@@ -1533,6 +1533,8 @@
 		BCEEEA92180BA73800BC20E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				07EFC9A5184E518100B6D693 /* MonsterData.h */,
+				07EFC9A6184E518100B6D693 /* MonsterData.m */,
 				BCEEEADC180BA86700BC20E9 /* AbilityData.h */,
 				BCEEEAE2180BA86700BC20E9 /* AcquisitionData.h */,
 				BCEEEAEE180C2F9600BC20E9 /* BaseData.h */,
@@ -1541,7 +1543,6 @@
 				BCEEEACA180BA86600BC20E9 /* EquipmentData.h */,
 				BCEEEAD0180BA86700BC20E9 /* GoldData.h */,
 				BCEEEAD3180BA86700BC20E9 /* ItemData.h */,
-				BC629E9918386A8B00D35C55 /* MonsterData.h */,
 				BC629E9C18386A8B00D35C55 /* PartyData.h */,
 				BCEEEADF180BA86700BC20E9 /* SinglePlayerContentData.h */,
 				BCEEEADD180BA86700BC20E9 /* AbilityData.m */,
@@ -1552,7 +1553,6 @@
 				BCEEEACB180BA86600BC20E9 /* EquipmentData.m */,
 				BCEEEAD1180BA86700BC20E9 /* GoldData.m */,
 				BCEEEAD4180BA86700BC20E9 /* ItemData.m */,
-				BC629E9A18386A8B00D35C55 /* MonsterData.m */,
 				BC629E9D18386A8B00D35C55 /* PartyData.m */,
 				BCEEEAE0180BA86700BC20E9 /* SinglePlayerContentData.m */,
 				BCEEEAA3180BA73800BC20E9 /* Management */,
@@ -1962,6 +1962,7 @@
 				BCAF495917E55ECB001A9B76 /* CCActionInterval.m in Sources */,
 				BCEEEA90180A848F00BC20E9 /* FLRadialMenuItem.m in Sources */,
 				BCFA7B331839A9400055C73C /* CCDirector+Utilities.m in Sources */,
+				07EFC9A7184E518100B6D693 /* MonsterData.m in Sources */,
 				BCEEEAF0180C2F9600BC20E9 /* BaseData.m in Sources */,
 				BCAF495A17E55ECB001A9B76 /* CCActionManager.m in Sources */,
 				BCAF495B17E55ECB001A9B76 /* CCActionPageTurn3D.m in Sources */,
@@ -1989,7 +1990,6 @@
 				BCAF496D17E55ECB001A9B76 /* CCGrabber.m in Sources */,
 				BCAF496E17E55ECB001A9B76 /* CCGrid.m in Sources */,
 				BCAF496F17E55ECB001A9B76 /* CCLabelAtlas.m in Sources */,
-				BC629E9B18386A8B00D35C55 /* MonsterData.m in Sources */,
 				BCAF497017E55ECB001A9B76 /* CCLabelBMFont.m in Sources */,
 				070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */,
 				BCEEEADE180BA86700BC20E9 /* AbilityData.m in Sources */,

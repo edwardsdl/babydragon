@@ -368,10 +368,10 @@
     [self.activeMonster.shadowSprite runAction:shadowSequence];
 }
 
--(void) performAbilityWithIndex:(NSNumber*) index
+-(void) performAbilityWithIndex:(int) index
 {
     //Get selected ability
-    self.selectedAbility = [self.activeMonster.monsterData.abilities.allObjects objectAtIndex:[index integerValue]];
+    self.selectedAbility = [self.activeMonster.monsterData.abilities objectAtIndex:index];
     
     //Hide combat menu
     [self.combatMenu closeMenu];
