@@ -18,6 +18,8 @@
 
 @property float opacity;
 
+@property(nonatomic, retain) id genericStorage;
+
 -(id) initWithDimensions:(CGSize) dimensions;
 
 -(void) addLabel:(NSString*) text color:(ccColor3B) color position:(CGPoint) position size:(int) size centerAnchor:(BOOL) centerAnchor;
@@ -25,5 +27,9 @@
 -(void) removeAllChildren;
 
 -(void) resizeTo:(CGSize) newDimensions;
+
+-(void) highlight;
+
+-(void) unhighlight;
 
 @end

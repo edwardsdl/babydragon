@@ -9,11 +9,8 @@
 #import "MainMenuLayer.h"
 #import "CombatLayer.h"
 #import "AppDelegate.h"
-#import "PartyLayer.h"
-#import "RosterLayer.h"
 #import "ScanMenuLayer.h"
-#import "Player.h"
-#import "AbilityData.h"
+#import "ManageLayer.h"
 #import "PartyData+Management.h"
 #import "MonsterData+Management.h"
 #import "MonsterData.h"
@@ -47,19 +44,15 @@
         scanNowMenuItem.fontSize = 16;
         scanNowMenuItem.fontName = @"Arial Rounded MT Bold";
         
-        CCMenuItemFont *singlePlayerMenuItem = [CCMenuItemFont itemWithString:@"Party" target:self selector:@selector(goToPartyScene)];
+        CCMenuItemFont *singlePlayerMenuItem = [CCMenuItemFont itemWithString:@"Manage" target:self selector:@selector(goToManageLayer)];
         singlePlayerMenuItem.fontSize = 16;
         singlePlayerMenuItem.fontName = @"Arial Rounded MT Bold";
-        
-        CCMenuItemFont *multiplayerBattleMenuItem = [CCMenuItemFont itemWithString:@"Multiplayer Battle" target:self selector:@selector(doNothing)];
-        multiplayerBattleMenuItem.fontSize = 16;
-        multiplayerBattleMenuItem.fontName = @"Arial Rounded MT Bold";
         
         CCMenuItemFont *debugBattleMenuItem = [CCMenuItemFont itemWithString:@"Debug Battle" target:self selector:@selector(goToDebugBattle)];
         debugBattleMenuItem.fontSize = 16;
         debugBattleMenuItem.fontName = @"Arial Rounded MT Bold";
         
-        CCMenu * myMenu = [CCMenu menuWithItems:scanNowMenuItem, singlePlayerMenuItem, multiplayerBattleMenuItem, debugBattleMenuItem, nil];
+        CCMenu * myMenu = [CCMenu menuWithItems:scanNowMenuItem, singlePlayerMenuItem, debugBattleMenuItem, nil];
         [myMenu alignItemsVertically];
         myMenu.position = ccp(120, size.height/2);
         [self addChild:myMenu];
@@ -78,9 +71,9 @@
 
 }
 
--(void) goToPartyScene
+-(void) goToManageLayer
 {
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[PartyLayer scene]]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[ManageLayer scene]]];
     
 }
 

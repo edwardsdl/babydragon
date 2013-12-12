@@ -108,4 +108,16 @@
     return _opacity;
 }
 
+-(void) highlight
+{
+    CCTexture2D* tex = [[CCTextureCache sharedTextureCache] addImage:@"FLMenuBackgroundHighlighted.png"];
+    [self->backgroundSprite setTexture: tex];
+}
+
+-(void) unhighlight
+{
+    CCTexture2D* tex = [[CCTextureCache sharedTextureCache] addImage:@"FLMenuBackground.png"];
+    [self->backgroundSprite setTexture: tex];
+}
+
 @end
