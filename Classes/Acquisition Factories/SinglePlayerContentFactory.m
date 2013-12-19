@@ -43,14 +43,14 @@
 
 - (void)generateTiles
 {
-    Tile *tiles = malloc((int)size.width * (int)size.height * sizeof(Tile));
-    for (int i = 0; i < _size.width; i++)
-    {
-        for (int j = 0; j < _size.height; j++)
-        {
-            tiles[i][j] = [[Tile alloc] initWithType:Open];
-        }
-    }
+//    Tile *tiles = malloc((int)size.width * (int)size.height * sizeof(Tile));
+//    for (int i = 0; i < _size.width; i++)
+//    {
+//        for (int j = 0; j < _size.height; j++)
+//        {
+//            tiles[i][j] = [[Tile alloc] initWithType:Open];
+//        }
+//    }
 }
 
 @end
