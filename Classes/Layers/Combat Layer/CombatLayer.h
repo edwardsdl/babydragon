@@ -16,17 +16,20 @@
 #import "CombatConfirmNode.h"
 #import "CombatHelper.h"
 #import "MainMenuLayer.h"
+#import "TargetType.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,
     ProcessingTurns,
     PlayerSelectingAction,
     PlayerSelectingEnemy,
+    PlayerSelectingAlly,
     ActionInProgress
 };
 
 typedef NS_ENUM(NSInteger, ActionSelected) {
-    Fight
+    Fight,
+    Ability
 };
 
 @interface CombatLayer : CCLayer
@@ -42,6 +45,7 @@ typedef NS_ENUM(NSInteger, ActionSelected) {
     
     CombatState state;
     ActionSelected actionSelected;
+    AbilityData* abilityInUse;
     
     CCSprite* hitSprite;
     
@@ -55,7 +59,9 @@ typedef NS_ENUM(NSInteger, ActionSelected) {
 
 -(id) initWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName;
 
--(void) beginPlayerSelectingEnemy;
+-(void) beginFight;
+
+-(void) beginAbility:(AbilityData*) ability;
 
 -(void) monsterWasTouched:(CombatMonsterNode*) monster;
 

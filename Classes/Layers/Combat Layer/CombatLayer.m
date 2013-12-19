@@ -162,6 +162,8 @@
     if ([self->monstersReadyForTurn count] == 0)
         return;
     
+    self->infoMonster = nil;
+    
     //Pick a random index/monster - TODO use courage to determine
     NSUInteger randomIndex = arc4random() % [self->monstersReadyForTurn count];
     self->activeMonster = [self->monstersReadyForTurn objectAtIndex:randomIndex];
@@ -199,7 +201,7 @@
     [self->monstersReadyForTurn removeObject:self->activeMonster];
 }
 
--(void) beginPlayerSelectingEnemy
+-(void) beginFight
 {
     //Close up the menu and the info panel
     self->combatInfo.visible = false;
@@ -214,6 +216,27 @@
     
     //Update the state
     self->state = PlayerSelectingEnemy;
+}
+
+-(void) beginAbility:(AbilityData*) ability
+{
+    //Close up the menu and the info panel
+    self->combatInfo.visible = false;
+    [self->combatMenu closeMenu];
+    [self->infoMonster endPulse];
+    
+    //Show a status message
+    [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"Select a target for %@", ability.name]];
+    
+    //Store that the player selected ability, and which ability is being used
+    self->actionSelected = Ability;
+    self->abilityInUse = ability;
+    
+    //Update the state
+    if (ability.targetType == SingleHostile)
+        self->state = PlayerSelectingEnemy;
+    else if (ability.targetType == SingleFriendly)
+        self->state = PlayerSelectingAlly;
 }
 
 //-----------------------------------------------------------------------
@@ -239,11 +262,24 @@
             self->combatConfirm.visible = YES;
         }
     }
+    if (self->state == PlayerSelectingAlly)
+    {
+        if ([self isMonster:monster inParty:1] && [monster isKoed] == NO)
+        {
+            [self setNewInfoMonster:monster];
+            
+            //Update the target monster
+            self->targetMonster = monster;
+            
+            //Show the confirm button
+            self->combatConfirm.visible = YES;
+        }
+    }
 }
 
 -(void) confirmWasTouched
 {
-    if (self->state == PlayerSelectingEnemy)
+    if (self->state == PlayerSelectingEnemy || self->state == PlayerSelectingAlly)
     {
         //Close up UI elements
         self->combatInfo.visible = NO;
@@ -257,6 +293,10 @@
         if (self->actionSelected == Fight)
         {
             [self runFight];
+        }
+        else if (self->actionSelected == Ability)
+        {
+            [self runAbility];
         }
     }
 }
@@ -285,6 +325,60 @@
         [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
         [self showHitSprite:self->targetMonster.position];
         [self sendUpNumbers:damage position:self->targetMonster.position color:ccc3(255, 255, 255)];
+    }];
+    
+    CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
+    
+    CCCallBlock* jumpBack = [CCCallBlock actionWithBlock:^
+    {
+        [self->activeMonster jumpBack];
+        [self hideHitSprite];
+        [self->combatStatus close];
+    }];
+    
+    CCDelayTime *delay3 = [CCDelayTime actionWithDuration:0.3f];
+    
+    CCCallBlock *resumeProcessingTurns = [CCCallBlock actionWithBlock:^
+    {
+        [self->activeMonster changeSprite:@"Standing"];
+        [self->activeMonster updateTurnCounter];
+        self->state = ProcessingTurns;
+    }];
+    
+    CCSequence* fightSequence = [CCSequence actions:jumpOut, delay1, assignDamage, delay2, jumpBack, delay3, resumeProcessingTurns, nil];
+    [self runAction:fightSequence];
+}
+
+-(void) runAbility
+{
+    self->state = ActionInProgress;
+    
+    //Setup a sequence to perform the ability
+    CCCallBlock* jumpOut = [CCCallBlock actionWithBlock:^
+    {
+        [self->activeMonster changeSprite:@"Fighting"];
+        [self->activeMonster jumpTo:ccp(self->winSize.width / 2, self->winSize.height / 2)];
+    }];
+    
+    CCDelayTime *delay1 = [CCDelayTime actionWithDuration:0.3f];
+    
+    CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
+    {
+        AbilityResult* result = [CombatHelper RunAbility:self->abilityInUse ofMonster:self->activeMonster onMonster:self->targetMonster];
+        
+        if (result.effectType == Damage)
+        {
+            [self->targetMonster updateHealthByValue:result.value * -1];
+            [self sendUpNumbers:result.value position:self->targetMonster.position color:ccc3(255, 255, 255)];
+            [self showHitSprite:self->targetMonster.position];
+        }
+        else if (result.effectType == Heal)
+        {
+            [self->targetMonster updateHealthByValue:result.value];
+            [self sendUpNumbers:result.value position:self->targetMonster.position color:ccc3(150, 255, 150)];
+        }
+
+        [self->combatStatus openAndShowLabel:result.statusText];
     }];
     
     CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
@@ -343,7 +437,7 @@
     [self->combatInfo showInfoForMonster:self->infoMonster];
     
     //Show the combat menu?
-    if (self->infoMonster == self->activeMonster)
+    if (self->infoMonster == self->activeMonster && self->state != PlayerSelectingAlly)
         [self->combatMenu openMenu];
     else
         [self->combatMenu closeMenu];

@@ -25,7 +25,7 @@
         //Create a label for the button
         [self addLabel:label color:ccc3(255, 255, 255) position:ccp(-48, -7) size:14 centerAnchor:NO];
         
-        //Draw an arrow is we need it
+        //Draw an arrow if we need it
         if (isParentButton)
         {
             CCSprite* arrowSprite = [CCSprite spriteWithFile:@"RightArrow.png"];

@@ -2,7 +2,7 @@
 //  MonsterData.h
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 11/16/13.
+//  Created by Eric Stenborg on 12/3/13.
 //  Copyright (c) 2013 First Light Games. All rights reserved.
 //
 
@@ -29,19 +29,24 @@
 @property (nonatomic) float strength;
 @property (nonatomic, retain) id traits;
 @property (nonatomic, retain) NSString * type;
-@property (nonatomic) float willpower;
 @property (nonatomic, retain) NSString * uuid;
-@property (nonatomic, retain) NSSet *abilities;
+@property (nonatomic) float willpower;
+@property (nonatomic, retain) NSOrderedSet *abilities;
 @property (nonatomic, retain) NSSet *parties;
 @end
 
 @interface MonsterData (CoreDataGeneratedAccessors)
 
+- (void)insertObject:(AbilityData *)value inAbilitiesAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromAbilitiesAtIndex:(NSUInteger)idx;
+- (void)insertAbilities:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeAbilitiesAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInAbilitiesAtIndex:(NSUInteger)idx withObject:(AbilityData *)value;
+- (void)replaceAbilitiesAtIndexes:(NSIndexSet *)indexes withAbilities:(NSArray *)values;
 - (void)addAbilitiesObject:(AbilityData *)value;
 - (void)removeAbilitiesObject:(AbilityData *)value;
-- (void)addAbilities:(NSSet *)values;
-- (void)removeAbilities:(NSSet *)values;
-
+- (void)addAbilities:(NSOrderedSet *)values;
+- (void)removeAbilities:(NSOrderedSet *)values;
 - (void)addPartiesObject:(PartyData *)value;
 - (void)removePartiesObject:(PartyData *)value;
 - (void)addParties:(NSSet *)values;

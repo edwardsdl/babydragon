@@ -644,7 +644,7 @@
 {
     [AbilityData removeAll];
     
-    AbilityData *hardShellAbility = [AbilityData insertAbilityForMonster:[MonsterData anyMonsterWithName:@"Caterpillar"]];
+    AbilityData *hardShellAbility = [AbilityData insertAbilityForMonster:[MonsterData anyMonsterWithName:@"Skeleton"]];
     [hardShellAbility setCost:8];
     [hardShellAbility setEffectSprite:@"No Sprite"];
     [hardShellAbility setEffectType:Heal];

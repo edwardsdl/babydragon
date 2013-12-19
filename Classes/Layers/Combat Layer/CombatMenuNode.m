@@ -75,17 +75,21 @@
 {
     self.visible = NO;
     self.IsOpen = NO;
+    [self closeAbilitiesSubMenu];
 }
 
 -(void) loadAbilities:(MonsterData*) monsterData
 {
+    //Store the abilities list for later
+    self->monsterAbilities = monsterData.abilities;
+    
     for (int i = 0; i < [self->abilitiesSubButtons count]; i++)
     {
         CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
         
         if ([monsterData.abilities count] > i)
         {
-            [button updateLabel:((AbilityData*)[monsterData.abilities.allObjects objectAtIndex:i]).name];
+            [button updateLabel:((AbilityData*)[monsterData.abilities objectAtIndex:i]).name];
             button.opacity = 255;
         }
         else
@@ -151,7 +155,7 @@
     
     if (button == fightButton)
     {
-        [combatLayer beginPlayerSelectingEnemy];
+        [combatLayer beginFight];
     }
     else if (button == abilitiesButton)
     {
@@ -159,6 +163,17 @@
             [self closeAbilitiesSubMenu];
         else
             [self openAbilitiesSubMenu];
+    }
+    else
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
+            if (button == [self->abilitiesSubButtons objectAtIndex:i] && [monsterAbilities count] > i)
+            {
+                [combatLayer beginAbility:[monsterAbilities objectAtIndex:i]];
+            }
+        }
     }
 }
 
