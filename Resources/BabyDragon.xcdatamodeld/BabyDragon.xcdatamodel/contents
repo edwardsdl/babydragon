@@ -78,7 +78,11 @@
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="monsters" toMany="YES" minCount="1" maxCount="3" deletionRule="Nullify" destinationEntity="MonsterData" inverseName="parties" inverseEntity="MonsterData" syncable="YES"/>
     </entity>
-    <entity name="SinglePlayerContentData" representedClassName="SinglePlayerContentData" parentEntity="AcquisitionData" syncable="YES"/>
+    <entity name="SinglePlayerContentData" representedClassName="SinglePlayerContentData" parentEntity="AcquisitionData" syncable="YES">
+        <attribute name="environmentType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="seed" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="worldPositionIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
     <fetchRequest name="GetAnyMonsterWithName" entity="MonsterData" predicateString="name == $NAME"/>
     <fetchRequest name="GetAnyPartyWithName" entity="PartyData" predicateString="name == $NAME"/>
     <fetchRequest name="GetDefaultMonsterAttributesForType" entity="DefaultMonsterData" predicateString="type == $TYPE" fetchLimit="1"/>

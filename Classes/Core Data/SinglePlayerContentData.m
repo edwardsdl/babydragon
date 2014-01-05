@@ -2,7 +2,7 @@
 //  SinglePlayerContentData.m
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 10/14/13.
+//  Created by Dallas Edwards on 12/16/13.
 //  Copyright (c) 2013 First Light Games. All rights reserved.
 //
 
@@ -11,5 +11,8 @@
 
 @implementation SinglePlayerContentData
 
+@dynamic environmentType;
+@dynamic worldPositionIndex;
+@dynamic seed;
 
 @end
