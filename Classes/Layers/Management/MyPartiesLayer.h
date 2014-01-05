@@ -2,7 +2,7 @@
 //  MyPartiesLayer.h
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 12/8/13.
+//  Created by Eric Stenborg on 12/16/13.
 //  Copyright 2013 First Light Games. All rights reserved.
 //
 
