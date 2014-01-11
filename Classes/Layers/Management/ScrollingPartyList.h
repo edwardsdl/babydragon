@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "PartyData+Management.h"
+#import "FLMenu.h"
+#import "PartyNode.h"
 
-@interface ScrollingPartyList : CCNode
-{
-    NSMutableArray* menus;
-}
+@class PartyNode;
+@interface ScrollingPartyList : CCNode <CCTouchOneByOneDelegate>
 
--(id) init;
+-(id) init:(PartyNode*) partyNode;
 
 @end

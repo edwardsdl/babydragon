@@ -1,21 +1,39 @@
 //
-//  ScollingMonstersList.m
+//  ScrollingMonsterSelectionList.m
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 12/8/13.
-//  Copyright 2013 First Light Games. All rights reserved.
+//  Created by Eric Stenborg on 1/7/14.
+//  Copyright 2014 First Light Games. All rights reserved.
 //
 
-#import "ScrollingMonstersList.h"
+#import "ScrollingMonsterSelectionList.h"
 
 
-@implementation ScrollingMonstersList
+@implementation ScrollingMonsterSelectionList
+{
+    ManagePartyLayer* managePartyLayer;
+    
+    float menuSpacing;
+    float monsterMenuWidth;
+    float monsterMenuHeight;
+    float yExtent;
+    
+    float lastScrollPosition;
+    float currentScrollVelocity;
+    float currentYPosition;
+    
+    NSMutableArray* menus;
+    
+    FLMenu* selectedMenu;
+    
+    BOOL beingTouched;
+}
 
--(id) init:(MonsterNode*) monsterNode
+-(id) init:(ManagePartyLayer*) parent
 {
     if( (self=[super init]))
     {
-        self->connectedMonsterNode = monsterNode;
+        self->managePartyLayer = parent;
         
         //Set class level values for easy math
         self->menuSpacing = 5;
@@ -130,19 +148,15 @@
     //If the menu is not scrolling then considering this a menu selection
     if (self->currentScrollVelocity == 0.0f)
     {
-        //Unhighlight the previous selected menu
-        [self->selectedMenu unhighlight];
-        
         //Determine the index of the menu item that was touched
         float yInMenu = ((position.y * -1.0f) + self->currentYPosition) + (self->monsterMenuHeight / 2);
         int menuIndex = yInMenu / (self->monsterMenuHeight + self->menuSpacing);
         
-        //Select this menu item and highlight
+        //Get the monster data
         self->selectedMenu = (FLMenu*)[menus objectAtIndex:menuIndex];
-        [self->selectedMenu highlight];
-        
         MonsterData* selectedMonster = (MonsterData*)(self->selectedMenu).genericStorage;
-        [self->connectedMonsterNode showNewMonster:selectedMonster];
+        
+        [managePartyLayer addMonsterToParty:selectedMonster];
     }
 }
 
@@ -155,7 +169,7 @@
         self->currentScrollVelocity = self->currentScrollVelocity - (self->currentScrollVelocity * .05);
         if (self->currentScrollVelocity < 1.0f && self->currentScrollVelocity > -1.0f)
             self->currentScrollVelocity = 0;
-    
+        
         //Move the menu
         if (self->currentScrollVelocity != 0)
             [self updateScroll];

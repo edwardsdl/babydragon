@@ -25,8 +25,6 @@
     {
         self.touchEnabled = true;
         
-        //CGSize winSize = [[CCDirector sharedDirector] winSize];
-        
         MonsterNode* monsterNode = [MonsterNode Create];
         monsterNode.position = ccp(380, 180);
         [self addChild:monsterNode];

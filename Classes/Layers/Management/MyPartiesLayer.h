@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "ScrollingPartyList.h"
+#import "FLLayerNavigationNode.h"
+#import "PartyNode.h"
 
 @interface MyPartiesLayer : CCLayer
 {

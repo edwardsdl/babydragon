@@ -19,4 +19,26 @@
 	return scene;
 }
 
+-(id) init
+{
+	if( (self=[super init]) )
+    {
+        self.touchEnabled = true;
+        
+        PartyNode* partyNode = [PartyNode Create];
+        partyNode.position = ccp(380, 180);
+        [self addChild:partyNode];
+        
+        ScrollingPartyList* list = [[ScrollingPartyList alloc] init:partyNode];
+        list.position = ccp((220 / 2) + 5, 320 - (42.5 / 2) - 5);
+        [self addChild:list];
+        
+        FLLayerNavigationNode* backButton = [FLLayerNavigationNode createWithLayerType:@"ManageLayer" dimensions:CGSizeMake(110, 25) label:@"Back" size:14];
+        backButton.position = ccp(568 - 32 - 55, 30);
+        [self addChild:backButton];
+    }
+    
+    return self;
+}
+
 @end

@@ -14,6 +14,7 @@
 		0733D9C6185F75E90018F555 /* ScrollingPartyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733D9C5185F75E90018F555 /* ScrollingPartyList.m */; };
 		0765FCD6185F6EC700E15D1C /* MyPartiesLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */; };
 		0765FCD9185F6FA100E15D1C /* ScrollingMonstersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD8185F6FA100E15D1C /* ScrollingMonstersList.m */; };
+		076A48AA187A0E1C007305B8 /* PartyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A48A9187A0E1C007305B8 /* PartyNode.m */; };
 		07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7A182C86C200ABF08B /* CombatLayer.m */; };
 		07746E7E182C8A2B00ABF08B /* CombatMonsterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */; };
 		07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 07746E7F182C9AFA00ABF08B /* BarBackground.png */; };
@@ -26,6 +27,8 @@
 		07EFC9A7184E518100B6D693 /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFC9A6184E518100B6D693 /* MonsterData.m */; };
 		07F1EE1C185A2B3E006579FA /* FLMenuBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F1EE1B185A2B3E006579FA /* FLMenuBackgroundHighlighted.png */; };
 		07F1EE1F185A2D25006579FA /* MonsterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1EE1E185A2D25006579FA /* MonsterNode.m */; };
+		07FB559F187CD21F00316BA6 /* ManagePartyLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB559E187CD21F00316BA6 /* ManagePartyLayer.m */; };
+		07FB55A2187CD60C00316BA6 /* ScrollingMonsterSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */; };
 		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
 		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
@@ -320,6 +323,8 @@
 		0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPartiesLayer.m; path = Classes/Layers/Management/MyPartiesLayer.m; sourceTree = SOURCE_ROOT; };
 		0765FCD7185F6FA100E15D1C /* ScrollingMonstersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingMonstersList.h; path = Classes/Layers/Management/ScrollingMonstersList.h; sourceTree = SOURCE_ROOT; };
 		0765FCD8185F6FA100E15D1C /* ScrollingMonstersList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollingMonstersList.m; path = Classes/Layers/Management/ScrollingMonstersList.m; sourceTree = SOURCE_ROOT; };
+		076A48A8187A0E1C007305B8 /* PartyNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PartyNode.h; path = Classes/Layers/Management/PartyNode.h; sourceTree = SOURCE_ROOT; };
+		076A48A9187A0E1C007305B8 /* PartyNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PartyNode.m; path = Classes/Layers/Management/PartyNode.m; sourceTree = SOURCE_ROOT; };
 		07746E79182C86C200ABF08B /* CombatLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatLayer.h; path = "Combat Layer/CombatLayer.h"; sourceTree = "<group>"; };
 		07746E7A182C86C200ABF08B /* CombatLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatLayer.m; path = "Combat Layer/CombatLayer.m"; sourceTree = "<group>"; };
 		07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMonsterNode.h; path = "Combat Layer/CombatMonsterNode.h"; sourceTree = "<group>"; };
@@ -341,6 +346,10 @@
 		07F1EE1B185A2B3E006579FA /* FLMenuBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FLMenuBackgroundHighlighted.png; path = "UI Elements/FLMenuBackgroundHighlighted.png"; sourceTree = "<group>"; };
 		07F1EE1D185A2D25006579FA /* MonsterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MonsterNode.h; path = Classes/Layers/Management/MonsterNode.h; sourceTree = SOURCE_ROOT; };
 		07F1EE1E185A2D25006579FA /* MonsterNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonsterNode.m; path = Classes/Layers/Management/MonsterNode.m; sourceTree = SOURCE_ROOT; };
+		07FB559D187CD21F00316BA6 /* ManagePartyLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManagePartyLayer.h; path = Classes/Layers/Management/ManagePartyLayer.h; sourceTree = SOURCE_ROOT; };
+		07FB559E187CD21F00316BA6 /* ManagePartyLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagePartyLayer.m; path = Classes/Layers/Management/ManagePartyLayer.m; sourceTree = SOURCE_ROOT; };
+		07FB55A0187CD60C00316BA6 /* ScrollingMonsterSelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingMonsterSelectionList.h; path = "Classes/Layers/Combat Layer/ScrollingMonsterSelectionList.h"; sourceTree = SOURCE_ROOT; };
+		07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollingMonsterSelectionList.m; path = "Classes/Layers/Combat Layer/ScrollingMonsterSelectionList.m"; sourceTree = SOURCE_ROOT; };
 		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
 		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
 		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
@@ -897,15 +906,21 @@
 			isa = PBXGroup;
 			children = (
 				0796B52B185507E30024048E /* ManageLayer.h */,
+				07FB559D187CD21F00316BA6 /* ManagePartyLayer.h */,
 				07F1EE1D185A2D25006579FA /* MonsterNode.h */,
 				0796B5311855182F0024048E /* MyMonstersLayer.h */,
 				0765FCD4185F6EC700E15D1C /* MyPartiesLayer.h */,
+				076A48A8187A0E1C007305B8 /* PartyNode.h */,
+				07FB55A0187CD60C00316BA6 /* ScrollingMonsterSelectionList.h */,
 				0765FCD7185F6FA100E15D1C /* ScrollingMonstersList.h */,
 				0733D9C4185F75E90018F555 /* ScrollingPartyList.h */,
 				0796B52C185507E30024048E /* ManageLayer.m */,
+				07FB559E187CD21F00316BA6 /* ManagePartyLayer.m */,
 				07F1EE1E185A2D25006579FA /* MonsterNode.m */,
 				0796B5321855182F0024048E /* MyMonstersLayer.m */,
 				0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */,
+				076A48A9187A0E1C007305B8 /* PartyNode.m */,
+				07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */,
 				0765FCD8185F6FA100E15D1C /* ScrollingMonstersList.m */,
 				0733D9C5185F75E90018F555 /* ScrollingPartyList.m */,
 			);
@@ -1996,6 +2011,7 @@
 				BC98602417F0DA0900F9E159 /* BabyDragon.xcdatamodeld in Sources */,
 				BCAF496217E55ECB001A9B76 /* CCCamera.m in Sources */,
 				BCAF496317E55ECB001A9B76 /* CCClippingNode.m in Sources */,
+				076A48AA187A0E1C007305B8 /* PartyNode.m in Sources */,
 				BCAF496417E55ECB001A9B76 /* CCConfiguration.m in Sources */,
 				BCEEEAC3180BA73800BC20E9 /* PartyData+Management.m in Sources */,
 				BCAF496517E55ECB001A9B76 /* ccDeprecated.m in Sources */,
@@ -2003,6 +2019,7 @@
 				BCAF496717E55ECB001A9B76 /* CCDrawingPrimitives.m in Sources */,
 				BCAF496817E55ECB001A9B76 /* CCDrawNode.m in Sources */,
 				BCAF496917E55ECB001A9B76 /* CCFontDefinition.m in Sources */,
+				07FB55A2187CD60C00316BA6 /* ScrollingMonsterSelectionList.m in Sources */,
 				BCAF496A17E55ECB001A9B76 /* ccFPSImages.m in Sources */,
 				BCAF496B17E55ECB001A9B76 /* CCGLProgram.m in Sources */,
 				BCAF496C17E55ECB001A9B76 /* ccGLStateCache.m in Sources */,
@@ -2049,6 +2066,7 @@
 				BCAF498817E55ECB001A9B76 /* CCSpriteFrameCache.m in Sources */,
 				BCAF498917E55ECB001A9B76 /* CCTexture2D.m in Sources */,
 				0796B52D185507E30024048E /* ManageLayer.m in Sources */,
+				07FB559F187CD21F00316BA6 /* ManagePartyLayer.m in Sources */,
 				079089141833116700FC3D8C /* CombatMenuButtonNode.m in Sources */,
 				BCAF498A17E55ECB001A9B76 /* CCTextureAtlas.m in Sources */,
 				BCAF498B17E55ECB001A9B76 /* CCTextureCache.m in Sources */,
@@ -2077,8 +2095,6 @@
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,
 				BCAF499E17E55ECB001A9B76 /* CCGLView.m in Sources */,
 				BCAF499F17E55ECB001A9B76 /* CCWindow.m in Sources */,
-				BCD80F151828496F002DD288 /* PartyLayer.m in Sources */,
-				BCEEEAE1180BA86700BC20E9 /* SinglePlayerContentData.m in Sources */,
 				BCAF49A017E55ECB001A9B76 /* base64.c in Sources */,
 				BCAF49A117E55ECB001A9B76 /* CCArray.m in Sources */,
 				BCAF49A217E55ECB001A9B76 /* ccCArray.m in Sources */,
