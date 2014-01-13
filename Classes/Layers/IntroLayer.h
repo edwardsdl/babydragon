@@ -7,6 +7,8 @@
 //
 
 #import "cocos2d.h"
+#import "MainMenuLayer.h"
+#import "MapLayer.h"
 
 @interface IntroLayer : CCLayer
 
