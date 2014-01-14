@@ -1,5 +1,5 @@
 //
-//  SinglePlayerContentData.h
+//  LevelData.h
 //  BabyDragon
 //
 //  Created by Dallas Edwards on 1/13/14.
@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "AcquisitionData.h"
 
 
-@interface SinglePlayerContentData : AcquisitionData
+@interface LevelData : NSManagedObject
 
+@property (nonatomic) int32_t worldIndex;
 @property (nonatomic) int32_t environmentType;
-@property (nonatomic) int32_t seed;
+@property (nonatomic) int32_t lootQuality;
 @property (nonatomic) int32_t minimumMonsterLevel;
 @property (nonatomic) int32_t maximumMonsterLevel;
-@property (nonatomic) int32_t lootQuality;
+@property (nonatomic) int32_t seed;
 
 @end

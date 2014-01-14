@@ -3,6 +3,4 @@
 
 @interface SinglePlayerContentData (Management)
 
-//@property (nonatomic) Tile *tiles;
-
 @end
