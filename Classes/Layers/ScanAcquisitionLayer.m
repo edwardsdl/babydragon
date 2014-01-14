@@ -12,7 +12,7 @@
 #import "MonsterData.h"
 #import "Player.h"
 #import "cocos2d.h"
-#import "MainMenuLayer.h"
+#import "MapLayer.h"
 #import "MonsterFactory.h"
 
 
@@ -46,7 +46,7 @@
         [self addChild:monsterSprite];
         
         //Back to the main menu
-        CCMenuItemFont *backItem = [CCMenuItemFont itemWithString:@"Back to Main Menu" target:self selector:@selector(backToMainMenu)];
+        CCMenuItemFont *backItem = [CCMenuItemFont itemWithString:@"Back to Main Menu" target:self selector:@selector(backToMap)];
         backItem.fontSize = 26;
         backItem.fontName = @"Arial Rounded MT Bold";
         
@@ -59,9 +59,9 @@
     return self;
 }
 
--(void)backToMainMenu
+-(void)backToMap
 {
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenuLayer scene] ]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MapLayer scene] ]];
 }
 
 @end

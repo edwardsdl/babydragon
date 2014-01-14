@@ -33,7 +33,7 @@
         self->myPartiesButton.position = ccp(142 + 220 + 64, 178);
         [self addChild:self->myPartiesButton];
         
-        self->backButton = [FLLayerNavigationNode createWithLayerType:@"MainMenuLayer" dimensions:CGSizeMake(110, 25) label:@"Back" size:14];
+        self->backButton = [FLLayerNavigationNode createWithLayerType:@"MapLayer" dimensions:CGSizeMake(110, 25) label:@"Back" size:14];
         self->backButton.position = ccp(568 - 32 - 55, 30);
         [self addChild:self->backButton];
     }

@@ -502,7 +502,7 @@
 -(void) endCombat
 {
     [self pauseSchedulerAndActions];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MainMenuLayer scene] ]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MapLayer scene] ]];
 }
 
 @end

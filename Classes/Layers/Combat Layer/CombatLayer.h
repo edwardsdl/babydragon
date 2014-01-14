@@ -15,7 +15,7 @@
 #import "CombatStatusNode.h"
 #import "CombatConfirmNode.h"
 #import "CombatHelper.h"
-#import "MainMenuLayer.h"
+#import "MapLayer.h"
 #import "TargetType.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
