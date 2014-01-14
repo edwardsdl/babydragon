@@ -34,6 +34,10 @@
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC1D87401884ED3200386142 /* SinglePlayerContentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D873F1884ED3200386142 /* SinglePlayerContentData.m */; };
 		BC1D87431884ED3300386142 /* LevelData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87421884ED3300386142 /* LevelData.m */; };
+		BC1D87471885040800386142 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87461885040800386142 /* Tile.m */; };
+		BC1D874A1885042400386142 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87491885042400386142 /* Level.m */; };
+		BC1D874D1885043B00386142 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D874C1885043B00386142 /* Room.m */; };
+		BC1D87501885044800386142 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D874F1885044800386142 /* Floor.m */; };
 		BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */; };
 		BC20AC0B17EB8E9E0095B125 /* BarcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0A17EB8E9E0095B125 /* BarcodeHelper.m */; };
 		BC20AC0F17EC055C0095B125 /* AcquisitionFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0E17EC055C0095B125 /* AcquisitionFactoryTests.m */; };
@@ -358,6 +362,14 @@
 		BC1D873F1884ED3200386142 /* SinglePlayerContentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayerContentData.m; sourceTree = "<group>"; };
 		BC1D87411884ED3300386142 /* LevelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelData.h; sourceTree = "<group>"; };
 		BC1D87421884ED3300386142 /* LevelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelData.m; sourceTree = "<group>"; };
+		BC1D87451885040800386142 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		BC1D87461885040800386142 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		BC1D87481885042400386142 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		BC1D87491885042400386142 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		BC1D874B1885043B00386142 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		BC1D874C1885043B00386142 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		BC1D874E1885044800386142 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
+		BC1D874F1885044800386142 /* Floor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Floor.m; sourceTree = "<group>"; };
 		BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProbabilityCollection.h; sourceTree = "<group>"; };
 		BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbabilityCollection.m; sourceTree = "<group>"; };
 		BC20AC0917EB8E9E0095B125 /* BarcodeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeHelper.h; sourceTree = "<group>"; };
@@ -928,6 +940,21 @@
 			path = "Party Layer";
 			sourceTree = "<group>";
 		};
+		BC1D8744188503D600386142 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				BC1D874E1885044800386142 /* Floor.h */,
+				BC1D87481885042400386142 /* Level.h */,
+				BC1D874B1885043B00386142 /* Room.h */,
+				BC1D87451885040800386142 /* Tile.h */,
+				BC1D874F1885044800386142 /* Floor.m */,
+				BC1D87491885042400386142 /* Level.m */,
+				BC1D874C1885043B00386142 /* Room.m */,
+				BC1D87461885040800386142 /* Tile.m */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
 		BC4A9F1217E7D1CF008EDA70 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,7 +1016,6 @@
 		BCAF463F17E559AD001A9B76 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D7BDE7D71806376B00BB0D7A /* AbilityResult.m */,
 				D7BDE7D61806376B00BB0D7A /* AbilityResult.h */,
 				BCFA7B311839A9400055C73C /* CCDirector+Utilities.h */,
 				BC30307E180F81FB0014F64E /* CCScene+Utilities.h */,
@@ -997,6 +1023,7 @@
 				BCAF465717E559AD001A9B76 /* Player.h */,
 				BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */,
 				BCAF465917E559AD001A9B76 /* TraitData.h */,
+				D7BDE7D71806376B00BB0D7A /* AbilityResult.m */,
 				BCFA7B321839A9400055C73C /* CCDirector+Utilities.m */,
 				BC30307F180F81FB0014F64E /* CCScene+Utilities.m */,
 				BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */,
@@ -1009,6 +1036,7 @@
 				BCEEEA92180BA73800BC20E9 /* Core Data */,
 				BCAF464617E559AD001A9B76 /* Helpers */,
 				BCAF464717E559AD001A9B76 /* Layers */,
+				BC1D8744188503D600386142 /* Level */,
 				BCAF465217E559AD001A9B76 /* Models */,
 				070672A0182FFC8D00C1E5AA /* UI */,
 			);
@@ -2049,6 +2077,7 @@
 				BCAF498517E55ECB001A9B76 /* CCSprite.m in Sources */,
 				BCA9E03D1809DE4B00FB3EFE /* CoreDataHelper.m in Sources */,
 				BCAF498617E55ECB001A9B76 /* CCSpriteBatchNode.m in Sources */,
+				BC1D874A1885042400386142 /* Level.m in Sources */,
 				BCAF498717E55ECB001A9B76 /* CCSpriteFrame.m in Sources */,
 				BCEEEAE7180BA86700BC20E9 /* EnhancementData.m in Sources */,
 				BCEEEACC180BA86600BC20E9 /* EquipmentData.m in Sources */,
@@ -2065,6 +2094,7 @@
 				BCAF498C17E55ECB001A9B76 /* CCTexturePVR.m in Sources */,
 				BCAF498D17E55ECB001A9B76 /* CCTileMapAtlas.m in Sources */,
 				0796B5331855182F0024048E /* MyMonstersLayer.m in Sources */,
+				BC1D87501885044800386142 /* Floor.m in Sources */,
 				BCAF498E17E55ECB001A9B76 /* CCTMXLayer.m in Sources */,
 				BCAF498F17E55ECB001A9B76 /* CCTMXObjectGroup.m in Sources */,
 				BCAF499017E55ECB001A9B76 /* CCTMXTiledMap.m in Sources */,
@@ -2085,10 +2115,12 @@
 				BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */,
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,
 				BCAF499E17E55ECB001A9B76 /* CCGLView.m in Sources */,
+				BC1D874D1885043B00386142 /* Room.m in Sources */,
 				BCAF499F17E55ECB001A9B76 /* CCWindow.m in Sources */,
 				BCAF49A017E55ECB001A9B76 /* base64.c in Sources */,
 				BCAF49A117E55ECB001A9B76 /* CCArray.m in Sources */,
 				BCAF49A217E55ECB001A9B76 /* ccCArray.m in Sources */,
+				BC1D87471885040800386142 /* Tile.m in Sources */,
 				BCAF49A317E55ECB001A9B76 /* CCFileUtils.m in Sources */,
 				BC9B23BF180A661200D1ECEF /* MonsterFactory.m in Sources */,
 				BCAF49A417E55ECB001A9B76 /* CCProfiling.m in Sources */,
