@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AbilityData" representedClassName="AbilityData" parentEntity="BaseData" syncable="YES">
         <attribute name="cost" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="effectSprite" attributeType="String" minValueString="1" syncable="YES"/>
@@ -60,6 +60,14 @@
         <attribute name="seed" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="worldIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="MapNodeData" representedClassName="MapNodeData" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="touchHeight" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="touchWidth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="worldIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="xTouchPosition" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="yTouchPosition" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <entity name="MonsterData" representedClassName="MonsterData" parentEntity="AcquisitionData" syncable="YES">
         <attribute name="abilityPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="courage" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
@@ -96,20 +104,22 @@
     <fetchRequest name="GetAnyMonsterWithName" entity="MonsterData" predicateString="name == $NAME"/>
     <fetchRequest name="GetAnyPartyWithName" entity="PartyData" predicateString="name == $NAME"/>
     <fetchRequest name="GetDefaultMonsterAttributesForType" entity="DefaultMonsterData" predicateString="type == $TYPE" fetchLimit="1"/>
+    <fetchRequest name="GetMapNodeForWorldIndex" entity="MapNodeData" predicateString="worldIndex == $WORLDINDEX"/>
     <fetchRequest name="GetMonsterWithUUID" entity="MonsterData" predicateString="uuid == $UUID"/>
     <fetchRequest name="GetPartyWithUUID" entity="PartyData" predicateString="uuid == $UUID"/>
     <elements>
-        <element name="AbilityData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="AcquisitionData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="BaseData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="DefaultMonsterData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="EnhancementData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="EquipmentData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="GoldData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="ItemData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="MonsterData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="PartyData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="SinglePlayerContentData" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="LevelData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AbilityData" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="AcquisitionData" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="BaseData" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="DefaultMonsterData" positionX="0" positionY="0" width="128" height="345"/>
+        <element name="EnhancementData" positionX="0" positionY="0" width="128" height="45"/>
+        <element name="EquipmentData" positionX="0" positionY="0" width="128" height="60"/>
+        <element name="GoldData" positionX="0" positionY="0" width="128" height="60"/>
+        <element name="ItemData" positionX="0" positionY="0" width="128" height="60"/>
+        <element name="LevelData" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="MonsterData" positionX="0" positionY="0" width="128" height="330"/>
+        <element name="PartyData" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="SinglePlayerContentData" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="MapNodeData" positionX="160" positionY="192" width="128" height="120"/>
     </elements>
 </model>

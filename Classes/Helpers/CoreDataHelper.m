@@ -5,6 +5,7 @@
 #import "ElementType.h"
 #import "MonsterData+Management.h"
 #import "PartyData+Management.h"
+#import "MapNodeData+Management.h"
 #import "TargetType.h"
 
 @interface CoreDataHelper ()
@@ -109,6 +110,7 @@
     [self initializeMonsterData];
     [self initializeAbilityData];
     [self initializePartyData];
+    [self initializeMapNodeData];
 }
 
 - (void)initializeDefaultMonsterData
@@ -695,6 +697,61 @@
     if (error != nil)
     {
         NSLog(@"Failed to initialize party data.");
+    }
+}
+
+- (void) initializeMapNodeData
+{
+    MapNodeData* mapNode;
+    float defaultTouchWidth = 32;
+    float defaultTouchHeight = 32;
+    
+    mapNode = [MapNodeData insertMapNode];
+    mapNode.worldIndex = 0;
+    mapNode.name = @"Plains of Anger";
+    mapNode.xTouchPosition = -241;
+    mapNode.yTouchPosition = -69.5;
+    mapNode.touchWidth = defaultTouchWidth;
+    mapNode.touchHeight = defaultTouchHeight;
+    
+    mapNode = [MapNodeData insertMapNode];
+    mapNode.worldIndex = 1;
+    mapNode.name = @"Crags of Doom";
+    mapNode.xTouchPosition = 36;
+    mapNode.yTouchPosition = -162.5;
+    mapNode.touchWidth = defaultTouchWidth;
+    mapNode.touchHeight = defaultTouchHeight;
+
+    mapNode = [MapNodeData insertMapNode];
+    mapNode.worldIndex = 2;
+    mapNode.name = @"Forest of Agony";
+    mapNode.xTouchPosition = 233;
+    mapNode.yTouchPosition = 11.5;
+    mapNode.touchWidth = defaultTouchWidth;
+    mapNode.touchHeight = defaultTouchHeight;
+
+    mapNode = [MapNodeData insertMapNode];
+    mapNode.worldIndex = 3;
+    mapNode.name = @"Dallas' House";
+    mapNode.xTouchPosition = 170.5;
+    mapNode.yTouchPosition = 191.5;
+    mapNode.touchWidth = defaultTouchWidth;
+    mapNode.touchHeight = defaultTouchHeight;
+
+    mapNode = [MapNodeData insertMapNode];
+    mapNode.worldIndex = 4;
+    mapNode.name = @"Mountains of Unbridled Anguish";
+    mapNode.xTouchPosition = -60.5;
+    mapNode.yTouchPosition = 331.5;
+    mapNode.touchWidth = defaultTouchWidth;
+    mapNode.touchHeight = defaultTouchHeight;
+    
+    NSError *error = nil;
+    [_managedObjectContext save:&error];
+    
+    if (error != nil)
+    {
+        NSLog(@"Failed to initialize map node data.");
     }
 }
 
