@@ -2,4 +2,6 @@
 
 @interface Room : NSObject
 
+@property (nonatomic, readonly, strong) NSArray *tiles;
+
 @end
