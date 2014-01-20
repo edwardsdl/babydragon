@@ -402,6 +402,7 @@
 		BC30306A180CF9AA0014F64E /* RosterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosterLayer.m; sourceTree = "<group>"; };
 		BC30307E180F81FB0014F64E /* CCScene+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCScene+Utilities.h"; sourceTree = "<group>"; };
 		BC30307F180F81FB0014F64E /* CCScene+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCScene+Utilities.m"; sourceTree = "<group>"; };
+		BC434470188D98FC00ED3198 /* EnvironmentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentType.h; sourceTree = "<group>"; };
 		BC4A9EE517E7D038008EDA70 /* BabyDragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyDragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbabilityCollectionTests.m; sourceTree = "<group>"; };
 		BC4A9F1617E7D1CF008EDA70 /* BabyDragonTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BabyDragonTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -1638,6 +1639,7 @@
 				BCA9E0471809F95000FB3EFE /* TargetType.h */,
 				BCEEEA91180BA69300BC20E9 /* TraitAttributeType.h */,
 				BC9AF4F8185F6EE0006822D1 /* TileType.h */,
+				BC434470188D98FC00ED3198 /* EnvironmentType.h */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
