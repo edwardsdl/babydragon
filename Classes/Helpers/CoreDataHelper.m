@@ -371,6 +371,33 @@
     
     [monster setIsTranslucent:NO];
     //--------------------------------------------------------------------
+    
+    //--------------------------------------------------------------------
+    //Fox
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Fox"];
+    [monster setElementType:Fire];
+    [monster setProbability:common];
+    
+    [monster setHealthPoints:19];
+    [monster setAbilityPoints:22];
+    [monster setCourage:10];
+    [monster setDefense:9];
+    [monster setIntellect:13];
+    [monster setSpeed:12];
+    [monster setStrength:8];
+    [monster setWillpower:10];
+    
+    [monster setHealthPointsLevelMultiplier:1.9];
+    [monster setAbilityPointsLevelMultiplier:2.2];
+    [monster setCourageLevelMultiplier:1.0];
+    [monster setDefenseLevelMultiplier:0.9];
+    [monster setIntellectLevelMultiplier:1.3];
+    [monster setSpeedLevelMultiplier:1.2];
+    [monster setStrengthLevelMultiplier:0.8];
+    [monster setWillpowerLevelMultiplier:1.0];
+    
+    [monster setIsTranslucent:NO];
+    //--------------------------------------------------------------------
 
     
     //--------------------------------------------------------------------
@@ -455,6 +482,8 @@
     [monster setStrengthLevelMultiplier:0.8];
     [monster setWillpowerLevelMultiplier:1.1];
     
+    [monster setIsTranslucent:YES];
+    
     //--------------------------------------------------------------------
     //Wisp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Wisp"];
@@ -479,7 +508,7 @@
     [monster setStrengthLevelMultiplier:0.8];
     [monster setWillpowerLevelMultiplier:1.1];
     
-    [monster setIsTranslucent:NO];
+    [monster setIsTranslucent:YES];
     //--------------------------------------------------------------------
     
     //--------------------------------------------------------------------
@@ -632,6 +661,7 @@
     [MonsterData insertMonsterWithType:@"Small_Blob" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Viper" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Bear_Cub" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Fox" barcode:@"No Barcode"];
     
     NSError *error = nil; 
     [_managedObjectContext save:&error];
@@ -680,12 +710,12 @@
     [PartyData removeAll];
     
     NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Baby Dragon"],
-                          [MonsterData anyMonsterWithName:@"Viper"],
+                          [MonsterData anyMonsterWithName:@"Fox"],
                           [MonsterData anyMonsterWithName:@"Skeleton"]];
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     
-    monsters = @[[MonsterData anyMonsterWithName:@"Wisp"],
+    monsters = @[[MonsterData anyMonsterWithName:@"Fox"],
                  [MonsterData anyMonsterWithName:@"Scorpion"],
                  [MonsterData anyMonsterWithName:@"Crab"]];
     

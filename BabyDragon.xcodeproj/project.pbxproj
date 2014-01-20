@@ -27,6 +27,9 @@
 		0796B52D185507E30024048E /* ManageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0796B52C185507E30024048E /* ManageLayer.m */; };
 		0796B530185509A90024048E /* FLLayerNavigationNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0796B52F185509A90024048E /* FLLayerNavigationNode.m */; };
 		0796B5331855182F0024048E /* MyMonstersLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0796B5321855182F0024048E /* MyMonstersLayer.m */; };
+		079AEC42188D93F7006E37BF /* Fox_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AEC3F188D93F7006E37BF /* Fox_KO.png */; };
+		079AEC43188D93F7006E37BF /* Fox_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AEC40188D93F7006E37BF /* Fox_Standing.png */; };
+		079AEC44188D93F7006E37BF /* Fox_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AEC41188D93F7006E37BF /* Fox_Fighting.png */; };
 		07A3948B1884578A001A1C20 /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A3948A1884578A001A1C20 /* Map.png */; };
 		07A3948F188457E9001A1C20 /* MapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A3948E188457E9001A1C20 /* MapLayer.m */; };
 		07A39492188458C4001A1C20 /* MapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A39491188458C4001A1C20 /* MapNode.m */; };
@@ -358,6 +361,9 @@
 		0796B52F185509A90024048E /* FLLayerNavigationNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLLayerNavigationNode.m; path = UI/FLLayerNavigationNode.m; sourceTree = "<group>"; };
 		0796B5311855182F0024048E /* MyMonstersLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMonstersLayer.h; path = Classes/Layers/Management/MyMonstersLayer.h; sourceTree = SOURCE_ROOT; };
 		0796B5321855182F0024048E /* MyMonstersLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMonstersLayer.m; path = Classes/Layers/Management/MyMonstersLayer.m; sourceTree = SOURCE_ROOT; };
+		079AEC3F188D93F7006E37BF /* Fox_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fox_KO.png; path = Monsters/Fox_KO.png; sourceTree = "<group>"; };
+		079AEC40188D93F7006E37BF /* Fox_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fox_Standing.png; path = Monsters/Fox_Standing.png; sourceTree = "<group>"; };
+		079AEC41188D93F7006E37BF /* Fox_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fox_Fighting.png; path = Monsters/Fox_Fighting.png; sourceTree = "<group>"; };
 		07A3948A1884578A001A1C20 /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Map.png; path = Map/Map.png; sourceTree = "<group>"; };
 		07A3948D188457E9001A1C20 /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapLayer.h; path = Map/MapLayer.h; sourceTree = "<group>"; };
 		07A3948E188457E9001A1C20 /* MapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapLayer.m; path = Map/MapLayer.m; sourceTree = "<group>"; };
@@ -1758,6 +1764,9 @@
 		D7D6D47D17E633C200D2ADB7 /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				079AEC3F188D93F7006E37BF /* Fox_KO.png */,
+				079AEC40188D93F7006E37BF /* Fox_Standing.png */,
+				079AEC41188D93F7006E37BF /* Fox_Fighting.png */,
 				D72ED1D71811C268005C98CD /* Angler_Fighting.png */,
 				D72ED1D21811C0B9005C98CD /* Angler_KO.png */,
 				D72ED1D31811C0B9005C98CD /* Angler_Standing.png */,
@@ -1937,6 +1946,7 @@
 				D722770718201E2600864928 /* Wisp_KO.png in Resources */,
 				D71EBA46182736410029A494 /* Firebat_Standing.png in Resources */,
 				D71EBA5218273AD30029A494 /* Skeleton_Fighting.png in Resources */,
+				079AEC42188D93F7006E37BF /* Fox_KO.png in Resources */,
 				BCAF47FD17E559AE001A9B76 /* Icon-Small.png in Resources */,
 				BCAF47FE17E559AE001A9B76 /* Icon-Small@2x.png in Resources */,
 				D71B8FE9180B3C8800ABBCCE /* Rat_KO.png in Resources */,
@@ -1951,6 +1961,7 @@
 				BCAF480117E559AE001A9B76 /* iTunesArtwork in Resources */,
 				BCAF480217E559AE001A9B76 /* MenuBackground.png in Resources */,
 				D72ED1D61811C0B9005C98CD /* Angler_Standing.png in Resources */,
+				079AEC43188D93F7006E37BF /* Fox_Standing.png in Resources */,
 				BCAF499617E55ECB001A9B76 /* LICENSE_cocos2d.txt in Resources */,
 				D75CFA3C1829613C0077F814 /* Small_Blob_Standing.png in Resources */,
 				0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */,
@@ -1970,6 +1981,7 @@
 				D71EBA5F18273D8F0029A494 /* Crab_KO.png in Resources */,
 				BCAF49C617E55ECB001A9B76 /* zbar-help.html in Resources */,
 				D744B38317F0A8100034A5E5 /* Baby_Dragon_Standing.png in Resources */,
+				079AEC44188D93F7006E37BF /* Fox_Fighting.png in Resources */,
 				BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */,
 				BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */,
 				0790891618331E2200FC3D8C /* RightArrow.png in Resources */,
