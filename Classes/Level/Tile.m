@@ -2,4 +2,9 @@
 
 @implementation Tile
 
+- (id)initWithTileType:(TileType)tileType
+{
+    
+}
+
 @end
