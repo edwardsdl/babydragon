@@ -1,7 +1,7 @@
 typedef NS_ENUM(int32_t, ElementType) {
     Water,
-    Forest,
+    Earth,
     Fire,
     Darkness,
-    Light
+    Holy
 };

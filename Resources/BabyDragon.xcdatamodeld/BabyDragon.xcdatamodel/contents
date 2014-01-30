@@ -23,6 +23,7 @@
     <entity name="DefaultMonsterData" representedClassName="DefaultMonsterData" parentEntity="BaseData" syncable="YES">
         <attribute name="abilityPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="abilityPointsLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="attackType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="courage" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="courageLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="defense" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
@@ -30,14 +31,12 @@
         <attribute name="elementType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="healthPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="healthPointsLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <attribute name="intellect" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <attribute name="intellectLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="isTranslucent" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="power" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="powerLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="probability" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="speed" attributeType="Integer 32" minValueString="1" defaultValueString="1" syncable="YES"/>
         <attribute name="speedLevelMultiplier" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <attribute name="strength" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <attribute name="strengthLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="type" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
         <attribute name="willpower" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="willpowerLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
@@ -70,18 +69,18 @@
     </entity>
     <entity name="MonsterData" representedClassName="MonsterData" parentEntity="AcquisitionData" syncable="YES">
         <attribute name="abilityPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="attackType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="courage" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="defense" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="elementType" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="experiencePoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="healthPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <attribute name="intellect" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="isTranslucent" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 32" minValueString="1" defaultValueString="1" syncable="YES"/>
         <attribute name="name" attributeType="String" minValueString="1" syncable="YES"/>
         <attribute name="paletteIndex" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="power" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
-        <attribute name="strength" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="traits" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="type" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
@@ -108,18 +107,18 @@
     <fetchRequest name="GetMonsterWithUUID" entity="MonsterData" predicateString="uuid == $UUID"/>
     <fetchRequest name="GetPartyWithUUID" entity="PartyData" predicateString="uuid == $UUID"/>
     <elements>
-        <element name="AbilityData" positionX="0" positionY="0" width="128" height="180"/>
-        <element name="AcquisitionData" positionX="0" positionY="0" width="128" height="90"/>
-        <element name="BaseData" positionX="0" positionY="0" width="128" height="75"/>
-        <element name="DefaultMonsterData" positionX="0" positionY="0" width="128" height="345"/>
-        <element name="EnhancementData" positionX="0" positionY="0" width="128" height="45"/>
-        <element name="EquipmentData" positionX="0" positionY="0" width="128" height="60"/>
-        <element name="GoldData" positionX="0" positionY="0" width="128" height="60"/>
-        <element name="ItemData" positionX="0" positionY="0" width="128" height="60"/>
-        <element name="LevelData" positionX="0" positionY="0" width="128" height="135"/>
-        <element name="MonsterData" positionX="0" positionY="0" width="128" height="330"/>
-        <element name="PartyData" positionX="0" positionY="0" width="128" height="90"/>
-        <element name="SinglePlayerContentData" positionX="0" positionY="0" width="128" height="120"/>
-        <element name="MapNodeData" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="AbilityData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AcquisitionData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="BaseData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DefaultMonsterData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="EnhancementData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="EquipmentData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GoldData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ItemData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="LevelData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MapNodeData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MonsterData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PartyData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SinglePlayerContentData" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

@@ -44,18 +44,18 @@ static NSString *entityName = @"MonsterData";
     [monsterData setElementType:[defaultMonsterData elementType]];
     [monsterData setExperiencePoints:0];
     [monsterData setHealthPoints:[defaultMonsterData healthPoints]];
-    [monsterData setIntellect:[defaultMonsterData intellect]];
     [monsterData setIsTranslucent:[defaultMonsterData isTranslucent]];
     // TODO: Set latitude
     [monsterData setLevel:1];
     // TODO: Set longitude
     [monsterData setName:[type stringByReplacingOccurrencesOfString:@"_" withString:@" "]];
     [monsterData setSpeed:[defaultMonsterData speed]];
-    [monsterData setStrength:[defaultMonsterData strength]];
+    [monsterData setPower:[defaultMonsterData power]];
     // TODO: Set traits
     [monsterData setType:type];
     [monsterData setUuid:[UUIDHelper createUUIDString]];
     [monsterData setWillpower:[defaultMonsterData willpower]];
+    [monsterData setAttackType:[defaultMonsterData attackType]];
     
     return monsterData;
 }
@@ -95,19 +95,14 @@ static NSString *entityName = @"MonsterData";
     return floor(self.defense);
 }
 
-- (int) trueIntellect
-{
-    return floor(self.intellect);
-}
-
 - (int) trueSpeed
 {
     return floor(self.speed);
 }
 
-- (int) trueStrength
+- (int) truePower
 {
-    return floor(self.strength);
+    return floor(self.power);
 }
 
 - (int) trueWillpower
@@ -128,7 +123,7 @@ static NSString *entityName = @"MonsterData";
     self.abilityPoints += defaultMonsterData.abilityPointsLevelMultiplier * levelsGained;
     self.courage += defaultMonsterData.courageLevelMultiplier * levelsGained;
     self.defense += defaultMonsterData.defenseLevelMultiplier * levelsGained;
-    self.intellect += defaultMonsterData.intellectLevelMultiplier * levelsGained;
+    self.power += defaultMonsterData.powerLevelMultiplier * levelsGained;
     self.speed += defaultMonsterData.speedLevelMultiplier * levelsGained;
     self.willpower += defaultMonsterData.willpowerLevelMultiplier * levelsGained;
     self.level += levelsGained;

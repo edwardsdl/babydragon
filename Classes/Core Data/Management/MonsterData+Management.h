@@ -10,9 +10,8 @@
 
 - (int) trueCourage;
 - (int) trueDefense;
-- (int) trueIntellect;
 - (int) trueSpeed;
-- (int) trueStrength;
+- (int) truePower;
 - (int) trueWillpower;
 
 - (void) levelUp;

@@ -30,7 +30,7 @@
     float modifiedDefense = (float)[defender.monsterData trueDefense] * defensePercent;
     
     //The damage value is the stength of the attack minus the modified defense value
-    float damage = (float)[attacker.monsterData trueStrength] - modifiedDefense;
+    float damage = (float)[attacker.monsterData truePower] - modifiedDefense;
     
     //Now apply the multiplier that was passed in, and take the floor of the final value
     int finalDamage = floor(damage * multiplier);

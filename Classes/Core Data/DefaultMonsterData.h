@@ -2,8 +2,8 @@
 //  DefaultMonsterData.h
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 10/29/13.
-//  Copyright (c) 2013 First Light Games. All rights reserved.
+//  Created by Eric Stenborg on 1/29/14.
+//  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -19,19 +19,18 @@
 @property (nonatomic) float courageLevelMultiplier;
 @property (nonatomic) int32_t defense;
 @property (nonatomic) float defenseLevelMultiplier;
+@property (nonatomic) int32_t elementType;
 @property (nonatomic) int32_t healthPoints;
 @property (nonatomic) float healthPointsLevelMultiplier;
-@property (nonatomic) int32_t intellect;
-@property (nonatomic) float intellectLevelMultiplier;
 @property (nonatomic) BOOL isTranslucent;
 @property (nonatomic) float probability;
 @property (nonatomic) int32_t speed;
 @property (nonatomic) float speedLevelMultiplier;
-@property (nonatomic) int32_t strength;
-@property (nonatomic) float strengthLevelMultiplier;
+@property (nonatomic) int32_t power;
+@property (nonatomic) float powerLevelMultiplier;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic) int32_t willpower;
 @property (nonatomic) float willpowerLevelMultiplier;
-@property (nonatomic) int32_t elementType;
+@property (nonatomic) int32_t attackType;
 
 @end
