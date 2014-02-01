@@ -13,13 +13,22 @@ static NSString *entityName = @"AbilityData";
     return [managedObjectContext objectsForEntityName:entityName];
 }
 
-+ (AbilityData *)insertAbilityForMonster:(MonsterData *)monster
+/*+ (AbilityData *)insertAbilityForMonster:(MonsterData *)monster
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     
     AbilityData *abilityData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                              inManagedObjectContext:managedObjectContext];
     [abilityData setMonster:monster];
+    
+    return abilityData;
+}*/
+
++ (AbilityData *)insertAbilityData
+{
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    
+    AbilityData *abilityData = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:managedObjectContext];
     
     return abilityData;
 }

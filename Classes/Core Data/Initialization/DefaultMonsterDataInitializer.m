@@ -21,9 +21,9 @@
     
     //Fox
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Fox"];
-    [monster setElementType:Earth];
+    [monster setElementType:ElementTypeEarth];
     [monster setProbability:common];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:24];
@@ -45,9 +45,9 @@
     
     //Imp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Imp"];
-    [monster setElementType:Fire];
+    [monster setElementType:ElementTypeFire];
     [monster setProbability:common];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:22];
@@ -69,9 +69,9 @@
     
     //Baby Dragon
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Baby_Dragon"];
-    [monster setElementType:Fire];
+    [monster setElementType:ElementTypeFire];
     [monster setProbability:uncommon];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:24];
     [monster setAbilityPoints:16];
@@ -93,9 +93,9 @@
     
     //Firebat
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Firebat"];
-    [monster setElementType:Fire];
+    [monster setElementType:ElementTypeFire];
     [monster setProbability:common];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:22];
@@ -117,9 +117,9 @@
     
     //Fire Elemental
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Fire_Elemental"];
-    [monster setElementType:Fire];
+    [monster setElementType:ElementTypeFire];
     [monster setProbability:rare];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:22];
@@ -141,9 +141,9 @@
     
     //Scorpion
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Scorpion"];
-    [monster setElementType:Earth];
+    [monster setElementType:ElementTypeEarth];
     [monster setProbability:common];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:24];
@@ -165,9 +165,9 @@
     
     //Small Blob
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Small_Blob"];
-    [monster setElementType:Earth];
+    [monster setElementType:ElementTypeEarth];
     [monster setProbability:common];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:24];
     [monster setAbilityPoints:18];
@@ -189,9 +189,9 @@
     
     //Viper
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Viper"];
-    [monster setElementType:Earth];
+    [monster setElementType:ElementTypeEarth];
     [monster setProbability:uncommon];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:24];
@@ -213,9 +213,9 @@
     
     //Wisp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Wisp"];
-    [monster setElementType:Earth];
+    [monster setElementType:ElementTypeEarth];
     [monster setProbability:uncommon];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:28];
@@ -237,9 +237,9 @@
     
     //Bear Cub
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Bear_Cub"];
-    [monster setElementType:Earth];
+    [monster setElementType:ElementTypeEarth];
     [monster setProbability:superRare];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:26];
     [monster setAbilityPoints:16];
@@ -261,9 +261,9 @@
     
     //Crab
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Crab"];
-    [monster setElementType:Water];
+    [monster setElementType:ElementTypeWater];
     [monster setProbability:common];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:24];
     [monster setAbilityPoints:16];
@@ -285,9 +285,9 @@
     
     //Hard Shell
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard_Shell"];
-    [monster setElementType:Water];
+    [monster setElementType:ElementTypeWater];
     [monster setProbability:uncommon];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:26];
     [monster setAbilityPoints:20];
@@ -309,9 +309,9 @@
     
     //Angler
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Angler"];
-    [monster setElementType:Water];
+    [monster setElementType:ElementTypeWater];
     [monster setProbability:rare];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:24];
@@ -333,9 +333,9 @@
     
     //Caterpillar
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Caterpillar"];
-    [monster setElementType:Holy];
+    [monster setElementType:ElementTypeHoly];
     [monster setProbability:common];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:24];
@@ -357,9 +357,9 @@
     
     //Marblu
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Marblu"];
-    [monster setElementType:Holy];
+    [monster setElementType:ElementTypeHoly];
     [monster setProbability:common];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:22];
@@ -381,9 +381,9 @@
     
     //Skeleton
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Skeleton"];
-    [monster setElementType:Darkness];
+    [monster setElementType:ElementTypeDarkness];
     [monster setProbability:common];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:22];
@@ -405,9 +405,9 @@
     
     //Rat
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Rat"];
-    [monster setElementType:Darkness];
+    [monster setElementType:ElementTypeDarkness];
     [monster setProbability:common];
-    [monster setAttackType:Physical];
+    [monster setAttackType:AttackTypePhysical];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:22];
@@ -429,9 +429,9 @@
     
     //Ghost
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Ghost"];
-    [monster setElementType:Darkness];
+    [monster setElementType:ElementTypeDarkness];
     [monster setProbability:uncommon];
-    [monster setAttackType:Magic];
+    [monster setAttackType:AttackTypeMagic];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:24];

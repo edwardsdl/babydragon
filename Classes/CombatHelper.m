@@ -49,7 +49,7 @@
 
 +(AbilityResult*) RunAbility:(AbilityData*) ability ofMonster:(CombatMonsterNode*) owner onMonster:(CombatMonsterNode*) target
 {
-    AbilityResult *result = [AbilityResult new];
+    /*AbilityResult *result = [AbilityResult new];
     result.targetMonster = target;
     result.effectType = (EffectType)ability.effectType;
     
@@ -64,7 +64,8 @@
         result.statusText = [NSString stringWithFormat:@"%@ healed %@ for %d health using %@", owner.monsterData.name, target.monsterData.name, result.value, ability.name];
     }
     
-    return result;
+    return result;*/
+    return nil;
 }
 
 +(int) GetXpNeededForLevel:(int) level

@@ -54,6 +54,7 @@
 
 + (void)initializeAbilityData
 {
+    /*
     [AbilityData removeAll];
     
     AbilityData *hardShellAbility = [AbilityData insertAbilityForMonster:[MonsterData anyMonsterWithName:@"Skeleton"]];
@@ -75,6 +76,7 @@
     [babyDragonAbility setName:@"Fireball"];
     [babyDragonAbility setTargetType:SingleHostile];
     [babyDragonAbility setValue:1.5];
+     */
     
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];

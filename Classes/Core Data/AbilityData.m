@@ -2,8 +2,8 @@
 //  AbilityData.m
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 10/14/13.
-//  Copyright (c) 2013 First Light Games. All rights reserved.
+//  Created by Eric Stenborg on 2/1/14.
+//  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
 #import "AbilityData.h"
@@ -12,14 +12,14 @@
 
 @implementation AbilityData
 
-@dynamic cost;
-@dynamic effectSprite;
+@dynamic apCost;
 @dynamic effectType;
 @dynamic elementType;
-@dynamic iconSprite;
 @dynamic name;
 @dynamic targetType;
 @dynamic value;
+@dynamic attackType;
+@dynamic level;
 @dynamic monster;
 
 @end
