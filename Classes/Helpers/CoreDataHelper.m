@@ -9,6 +9,7 @@
 #import "CoreDataHelper.h"
 #import "DefaultMonsterDataInitializer.h"
 #import "DebugDataInitializer.h"
+#import "AbilityDataInitializer.h"
 
 @implementation CoreDataHelper
 
@@ -99,6 +100,7 @@
 
 - (void)initializePersistentObjectStore
 {
+    [AbilityDataInitializer initialize];
     [DefaultMonsterDataInitializer initialize];
     [DebugDataInitializer initialize];
 }

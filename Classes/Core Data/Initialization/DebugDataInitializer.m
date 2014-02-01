@@ -14,7 +14,6 @@
 + (void)initialize
 {
     [DebugDataInitializer initializeMonsterData];
-    [DebugDataInitializer initializeAbilityData];
     [DebugDataInitializer initializePartyData];
     [DebugDataInitializer initializeMapNodeData];
 }
@@ -49,42 +48,6 @@
     if (error != nil)
     {
         NSLog(@"Failed to initialize monster data.");
-    }
-}
-
-+ (void)initializeAbilityData
-{
-    /*
-    [AbilityData removeAll];
-    
-    AbilityData *hardShellAbility = [AbilityData insertAbilityForMonster:[MonsterData anyMonsterWithName:@"Skeleton"]];
-    [hardShellAbility setCost:8];
-    [hardShellAbility setEffectSprite:@"No Sprite"];
-    [hardShellAbility setEffectType:Heal];
-    [hardShellAbility setElementType:Water];
-    [hardShellAbility setIconSprite:@"AbilityIcon.png"];
-    [hardShellAbility setName:@"Heal"];
-    [hardShellAbility setTargetType:SingleFriendly];
-    [hardShellAbility setValue:15];
-    
-    AbilityData *babyDragonAbility = [AbilityData insertAbilityForMonster:[MonsterData anyMonsterWithName:@"Baby Dragon"]];
-    [babyDragonAbility setCost:8];
-    [babyDragonAbility setEffectSprite:@"No Sprite"];
-    [babyDragonAbility setEffectType:Damage];
-    [babyDragonAbility setElementType:Fire];
-    [babyDragonAbility setIconSprite:@"AbilityIcon.png"];
-    [babyDragonAbility setName:@"Fireball"];
-    [babyDragonAbility setTargetType:SingleHostile];
-    [babyDragonAbility setValue:1.5];
-     */
-    
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    [managedObjectContext save:&error];
-    
-    if (error != nil)
-    {
-        NSLog(@"Failed to initialize ability data.");
     }
 }
 
