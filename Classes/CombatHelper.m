@@ -29,7 +29,7 @@
     //Calculate the modified defense
     float modifiedDefense = (float)[defender.monsterData trueDefense] * defensePercent;
     
-    //The damage value is the stength of the attack minus the modified defense value
+    //The damage value is the power of the attacker minus the modified defense value
     float damage = (float)[attacker.monsterData truePower] - modifiedDefense;
     
     //Now apply the multiplier that was passed in, and take the floor of the final value
