@@ -50,11 +50,11 @@
     //Ability value
     [self addLabel:[NSString stringWithFormat:@"%d", monster.abilityPoints] color:ccc3(190, 190, 255) position:ccp(((self->dimensions.width / 2)  * -1) + 75 + 85, (self->dimensions.height / 2) - 70) size:14 centerAnchor:NO];
     
-    //Strength
-    [self addLabel:@"Strength" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100) size:14 centerAnchor:NO];
+    //Power
+    [self addLabel:@"Power" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100) size:14 centerAnchor:NO];
     
-    //Strength value
-    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.strength] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100) size:14 centerAnchor:NO];
+    //Power value
+    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.power] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100) size:14 centerAnchor:NO];
     
     //Defense
     [self addLabel:@"Defense" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - 16) size:14 centerAnchor:NO];
@@ -62,29 +62,23 @@
     //Defense value
     [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.defense] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - 16) size:14 centerAnchor:NO];
     
-    //Intellect
-    [self addLabel:@"Intellect" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - (16*2)) size:14 centerAnchor:NO];
-    
-    //Intellect value
-    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.intellect] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - (16*2)) size:14 centerAnchor:NO];
-    
     //Willpower
-    [self addLabel:@"Willpower" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - (16*3)) size:14 centerAnchor:NO];
+    [self addLabel:@"Willpower" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - (16*2)) size:14 centerAnchor:NO];
     
     //Willpower value
-    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.willpower] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - (16*3)) size:14 centerAnchor:NO];
+    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.willpower] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - (16*2)) size:14 centerAnchor:NO];
     
     //Speed
-    [self addLabel:@"Speed" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - (16*4)) size:14 centerAnchor:NO];
+    [self addLabel:@"Speed" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - (16*3)) size:14 centerAnchor:NO];
     
     //Speed value
-    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.speed] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - (16*4)) size:14 centerAnchor:NO];
+    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.speed] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - (16*3)) size:14 centerAnchor:NO];
     
     //Courage
-    [self addLabel:@"Courage" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - (16*5)) size:14 centerAnchor:NO];
+    [self addLabel:@"Courage" color:ccc3(255, 255, 255) position:ccp(-130 + 3.5, 120 - 100 - (16*4)) size:14 centerAnchor:NO];
     
     //Courage value
-    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.courage] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - (16*5)) size:14 centerAnchor:NO];
+    [self addLabel:[NSString stringWithFormat:@"%i", (int)monster.courage] color:ccc3(255, 255, 255) position:ccp(-130 + 3.5 + 75, 120 - 100 - (16*4)) size:14 centerAnchor:NO];
 }
 
 @end

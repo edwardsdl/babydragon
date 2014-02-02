@@ -18,7 +18,7 @@
     {
         float yBarBorderOffset = -40.0;
         float yBarSpacing = -5.5;
-        self->yShadowOffset = -37.5;
+        self->yShadowOffset = -33;
         
         self.monsterData = data;
         self->partyNumber = partyNum;
@@ -29,7 +29,10 @@
         self->shadowSprite = [CCSprite spriteWithFile:@"MonsterShadow.png"];
         self->shadowSprite.position = ccp(0, yShadowOffset);
         if (self.monsterData.isTranslucent)
+            self->shadowSprite.opacity = 90;
+        else
             self->shadowSprite.opacity = 150;
+        self->shadowSprite.scale = 1.1f;
         [self addChild:self->shadowSprite];
         
         //Draw the monster sprite
@@ -37,7 +40,7 @@
         if (self->partyNumber == 1)
             self->monsterSprite.scaleX *= -1;
         if (self.monsterData.isTranslucent)
-            self->monsterSprite.opacity = 150;
+            self->monsterSprite.opacity = 200;
         [self addChild:self->monsterSprite];
         
         //Draw the health bar

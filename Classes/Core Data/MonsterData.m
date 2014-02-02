@@ -2,8 +2,8 @@
 //  MonsterData.m
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 12/3/13.
-//  Copyright (c) 2013 First Light Games. All rights reserved.
+//  Created by Eric Stenborg on 1/29/14.
+//  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
 #import "MonsterData.h"
@@ -19,17 +19,17 @@
 @dynamic elementType;
 @dynamic experiencePoints;
 @dynamic healthPoints;
-@dynamic intellect;
 @dynamic isTranslucent;
 @dynamic level;
 @dynamic name;
 @dynamic paletteIndex;
 @dynamic speed;
-@dynamic strength;
+@dynamic power;
 @dynamic traits;
 @dynamic type;
 @dynamic uuid;
 @dynamic willpower;
+@dynamic attackType;
 @dynamic abilities;
 @dynamic parties;
 

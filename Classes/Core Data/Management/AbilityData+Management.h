@@ -3,7 +3,8 @@
 @interface AbilityData (Management)
 
 + (NSArray *)allAbilities;
-+ (AbilityData *)insertAbilityForMonster:(MonsterData *)monster;
+//+ (AbilityData *)insertAbilityForMonster:(MonsterData *)monster;
++ (AbilityData *)insertAbilityData;
 + (void)removeAll;
 
 @end

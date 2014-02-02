@@ -233,9 +233,9 @@
     self->abilityInUse = ability;
     
     //Update the state
-    if (ability.targetType == SingleHostile)
+    if (ability.targetType == TargetTypeSingleHostile)
         self->state = PlayerSelectingEnemy;
-    else if (ability.targetType == SingleFriendly)
+    else if (ability.targetType == TargetTypeSingleFriendly)
         self->state = PlayerSelectingAlly;
 }
 
@@ -364,6 +364,7 @@
     
     CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
     {
+        /*
         AbilityResult* result = [CombatHelper RunAbility:self->abilityInUse ofMonster:self->activeMonster onMonster:self->targetMonster];
         
         if (result.effectType == Damage)
@@ -379,6 +380,7 @@
         }
 
         [self->combatStatus openAndShowLabel:result.statusText];
+         */
     }];
     
     CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];

@@ -7,13 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "CoreDataHelper.h"
 #import "ScanAcquisitionLayer.h"
 #import "MonsterData.h"
 #import "Player.h"
 #import "cocos2d.h"
 #import "MapLayer.h"
 #import "MonsterFactory.h"
+#import "CoreDataHelper.h"
 
 
 @implementation ScanAcquisitionLayer
