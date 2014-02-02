@@ -41,6 +41,8 @@
 
 -(void) updateHealthByValue:(int)value;
 
+-(void) updateAPByValue:(int)value;
+
 -(void) updateTurnCounter;
 
 -(void) beginPulse;

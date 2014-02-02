@@ -17,7 +17,7 @@
     CombatMenuButtonNode* abilitiesButton;
     CombatMenuButtonNode* backpackButton;
     
-    NSOrderedSet* monsterAbilities;
+    NSArray* monsterAbilities;
     
     NSMutableArray* abilitiesSubButtons;
     

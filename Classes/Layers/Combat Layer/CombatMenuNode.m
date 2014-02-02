@@ -81,7 +81,7 @@
 -(void) loadAbilities:(MonsterData*) monsterData
 {
     //Store the abilities list for later
-    self->monsterAbilities = monsterData.abilities;
+    self->monsterAbilities = [monsterData.abilities allObjects];
     
     for (int i = 0; i < [self->abilitiesSubButtons count]; i++)
     {
@@ -89,8 +89,15 @@
         
         if ([monsterData.abilities count] > i)
         {
-            [button updateLabel:((AbilityData*)[monsterData.abilities objectAtIndex:i]).name];
-            button.opacity = 255;
+            [button updateLabel:
+             [NSString stringWithFormat:@"%@ %i",
+              ((AbilityData*)[self->monsterAbilities objectAtIndex:i]).name,
+              ((AbilityData*)[self->monsterAbilities objectAtIndex:i]).level]];
+            
+            if (monsterData.abilityPoints < ((AbilityData*)[self->monsterAbilities objectAtIndex:i]).apCost)
+                button.opacity = 100;
+            else
+                button.opacity = 255;
         }
         else
         {
@@ -171,7 +178,8 @@
             CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
             if (button == [self->abilitiesSubButtons objectAtIndex:i] && [monsterAbilities count] > i)
             {
-                [combatLayer beginAbility:[monsterAbilities objectAtIndex:i]];
+                if (button.opacity == 255)
+                    [combatLayer beginAbility:[monsterAbilities objectAtIndex:i]];
             }
         }
     }

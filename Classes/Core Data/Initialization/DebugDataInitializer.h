@@ -10,6 +10,6 @@
 
 @interface DebugDataInitializer : NSObject
 
-+ (void)initialize;
++ (void)initializeData;
 
 @end

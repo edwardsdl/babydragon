@@ -11,9 +11,10 @@
 
 @implementation DebugDataInitializer
 
-+ (void)initialize
++ (void)initializeData
 {
     [DebugDataInitializer initializeMonsterData];
+    [DebugDataInitializer initializeMonsterAbilities];
     [DebugDataInitializer initializePartyData];
     [DebugDataInitializer initializeMapNodeData];
 }
@@ -48,6 +49,22 @@
     if (error != nil)
     {
         NSLog(@"Failed to initialize monster data.");
+    }
+}
+
++ (void)initializeMonsterAbilities
+{
+    [[MonsterData anyMonsterWithName:@"Fox"] addAbilities:[NSSet setWithArray:@[
+        [AbilityData abilityDataWithName:@"Inferno" andLevel:[NSNumber numberWithInt:1]]
+    ]]];
+    
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    [managedObjectContext save:&error];
+    
+    if (error != nil)
+    {
+        NSLog(@"Failed to initialize monster ability data.");
     }
 }
 

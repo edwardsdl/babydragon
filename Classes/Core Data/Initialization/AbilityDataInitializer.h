@@ -10,6 +10,6 @@
 
 @interface AbilityDataInitializer : NSObject
 
-+(void) initialize;
++(void) initializeData;
 
 @end

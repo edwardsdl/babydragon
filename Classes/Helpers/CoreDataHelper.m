@@ -100,9 +100,9 @@
 
 - (void)initializePersistentObjectStore
 {
-    [AbilityDataInitializer initialize];
-    [DefaultMonsterDataInitializer initialize];
-    [DebugDataInitializer initialize];
+    [AbilityDataInitializer initializeData];
+    [DefaultMonsterDataInitializer initializeData];
+    [DebugDataInitializer initializeData];
 }
 
 @end

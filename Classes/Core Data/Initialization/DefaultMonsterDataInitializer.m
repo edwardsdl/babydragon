@@ -7,7 +7,7 @@
 
 @implementation DefaultMonsterDataInitializer
 
-+(void) initialize
++(void) initializeData
 {
     [DefaultMonsterData removeAll];
     

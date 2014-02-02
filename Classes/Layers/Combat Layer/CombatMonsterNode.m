@@ -133,6 +133,19 @@
     self->healthBar.percentage = ((float)self.currentHealthPoints / self.monsterData.healthPoints) * 100.0f;
 }
 
+-(void) updateAPByValue:(int)value
+{
+    self.currentAbilityPoints += value;
+    
+    if (self.currentAbilityPoints < 0)
+        self.currentAbilityPoints = 0;
+    
+    if (self.currentAbilityPoints > self.monsterData.abilityPoints)
+        self.currentAbilityPoints = self.monsterData.abilityPoints;
+    
+    self->actionBar.percentage = ((float)self.currentAbilityPoints / self.monsterData.abilityPoints) * 100.0f;
+}
+
 -(void) updateTurnCounter
 {
     //Increment the turn counter by the monster speed
