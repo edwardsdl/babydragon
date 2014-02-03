@@ -758,6 +758,8 @@
 		BCAF494F17E55ECB001A9B76 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		BCAF495117E55ECB001A9B76 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		BCDC1342189F1F1E00CBED42 /* LootQualityType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LootQualityType.h; sourceTree = "<group>"; };
+		BCDC1343189F1FA400CBED42 /* LevelSizeType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelSizeType.h; sourceTree = "<group>"; };
 		BCE563E718030C5C001A744B /* ElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementType.h; sourceTree = "<group>"; };
 		BCEEEA88180A81BE00BC20E9 /* NSData+ByteUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ByteUtilities.h"; sourceTree = "<group>"; };
 		BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ByteUtilities.m"; sourceTree = "<group>"; };
@@ -1670,6 +1672,8 @@
 				BC9AF4F8185F6EE0006822D1 /* TileType.h */,
 				BC434470188D98FC00ED3198 /* EnvironmentType.h */,
 				07F8C6011899EF440000FAAB /* AttackType.h */,
+				BCDC1342189F1F1E00CBED42 /* LootQualityType.h */,
+				BCDC1343189F1FA400CBED42 /* LevelSizeType.h */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
