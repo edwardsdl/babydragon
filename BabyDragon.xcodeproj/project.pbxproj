@@ -62,6 +62,9 @@
 		BC20AC0F17EC055C0095B125 /* AcquisitionFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0E17EC055C0095B125 /* AcquisitionFactoryTests.m */; };
 		BC30306B180CF9AA0014F64E /* RosterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30306A180CF9AA0014F64E /* RosterLayer.m */; };
 		BC303080180F81FB0014F64E /* CCScene+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30307F180F81FB0014F64E /* CCScene+Utilities.m */; };
+		BC3F52FA189F3C1100EC2900 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3F52F9189F3C1100EC2900 /* CoreLocation.framework */; };
+		BC3F52FD189F425600EC2900 /* AcquisitionData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3F52FC189F425600EC2900 /* AcquisitionData+Management.m */; };
+		BC3F5300189F46B100EC2900 /* AcquisitionData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3F52FF189F46B100EC2900 /* AcquisitionData.m */; };
 		BC4A9EE817E7D038008EDA70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E972E17DA438E00DC8A74 /* UIKit.framework */; };
 		BC4A9EE917E7D038008EDA70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E973017DA438E00DC8A74 /* Foundation.framework */; };
 		BC4A9F1B17E7D1CF008EDA70 /* ProbabilityCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */; };
@@ -228,7 +231,6 @@
 		BCEEEACC180BA86600BC20E9 /* EquipmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEACB180BA86600BC20E9 /* EquipmentData.m */; };
 		BCEEEAD2180BA86700BC20E9 /* GoldData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAD1180BA86700BC20E9 /* GoldData.m */; };
 		BCEEEAD5180BA86700BC20E9 /* ItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAD4180BA86700BC20E9 /* ItemData.m */; };
-		BCEEEAE4180BA86700BC20E9 /* AcquisitionData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAE3180BA86700BC20E9 /* AcquisitionData.m */; };
 		BCEEEAE7180BA86700BC20E9 /* EnhancementData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAE6180BA86700BC20E9 /* EnhancementData.m */; };
 		BCEEEAF0180C2F9600BC20E9 /* BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAEF180C2F9600BC20E9 /* BaseData.m */; };
 		BCEF361C17F1FE8A008F7688 /* MonsterFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEF361B17F1FE8A008F7688 /* MonsterFactoryTests.m */; };
@@ -424,6 +426,11 @@
 		BC30306A180CF9AA0014F64E /* RosterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosterLayer.m; sourceTree = "<group>"; };
 		BC30307E180F81FB0014F64E /* CCScene+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCScene+Utilities.h"; sourceTree = "<group>"; };
 		BC30307F180F81FB0014F64E /* CCScene+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCScene+Utilities.m"; sourceTree = "<group>"; };
+		BC3F52F9189F3C1100EC2900 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BC3F52FB189F425600EC2900 /* AcquisitionData+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AcquisitionData+Management.h"; sourceTree = "<group>"; };
+		BC3F52FC189F425600EC2900 /* AcquisitionData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AcquisitionData+Management.m"; sourceTree = "<group>"; };
+		BC3F52FE189F46B100EC2900 /* AcquisitionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AcquisitionData.h; path = "Classes/Core Data/AcquisitionData.h"; sourceTree = SOURCE_ROOT; };
+		BC3F52FF189F46B100EC2900 /* AcquisitionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcquisitionData.m; path = "Classes/Core Data/AcquisitionData.m"; sourceTree = SOURCE_ROOT; };
 		BC434470188D98FC00ED3198 /* EnvironmentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentType.h; sourceTree = "<group>"; };
 		BC4A9EE517E7D038008EDA70 /* BabyDragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyDragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbabilityCollectionTests.m; sourceTree = "<group>"; };
@@ -786,8 +793,6 @@
 		BCEEEAD1180BA86700BC20E9 /* GoldData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldData.m; sourceTree = "<group>"; };
 		BCEEEAD3180BA86700BC20E9 /* ItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemData.h; sourceTree = "<group>"; };
 		BCEEEAD4180BA86700BC20E9 /* ItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemData.m; sourceTree = "<group>"; };
-		BCEEEAE2180BA86700BC20E9 /* AcquisitionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionData.h; sourceTree = "<group>"; };
-		BCEEEAE3180BA86700BC20E9 /* AcquisitionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcquisitionData.m; sourceTree = "<group>"; };
 		BCEEEAE5180BA86700BC20E9 /* EnhancementData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnhancementData.h; sourceTree = "<group>"; };
 		BCEEEAE6180BA86700BC20E9 /* EnhancementData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnhancementData.m; sourceTree = "<group>"; };
 		BCEEEAEE180C2F9600BC20E9 /* BaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseData.h; sourceTree = "<group>"; };
@@ -900,6 +905,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3F52FA189F3C1100EC2900 /* CoreLocation.framework in Frameworks */,
 				BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */,
 				D7EDDCB917E3FAF6003A820A /* CoreVideo.framework in Frameworks */,
 				D7EDDCB717E3FAF0003A820A /* CoreMedia.framework in Frameworks */,
@@ -1682,7 +1688,7 @@
 			isa = PBXGroup;
 			children = (
 				072C5774189D47AF005C4AA6 /* AbilityData.h */,
-				BCEEEAE2180BA86700BC20E9 /* AcquisitionData.h */,
+				BC3F52FE189F46B100EC2900 /* AcquisitionData.h */,
 				BCEEEAEE180C2F9600BC20E9 /* BaseData.h */,
 				07F8C60B1899F04E0000FAAB /* DefaultMonsterData.h */,
 				BCEEEAE5180BA86700BC20E9 /* EnhancementData.h */,
@@ -1695,7 +1701,7 @@
 				BC629E9C18386A8B00D35C55 /* PartyData.h */,
 				BC1D873E1884ED3200386142 /* SinglePlayerContentData.h */,
 				072C5775189D47AF005C4AA6 /* AbilityData.m */,
-				BCEEEAE3180BA86700BC20E9 /* AcquisitionData.m */,
+				BC3F52FF189F46B100EC2900 /* AcquisitionData.m */,
 				BCEEEAEF180C2F9600BC20E9 /* BaseData.m */,
 				07F8C60C1899F04E0000FAAB /* DefaultMonsterData.m */,
 				BCEEEAE6180BA86700BC20E9 /* EnhancementData.m */,
@@ -1732,6 +1738,8 @@
 				BCEEEAAD180BA73800BC20E9 /* NSManagedObjectContext+Management.m */,
 				BCEEEAAF180BA73800BC20E9 /* PartyData+Management.m */,
 				BC9ED4CD184F792D00A6E8E3 /* SinglePlayerContentData+Management.m */,
+				BC3F52FB189F425600EC2900 /* AcquisitionData+Management.h */,
+				BC3F52FC189F425600EC2900 /* AcquisitionData+Management.m */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -1762,6 +1770,7 @@
 		D74E972317DA438E00DC8A74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC3F52F9189F3C1100EC2900 /* CoreLocation.framework */,
 				BC0C754B17F912D10070D5BA /* CoreData.framework */,
 				D7EDDCB417E3FADF003A820A /* libiconv.dylib */,
 				D74E972A17DA438E00DC8A74 /* AudioToolbox.framework */,
@@ -2120,7 +2129,6 @@
 				BCAF495D17E55ECB001A9B76 /* CCActionTiledGrid.m in Sources */,
 				BCAF495E17E55ECB001A9B76 /* CCActionTween.m in Sources */,
 				BCAF495F17E55ECB001A9B76 /* CCAnimation.m in Sources */,
-				BCEEEAE4180BA86700BC20E9 /* AcquisitionData.m in Sources */,
 				078B35E7188C6C600068C34D /* MapNodeData.m in Sources */,
 				BCAF496017E55ECB001A9B76 /* CCAnimationCache.m in Sources */,
 				BCAF496117E55ECB001A9B76 /* CCAtlasNode.m in Sources */,
@@ -2184,6 +2192,7 @@
 				0765FCD6185F6EC700E15D1C /* MyPartiesLayer.m in Sources */,
 				07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */,
 				BCAF498817E55ECB001A9B76 /* CCSpriteFrameCache.m in Sources */,
+				BC3F52FD189F425600EC2900 /* AcquisitionData+Management.m in Sources */,
 				BCAF498917E55ECB001A9B76 /* CCTexture2D.m in Sources */,
 				0796B52D185507E30024048E /* ManageLayer.m in Sources */,
 				07FB559F187CD21F00316BA6 /* ManagePartyLayer.m in Sources */,
@@ -2241,6 +2250,7 @@
 				BCAF49AC17E55ECB001A9B76 /* CDAudioManager.m in Sources */,
 				BCAF49AD17E55ECB001A9B76 /* CDOpenALSupport.m in Sources */,
 				BCAF49AE17E55ECB001A9B76 /* CDXMacOSXSupport.m in Sources */,
+				BC3F5300189F46B100EC2900 /* AcquisitionData.m in Sources */,
 				BCAF49AF17E55ECB001A9B76 /* CDXPropertyModifierAction.m in Sources */,
 				BCAF49B017E55ECB001A9B76 /* CocosDenshion.m in Sources */,
 				BCAF49B317E55ECB001A9B76 /* SimpleAudioEngine.m in Sources */,
