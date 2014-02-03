@@ -1,16 +1,27 @@
 #import "BarcodeHelper.h"
+#import "EnvironmentType.h"
+#import "LevelSizeType.h"
+#import "LootQualityType.h"
+#import "ProbabilityCollection.h"
 #import "SinglePlayerContentFactory.h"
 #import "Tile.h"
 
-@interface SinglePlayerContentData()
+@interface SinglePlayerContentFactory()
+{
+    ProbabilityCollection *_environmentProbabilityCollection;
+    ProbabilityCollection *_sizeProbabilityCollection;
+    ProbabilityCollection *_lootProbabilityCollection;
+}
 
-- (void)generateTiles;
+- (void)populateEnvironmentProbabilityCollection;
+- (void)populateSizeProbabilityCollection;
+- (void)populateLootQualityProbabilityCollection;
 
 @end
 
 @implementation SinglePlayerContentFactory
 {
-    CGSize _size;
+    CGSize _floorSize;
 }
 
 #pragma mark - Initializers
@@ -18,8 +29,8 @@
 {
     if (self = [super init])
     {
-        _size = CGSizeMake(10, 10);
-        
+        _sizeProbabilityCollection = [[ProbabilityCollection alloc] init];
+        [self populateSizeProbabilityCollection];
     }
     
     return self;
@@ -41,16 +52,28 @@
 
 #pragma mark - Private methods
 
-- (void)generateTiles
+- (void)populateEnvironmentProbabilityCollection
 {
-//    Tile *tiles = malloc((int)size.width * (int)size.height * sizeof(Tile));
-//    for (int i = 0; i < _size.width; i++)
-//    {
-//        for (int j = 0; j < _size.height; j++)
-//        {
-//            tiles[i][j] = [[Tile alloc] initWithType:Open];
-//        }
-//    }
+    for (int i = 0; i < EnvironmentTypeCount; i++)
+    {
+        [_environmentProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
+    }
+}
+
+- (void)populateSizeProbabilityCollection
+{
+    for (int i = 0; i < LevelSizeTypeCount; i++)
+    {
+        [_sizeProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
+    }
+}
+
+- (void)populateLootQualityProbabilityCollection
+{
+    for (int i = 0; i < LootQualityTypeCount; i++)
+    {
+        [_lootProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
+    }
 }
 
 @end
