@@ -9,7 +9,7 @@
 
 @implementation AbilityDataInitializer
 
-+(void) initialize
++(void) initializeData
 {
     [AbilityData removeAll];
     

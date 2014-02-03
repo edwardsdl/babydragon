@@ -10,6 +10,6 @@
 
 @interface DefaultMonsterDataInitializer : NSObject
 
-+(void) initialize;
++(void) initializeData;
 
 @end

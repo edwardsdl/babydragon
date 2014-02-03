@@ -24,6 +24,18 @@ static NSString *entityName = @"AbilityData";
     return abilityData;
 }*/
 
++ (AbilityData *)abilityDataWithName:(NSString *)name andLevel:(NSNumber*) level
+{
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    
+    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetAbilityWithNameAndLevel"
+                                                                substitutionVariables:@{@"NAME": name, @"LEVEL": level}];
+    
+    return [results count] > 0
+    ? (AbilityData *)[results objectAtIndex:0]
+    : nil;
+}
+
 + (AbilityData *)insertAbilityData
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];

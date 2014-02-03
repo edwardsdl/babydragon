@@ -85,7 +85,7 @@
         <attribute name="type" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="willpower" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <relationship name="abilities" optional="YES" toMany="YES" minCount="1" deletionRule="Cascade" ordered="YES" destinationEntity="AbilityData" inverseName="monster" inverseEntity="AbilityData" syncable="YES"/>
+        <relationship name="abilities" optional="YES" toMany="YES" minCount="1" deletionRule="Cascade" destinationEntity="AbilityData" inverseName="monster" inverseEntity="AbilityData" syncable="YES"/>
         <relationship name="parties" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="PartyData" inverseName="monsters" inverseEntity="PartyData" syncable="YES"/>
     </entity>
     <entity name="PartyData" representedClassName="PartyData" parentEntity="BaseData" syncable="YES">
@@ -100,6 +100,7 @@
         <attribute name="minimumMonsterLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="seed" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
+    <fetchRequest name="GetAbilityWithNameAndLevel" entity="AbilityData" predicateString="name == $NAME AND level == $LEVEL"/>
     <fetchRequest name="GetAnyMonsterWithName" entity="MonsterData" predicateString="name == $NAME"/>
     <fetchRequest name="GetAnyPartyWithName" entity="PartyData" predicateString="name == $NAME"/>
     <fetchRequest name="GetDefaultMonsterAttributesForType" entity="DefaultMonsterData" predicateString="type == $TYPE" fetchLimit="1"/>

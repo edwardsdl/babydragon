@@ -362,7 +362,7 @@
     
     CCDelayTime *delay1 = [CCDelayTime actionWithDuration:0.3f];
     
-    CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
+    CCCallBlock *performAbility = [CCCallBlock actionWithBlock:^
     {
         /*
         AbilityResult* result = [CombatHelper RunAbility:self->abilityInUse ofMonster:self->activeMonster onMonster:self->targetMonster];
@@ -381,6 +381,9 @@
 
         [self->combatStatus openAndShowLabel:result.statusText];
          */
+        
+        //Substract AP
+        [self->activeMonster updateAPByValue:abilityInUse.apCost * -1];
     }];
     
     CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
@@ -401,7 +404,7 @@
         self->state = ProcessingTurns;
     }];
     
-    CCSequence* fightSequence = [CCSequence actions:jumpOut, delay1, assignDamage, delay2, jumpBack, delay3, resumeProcessingTurns, nil];
+    CCSequence* fightSequence = [CCSequence actions:jumpOut, delay1, performAbility, delay2, jumpBack, delay3, resumeProcessingTurns, nil];
     [self runAction:fightSequence];
 }
 
