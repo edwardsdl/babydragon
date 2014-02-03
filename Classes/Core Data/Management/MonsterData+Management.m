@@ -51,7 +51,6 @@ static NSString *entityName = @"MonsterData";
     [monsterData setName:[type stringByReplacingOccurrencesOfString:@"_" withString:@" "]];
     [monsterData setSpeed:[defaultMonsterData speed]];
     [monsterData setPower:[defaultMonsterData power]];
-    // TODO: Set traits
     [monsterData setType:type];
     [monsterData setUuid:[UUIDHelper createUUIDString]];
     [monsterData setWillpower:[defaultMonsterData willpower]];
