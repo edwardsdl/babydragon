@@ -7,7 +7,7 @@
 
 @interface MonsterFactory ()
 {
-    ProbabilityCollection * _monsterProbabilityCollection;
+    ProbabilityCollection *_monsterProbabilityCollection;
 }
 
 - (void)populateMonsterProbabilityCollection;
