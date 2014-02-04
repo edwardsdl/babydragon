@@ -21,7 +21,7 @@
     
     //Fox
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Fox"];
-    [monster setElementType:ElementTypeEarth];
+    [monster setElementType:ElementTypeFire];
     [monster setProbability:common];
     [monster setAttackType:AttackTypeMagic];
     
@@ -161,7 +161,7 @@
     [monster setPowerLevelMultiplier:1.2];
     [monster setWillpowerLevelMultiplier:1];
     
-    [monster setIsTranslucent:YES];
+    [monster setIsTranslucent:NO];
     
     //Small Blob
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Small_Blob"];
@@ -209,7 +209,7 @@
     [monster setPowerLevelMultiplier:1.2];
     [monster setWillpowerLevelMultiplier:1];
     
-    [monster setIsTranslucent:YES];
+    [monster setIsTranslucent:NO];
     
     //Wisp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Wisp"];
@@ -257,7 +257,7 @@
     [monster setPowerLevelMultiplier:1.1];
     [monster setWillpowerLevelMultiplier:1];
     
-    [monster setIsTranslucent:YES];
+    [monster setIsTranslucent:NO];
     
     //Crab
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Crab"];
@@ -281,7 +281,7 @@
     [monster setPowerLevelMultiplier:1.1];
     [monster setWillpowerLevelMultiplier:1];
     
-    [monster setIsTranslucent:YES];
+    [monster setIsTranslucent:NO];
     
     //Hard Shell
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard_Shell"];
@@ -377,7 +377,7 @@
     [monster setPowerLevelMultiplier:1.2];
     [monster setWillpowerLevelMultiplier:1];
     
-    [monster setIsTranslucent:YES];
+    [monster setIsTranslucent:NO];
     
     //Skeleton
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Skeleton"];
@@ -449,7 +449,7 @@
     [monster setPowerLevelMultiplier:1.2];
     [monster setWillpowerLevelMultiplier:1.1];
     
-    [monster setIsTranslucent:NO];
+    [monster setIsTranslucent:YES];
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     [managedObjectContext save:&error];

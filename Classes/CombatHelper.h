@@ -10,12 +10,17 @@
 #import "CombatMonsterNode.h"
 #import "AbilityData.h"
 #import "AbilityResult.h"
+#import "AttackType.h"
+#import "ElementType.h";
 
 @interface CombatHelper : NSObject
 
-+(int) CalculatePhysicalDamageWithAttacker:(CombatMonsterNode*) attacker andDefender:(CombatMonsterNode*) defender andMultiplier:(float) multiplier;
++(int) CalculateFightDamageWithAttacker:(MonsterData*) attacker
+                            andDefender:(MonsterData*) defender;
 
-+(int) CalculateFightDamageWithAttacker:(CombatMonsterNode*) attacker andDefender:(CombatMonsterNode*) defender;
++(int) CalculateAttackAbilityDamageWithAbility:(AbilityData*) ability
+                                   AndAttacker:(MonsterData*) attacker
+                                   andDefender:(MonsterData*) defender;
 
 +(AbilityResult*) RunAbility:(AbilityData*) ability ofMonster:(CombatMonsterNode*) owner onMonster:(CombatMonsterNode*) target;
 

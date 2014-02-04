@@ -320,11 +320,19 @@
     
     CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
     {
-        int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster andDefender:self->targetMonster];
-        [self->targetMonster updateHealthByValue:damage * -1];
-        [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
-        [self showHitSprite:self->targetMonster.position];
-        [self sendUpNumbers:damage position:self->targetMonster.position color:ccc3(255, 255, 255)];
+        int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
+        if (damage > 0)
+        {
+            [self->targetMonster updateHealthByValue:damage * -1];
+            [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
+            [self showHitSprite:self->targetMonster.position];
+            [self sendUpText:[NSString stringWithFormat:@"%d", damage] position:self->targetMonster.position color:ccc3(255, 255, 255)];
+        }
+        else
+        {
+            [self->combatStatus openAndShowLabel:@"Missed!"];
+            [self sendUpText:@"Miss!" position:self->targetMonster.position color:ccc3(255, 255, 255)];
+        }
     }];
     
     CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
@@ -364,6 +372,49 @@
     
     CCCallBlock *performAbility = [CCCallBlock actionWithBlock:^
     {
+        switch (self->abilityInUse.effectType)
+        {
+            case EffectTypeAttack:
+            {
+                int damage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
+                if (damage > 0)
+                {
+                    [self->targetMonster updateHealthByValue:damage * -1];
+                    [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
+                    [self showHitSprite:self->targetMonster.position];
+                    [self sendUpText:[NSString stringWithFormat:@"%d", damage] position:self->targetMonster.position color:ccc3(255, 255, 255)];
+                }
+                else
+                {
+                    [self->combatStatus openAndShowLabel:@"Missed!"];
+                    [self sendUpText:@"Miss!" position:self->targetMonster.position color:ccc3(255, 255, 255)];
+                }
+                break;
+            }
+            case EffectTypeGroupAttack:
+                break;
+            case EffectTypeDamageOverTime:
+                break;
+            case EffectTypeShield:
+                break;
+            case EffectTypeCure:
+                break;
+            case EffectTypeGroupCure:
+                break;
+            case EffectTypeRevive:
+                break;
+            case EffectTypeAlterSpeed:
+                break;
+            case EffectTypeAlterCourage:
+                break;
+            case EffectTypeAlterPower:
+                break;
+            case EffectTypeAlterDefense:
+                break;
+            case EffectTypeAlterWillpower:
+                break;
+        }
+        
         /*
         AbilityResult* result = [CombatHelper RunAbility:self->abilityInUse ofMonster:self->activeMonster onMonster:self->targetMonster];
         
@@ -462,14 +513,14 @@
     self->hitSprite.visible = NO;
 }
 
--(void) sendUpNumbers:(int) value position:(CGPoint) position color:(ccColor3B) color
+-(void) sendUpText:(NSString*) text position:(CGPoint) position color:(ccColor3B) color
 {
-    CCLabelTTF *numbersLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", value] fontName:@"Georgia" fontSize:14];
+    CCLabelTTF *numbersLabel = [CCLabelTTF labelWithString:text fontName:@"Georgia" fontSize:14];
     numbersLabel.color = color;
     numbersLabel.position = position;
     [self addChild:numbersLabel z:100];
     
-    CCLabelTTF *numbersLabelShadow = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", value] fontName:@"Georgia" fontSize:14];
+    CCLabelTTF *numbersLabelShadow = [CCLabelTTF labelWithString:text fontName:@"Georgia" fontSize:14];
     numbersLabelShadow.color = ccc3(0, 0, 0);
     numbersLabelShadow.position = ccp(position.x + 1, position.y -1);
     [self addChild:numbersLabelShadow z:99];

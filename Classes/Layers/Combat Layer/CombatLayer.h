@@ -17,6 +17,7 @@
 #import "CombatHelper.h"
 #import "MapLayer.h"
 #import "TargetType.h"
+#import "EffectType.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,
