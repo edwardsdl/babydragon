@@ -11,7 +11,7 @@
 #import "AbilityData.h"
 #import "AbilityResult.h"
 #import "AttackType.h"
-#import "ElementType.h";
+#import "ElementType.h"
 
 @interface CombatHelper : NSObject
 
@@ -21,9 +21,5 @@
 +(int) CalculateAttackAbilityDamageWithAbility:(AbilityData*) ability
                                    AndAttacker:(MonsterData*) attacker
                                    andDefender:(MonsterData*) defender;
-
-+(AbilityResult*) RunAbility:(AbilityData*) ability ofMonster:(CombatMonsterNode*) owner onMonster:(CombatMonsterNode*) target;
-
-+(int) GetXpNeededForLevel:(int) level;
 
 @end

@@ -139,30 +139,4 @@
     return damage;
 }
 
-+(AbilityResult*) RunAbility:(AbilityData*) ability ofMonster:(CombatMonsterNode*) owner onMonster:(CombatMonsterNode*) target
-{
-    /*AbilityResult *result = [AbilityResult new];
-    result.targetMonster = target;
-    result.effectType = (EffectType)ability.effectType;
-    
-    if (ability.effectType == Damage)
-    {
-        result.value = [CombatHelper CalculatePhysicalDamageWithAttacker:owner andDefender:target andMultiplier:ability.value];
-        result.statusText = [NSString stringWithFormat:@"%@ used %@ on %@ for %d damage", owner.monsterData.name, ability.name, target.monsterData.name, result.value];
-    }
-    else if ((EffectType)ability.effectType == Heal)
-    {
-        result.value = ability.value;
-        result.statusText = [NSString stringWithFormat:@"%@ healed %@ for %d health using %@", owner.monsterData.name, target.monsterData.name, result.value, ability.name];
-    }
-    
-    return result;*/
-    return nil;
-}
-
-+(int) GetXpNeededForLevel:(int) level
-{
-    return 0;
-}
-
 @end

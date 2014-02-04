@@ -321,18 +321,7 @@
     CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
     {
         int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
-        if (damage > 0)
-        {
-            [self->targetMonster updateHealthByValue:damage * -1];
-            [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
-            [self showHitSprite:self->targetMonster.position];
-            [self sendUpText:[NSString stringWithFormat:@"%d", damage] position:self->targetMonster.position color:ccc3(255, 255, 255)];
-        }
-        else
-        {
-            [self->combatStatus openAndShowLabel:@"Missed!"];
-            [self sendUpText:@"Miss!" position:self->targetMonster.position color:ccc3(255, 255, 255)];
-        }
+        [self assignDamage:damage ToMonster:self->targetMonster];
     }];
     
     CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
@@ -377,22 +366,23 @@
             case EffectTypeAttack:
             {
                 int damage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
-                if (damage > 0)
-                {
-                    [self->targetMonster updateHealthByValue:damage * -1];
-                    [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, damage]];
-                    [self showHitSprite:self->targetMonster.position];
-                    [self sendUpText:[NSString stringWithFormat:@"%d", damage] position:self->targetMonster.position color:ccc3(255, 255, 255)];
-                }
-                else
-                {
-                    [self->combatStatus openAndShowLabel:@"Missed!"];
-                    [self sendUpText:@"Miss!" position:self->targetMonster.position color:ccc3(255, 255, 255)];
-                }
+                [self assignDamage:damage ToMonster:self->targetMonster];
                 break;
             }
             case EffectTypeGroupAttack:
+            {
+                for (CombatMonsterNode* monster in self->monsters)
+                {
+                    if ((self->activeMonster.partyNumber == 1 && monster.partyNumber == 2) ||
+                        (self->activeMonster.partyNumber == 2 && monster.partyNumber == 1))
+                    {
+                        int damage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster.monsterData andDefender:monster.monsterData];
+                        [self assignDamage:damage ToMonster:(CombatMonsterNode*) monster];
+                    }
+                }
+                
                 break;
+            }
             case EffectTypeDamageOverTime:
                 break;
             case EffectTypeShield:
@@ -414,24 +404,6 @@
             case EffectTypeAlterWillpower:
                 break;
         }
-        
-        /*
-        AbilityResult* result = [CombatHelper RunAbility:self->abilityInUse ofMonster:self->activeMonster onMonster:self->targetMonster];
-        
-        if (result.effectType == Damage)
-        {
-            [self->targetMonster updateHealthByValue:result.value * -1];
-            [self sendUpNumbers:result.value position:self->targetMonster.position color:ccc3(255, 255, 255)];
-            [self showHitSprite:self->targetMonster.position];
-        }
-        else if (result.effectType == Heal)
-        {
-            [self->targetMonster updateHealthByValue:result.value];
-            [self sendUpNumbers:result.value position:self->targetMonster.position color:ccc3(150, 255, 150)];
-        }
-
-        [self->combatStatus openAndShowLabel:result.statusText];
-         */
         
         //Substract AP
         [self->activeMonster updateAPByValue:abilityInUse.apCost * -1];
@@ -511,6 +483,22 @@
 -(void) hideHitSprite
 {
     self->hitSprite.visible = NO;
+}
+
+-(void) assignDamage:(int) damage ToMonster:(CombatMonsterNode*) monster
+{
+    if (damage > 0)
+    {
+        [monster updateHealthByValue:damage * -1];
+        [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, monster.monsterData.name, damage]];
+        [self showHitSprite:monster.position];
+        [self sendUpText:[NSString stringWithFormat:@"%d", damage] position:monster.position color:ccc3(255, 255, 255)];
+    }
+    else
+    {
+        [self->combatStatus openAndShowLabel:@"Missed!"];
+        [self sendUpText:@"Miss!" position:monster.position color:ccc3(255, 255, 255)];
+    }
 }
 
 -(void) sendUpText:(NSString*) text position:(CGPoint) position color:(ccColor3B) color

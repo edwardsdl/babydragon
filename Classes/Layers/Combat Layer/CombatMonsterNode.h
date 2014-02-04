@@ -13,8 +13,6 @@
 
 @interface CombatMonsterNode : CCNode <CCTouchOneByOneDelegate>
 {
-    int partyNumber;
-    
     CCSprite *shadowSprite;
     CCSprite *monsterSprite;
     
@@ -32,6 +30,8 @@
 @property int currentHealthPoints;
 
 @property int currentAbilityPoints;
+
+@property int partyNumber;
 
 -(id) init:(MonsterData*) data partyNumber:(int) partyNum;
 

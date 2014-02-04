@@ -21,7 +21,7 @@
         self->yShadowOffset = -33;
         
         self.monsterData = data;
-        self->partyNumber = partyNum;
+        self.partyNumber = partyNum;
         self.currentHealthPoints = self.monsterData.healthPoints;
         self.currentAbilityPoints = self.monsterData.abilityPoints;
         
@@ -37,7 +37,7 @@
         
         //Draw the monster sprite
         self->monsterSprite = [CCSprite spriteWithFile:[NSString stringWithFormat:@"%@_Standing.png", self.monsterData.type]];
-        if (self->partyNumber == 1)
+        if (self.partyNumber == 1)
             self->monsterSprite.scaleX *= -1;
         if (self.monsterData.isTranslucent)
             self->monsterSprite.opacity = 200;
@@ -198,7 +198,7 @@
     
     //Determine bezier control points
     float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));
-    if (self->partyNumber == 2)
+    if (self.partyNumber == 2)
         angle += [MathHelpers degreesToRadians:180.0f];
     CGPoint midpoint = [MathHelpers calcMidpointOfLinrWithPointOone:self->monsterSprite.position andPointTwp:bezierTo.endPosition];
     bezierTo.controlPoint_1 = ccp(midpoint.x + (40 * cos(angle)), midpoint.y + (40 * sin(angle)));
@@ -219,7 +219,7 @@
     
     //Determine bezier control points
     float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));
-    if (self->partyNumber == 1)
+    if (self.partyNumber == 1)
         angle += [MathHelpers degreesToRadians:180.0f];
     CGPoint midpoint = [MathHelpers calcMidpointOfLinrWithPointOone:self->monsterSprite.position andPointTwp:bezierTo.endPosition];
     bezierTo.controlPoint_1 = ccp(midpoint.x + (40 * cos(angle)), midpoint.y + (40 * sin(angle)));
