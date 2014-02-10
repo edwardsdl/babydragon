@@ -139,4 +139,15 @@
     return damage;
 }
 
++(int) CalculateHealingWithAbility:(AbilityData*) ability AndHealer:(MonsterData*) healer AndTarget:(MonsterData*) target
+{
+    int upperPercent = 115;
+    int lowerPercent = 85;
+    
+    float healing = ability.value *
+        (float)((arc4random() % (upperPercent - lowerPercent)) + lowerPercent) / 100.0f;
+    
+    return floor(healing);
+}
+
 @end

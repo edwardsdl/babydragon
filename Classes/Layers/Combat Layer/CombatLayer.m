@@ -403,9 +403,24 @@
             case EffectTypeShield:
                 break;
             case EffectTypeCure:
+            {
+                int healing = [CombatHelper CalculateHealingWithAbility:self->abilityInUse AndHealer:self->activeMonster.monsterData AndTarget:self->targetMonster.monsterData];
+                [self assignHealing:healing ToMonster:self->targetMonster];
                 break;
+            }
             case EffectTypeGroupCure:
+            {
+                for (CombatMonsterNode* monster in self->monsters)
+                {
+                    if (self->activeMonster.partyNumber == monster.partyNumber)
+                    {
+                        int healing = [CombatHelper CalculateHealingWithAbility:self->abilityInUse AndHealer:self->activeMonster.monsterData AndTarget:monster.monsterData];
+                        [self assignHealing:healing ToMonster:(CombatMonsterNode*) monster];
+                    }
+                }
+                
                 break;
+            }
             case EffectTypeRevive:
                 break;
             case EffectTypeAlterSpeed:
@@ -514,6 +529,13 @@
         [self->combatStatus openAndShowLabel:@"Missed!"];
         [self sendUpText:@"Miss!" position:monster.position color:ccc3(255, 255, 255)];
     }
+}
+
+-(void) assignHealing:(int) healing ToMonster:(CombatMonsterNode*) monster
+{
+    [monster updateHealthByValue:healing];
+    [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ healed %@ for %d", self->activeMonster.monsterData.name, monster.monsterData.name, healing]];
+    [self sendUpText:[NSString stringWithFormat:@"%d", healing] position:monster.position color:ccc3(150, 255, 150)];
 }
 
 -(void) sendUpText:(NSString*) text position:(CGPoint) position color:(ccColor3B) color

@@ -22,4 +22,8 @@
                                    AndAttacker:(MonsterData*) attacker
                                    andDefender:(MonsterData*) defender;
 
++(int) CalculateHealingWithAbility:(AbilityData*) ability
+                         AndHealer:(MonsterData*) healer
+                         AndTarget:(MonsterData*) target;
+
 @end
