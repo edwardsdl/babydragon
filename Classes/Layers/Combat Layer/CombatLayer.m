@@ -225,18 +225,33 @@
     [self->combatMenu closeMenu];
     [self->infoMonster endPulse];
     
-    //Show a status message
-    [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"Select a target for %@", ability.name]];
-    
     //Store that the player selected ability, and which ability is being used
     self->actionSelected = Ability;
     self->abilityInUse = ability;
     
-    //Update the state
-    if (ability.targetType == TargetTypeSingleHostile)
-        self->state = PlayerSelectingEnemy;
-    else if (ability.targetType == TargetTypeSingleFriendly)
-        self->state = PlayerSelectingAlly;
+    //Single target abilities
+    if (ability.targetType == TargetTypeSingleFriendly ||
+        ability.targetType == TargetTypeSingleFriendlyKO ||
+        ability.targetType == TargetTypeSingleHostile)
+    {
+        //Show a status message
+        [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"Select a target for %@", ability.name]];
+    
+        //Update the state
+        if (ability.targetType == TargetTypeSingleHostile)
+            self->state = PlayerSelectingEnemy;
+        else if (ability.targetType == TargetTypeSingleFriendly)
+            self->state = PlayerSelectingAlly;
+    }
+    //Group target abilities
+    else
+    {
+        //Reset the turn counter immediately here
+        [self->activeMonster resetTurnCounter];
+        
+        //Immediately run the ability
+        [self runAbility];
+    }
 }
 
 //-----------------------------------------------------------------------

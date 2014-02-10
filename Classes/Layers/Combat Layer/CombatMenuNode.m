@@ -175,11 +175,14 @@
     {
         for (int i = 0; i < 4; i++)
         {
-            CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
+            //CombatMenuButtonNode* button = (CombatMenuButtonNode*)[self->abilitiesSubButtons objectAtIndex:i];
             if (button == [self->abilitiesSubButtons objectAtIndex:i] && [monsterAbilities count] > i)
             {
                 if (button.opacity == 255)
-                    [combatLayer beginAbility:[monsterAbilities objectAtIndex:i]];
+                {
+                    AbilityData* abilityToRun = [monsterAbilities objectAtIndex:i];
+                    [combatLayer beginAbility:abilityToRun];
+                }
             }
         }
     }
