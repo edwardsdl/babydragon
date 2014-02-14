@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "CombatMonsterNode.h"
 #import "AbilityData.h"
-#import "AbilityResult.h"
 #import "AttackType.h"
 #import "ElementType.h"
 

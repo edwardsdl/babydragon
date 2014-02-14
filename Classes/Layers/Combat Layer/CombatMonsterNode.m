@@ -24,6 +24,7 @@
         self.partyNumber = partyNum;
         self.currentHealthPoints = self.monsterData.healthPoints;
         self.currentAbilityPoints = self.monsterData.abilityPoints;
+        self.statusEffects = [NSMutableArray array];
         
         //Draw the shadow sprite
         self->shadowSprite = [CCSprite spriteWithFile:@"MonsterShadow.png"];

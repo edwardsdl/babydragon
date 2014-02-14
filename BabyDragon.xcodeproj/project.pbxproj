@@ -33,6 +33,7 @@
 		079AEC42188D93F7006E37BF /* Fox_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AEC3F188D93F7006E37BF /* Fox_KO.png */; };
 		079AEC43188D93F7006E37BF /* Fox_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AEC40188D93F7006E37BF /* Fox_Standing.png */; };
 		079AEC44188D93F7006E37BF /* Fox_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = 079AEC41188D93F7006E37BF /* Fox_Fighting.png */; };
+		079DB27E18AE8B73005DF02D /* StatusEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 079DB27D18AE8B73005DF02D /* StatusEffect.m */; };
 		07A3948B1884578A001A1C20 /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A3948A1884578A001A1C20 /* Map.png */; };
 		07A3948F188457E9001A1C20 /* MapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A3948E188457E9001A1C20 /* MapLayer.m */; };
 		07A39492188458C4001A1C20 /* MapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A39491188458C4001A1C20 /* MapNode.m */; };
@@ -86,7 +87,6 @@
 		BCAF477C17E559AE001A9B76 /* ScanAcquisitionLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF464F17E559AD001A9B76 /* ScanAcquisitionLayer.m */; };
 		BCAF477D17E559AE001A9B76 /* ScanMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF465117E559AD001A9B76 /* ScanMenuLayer.m */; };
 		BCAF478017E559AE001A9B76 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF465817E559AD001A9B76 /* Player.m */; };
-		BCAF478117E559AE001A9B76 /* TraitData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF465A17E559AD001A9B76 /* TraitData.m */; };
 		BCAF47F417E559AE001A9B76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF476217E559AD001A9B76 /* main.m */; };
 		BCAF47F717E559AE001A9B76 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF476817E559AD001A9B76 /* Default-568h@2x.png */; };
 		BCAF47F817E559AE001A9B76 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF476917E559AD001A9B76 /* Default-Landscape~ipad.png */; };
@@ -298,7 +298,6 @@
 		D76BDC8817EB7D8E008DFBB3 /* MathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D76BDC8717EB7D8E008DFBB3 /* MathHelpers.m */; };
 		D76DC53B17EB6D3800E71B07 /* FLRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D76DC53A17EB6D3800E71B07 /* FLRadialMenu.m */; };
 		D77E1F5617FF83CD00D182AD /* Button_254x74.png in Resources */ = {isa = PBXBuildFile; fileRef = D77E1F5517FF83CD00D182AD /* Button_254x74.png */; };
-		D7BDE7D81806376B00BB0D7A /* AbilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BDE7D71806376B00BB0D7A /* AbilityResult.m */; };
 		D7D2A52A17F9EA48001F39BF /* CombatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2A52917F9EA48001F39BF /* CombatHelper.m */; };
 		D7D6D48417E635EF00D2ADB7 /* BattleBackground_Test.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6D48117E635EF00D2ADB7 /* BattleBackground_Test.png */; };
 		D7D6D48517E635EF00D2ADB7 /* Monster_Selection.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6D48217E635EF00D2ADB7 /* Monster_Selection.png */; };
@@ -375,6 +374,9 @@
 		079AEC3F188D93F7006E37BF /* Fox_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fox_KO.png; path = Monsters/Fox_KO.png; sourceTree = "<group>"; };
 		079AEC40188D93F7006E37BF /* Fox_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fox_Standing.png; path = Monsters/Fox_Standing.png; sourceTree = "<group>"; };
 		079AEC41188D93F7006E37BF /* Fox_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fox_Fighting.png; path = Monsters/Fox_Fighting.png; sourceTree = "<group>"; };
+		079DB27A18AE8A09005DF02D /* StatusEffectType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusEffectType.h; sourceTree = "<group>"; };
+		079DB27C18AE8B73005DF02D /* StatusEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusEffect.h; path = Classes/Representations/StatusEffect.h; sourceTree = "<group>"; };
+		079DB27D18AE8B73005DF02D /* StatusEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusEffect.m; path = Classes/Representations/StatusEffect.m; sourceTree = "<group>"; };
 		07A3948A1884578A001A1C20 /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Map.png; path = Map/Map.png; sourceTree = "<group>"; };
 		07A3948D188457E9001A1C20 /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapLayer.h; path = Map/MapLayer.h; sourceTree = "<group>"; };
 		07A3948E188457E9001A1C20 /* MapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapLayer.m; path = Map/MapLayer.m; sourceTree = "<group>"; };
@@ -473,8 +475,6 @@
 		BCAF465117E559AD001A9B76 /* ScanMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanMenuLayer.m; sourceTree = "<group>"; };
 		BCAF465717E559AD001A9B76 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		BCAF465817E559AD001A9B76 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		BCAF465917E559AD001A9B76 /* TraitData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraitData.h; sourceTree = "<group>"; };
-		BCAF465A17E559AD001A9B76 /* TraitData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraitData.m; sourceTree = "<group>"; };
 		BCAF476217E559AD001A9B76 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCAF476317E559AD001A9B76 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		BCAF476817E559AD001A9B76 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -867,8 +867,6 @@
 		D76DC53917EB6D3800E71B07 /* FLRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLRadialMenu.h; path = Classes/Core/FLRadialMenu.h; sourceTree = SOURCE_ROOT; };
 		D76DC53A17EB6D3800E71B07 /* FLRadialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLRadialMenu.m; path = Classes/Core/FLRadialMenu.m; sourceTree = SOURCE_ROOT; };
 		D77E1F5517FF83CD00D182AD /* Button_254x74.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button_254x74.png; path = "UI Elements/Button_254x74.png"; sourceTree = "<group>"; };
-		D7BDE7D61806376B00BB0D7A /* AbilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbilityResult.h; sourceTree = "<group>"; };
-		D7BDE7D71806376B00BB0D7A /* AbilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbilityResult.m; sourceTree = "<group>"; };
 		D7D2A52817F9EA48001F39BF /* CombatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatHelper.h; path = ../CombatHelper.h; sourceTree = "<group>"; };
 		D7D2A52917F9EA48001F39BF /* CombatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatHelper.m; path = ../CombatHelper.m; sourceTree = "<group>"; };
 		D7D6D48117E635EF00D2ADB7 /* BattleBackground_Test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BattleBackground_Test.png; path = Combat/BattleBackground_Test.png; sourceTree = "<group>"; };
@@ -957,6 +955,16 @@
 				070326551833F1EA00685CD3 /* CombatStatusNode.m */,
 			);
 			name = "Combat Layer";
+			sourceTree = "<group>";
+		};
+		079DB27B18AE8A7F005DF02D /* Representations */ = {
+			isa = PBXGroup;
+			children = (
+				079DB27C18AE8B73005DF02D /* StatusEffect.h */,
+				079DB27D18AE8B73005DF02D /* StatusEffect.m */,
+			);
+			name = Representations;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		07A3948918845756001A1C20 /* Map */ = {
@@ -1100,20 +1108,16 @@
 		BCAF463F17E559AD001A9B76 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D7BDE7D61806376B00BB0D7A /* AbilityResult.h */,
 				BCFA7B311839A9400055C73C /* CCDirector+Utilities.h */,
 				BC30307E180F81FB0014F64E /* CCScene+Utilities.h */,
 				BCEEEA88180A81BE00BC20E9 /* NSData+ByteUtilities.h */,
 				BCAF465717E559AD001A9B76 /* Player.h */,
 				BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */,
-				BCAF465917E559AD001A9B76 /* TraitData.h */,
-				D7BDE7D71806376B00BB0D7A /* AbilityResult.m */,
 				BCFA7B321839A9400055C73C /* CCDirector+Utilities.m */,
 				BC30307F180F81FB0014F64E /* CCScene+Utilities.m */,
 				BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */,
 				BCAF465817E559AD001A9B76 /* Player.m */,
 				BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */,
-				BCAF465A17E559AD001A9B76 /* TraitData.m */,
 				BC9B23B3180A661200D1ECEF /* Acquisition Factories */,
 				BCAF464017E559AD001A9B76 /* App Delegate */,
 				BCAF464317E559AD001A9B76 /* Core */,
@@ -1122,6 +1126,7 @@
 				BCAF464717E559AD001A9B76 /* Layers */,
 				BC1D8744188503D600386142 /* Level */,
 				BCAF465217E559AD001A9B76 /* Models */,
+				079DB27B18AE8A7F005DF02D /* Representations */,
 				070672A0182FFC8D00C1E5AA /* UI */,
 			);
 			path = Classes;
@@ -1680,6 +1685,7 @@
 				07F8C6011899EF440000FAAB /* AttackType.h */,
 				BCDC1342189F1F1E00CBED42 /* LootQualityType.h */,
 				BCDC1343189F1FA400CBED42 /* LevelSizeType.h */,
+				079DB27A18AE8A09005DF02D /* StatusEffectType.h */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -2106,7 +2112,6 @@
 				BCAF477D17E559AE001A9B76 /* ScanMenuLayer.m in Sources */,
 				BCAF478017E559AE001A9B76 /* Player.m in Sources */,
 				0765FCD9185F6FA100E15D1C /* ScrollingMonstersList.m in Sources */,
-				BCAF478117E559AE001A9B76 /* TraitData.m in Sources */,
 				BCAF47F417E559AE001A9B76 /* main.m in Sources */,
 				07A3948F188457E9001A1C20 /* MapLayer.m in Sources */,
 				BCAF495217E55ECB001A9B76 /* CCAction.m in Sources */,
@@ -2179,6 +2184,7 @@
 				BCAF498017E55ECB001A9B76 /* CCRenderTexture.m in Sources */,
 				BCAF498117E55ECB001A9B76 /* CCScene.m in Sources */,
 				072C5776189D47AF005C4AA6 /* AbilityData.m in Sources */,
+				079DB27E18AE8B73005DF02D /* StatusEffect.m in Sources */,
 				BCAF498217E55ECB001A9B76 /* CCScheduler.m in Sources */,
 				BCAF498317E55ECB001A9B76 /* CCShaderCache.m in Sources */,
 				BCAF498417E55ECB001A9B76 /* ccShaders.m in Sources */,
@@ -2279,7 +2285,6 @@
 				070326561833F1EA00685CD3 /* CombatStatusNode.m in Sources */,
 				D76BDC8817EB7D8E008DFBB3 /* MathHelpers.m in Sources */,
 				BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */,
-				D7BDE7D81806376B00BB0D7A /* AbilityResult.m in Sources */,
 				BC20AC0B17EB8E9E0095B125 /* BarcodeHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

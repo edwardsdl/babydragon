@@ -33,6 +33,8 @@
 
 @property int partyNumber;
 
+@property (nonatomic, retain) NSMutableArray* statusEffects;
+
 -(id) init:(MonsterData*) data partyNumber:(int) partyNum;
 
 -(BOOL) isKoed;

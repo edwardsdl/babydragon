@@ -171,6 +171,38 @@
     //Begin the monsters turn if it's not KO'ed (its turn could have come up, then been KO'ed so this is possible)
     if (self->activeMonster.isKoed == NO)
     {
+        //Process status effects
+        int totalDotDamage = 0;
+        for (StatusEffect* effect in self->activeMonster.statusEffects)
+        {
+            //If it's a DoT then add it to the damage total
+            if (effect.Type == StatusEffectTypeDamageOverTime)
+            {
+                totalDotDamage += effect.Value;
+            }
+            
+            //Decrement the effect's turn count
+            effect.TurnsRemaining--;
+            
+            //If the turns remaining is zero then remove it from the monster
+            if (effect.TurnsRemaining <= 0)
+                [self->activeMonster.statusEffects removeObject:effect];
+        }
+        
+        //If there is any DoT damage, inflict it
+        if (totalDotDamage != 0)
+        {
+            [self assignDamage:totalDotDamage ToMonster:self->activeMonster];
+            
+            //Check for a KO from this damage
+            if (self->activeMonster.isKoed)
+            {
+                //Remove this monster from the ready array and return
+                [self->monstersReadyForTurn removeObject:self->activeMonster];
+                return;
+            }
+        }
+        
         //If the monster is in party one then the player is going to take action
         if ([self isMonster:self->activeMonster inParty:1])
         {
@@ -399,7 +431,25 @@
                 break;
             }
             case EffectTypeDamageOverTime:
+            {
+                int dotTurns = 3;
+                
+                //Determine damage per turn
+                int totalDamage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
+                int damagePerTurn = totalDamage / dotTurns;
+                
+                //Create a status effect and add to the monster
+                StatusEffect* effect = [StatusEffect new];
+                effect.Name = self->abilityInUse.name;
+                effect.Value = damagePerTurn;
+                effect.Type = StatusEffectTypeDamageOverTime;
+                effect.TurnsRemaining = dotTurns;
+                [self->targetMonster.statusEffects addObject:effect];
+                
+                [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ inflicts %@ with %@", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, self->abilityInUse.name]];
+                
                 break;
+            }
             case EffectTypeShield:
                 break;
             case EffectTypeCure:

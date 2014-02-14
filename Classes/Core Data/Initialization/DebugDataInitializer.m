@@ -56,7 +56,8 @@
 {
     [[MonsterData anyMonsterWithName:@"Fox"] addAbilities:[NSSet setWithArray:@[
         [AbilityData abilityDataWithName:@"Cure" andLevel:[NSNumber numberWithInt:1]],
-        [AbilityData abilityDataWithName:@"Restore" andLevel:[NSNumber numberWithInt:1]]
+        [AbilityData abilityDataWithName:@"Restore" andLevel:[NSNumber numberWithInt:1]],
+        [AbilityData abilityDataWithName:@"Combust" andLevel:[NSNumber numberWithInt:1]]
     ]]];
     
     NSError *error = nil;

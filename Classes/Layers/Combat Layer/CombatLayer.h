@@ -18,6 +18,8 @@
 #import "MapLayer.h"
 #import "TargetType.h"
 #import "EffectType.h"
+#import "StatusEffect.h"
+#import "StatusEffectType.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,
