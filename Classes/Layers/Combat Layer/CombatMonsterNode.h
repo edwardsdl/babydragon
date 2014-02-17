@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "MonsterData.h"
 #import "MathHelpers.h"
+#import "MonsterData+Management.h"
 
 @interface CombatMonsterNode : CCNode <CCTouchOneByOneDelegate>
 {
@@ -58,5 +59,15 @@
 -(void) changeSprite:(NSString*) spriteName;
 
 -(void) resetTurnCounter;
+
+-(int) adjustedDefense;
+
+-(int) adjustedPower;
+
+-(int) adjustedWillpower;
+
+-(int) adjustedCourage;
+
+-(int) adjustedSpeed;
 
 @end

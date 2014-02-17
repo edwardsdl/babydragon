@@ -14,15 +14,13 @@
 
 @interface CombatHelper : NSObject
 
-+(int) CalculateFightDamageWithAttacker:(MonsterData*) attacker
-                            andDefender:(MonsterData*) defender;
++(int) CalculateFightDamageWithAttacker:(CombatMonsterNode*) attacker
+                            andDefender:(CombatMonsterNode*) defender;
 
 +(int) CalculateAttackAbilityDamageWithAbility:(AbilityData*) ability
-                                   AndAttacker:(MonsterData*) attacker
-                                   andDefender:(MonsterData*) defender;
+                                   AndAttacker:(CombatMonsterNode*) attacker
+                                   andDefender:(CombatMonsterNode*) defender;
 
-+(int) CalculateHealingWithAbility:(AbilityData*) ability
-                         AndHealer:(MonsterData*) healer
-                         AndTarget:(MonsterData*) target;
++(int) CalculateHealingWithAbility:(AbilityData*) ability;
 
 @end

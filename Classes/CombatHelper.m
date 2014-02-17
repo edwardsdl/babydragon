@@ -12,8 +12,8 @@
 
 @implementation CombatHelper
 
-+(int) CalculateDamageWithAttacker:(MonsterData*) attacker
-                        andDefender:(MonsterData*) defender
++(int) CalculateDamageWithAttacker:(CombatMonsterNode*) attacker
+                        andDefender:(CombatMonsterNode*) defender
                         andAttackType:(AttackType) attackType
                         andMultiplier:(float) multiplier
 {
@@ -23,8 +23,8 @@
     int defensePercentPerLevel = 5;
     
     //Update the percentages for the level gap between the monsters
-    upperDefensePercent = upperDefensePercent + ((defender.level - attacker.level) * defensePercentPerLevel);
-    lowerDefensePercent = lowerDefensePercent + ((defender.level - attacker.level) * defensePercentPerLevel);
+    upperDefensePercent = upperDefensePercent + ((defender.monsterData.level - attacker.monsterData.level) * defensePercentPerLevel);
+    lowerDefensePercent = lowerDefensePercent + ((defender.monsterData.level - attacker.monsterData.level) * defensePercentPerLevel);
     
     //Randomize a value for the final defense percent and convert to float decimal value
     float defensePercent = (float)((arc4random() % (upperDefensePercent - lowerDefensePercent)) + lowerDefensePercent) / 100.0f;
@@ -32,12 +32,12 @@
     //Calculate the modified defense (defense for physical, willpower for magic)
     float modifiedDefense = 0.0f;
     if (attackType == AttackTypePhysical)
-        modifiedDefense = (float)[defender trueDefense] * defensePercent;
+        modifiedDefense = (float)[defender adjustedDefense] * defensePercent;
     else
-        modifiedDefense = (float)[defender trueWillpower] * defensePercent;
+        modifiedDefense = (float)[defender adjustedWillpower] * defensePercent;
     
     //The damage value is the power of the attacker minus the modified defense value
-    float damage = (float)[attacker truePower] - modifiedDefense;
+    float damage = (float)[attacker adjustedPower] - modifiedDefense;
     
     //Now apply the multiplier that was passed in, and take the floor of the final value
     int finalDamage = floor(damage * multiplier);
@@ -49,49 +49,49 @@
     return finalDamage;
 }
 
-+(bool) DoesAttacker:(MonsterData*) attacker HitDefender:(MonsterData*) defender
++(bool) DoesAttacker:(CombatMonsterNode*) attacker HitDefender:(CombatMonsterNode*) defender
 {
-    float missPercent = 0.08 + ((defender.level - attacker.level) * 0.02);
+    float missPercent = 0.08 + ((defender.monsterData.level - attacker.monsterData.level) * 0.02);
     missPercent =(missPercent * 100.0f);
     float hitRoll = (arc4random() % 100);
     return (hitRoll > missPercent);
 }
 
-+(int) DetermineElementalMatchupForAttack:(MonsterData*) attacker AndDefender:(MonsterData*) defender
++(int) DetermineElementalMatchupForAttack:(CombatMonsterNode*) attacker AndDefender:(CombatMonsterNode*) defender
 {
-    if (attacker.elementType == ElementTypeFire)
+    if (attacker.monsterData.elementType == ElementTypeFire)
     {
-        if (defender.elementType == ElementTypeEarth)
+        if (defender.monsterData.elementType == ElementTypeEarth)
             return 1;
-        else if (defender.elementType == ElementTypeWater)
+        else if (defender.monsterData.elementType == ElementTypeWater)
             return -1;
     }
     
-    if (attacker.elementType == ElementTypeWater)
+    if (attacker.monsterData.elementType == ElementTypeWater)
     {
-        if (defender.elementType == ElementTypeFire)
+        if (defender.monsterData.elementType == ElementTypeFire)
             return 1;
-        else if (defender.elementType == ElementTypeEarth)
+        else if (defender.monsterData.elementType == ElementTypeEarth)
             return -1;
     }
     
-    if (attacker.elementType == ElementTypeEarth)
+    if (attacker.monsterData.elementType == ElementTypeEarth)
     {
-        if (defender.elementType == ElementTypeWater)
+        if (defender.monsterData.elementType == ElementTypeWater)
             return 1;
-        else if (defender.elementType == ElementTypeFire)
+        else if (defender.monsterData.elementType == ElementTypeFire)
             return -1;
     }
     
-    if (attacker.elementType == ElementTypeDarkness)
+    if (attacker.monsterData.elementType == ElementTypeDarkness)
     {
-        if (defender.elementType == ElementTypeHoly)
+        if (defender.monsterData.elementType == ElementTypeHoly)
             return 1;
     }
     
-    if (attacker.elementType == ElementTypeHoly)
+    if (attacker.monsterData.elementType == ElementTypeHoly)
     {
-        if (defender.elementType == ElementTypeDarkness)
+        if (defender.monsterData.elementType == ElementTypeDarkness)
             return 1;
     }
     
@@ -99,7 +99,7 @@
     return 0;
 }
 
-+(int) CalculateFightDamageWithAttacker:(MonsterData*) attacker andDefender:(MonsterData*) defender
++(int) CalculateFightDamageWithAttacker:(CombatMonsterNode*) attacker andDefender:(CombatMonsterNode*) defender
 {
     //Determine if the monster hit
     if ([self DoesAttacker:attacker HitDefender:defender] == NO)
@@ -108,7 +108,7 @@
     int damage = [self CalculateDamageWithAttacker:attacker andDefender:defender andAttackType:AttackTypePhysical andMultiplier:1.0f];
     
     //Cut the fight damage of magic monsters in half
-    if (attacker.attackType == AttackTypeMagic)
+    if (attacker.monsterData.attackType == AttackTypeMagic)
     {
         damage = (int)((float)damage * 0.5f);
         
@@ -120,7 +120,7 @@
     return damage;
 }
 
-+(int) CalculateAttackAbilityDamageWithAbility:(AbilityData*) ability AndAttacker:(MonsterData*) attacker andDefender:(MonsterData*) defender
++(int) CalculateAttackAbilityDamageWithAbility:(AbilityData*) ability AndAttacker:(CombatMonsterNode*) attacker andDefender:(CombatMonsterNode*) defender
 {
     //Determine if the monster hit, but only for physical abilities
     if (ability.attackType == AttackTypePhysical && [self DoesAttacker:attacker HitDefender:defender] == NO)
@@ -138,7 +138,7 @@
     return damage;
 }
 
-+(int) CalculateHealingWithAbility:(AbilityData*) ability AndHealer:(MonsterData*) healer AndTarget:(MonsterData*) target
++(int) CalculateHealingWithAbility:(AbilityData*) ability
 {
     int upperPercent = 115;
     int lowerPercent = 85;

@@ -1377,7 +1377,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:0.05];
+    [ability setValue:0.1];
     
     //Haste 2
     ability = [AbilityData insertAbilityData];
@@ -1388,7 +1388,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:0.075];
+    [ability setValue:0.15];
     
     //Haste 3
     ability = [AbilityData insertAbilityData];
@@ -1399,7 +1399,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:0.1];
+    [ability setValue:0.2];
     
     //Haste 4
     ability = [AbilityData insertAbilityData];
@@ -1410,7 +1410,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:-0.125];
+    [ability setValue:0.25];
     
     //Slow 1
     ability = [AbilityData insertAbilityData];
@@ -1421,7 +1421,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:-0.05];
+    [ability setValue:-0.1];
     
     //Slow 2
     ability = [AbilityData insertAbilityData];
@@ -1432,7 +1432,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:-0.075];
+    [ability setValue:-0.15];
     
     //Slow 3
     ability = [AbilityData insertAbilityData];
@@ -1443,7 +1443,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:-0.1];
+    [ability setValue:-0.2];
     
     //Slow 4
     ability = [AbilityData insertAbilityData];
@@ -1454,7 +1454,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterSpeed];
-    [ability setValue:-0.125];
+    [ability setValue:-0.25];
     
     //Fortify 1
     ability = [AbilityData insertAbilityData];
@@ -1465,7 +1465,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:0.05];
+    [ability setValue:0.1];
     
     //Fortify 2
     ability = [AbilityData insertAbilityData];
@@ -1476,7 +1476,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:0.075];
+    [ability setValue:0.15];
     
     //Fortify 3
     ability = [AbilityData insertAbilityData];
@@ -1487,7 +1487,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:0.1];
+    [ability setValue:0.2];
     
     //Fortify 4
     ability = [AbilityData insertAbilityData];
@@ -1498,7 +1498,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:-0.125];
+    [ability setValue:0.25];
     
     //Daze 1
     ability = [AbilityData insertAbilityData];
@@ -1509,7 +1509,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:-0.05];
+    [ability setValue:-0.1];
     
     //Daze 2
     ability = [AbilityData insertAbilityData];
@@ -1520,7 +1520,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:-0.075];
+    [ability setValue:-0.15];
     
     //Daze 3
     ability = [AbilityData insertAbilityData];
@@ -1531,7 +1531,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:-0.1];
+    [ability setValue:-0.2];
     
     //Daze 4
     ability = [AbilityData insertAbilityData];
@@ -1542,7 +1542,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterWillpower];
-    [ability setValue:-0.125];
+    [ability setValue:-0.25];
     
     //Toughen 1
     ability = [AbilityData insertAbilityData];
@@ -1553,7 +1553,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:0.05];
+    [ability setValue:0.1];
     
     //Toughen 2
     ability = [AbilityData insertAbilityData];
@@ -1564,7 +1564,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:0.075];
+    [ability setValue:0.15];
     
     //Toughen 3
     ability = [AbilityData insertAbilityData];
@@ -1575,7 +1575,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:0.1];
+    [ability setValue:0.2];
     
     //Toughen 4
     ability = [AbilityData insertAbilityData];
@@ -1586,7 +1586,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:-0.125];
+    [ability setValue:0.25];
     
     //Dimish 1
     ability = [AbilityData insertAbilityData];
@@ -1597,7 +1597,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:-0.05];
+    [ability setValue:-0.1];
     
     //Dimish 2
     ability = [AbilityData insertAbilityData];
@@ -1608,7 +1608,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:-0.075];
+    [ability setValue:-0.15];
     
     //Dimish 3
     ability = [AbilityData insertAbilityData];
@@ -1619,7 +1619,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:-0.1];
+    [ability setValue:-0.2];
     
     //Dimish 4
     ability = [AbilityData insertAbilityData];
@@ -1630,7 +1630,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterDefense];
-    [ability setValue:-0.125];
+    [ability setValue:-0.25];
     
     //Embolden 1
     ability = [AbilityData insertAbilityData];
@@ -1641,7 +1641,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:0.05];
+    [ability setValue:0.1];
     
     //Embolden 2
     ability = [AbilityData insertAbilityData];
@@ -1652,7 +1652,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:0.075];
+    [ability setValue:0.15];
     
     //Embolden 3
     ability = [AbilityData insertAbilityData];
@@ -1663,7 +1663,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:0.1];
+    [ability setValue:0.2];
     
     //Embolden 4
     ability = [AbilityData insertAbilityData];
@@ -1674,7 +1674,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:-0.125];
+    [ability setValue:0.25];
     
     //Intimidate 1
     ability = [AbilityData insertAbilityData];
@@ -1685,7 +1685,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:-0.05];
+    [ability setValue:-0.1];
     
     //Intimidate 2
     ability = [AbilityData insertAbilityData];
@@ -1696,7 +1696,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:-0.075];
+    [ability setValue:-0.15];
     
     //Intimidate 3
     ability = [AbilityData insertAbilityData];
@@ -1707,7 +1707,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:-0.1];
+    [ability setValue:-0.2];
     
     //Intimidate 4
     ability = [AbilityData insertAbilityData];
@@ -1718,7 +1718,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterCourage];
-    [ability setValue:-0.125];
+    [ability setValue:-0.25];
     
     //Enhance 1
     ability = [AbilityData insertAbilityData];
@@ -1729,7 +1729,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:0.05];
+    [ability setValue:0.1];
     
     //Enhance 2
     ability = [AbilityData insertAbilityData];
@@ -1740,7 +1740,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:0.075];
+    [ability setValue:0.15];
     
     //Enhance 3
     ability = [AbilityData insertAbilityData];
@@ -1751,7 +1751,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:0.1];
+    [ability setValue:0.2];
     
     //Enhance 4
     ability = [AbilityData insertAbilityData];
@@ -1762,7 +1762,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:-0.125];
+    [ability setValue:0.25];
     
     //Weaken 1
     ability = [AbilityData insertAbilityData];
@@ -1773,7 +1773,7 @@
     [ability setLevel:1];
     [ability setApCost:5];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:-0.05];
+    [ability setValue:-0.1];
     
     //Weaken 2
     ability = [AbilityData insertAbilityData];
@@ -1784,7 +1784,7 @@
     [ability setLevel:2];
     [ability setApCost:12];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:-0.075];
+    [ability setValue:-0.15];
     
     //Weaken 3
     ability = [AbilityData insertAbilityData];
@@ -1795,7 +1795,7 @@
     [ability setLevel:3];
     [ability setApCost:18];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:-0.1];
+    [ability setValue:-0.2];
     
     //Weaken 4
     ability = [AbilityData insertAbilityData];
@@ -1806,7 +1806,7 @@
     [ability setLevel:4];
     [ability setApCost:25];
     [ability setEffectType:EffectTypeAlterPower];
-    [ability setValue:-0.125];
+    [ability setValue:-0.25];
     
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];

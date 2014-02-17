@@ -367,7 +367,7 @@
     
     CCCallBlock *assignDamage = [CCCallBlock actionWithBlock:^
     {
-        int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
+        int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster andDefender:self->targetMonster];
         [self assignDamage:damage ToMonster:self->targetMonster];
     }];
     
@@ -412,7 +412,7 @@
         {
             case EffectTypeAttack:
             {
-                int damage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
+                int damage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster andDefender:self->targetMonster];
                 [self assignDamage:damage ToMonster:self->targetMonster];
                 break;
             }
@@ -423,7 +423,7 @@
                     if ((self->activeMonster.partyNumber == 1 && monster.partyNumber == 2) ||
                         (self->activeMonster.partyNumber == 2 && monster.partyNumber == 1))
                     {
-                        int damage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster.monsterData andDefender:monster.monsterData];
+                        int damage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster andDefender:monster];
                         [self assignDamage:damage ToMonster:(CombatMonsterNode*) monster];
                     }
                 }
@@ -435,7 +435,7 @@
                 int dotTurns = 3;
                 
                 //Determine damage per turn
-                int totalDamage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster.monsterData andDefender:self->targetMonster.monsterData];
+                int totalDamage = [CombatHelper CalculateAttackAbilityDamageWithAbility:self->abilityInUse AndAttacker:self->activeMonster andDefender:self->targetMonster];
                 int damagePerTurn = totalDamage / dotTurns;
                 
                 //Create a status effect and add to the monster
@@ -454,7 +454,7 @@
                 break;
             case EffectTypeCure:
             {
-                int healing = [CombatHelper CalculateHealingWithAbility:self->abilityInUse AndHealer:self->activeMonster.monsterData AndTarget:self->targetMonster.monsterData];
+                int healing = [CombatHelper CalculateHealingWithAbility:self->abilityInUse];
                 [self assignHealing:healing ToMonster:self->targetMonster];
                 break;
             }
@@ -464,7 +464,7 @@
                 {
                     if (self->activeMonster.partyNumber == monster.partyNumber)
                     {
-                        int healing = [CombatHelper CalculateHealingWithAbility:self->abilityInUse AndHealer:self->activeMonster.monsterData AndTarget:monster.monsterData];
+                        int healing = [CombatHelper CalculateHealingWithAbility:self->abilityInUse];
                         [self assignHealing:healing ToMonster:(CombatMonsterNode*) monster];
                     }
                 }
@@ -474,15 +474,30 @@
             case EffectTypeRevive:
                 break;
             case EffectTypeAlterSpeed:
+            {
+                [self assignAlterEffectToTarget:[self->targetMonster.monsterData trueSpeed] type:StatusEffectTypeAlterSpeed];
                 break;
+            }
             case EffectTypeAlterCourage:
+            {
+                [self assignAlterEffectToTarget:[self->targetMonster.monsterData trueCourage] type:StatusEffectTypeAlterCourage];
                 break;
+            }
             case EffectTypeAlterPower:
+            {
+                [self assignAlterEffectToTarget:[self->targetMonster.monsterData truePower] type:StatusEffectTypeAlterPower];
                 break;
+            }
             case EffectTypeAlterDefense:
+            {
+                [self assignAlterEffectToTarget:[self->targetMonster.monsterData trueDefense] type:StatusEffectTypeAlterDefense];
                 break;
+            }
             case EffectTypeAlterWillpower:
+            {
+                [self assignAlterEffectToTarget:[self->targetMonster.monsterData trueWillpower] type:StatusEffectTypeAlterWillpower];
                 break;
+            }
         }
         
         //Substract AP
@@ -634,6 +649,34 @@
 {
     [self pauseSchedulerAndActions];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MapLayer scene] ]];
+}
+
+-(void) assignAlterEffectToTarget:(int) originalValue type:(StatusEffectType) effectType
+{
+    int alterTurns = 3;
+    
+    StatusEffect* existingEffect = nil;
+    for (StatusEffect* e in self->targetMonster.statusEffects)
+    {
+        if (e.Type == effectType)
+        {
+            existingEffect = e;
+            break;
+        }
+    }
+    
+    if (existingEffect != nil)
+        [self->targetMonster.statusEffects removeObject:existingEffect];
+    
+    int adjustmentValue = (float)originalValue * self->abilityInUse.value;
+    if (adjustmentValue <= 0)
+        adjustmentValue = 1;
+    StatusEffect* effect = [StatusEffect new];
+    effect.Name = self->abilityInUse.name;
+    effect.Value = adjustmentValue;
+    effect.Type = effectType;
+    effect.TurnsRemaining = alterTurns;
+    [self->targetMonster.statusEffects addObject:effect];
 }
 
 @end

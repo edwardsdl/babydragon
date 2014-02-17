@@ -256,4 +256,40 @@
     return NO;
 }
 
+-(int) adjustedDefense
+{
+    return [self getAdjustedStat:[self.monsterData trueDefense] type:StatusEffectTypeAlterDefense];
+}
+
+-(int) adjustedPower
+{
+    return [self getAdjustedStat:[self.monsterData truePower] type:StatusEffectTypeAlterPower];
+}
+
+-(int) adjustedWillpower
+{
+    return [self getAdjustedStat:[self.monsterData trueWillpower] type:StatusEffectTypeAlterWillpower];
+}
+
+-(int) adjustedCourage
+{
+    return [self getAdjustedStat:[self.monsterData trueCourage] type:StatusEffectTypeAlterCourage];
+}
+
+-(int) adjustedSpeed
+{
+    return [self getAdjustedStat:[self.monsterData trueSpeed] type:StatusEffectTypeAlterSpeed];
+}
+
+-(int) getAdjustedStat:(int) originalStatValue type:(StatusEffectType) effectType
+{
+    for (StatusEffect* effect in self.statusEffects)
+    {
+        if (effect.Type == effectType)
+            return originalStatValue + effect.Value;
+    }
+    
+    return originalStatValue;
+}
+
 @end
