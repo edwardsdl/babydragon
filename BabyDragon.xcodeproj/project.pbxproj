@@ -437,6 +437,7 @@
 		BC3F52FF189F46B100EC2900 /* AcquisitionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcquisitionData.m; path = "Classes/Core Data/AcquisitionData.m"; sourceTree = SOURCE_ROOT; };
 		BC3F530118B2978B00EC2900 /* GoldData+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GoldData+Management.h"; sourceTree = "<group>"; };
 		BC3F530218B2978B00EC2900 /* GoldData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GoldData+Management.m"; sourceTree = "<group>"; };
+		BC3F530418B2F7DD00EC2900 /* GoldFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldFactoryTests.m; sourceTree = "<group>"; };
 		BC434470188D98FC00ED3198 /* EnvironmentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentType.h; sourceTree = "<group>"; };
 		BC4A9EE517E7D038008EDA70 /* BabyDragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyDragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbabilityCollectionTests.m; sourceTree = "<group>"; };
@@ -1063,6 +1064,7 @@
 				BC629EA218386E3700D35C55 /* UUIDHelperTests.m */,
 				BC4A9F1517E7D1CF008EDA70 /* Other Sources */,
 				BC4A9F1717E7D1CF008EDA70 /* Resources */,
+				BC3F530418B2F7DD00EC2900 /* GoldFactoryTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -2096,6 +2098,7 @@
 				BCA9E0441809DF4A00FB3EFE /* MonsterDataTests.m in Sources */,
 				BCEF361C17F1FE8A008F7688 /* MonsterFactoryTests.m in Sources */,
 				BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */,
+				BC3F530518B2F7DD00EC2900 /* GoldFactoryTests.m in Sources */,
 				BCA9E0451809DF5800FB3EFE /* DefaultMonsterDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

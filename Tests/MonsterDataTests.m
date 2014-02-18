@@ -34,7 +34,7 @@
     
     XCTAssertNil(error, @"The monster was inserted successfully.");
     
-    monsterData = [MonsterData monsterWithName:name];
+    monsterData = [MonsterData monsterWithUUID:[monsterData uuid]];
     
     XCTAssertNotNil(monsterData, @"The monster was fetched successfully.");
 }
