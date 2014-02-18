@@ -76,6 +76,8 @@
 		BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA018386AFD00D35C55 /* UUIDHelper.m */; };
 		BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA218386E3700D35C55 /* UUIDHelperTests.m */; };
 		BC98602417F0DA0900F9E159 /* BabyDragon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC98602217F0DA0900F9E159 /* BabyDragon.xcdatamodeld */; };
+		BC98651218B305E000AD0B3C /* DefaultItemData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */; };
+		BC98651818B3112B00AD0B3C /* DefaultItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC98651718B3112B00AD0B3C /* DefaultItemData.m */; };
 		BC9B23BD180A661200D1ECEF /* AcquisitionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B23B6180A661200D1ECEF /* AcquisitionFactory.m */; };
 		BC9B23BE180A661200D1ECEF /* GoldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B23B8180A661200D1ECEF /* GoldFactory.m */; };
 		BC9B23BF180A661200D1ECEF /* MonsterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B23BA180A661200D1ECEF /* MonsterFactory.m */; };
@@ -221,7 +223,7 @@
 		BCAF49C617E55ECB001A9B76 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = BCAF494F17E55ECB001A9B76 /* zbar-help.html */; };
 		BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */; };
 		BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495117E55ECB001A9B76 /* zbar-samples.png */; };
-		BCCCD16518B3019F00F22C52 /* DefaultItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCCD16418B3019F00F22C52 /* DefaultItemData.m */; };
+		BCCCD16818B302B800F22C52 /* DefaultItemDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCCD16718B302B800F22C52 /* DefaultItemDataInitializer.m */; };
 		BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */; };
 		BCEEEA8F180A848F00BC20E9 /* FLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8C180A848F00BC20E9 /* FLButton.m */; };
 		BCEEEA90180A848F00BC20E9 /* FLRadialMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8E180A848F00BC20E9 /* FLRadialMenuItem.m */; };
@@ -452,6 +454,10 @@
 		BC629EA018386AFD00D35C55 /* UUIDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelper.m; sourceTree = "<group>"; };
 		BC629EA218386E3700D35C55 /* UUIDHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelperTests.m; sourceTree = "<group>"; };
 		BC98602317F0DA0900F9E159 /* BabyDragon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BabyDragon.xcdatamodel; sourceTree = "<group>"; };
+		BC98651018B305E000AD0B3C /* DefaultItemData+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DefaultItemData+Management.h"; sourceTree = "<group>"; };
+		BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DefaultItemData+Management.m"; sourceTree = "<group>"; };
+		BC98651618B3112B00AD0B3C /* DefaultItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultItemData.h; sourceTree = "<group>"; };
+		BC98651718B3112B00AD0B3C /* DefaultItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultItemData.m; sourceTree = "<group>"; };
 		BC9AF4F8185F6EE0006822D1 /* TileType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileType.h; sourceTree = "<group>"; };
 		BC9B23B4180A661200D1ECEF /* Acquiring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acquiring.h; sourceTree = "<group>"; };
 		BC9B23B5180A661200D1ECEF /* AcquisitionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionFactory.h; sourceTree = "<group>"; };
@@ -771,8 +777,8 @@
 		BCAF494F17E55ECB001A9B76 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		BCAF495117E55ECB001A9B76 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
-		BCCCD16318B3019F00F22C52 /* DefaultItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultItemData.h; sourceTree = "<group>"; };
-		BCCCD16418B3019F00F22C52 /* DefaultItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultItemData.m; sourceTree = "<group>"; };
+		BCCCD16618B302B800F22C52 /* DefaultItemDataInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultItemDataInitializer.h; path = Initialization/DefaultItemDataInitializer.h; sourceTree = "<group>"; };
+		BCCCD16718B302B800F22C52 /* DefaultItemDataInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefaultItemDataInitializer.m; path = Initialization/DefaultItemDataInitializer.m; sourceTree = "<group>"; };
 		BCDC1342189F1F1E00CBED42 /* LootQualityType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LootQualityType.h; sourceTree = "<group>"; };
 		BCDC1343189F1FA400CBED42 /* LevelSizeType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelSizeType.h; sourceTree = "<group>"; };
 		BCE563E718030C5C001A744B /* ElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementType.h; sourceTree = "<group>"; };
@@ -1006,9 +1012,11 @@
 			children = (
 				072C5777189D4897005C4AA6 /* AbilityDataInitializer.h */,
 				07F8C5F81899E7640000FAAB /* DebugDataInitializer.h */,
+				BCCCD16618B302B800F22C52 /* DefaultItemDataInitializer.h */,
 				07F8C5FE1899ECB90000FAAB /* DefaultMonsterDataInitializer.h */,
 				072C5778189D4897005C4AA6 /* AbilityDataInitializer.m */,
 				07F8C5F91899E7640000FAAB /* DebugDataInitializer.m */,
+				BCCCD16718B302B800F22C52 /* DefaultItemDataInitializer.m */,
 				07F8C5FF1899ECB90000FAAB /* DefaultMonsterDataInitializer.m */,
 			);
 			name = Initialization;
@@ -1702,10 +1710,11 @@
 		BCEEEA92180BA73800BC20E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				BC98651618B3112B00AD0B3C /* DefaultItemData.h */,
+				BC98651718B3112B00AD0B3C /* DefaultItemData.m */,
 				072C5774189D47AF005C4AA6 /* AbilityData.h */,
 				BC3F52FE189F46B100EC2900 /* AcquisitionData.h */,
 				BCEEEAEE180C2F9600BC20E9 /* BaseData.h */,
-				BCCCD16318B3019F00F22C52 /* DefaultItemData.h */,
 				07F8C60B1899F04E0000FAAB /* DefaultMonsterData.h */,
 				BCEEEAE5180BA86700BC20E9 /* EnhancementData.h */,
 				BCEEEACA180BA86600BC20E9 /* EquipmentData.h */,
@@ -1719,7 +1728,6 @@
 				072C5775189D47AF005C4AA6 /* AbilityData.m */,
 				BC3F52FF189F46B100EC2900 /* AcquisitionData.m */,
 				BCEEEAEF180C2F9600BC20E9 /* BaseData.m */,
-				BCCCD16418B3019F00F22C52 /* DefaultItemData.m */,
 				07F8C60C1899F04E0000FAAB /* DefaultMonsterData.m */,
 				BCEEEAE6180BA86700BC20E9 /* EnhancementData.m */,
 				BCEEEACB180BA86600BC20E9 /* EquipmentData.m */,
@@ -1759,6 +1767,8 @@
 				BC9ED4CD184F792D00A6E8E3 /* SinglePlayerContentData+Management.m */,
 				BC3F530118B2978B00EC2900 /* GoldData+Management.h */,
 				BC3F530218B2978B00EC2900 /* GoldData+Management.m */,
+				BC98651018B305E000AD0B3C /* DefaultItemData+Management.h */,
+				BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -2166,9 +2176,9 @@
 				BCAF496A17E55ECB001A9B76 /* ccFPSImages.m in Sources */,
 				BCAF496B17E55ECB001A9B76 /* CCGLProgram.m in Sources */,
 				BCAF496C17E55ECB001A9B76 /* ccGLStateCache.m in Sources */,
+				BCCCD16818B302B800F22C52 /* DefaultItemDataInitializer.m in Sources */,
 				BCAF496D17E55ECB001A9B76 /* CCGrabber.m in Sources */,
 				BCAF496E17E55ECB001A9B76 /* CCGrid.m in Sources */,
-				BCCCD16518B3019F00F22C52 /* DefaultItemData.m in Sources */,
 				078B35EC188C6D1D0068C34D /* MapNodeMenu.m in Sources */,
 				072C5779189D4897005C4AA6 /* AbilityDataInitializer.m in Sources */,
 				BCAF496F17E55ECB001A9B76 /* CCLabelAtlas.m in Sources */,
@@ -2277,6 +2287,7 @@
 				BCAF49AF17E55ECB001A9B76 /* CDXPropertyModifierAction.m in Sources */,
 				BCAF49B017E55ECB001A9B76 /* CocosDenshion.m in Sources */,
 				BCAF49B317E55ECB001A9B76 /* SimpleAudioEngine.m in Sources */,
+				BC98651818B3112B00AD0B3C /* DefaultItemData.m in Sources */,
 				BC303080180F81FB0014F64E /* CCScene+Utilities.m in Sources */,
 				BCAF49B517E55ECB001A9B76 /* aabb.c in Sources */,
 				BCAF49B817E55ECB001A9B76 /* mat4stack.c in Sources */,
@@ -2284,6 +2295,7 @@
 				BCAF49B917E55ECB001A9B76 /* matrix.c in Sources */,
 				BC1D87401884ED3200386142 /* SinglePlayerContentData.m in Sources */,
 				BCAF49BA17E55ECB001A9B76 /* mat3.c in Sources */,
+				BC98651218B305E000AD0B3C /* DefaultItemData+Management.m in Sources */,
 				BCAF49BB17E55ECB001A9B76 /* mat4.c in Sources */,
 				BCAF49BC17E55ECB001A9B76 /* neon_matrix_impl.c in Sources */,
 				BCAF49BD17E55ECB001A9B76 /* plane.c in Sources */,
