@@ -4,5 +4,6 @@ typedef NS_ENUM(int32_t, StatusEffectType) {
     StatusEffectTypeAlterCourage,
     StatusEffectTypeAlterPower,
     StatusEffectTypeAlterDefense,
-    StatusEffectTypeAlterWillpower
+    StatusEffectTypeAlterWillpower,
+    StatusEffectTypeShielding
 };
