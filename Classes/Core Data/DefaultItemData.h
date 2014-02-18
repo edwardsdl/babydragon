@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BaseData.h"
 
 
-@interface DefaultItemData : NSManagedObject
+@interface DefaultItemData : BaseData
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic) int32_t effectType;
-@property (nonatomic) int32_t targetType;
 @property (nonatomic) int32_t attackType;
+@property (nonatomic) int32_t effectType;
 @property (nonatomic) int32_t elementType;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic) int32_t targetType;
 @property (nonatomic) float value;
 
 @end

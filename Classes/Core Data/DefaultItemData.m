@@ -11,11 +11,11 @@
 
 @implementation DefaultItemData
 
-@dynamic name;
-@dynamic effectType;
-@dynamic targetType;
 @dynamic attackType;
+@dynamic effectType;
 @dynamic elementType;
+@dynamic name;
+@dynamic targetType;
 @dynamic value;
 
 @end
