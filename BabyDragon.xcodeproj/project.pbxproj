@@ -221,6 +221,7 @@
 		BCAF49C617E55ECB001A9B76 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = BCAF494F17E55ECB001A9B76 /* zbar-help.html */; };
 		BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */; };
 		BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495117E55ECB001A9B76 /* zbar-samples.png */; };
+		BCCCD16518B3019F00F22C52 /* DefaultItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCCD16418B3019F00F22C52 /* DefaultItemData.m */; };
 		BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */; };
 		BCEEEA8F180A848F00BC20E9 /* FLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8C180A848F00BC20E9 /* FLButton.m */; };
 		BCEEEA90180A848F00BC20E9 /* FLRadialMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA8E180A848F00BC20E9 /* FLRadialMenuItem.m */; };
@@ -770,6 +771,8 @@
 		BCAF494F17E55ECB001A9B76 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		BCAF495117E55ECB001A9B76 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		BCCCD16318B3019F00F22C52 /* DefaultItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultItemData.h; sourceTree = "<group>"; };
+		BCCCD16418B3019F00F22C52 /* DefaultItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultItemData.m; sourceTree = "<group>"; };
 		BCDC1342189F1F1E00CBED42 /* LootQualityType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LootQualityType.h; sourceTree = "<group>"; };
 		BCDC1343189F1FA400CBED42 /* LevelSizeType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelSizeType.h; sourceTree = "<group>"; };
 		BCE563E718030C5C001A744B /* ElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementType.h; sourceTree = "<group>"; };
@@ -1702,6 +1705,7 @@
 				072C5774189D47AF005C4AA6 /* AbilityData.h */,
 				BC3F52FE189F46B100EC2900 /* AcquisitionData.h */,
 				BCEEEAEE180C2F9600BC20E9 /* BaseData.h */,
+				BCCCD16318B3019F00F22C52 /* DefaultItemData.h */,
 				07F8C60B1899F04E0000FAAB /* DefaultMonsterData.h */,
 				BCEEEAE5180BA86700BC20E9 /* EnhancementData.h */,
 				BCEEEACA180BA86600BC20E9 /* EquipmentData.h */,
@@ -1715,6 +1719,7 @@
 				072C5775189D47AF005C4AA6 /* AbilityData.m */,
 				BC3F52FF189F46B100EC2900 /* AcquisitionData.m */,
 				BCEEEAEF180C2F9600BC20E9 /* BaseData.m */,
+				BCCCD16418B3019F00F22C52 /* DefaultItemData.m */,
 				07F8C60C1899F04E0000FAAB /* DefaultMonsterData.m */,
 				BCEEEAE6180BA86700BC20E9 /* EnhancementData.m */,
 				BCEEEACB180BA86600BC20E9 /* EquipmentData.m */,
@@ -2163,6 +2168,7 @@
 				BCAF496C17E55ECB001A9B76 /* ccGLStateCache.m in Sources */,
 				BCAF496D17E55ECB001A9B76 /* CCGrabber.m in Sources */,
 				BCAF496E17E55ECB001A9B76 /* CCGrid.m in Sources */,
+				BCCCD16518B3019F00F22C52 /* DefaultItemData.m in Sources */,
 				078B35EC188C6D1D0068C34D /* MapNodeMenu.m in Sources */,
 				072C5779189D4897005C4AA6 /* AbilityDataInitializer.m in Sources */,
 				BCAF496F17E55ECB001A9B76 /* CCLabelAtlas.m in Sources */,

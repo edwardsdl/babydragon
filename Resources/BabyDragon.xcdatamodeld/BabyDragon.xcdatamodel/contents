@@ -20,6 +20,14 @@
         <attribute name="dateCreated" attributeType="Date" syncable="YES"/>
         <attribute name="dateUpdated" attributeType="Date" syncable="YES"/>
     </entity>
+    <entity name="DefaultItemData" representedClassName="DefaultItemData" syncable="YES">
+        <attribute name="attackType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="effectType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="elementType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="DefaultMonsterData" representedClassName="DefaultMonsterData" parentEntity="BaseData" syncable="YES">
         <attribute name="abilityPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="abilityPointsLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
@@ -121,5 +129,6 @@
         <element name="MonsterData" positionX="0" positionY="0" width="0" height="0"/>
         <element name="PartyData" positionX="0" positionY="0" width="0" height="0"/>
         <element name="SinglePlayerContentData" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DefaultItemData" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
