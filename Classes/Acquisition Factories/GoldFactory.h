@@ -1,9 +1,9 @@
 #import "Acquiring.h"
 #import <Foundation/Foundation.h>
-#import "GoldData.h"
+#import "GoldData+Management.h"
 
 @interface GoldFactory : NSObject <Acquiring>
 
-- (GoldData *) newGoldFromHash:(NSData *)hash;
+- (GoldData *) newGoldFromBarcode:(NSString *)barcode;
 
 @end
