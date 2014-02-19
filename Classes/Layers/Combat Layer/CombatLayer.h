@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger, CombatState) {
     PlayerSelectingAction,
     PlayerSelectingEnemy,
     PlayerSelectingAlly,
+    PlayerSelectingAllyKO,
     ActionInProgress
 };
 

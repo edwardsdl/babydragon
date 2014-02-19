@@ -150,7 +150,7 @@
 -(void) updateTurnCounter
 {
     //Increment the turn counter by the monster speed
-    [self setTurnCounter:self->turnCounter + self.monsterData.speed];
+    [self setTurnCounter:self->turnCounter + [self adjustedSpeed]];
     
     //Don't let the counter go over 1000
     if (self->turnCounter > 1000)
@@ -285,8 +285,8 @@
 {
     for (StatusEffect* effect in self.statusEffects)
     {
-        if (effect.Type == effectType)
-            return originalStatValue + effect.Value;
+        if (effect.type == effectType)
+            return originalStatValue + (int)effect.value;
     }
     
     return originalStatValue;
