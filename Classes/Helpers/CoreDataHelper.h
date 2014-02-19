@@ -12,8 +12,12 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+typedef void (^ ErrorBlock)(NSError *);
+
 + (CoreDataHelper *)sharedInstance;
+
 - (NSURL *)applicationDocumentsDirectory;
 - (void)initializePersistentObjectStore;
+- (void)saveWithErrorBlock:(ErrorBlock)errorBlock;
 
 @end
