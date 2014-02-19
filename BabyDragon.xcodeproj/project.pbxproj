@@ -1750,7 +1750,9 @@
 				BCEEEAA4180BA73800BC20E9 /* AbilityData+Management.h */,
 				BC3F52FB189F425600EC2900 /* AcquisitionData+Management.h */,
 				BCEEEAA6180BA73800BC20E9 /* BaseData+Management.h */,
+				BC98651018B305E000AD0B3C /* DefaultItemData+Management.h */,
 				BCEEEAA8180BA73800BC20E9 /* DefaultMonsterData+Management.h */,
+				BC3F530118B2978B00EC2900 /* GoldData+Management.h */,
 				078B35E2188C648B0068C34D /* MapNodeData+Management.h */,
 				BCEEEAAA180BA73800BC20E9 /* MonsterData+Management.h */,
 				BCEEEAAC180BA73800BC20E9 /* NSManagedObjectContext+Management.h */,
@@ -1759,16 +1761,14 @@
 				BCEEEAA5180BA73800BC20E9 /* AbilityData+Management.m */,
 				BC3F52FC189F425600EC2900 /* AcquisitionData+Management.m */,
 				BCEEEAA7180BA73800BC20E9 /* BaseData+Management.m */,
+				BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */,
 				BCEEEAA9180BA73800BC20E9 /* DefaultMonsterData+Management.m */,
+				BC3F530218B2978B00EC2900 /* GoldData+Management.m */,
 				078B35E3188C648B0068C34D /* MapNodeData+Management.m */,
 				BCEEEAAB180BA73800BC20E9 /* MonsterData+Management.m */,
 				BCEEEAAD180BA73800BC20E9 /* NSManagedObjectContext+Management.m */,
 				BCEEEAAF180BA73800BC20E9 /* PartyData+Management.m */,
 				BC9ED4CD184F792D00A6E8E3 /* SinglePlayerContentData+Management.m */,
-				BC3F530118B2978B00EC2900 /* GoldData+Management.h */,
-				BC3F530218B2978B00EC2900 /* GoldData+Management.m */,
-				BC98651018B305E000AD0B3C /* DefaultItemData+Management.h */,
-				BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */,
 			);
 			path = Management;
 			sourceTree = "<group>";
