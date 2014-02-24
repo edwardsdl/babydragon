@@ -176,16 +176,16 @@
         for (StatusEffect* effect in self->activeMonster.statusEffects)
         {
             //If it's a DoT then add it to the damage total
-            if (effect.Type == StatusEffectTypeDamageOverTime)
+            if (effect.type == StatusEffectTypeDamageOverTime)
             {
-                totalDotDamage += effect.Value;
+                totalDotDamage += effect.value;
             }
             
             //Decrement the effect's turn count
-            effect.TurnsRemaining--;
+            effect.turnsRemaining--;
             
             //If the turns remaining is zero then remove it from the monster
-            if (effect.TurnsRemaining <= 0)
+            if (effect.turnsRemaining <= 0)
                 [self->activeMonster.statusEffects removeObject:effect];
         }
         
@@ -274,6 +274,8 @@
             self->state = PlayerSelectingEnemy;
         else if (ability.targetType == TargetTypeSingleFriendly)
             self->state = PlayerSelectingAlly;
+        else if (ability.targetType == TargetTypeSingleFriendlyKO)
+            self->state = PlayerSelectingAllyKO;
     }
     //Group target abilities
     else
@@ -296,7 +298,7 @@
     {
         [self setNewInfoMonster:monster];
     }
-    if (self->state == PlayerSelectingEnemy)
+    else if (self->state == PlayerSelectingEnemy)
     {
         if ([self isMonster:monster inParty:2] && [monster isKoed] == NO)
         {
@@ -309,9 +311,22 @@
             self->combatConfirm.visible = YES;
         }
     }
-    if (self->state == PlayerSelectingAlly)
+    else if (self->state == PlayerSelectingAlly)
     {
         if ([self isMonster:monster inParty:1] && [monster isKoed] == NO)
+        {
+            [self setNewInfoMonster:monster];
+            
+            //Update the target monster
+            self->targetMonster = monster;
+            
+            //Show the confirm button
+            self->combatConfirm.visible = YES;
+        }
+    }
+    else if (self->state == PlayerSelectingAllyKO)
+    {
+        if ([self isMonster:monster inParty:1] && [monster isKoed])
         {
             [self setNewInfoMonster:monster];
             
@@ -326,7 +341,8 @@
 
 -(void) confirmWasTouched
 {
-    if (self->state == PlayerSelectingEnemy || self->state == PlayerSelectingAlly)
+    if (self->state == PlayerSelectingEnemy || self->state == PlayerSelectingAlly
+        || self->state == PlayerSelectingAllyKO)
     {
         //Close up UI elements
         self->combatInfo.visible = NO;
@@ -440,10 +456,10 @@
                 
                 //Create a status effect and add to the monster
                 StatusEffect* effect = [StatusEffect new];
-                effect.Name = self->abilityInUse.name;
-                effect.Value = damagePerTurn;
-                effect.Type = StatusEffectTypeDamageOverTime;
-                effect.TurnsRemaining = dotTurns;
+                effect.name = self->abilityInUse.name;
+                effect.value = damagePerTurn;
+                effect.type = StatusEffectTypeDamageOverTime;
+                effect.turnsRemaining = dotTurns;
                 [self->targetMonster.statusEffects addObject:effect];
                 
                 [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ inflicts %@ with %@", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name, self->abilityInUse.name]];
@@ -451,7 +467,18 @@
                 break;
             }
             case EffectTypeShield:
+            {
+                StatusEffect* effect = [StatusEffect new];
+                effect.name = self->abilityInUse.name;
+                effect.value = self->abilityInUse.value;
+                effect.type = StatusEffectTypeShielding;
+                effect.turnsRemaining = 1;
+                effect.shieldTarget = self->targetMonster;
+                [self->activeMonster.statusEffects addObject:effect];
+                
+                [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ shields %@", self->activeMonster.monsterData.name, self->targetMonster.monsterData.name]];
                 break;
+            }
             case EffectTypeCure:
             {
                 int healing = [CombatHelper CalculateHealingWithAbility:self->abilityInUse];
@@ -472,7 +499,11 @@
                 break;
             }
             case EffectTypeRevive:
+            {
+                [self assignHealing:10 ToMonster:self->targetMonster];
+                [self->targetMonster changeSprite:@"Standing"];
                 break;
+            }
             case EffectTypeAlterSpeed:
             {
                 [self assignAlterEffectToTarget:[self->targetMonster.monsterData trueSpeed] type:StatusEffectTypeAlterSpeed];
@@ -584,10 +615,42 @@
 {
     if (damage > 0)
     {
-        [monster updateHealthByValue:damage * -1];
-        [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, monster.monsterData.name, damage]];
-        [self showHitSprite:monster.position];
-        [self sendUpText:[NSString stringWithFormat:@"%d", damage] position:monster.position color:ccc3(255, 255, 255)];
+        //See if another monster is shielding
+        CombatMonsterNode* shielder= nil;
+        float shieldValue = 0.0f;
+        for (CombatMonsterNode* ally in self->monsters)
+        {
+            if (ally.partyNumber == monster.partyNumber && ally != monster)
+            {
+                for (StatusEffect* effect in ally.statusEffects)
+                {
+                    if (effect.type == StatusEffectTypeShielding && effect.shieldTarget == monster)
+                    {
+                        shielder = ally;
+                        shieldValue = effect.value;
+                    }
+                }
+            }
+        }
+        
+        if (shielder == nil)
+        {
+            [monster updateHealthByValue:damage * -1];
+            [self->combatStatus openAndShowLabel:[NSString stringWithFormat:@"%@ hit %@ for %d damage", self->activeMonster.monsterData.name, monster.monsterData.name, damage]];
+            [self showHitSprite:monster.position];
+            [self sendUpText:[NSString stringWithFormat:@"%d", damage] position:monster.position color:ccc3(255, 255, 255)];
+        }
+        else
+        {
+            int shielderDamage = (float)damage * shieldValue;
+            int targetDamage = damage - shielderDamage;
+            
+            [shielder updateHealthByValue:shielderDamage * -1];
+            [self sendUpText:[NSString stringWithFormat:@"%d", shielderDamage] position:shielder.position color:ccc3(255, 255, 255)];
+            
+            [monster updateHealthByValue:targetDamage * -1];
+            [self sendUpText:[NSString stringWithFormat:@"%d", targetDamage] position:monster.position color:ccc3(255, 255, 255)];
+        }
     }
     else
     {
@@ -658,7 +721,7 @@
     StatusEffect* existingEffect = nil;
     for (StatusEffect* e in self->targetMonster.statusEffects)
     {
-        if (e.Type == effectType)
+        if (e.type == effectType)
         {
             existingEffect = e;
             break;
@@ -669,13 +732,15 @@
         [self->targetMonster.statusEffects removeObject:existingEffect];
     
     int adjustmentValue = (float)originalValue * self->abilityInUse.value;
-    if (adjustmentValue <= 0)
+    if (adjustmentValue == 0 && self->abilityInUse.value < 0)
+        adjustmentValue = -1;
+    if (adjustmentValue == 0 && self->abilityInUse.value > 0)
         adjustmentValue = 1;
     StatusEffect* effect = [StatusEffect new];
-    effect.Name = self->abilityInUse.name;
-    effect.Value = adjustmentValue;
-    effect.Type = effectType;
-    effect.TurnsRemaining = alterTurns;
+    effect.name = self->abilityInUse.name;
+    effect.value = adjustmentValue;
+    effect.type = effectType;
+    effect.turnsRemaining = alterTurns;
     [self->targetMonster.statusEffects addObject:effect];
 }
 

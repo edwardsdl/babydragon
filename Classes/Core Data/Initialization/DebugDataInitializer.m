@@ -56,8 +56,13 @@
 {
     [[MonsterData anyMonsterWithName:@"Fox"] addAbilities:[NSSet setWithArray:@[
         [AbilityData abilityDataWithName:@"Cure" andLevel:[NSNumber numberWithInt:1]],
-        [AbilityData abilityDataWithName:@"Haste" andLevel:[NSNumber numberWithInt:1]],
-        [AbilityData abilityDataWithName:@"Slow" andLevel:[NSNumber numberWithInt:1]]
+        [AbilityData abilityDataWithName:@"Revive" andLevel:[NSNumber numberWithInt:1]],
+        [AbilityData abilityDataWithName:@"Slow" andLevel:[NSNumber numberWithInt:1]],
+        [AbilityData abilityDataWithName:@"Haste" andLevel:[NSNumber numberWithInt:1]]
+    ]]];
+ 
+    [[MonsterData anyMonsterWithName:@"Baby Dragon"] addAbilities:[NSSet setWithArray:@[
+        [AbilityData abilityDataWithName:@"Flame_Shield" andLevel:[NSNumber numberWithInt:1]]
     ]]];
     
     NSError *error = nil;

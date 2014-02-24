@@ -8,15 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "StatusEffectType.h"
+#import "CombatMonsterNode.h"
 
 @interface StatusEffect : NSObject
 
-@property (nonatomic, retain) NSString* Name;
+@property (nonatomic, retain) NSString* name;
 
-@property (nonatomic) StatusEffectType Type;
+@property (nonatomic) StatusEffectType type;
 
-@property (nonatomic) int Value;
+@property (nonatomic) float value;
 
-@property (nonatomic) int TurnsRemaining;
+@property (nonatomic) int turnsRemaining;
+
+@property (nonatomic) CombatMonsterNode* shieldTarget;
 
 @end
