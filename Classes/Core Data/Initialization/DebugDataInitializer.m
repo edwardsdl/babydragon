@@ -79,7 +79,7 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Baby Dragon"],
+    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Wisp"],
                           [MonsterData anyMonsterWithName:@"Fox"],
                           [MonsterData anyMonsterWithName:@"Skeleton"]];
     
