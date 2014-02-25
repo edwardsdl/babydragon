@@ -85,7 +85,7 @@
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     
-    monsters = @[[MonsterData anyMonsterWithName:@"Fox"],
+    monsters = @[[MonsterData anyMonsterWithName:@"Ghost"],
                  [MonsterData anyMonsterWithName:@"Scorpion"],
                  [MonsterData anyMonsterWithName:@"Crab"]];
     

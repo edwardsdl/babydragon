@@ -19,6 +19,7 @@
         float yBarBorderOffset = -40.0;
         float yBarSpacing = -5.5;
         self->yShadowOffset = -33;
+        self->ySpriteOffset = 0.0f;
         
         self.monsterData = data;
         self.partyNumber = partyNum;
@@ -43,6 +44,17 @@
         if (self.monsterData.isTranslucent)
             self->monsterSprite.opacity = 200;
         [self addChild:self->monsterSprite];
+        
+        //Factor in monster scale from monster data
+        self->monsterSprite.scaleX *= self.monsterData.scalePercent;
+        self->monsterSprite.scaleY *= self.monsterData.scalePercent;
+        self->shadowSprite.scaleX *= self.monsterData.scalePercent;
+        self->shadowSprite.scaleY *= self.monsterData.scalePercent;
+        if (self.monsterData.isFlying == NO)    //Flying monsters are still drawn center
+        {
+            self->ySpriteOffset = (32.5 - (32.5 * self.monsterData.scalePercent)) * -1.0f;
+            self->monsterSprite.position = ccp(0, self->ySpriteOffset);
+        }
         
         //Draw the health bar
         self->healthBar = [CCProgressTimer progressWithSprite:[CCSprite spriteWithFile:@"HealthBarFull.png"]];
@@ -195,7 +207,7 @@
     
     //Setup bezier curve
     ccBezierConfig bezierTo;
-    bezierTo.endPosition = newPosition;
+    bezierTo.endPosition = ccp(newPosition.x, newPosition.y + self->ySpriteOffset);
     
     //Determine bezier control points
     float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));
@@ -216,7 +228,7 @@
 {
     //Setup bezier curve
     ccBezierConfig bezierTo;
-    bezierTo.endPosition = ccp(0, 0);
+    bezierTo.endPosition = ccp(0, self->ySpriteOffset);
     
     //Determine bezier control points
     float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));

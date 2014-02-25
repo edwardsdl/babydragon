@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AbilityData" representedClassName="AbilityData" parentEntity="BaseData" syncable="YES">
         <attribute name="apCost" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="attackType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -31,10 +31,12 @@
         <attribute name="elementType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="healthPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="healthPointsLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="isFlying" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isTranslucent" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="power" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="powerLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="probability" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="scalePercent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="speed" attributeType="Integer 32" minValueString="1" defaultValueString="1" syncable="YES"/>
         <attribute name="speedLevelMultiplier" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="type" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
@@ -75,11 +77,13 @@
         <attribute name="elementType" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="experiencePoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="healthPoints" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="isFlying" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isTranslucent" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 32" minValueString="1" defaultValueString="1" syncable="YES"/>
         <attribute name="name" attributeType="String" minValueString="1" syncable="YES"/>
         <attribute name="paletteIndex" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="power" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="scalePercent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="traits" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="type" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>

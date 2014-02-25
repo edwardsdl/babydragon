@@ -45,6 +45,8 @@ static NSString *entityName = @"MonsterData";
     [monsterData setExperiencePoints:0];
     [monsterData setHealthPoints:[defaultMonsterData healthPoints]];
     [monsterData setIsTranslucent:[defaultMonsterData isTranslucent]];
+    [monsterData setIsFlying:[defaultMonsterData isFlying]];
+    [monsterData setScalePercent:[defaultMonsterData scalePercent]];
     // TODO: Set latitude
     [monsterData setLevel:1];
     // TODO: Set longitude

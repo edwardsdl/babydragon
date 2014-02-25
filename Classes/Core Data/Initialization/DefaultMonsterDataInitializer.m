@@ -42,6 +42,8 @@
     [monster setWillpowerLevelMultiplier:1.1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.55];
+    [monster setIsFlying:NO];
     
     //Imp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Imp"];
@@ -66,6 +68,8 @@
     [monster setWillpowerLevelMultiplier:0.9];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.6];
+    [monster setIsFlying:YES];
     
     //Baby Dragon
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Baby_Dragon"];
@@ -90,6 +94,8 @@
     [monster setWillpowerLevelMultiplier:0.9];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.7];
+    [monster setIsFlying:NO];
     
     //Firebat
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Firebat"];
@@ -114,6 +120,8 @@
     [monster setWillpowerLevelMultiplier:1.2];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.65];
+    [monster setIsFlying:YES];
     
     //Fire Elemental
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Fire_Elemental"];
@@ -138,6 +146,8 @@
     [monster setWillpowerLevelMultiplier:1.1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.7];
+    [monster setIsFlying:YES];
     
     //Scorpion
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Scorpion"];
@@ -162,6 +172,8 @@
     [monster setWillpowerLevelMultiplier:1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.55];
+    [monster setIsFlying:NO];
     
     //Small Blob
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Small_Blob"];
@@ -186,6 +198,8 @@
     [monster setWillpowerLevelMultiplier:1.1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.6];
+    [monster setIsFlying:NO];
     
     //Viper
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Viper"];
@@ -210,6 +224,8 @@
     [monster setWillpowerLevelMultiplier:1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.6];
+    [monster setIsFlying:NO];
     
     //Wisp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Wisp"];
@@ -234,6 +250,8 @@
     [monster setWillpowerLevelMultiplier:0.9];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.75];
+    [monster setIsFlying:YES];
     
     //Bear Cub
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Bear_Cub"];
@@ -258,6 +276,8 @@
     [monster setWillpowerLevelMultiplier:1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.75];
+    [monster setIsFlying:NO];
     
     //Crab
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Crab"];
@@ -282,6 +302,8 @@
     [monster setWillpowerLevelMultiplier:1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.6];
+    [monster setIsFlying:NO];
     
     //Hard Shell
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard_Shell"];
@@ -306,6 +328,8 @@
     [monster setWillpowerLevelMultiplier:1.1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.6];
+    [monster setIsFlying:NO];
     
     //Angler
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Angler"];
@@ -330,6 +354,8 @@
     [monster setWillpowerLevelMultiplier:1.1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.75];
+    [monster setIsFlying:YES];
     
     //Caterpillar
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Caterpillar"];
@@ -354,6 +380,8 @@
     [monster setWillpowerLevelMultiplier:1.3];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.75];
+    [monster setIsFlying:NO];
     
     //Marblu
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Marblu"];
@@ -378,6 +406,8 @@
     [monster setWillpowerLevelMultiplier:1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.75];
+    [monster setIsFlying:NO];
     
     //Skeleton
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Skeleton"];
@@ -402,6 +432,8 @@
     [monster setWillpowerLevelMultiplier:1.2];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.85];
+    [monster setIsFlying:NO];
     
     //Rat
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Rat"];
@@ -426,6 +458,8 @@
     [monster setWillpowerLevelMultiplier:1.1];
     
     [monster setIsTranslucent:NO];
+    [monster setScalePercent:0.65];
+    [monster setIsFlying:NO];
     
     //Ghost
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Ghost"];
@@ -450,6 +484,8 @@
     [monster setWillpowerLevelMultiplier:1.1];
     
     [monster setIsTranslucent:YES];
+    [monster setScalePercent:0.75];
+    [monster setIsFlying:YES];
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     [managedObjectContext save:&error];

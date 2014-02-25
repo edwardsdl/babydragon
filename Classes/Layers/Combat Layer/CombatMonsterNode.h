@@ -24,6 +24,7 @@
     int turnCounter;
     
     float yShadowOffset;
+    float ySpriteOffset;
 };
 
 @property (nonatomic, retain) MonsterData *monsterData;
