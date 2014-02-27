@@ -54,7 +54,7 @@
 
 + (void)initializeMonsterAbilities
 {
-    [[MonsterData anyMonsterWithName:@"Fox"] addAbilities:[NSSet setWithArray:@[
+    /*[[MonsterData anyMonsterWithName:@"Fox"] addAbilities:[NSSet setWithArray:@[
         [AbilityData abilityDataWithName:@"Cure" andLevel:[NSNumber numberWithInt:1]],
         [AbilityData abilityDataWithName:@"Revive" andLevel:[NSNumber numberWithInt:1]],
         [AbilityData abilityDataWithName:@"Slow" andLevel:[NSNumber numberWithInt:1]],
@@ -63,7 +63,12 @@
  
     [[MonsterData anyMonsterWithName:@"Baby Dragon"] addAbilities:[NSSet setWithArray:@[
         [AbilityData abilityDataWithName:@"Flame_Shield" andLevel:[NSNumber numberWithInt:1]]
-    ]]];
+    ]]];*/
+    
+    [[MonsterData anyMonsterWithName:@"Fox"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Baby Dragon"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Fire Elemental"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Viper"] assignAbilitiesForLevel:1];
     
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
@@ -79,9 +84,9 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Wisp"],
+    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Viper"],
                           [MonsterData anyMonsterWithName:@"Fox"],
-                          [MonsterData anyMonsterWithName:@"Skeleton"]];
+                          [MonsterData anyMonsterWithName:@"Fire Elemental"]];
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     

@@ -16,5 +16,6 @@
 
 - (void) levelUp;
 - (void) levelUp:(int) levelsGained;
+- (void) assignAbilitiesForLevel:(int) level;
 
 @end

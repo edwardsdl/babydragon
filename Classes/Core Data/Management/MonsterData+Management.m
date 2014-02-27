@@ -3,6 +3,11 @@
 #import "NSManagedObjectContext+Management.h"
 #import "MonsterData+Management.h"
 #import "UUIDHelper.h"
+#import "RoleType.h"
+#import "AbilityData.h"
+#import "AbilityData+Management.h"
+#import "EffectType.h"
+#import "AttackType.h"
 
 @implementation MonsterData (Management)
 
@@ -130,6 +135,82 @@ static NSString *entityName = @"MonsterData";
     self.level += levelsGained;
     
     [[CoreDataHelper.sharedInstance managedObjectContext] save:nil];
+}
+
+- (void) assignAbilitiesForLevel:(int) level
+{
+    //Get the default monster data so we can lookup role types
+    DefaultMonsterData *defaultMonsterData = [DefaultMonsterData defaultMonsterDataForType:self.type];
+    
+    int rank = 0;
+    
+    //Assigning Direct Damage Primary
+    if (defaultMonsterData.roleTypePrimary == RoleTypeDirectDamage)
+    {
+        //Assign 4 rank abilities
+        if (level == 1)
+            rank = 1;
+        else if (level == 9)
+            rank = 2;
+        else if (level == 18)
+            rank = 3;
+        else if (level == 27)
+            rank = 4;
+        else
+            rank = 0;
+        
+        if (rank != 0)
+        {
+            AbilityData* ability = [AbilityData abilityDataWithLevel:[NSNumber numberWithInt:rank]
+                                            andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                            andEffectType:[NSNumber numberWithInt:EffectTypeAttack]
+                                            andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            [self addAbilitiesObject:ability];
+        }
+        
+        //Assign 3 rank abilities for Magic type monsters
+        if (defaultMonsterData.attackType == AttackTypeMagic)
+        {
+            if (level == 1)
+                rank = 1;
+            else if (level == 13)
+                rank = 2;
+            else if (level == 26)
+                rank = 3;
+            else
+                rank = 0;
+            
+            if (rank != 0)
+            {
+                AbilityData* ability = [AbilityData abilityDataWithLevel:[NSNumber numberWithInt:rank]
+                                                andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                                andEffectType:[NSNumber numberWithInt:EffectTypeGroupAttack]
+                                                andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+                [self addAbilitiesObject:ability];
+            }
+        }
+    }
+    else if (defaultMonsterData.roleTypePrimary == RoleTypeDamageOverTime)
+    {
+        if (level == 1)
+            rank = 1;
+        else if (level == 13)
+            rank = 2;
+        else if (level == 26)
+            rank = 3;
+        else
+            rank = 0;
+        
+        if (rank != 0)
+        {
+            AbilityData* ability = [AbilityData abilityDataWithLevel:[NSNumber numberWithInt:rank]
+                                                    andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                                    andEffectType:[NSNumber numberWithInt:EffectTypeDamageOverTime]
+                                                    andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            [self addAbilitiesObject:ability];
+        }
+    }
+    
 }
 
 @end

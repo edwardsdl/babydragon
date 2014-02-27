@@ -4,6 +4,7 @@
 #import "DefaultMonsterData+Management.h"
 #import "ElementType.h"
 #import "AttackType.h"
+#import "RoleType.h"
 
 @implementation DefaultMonsterDataInitializer
 
@@ -44,6 +45,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.55];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeDirectDamage];
+    [monster setRoleTypeSecondary:RoleTypeBuff];
     
     //Imp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Imp"];
@@ -70,6 +73,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.6];
     [monster setIsFlying:YES];
+    [monster setRoleTypePrimary:RoleTypeDamageOverTime];
+    [monster setRoleTypeSecondary:RoleTypeDebuff];
     
     //Baby Dragon
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Baby_Dragon"];
@@ -96,6 +101,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.7];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeDirectDamage];
+    [monster setRoleTypeSecondary:RoleTypeTank];
     
     //Firebat
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Firebat"];
@@ -122,6 +129,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.65];
     [monster setIsFlying:YES];
+    [monster setRoleTypePrimary:RoleTypeDirectDamage];
+    [monster setRoleTypeSecondary:RoleTypeDebuff];
     
     //Fire Elemental
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Fire_Elemental"];
@@ -148,6 +157,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.7];
     [monster setIsFlying:YES];
+    [monster setRoleTypePrimary:RoleTypeDirectDamage];
+    [monster setRoleTypeSecondary:RoleTypeHeal];
     
     //Scorpion
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Scorpion"];
@@ -174,6 +185,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.55];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeDebuff];
+    [monster setRoleTypeSecondary:RoleTypeDamageOverTime];
     
     //Small Blob
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Small_Blob"];
@@ -200,6 +213,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.6];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeTank];
+    [monster setRoleTypeSecondary:RoleTypeDamageOverTime];
     
     //Viper
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Viper"];
@@ -226,6 +241,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.6];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeDamageOverTime];
+    [monster setRoleTypeSecondary:RoleTypeBuff];
     
     //Wisp
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Wisp"];
@@ -252,6 +269,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.75];
     [monster setIsFlying:YES];
+    [monster setRoleTypePrimary:RoleTypeHeal];
+    [monster setRoleTypeSecondary:RoleTypeBuff];
     
     //Bear Cub
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Bear_Cub"];
@@ -278,6 +297,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.75];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeTank];
+    [monster setRoleTypeSecondary:RoleTypeDirectDamage];
     
     //Crab
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Crab"];
@@ -304,6 +325,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.6];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeTank];
+    [monster setRoleTypeSecondary:RoleTypeDirectDamage];
     
     //Hard Shell
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Hard_Shell"];
@@ -330,6 +353,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.6];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeTank];
+    [monster setRoleTypeSecondary:RoleTypeHeal];
     
     //Angler
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Angler"];
@@ -356,6 +381,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.75];
     [monster setIsFlying:YES];
+    [monster setRoleTypePrimary:RoleTypeBuff];
+    [monster setRoleTypeSecondary:RoleTypeDirectDamage];
     
     //Caterpillar
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Caterpillar"];
@@ -382,6 +409,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.75];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeBuff];
+    [monster setRoleTypeSecondary:RoleTypeDebuff];
     
     //Marblu
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Marblu"];
@@ -408,6 +437,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.75];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeHeal];
+    [monster setRoleTypeSecondary:RoleTypeDirectDamage];
     
     //Skeleton
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Skeleton"];
@@ -434,6 +465,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.85];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeDamageOverTime];
+    [monster setRoleTypeSecondary:RoleTypeDebuff];
     
     //Rat
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Rat"];
@@ -460,6 +493,8 @@
     [monster setIsTranslucent:NO];
     [monster setScalePercent:0.65];
     [monster setIsFlying:NO];
+    [monster setRoleTypePrimary:RoleTypeDamageOverTime];
+    [monster setRoleTypeSecondary:RoleTypeDirectDamage];
     
     //Ghost
     monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Ghost"];
@@ -486,6 +521,8 @@
     [monster setIsTranslucent:YES];
     [monster setScalePercent:0.75];
     [monster setIsFlying:YES];
+    [monster setRoleTypePrimary:RoleTypeHeal];
+    [monster setRoleTypeSecondary:RoleTypeDamageOverTime];
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     [managedObjectContext save:&error];
