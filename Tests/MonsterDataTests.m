@@ -29,10 +29,9 @@
     MonsterData *monsterData = [MonsterData insertMonsterWithType:@"Baby_Dragon" barcode:@"No Barcode"];
     [monsterData setName:name];
     
-    NSError *error;
-    [[[CoreDataHelper sharedInstance] managedObjectContext] save:&error];
+    BOOL wasSaveSuccessful = [[CoreDataHelper sharedInstance] save];
     
-    XCTAssertNil(error, @"The monster was inserted successfully.");
+    XCTAssertTrue(wasSaveSuccessful, @"The monster was inserted successfully.");
     
     monsterData = [MonsterData monsterWithUUID:[monsterData uuid]];
     
