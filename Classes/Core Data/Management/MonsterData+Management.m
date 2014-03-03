@@ -78,8 +78,7 @@ static NSString *entityName = @"MonsterData";
         [managedObjectContext deleteObject:monsterData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 - (int)trueCourage
@@ -125,7 +124,7 @@ static NSString *entityName = @"MonsterData";
     self.willpower += defaultMonsterData.willpowerLevelMultiplier * levelsGained;
     self.level += levelsGained;
     
-    [[CoreDataHelper.sharedInstance managedObjectContext] save:nil];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 - (void)assignAbilitiesForLevel:(int)level

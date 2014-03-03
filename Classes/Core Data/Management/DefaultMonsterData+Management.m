@@ -45,8 +45,7 @@ static NSString *entityName = @"DefaultMonsterData";
         [managedObjectContext deleteObject:defaultMonsterData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

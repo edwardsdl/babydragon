@@ -69,8 +69,7 @@ static NSString *entityName = @"AbilityData";
         [managedObjectContext deleteObject:abilityData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

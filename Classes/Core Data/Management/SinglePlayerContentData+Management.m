@@ -45,8 +45,7 @@ static NSString *entityName = @"SinglePlayerContentData";
         [managedObjectContext deleteObject:singlePlayerContent];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 + (SinglePlayerContentData *)singlePlayerContentWithSeed:(int)seed
