@@ -2,7 +2,7 @@
 //  LevelData.m
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 1/13/14.
+//  Created by Dallas Edwards on 3/2/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -11,11 +11,11 @@
 
 @implementation LevelData
 
-@dynamic worldIndex;
 @dynamic environmentType;
 @dynamic lootQuality;
-@dynamic minimumMonsterLevel;
 @dynamic maximumMonsterLevel;
+@dynamic minimumMonsterLevel;
 @dynamic seed;
+@dynamic worldIndex;
 
 @end

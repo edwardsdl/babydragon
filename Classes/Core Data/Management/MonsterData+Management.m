@@ -1,3 +1,4 @@
+#import "BaseData+Management.h"
 #import "CoreDataHelper.h"
 #import "DefaultMonsterData+Management.h"
 #import "NSManagedObjectContext+Management.h"
@@ -59,7 +60,6 @@ static NSString *entityName = @"MonsterData";
     [monsterData setSpeed:[defaultMonsterData speed]];
     [monsterData setPower:[defaultMonsterData power]];
     [monsterData setType:type];
-    [monsterData setUuid:[UUIDHelper createUUIDString]];
     [monsterData setWillpower:[defaultMonsterData willpower]];
     [monsterData setAttackType:[defaultMonsterData attackType]];
     
@@ -68,14 +68,7 @@ static NSString *entityName = @"MonsterData";
 
 + (MonsterData *)monsterWithUUID:(NSString *)uuid
 {
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    
-    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetMonsterWithUUID"
-                                                                substitutionVariables:@{@"UUID": uuid}];
-    
-    return [results count] > 0
-        ? (MonsterData *)[results objectAtIndex:0]
-        : nil;
+    return (MonsterData *)[self baseDataWithUUID:uuid];
 }
 
 + (void)removeAll

@@ -2,7 +2,7 @@
 //  MonsterData.h
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 2/24/14.
+//  Created by Dallas Edwards on 3/2/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -21,18 +21,17 @@
 @property (nonatomic) int32_t elementType;
 @property (nonatomic) int32_t experiencePoints;
 @property (nonatomic) int32_t healthPoints;
+@property (nonatomic) BOOL isFlying;
 @property (nonatomic) BOOL isTranslucent;
 @property (nonatomic) int32_t level;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic) int32_t paletteIndex;
 @property (nonatomic) float power;
+@property (nonatomic) float scalePercent;
 @property (nonatomic) float speed;
 @property (nonatomic, retain) id traits;
 @property (nonatomic, retain) NSString * type;
-@property (nonatomic, retain) NSString * uuid;
 @property (nonatomic) float willpower;
-@property (nonatomic) BOOL isFlying;
-@property (nonatomic) float scalePercent;
 @property (nonatomic, retain) NSSet *abilities;
 @property (nonatomic, retain) NSSet *parties;
 @end

@@ -11,21 +11,21 @@
 {
     [DefaultItemData removeAll];
     
-    DefaultItemData *defaultItemData = [DefaultItemData insertDefaultItemDataWithName:@"Lesser Potion of Healing"];
+    DefaultItemData *defaultItemData = [DefaultItemData insertDefaultItemDataForType:@"Lesser Potion of Healing"];
     [defaultItemData setAttackType:AttackTypeNone];
     [defaultItemData setEffectType:EffectTypeCure];
     [defaultItemData setElementType:ElementTypeNone];
     [defaultItemData setTargetType:TargetTypeSingleFriendly];
     [defaultItemData setValue:15];
     
-    defaultItemData = [DefaultItemData insertDefaultItemDataWithName:@"Potion of Healing"];
+    defaultItemData = [DefaultItemData insertDefaultItemDataForType:@"Potion of Healing"];
     [defaultItemData setAttackType:AttackTypeNone];
     [defaultItemData setEffectType:EffectTypeCure];
     [defaultItemData setElementType:ElementTypeNone];
     [defaultItemData setTargetType:TargetTypeSingleFriendly];
     [defaultItemData setValue:20];
     
-    defaultItemData = [DefaultItemData insertDefaultItemDataWithName:@"Greater Potion of Healing"];
+    defaultItemData = [DefaultItemData insertDefaultItemDataForType:@"Greater Potion of Healing"];
     [defaultItemData setAttackType:AttackTypeNone];
     [defaultItemData setEffectType:EffectTypeCure];
     [defaultItemData setElementType:ElementTypeNone];

@@ -1,3 +1,4 @@
+#import "BaseData+Management.h"
 #import "CoreDataHelper.h"
 #import "NSManagedObjectContext+Management.h"
 #import "PartyData+Management.h"
@@ -33,8 +34,6 @@ static NSString *entityName = @"PartyData";
     PartyData *partyData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                          inManagedObjectContext:managedObjectContext];
     [partyData setName:name];
-    [partyData setUuid:[UUIDHelper createUUIDString]];
-    
     [partyData addMonsters:[NSSet setWithArray:monsters]];
     
     return partyData;
@@ -42,14 +41,7 @@ static NSString *entityName = @"PartyData";
 
 + (PartyData *)partyWithUUID:(NSString *)uuid
 {
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    
-    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetPartyWithUUID"
-                                                                substitutionVariables:@{@"UUID": uuid}];
-    
-    return [results count] > 0
-        ? (PartyData *)[results objectAtIndex:0]
-        : nil;
+    return (PartyData *)[self baseDataWithUUID:uuid];
 }
 
 + (void)removeAll

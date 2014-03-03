@@ -2,7 +2,7 @@
 //  DefaultMonsterData.h
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 2/26/14.
+//  Created by Dallas Edwards on 3/2/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -28,13 +28,13 @@
 @property (nonatomic) int32_t power;
 @property (nonatomic) float powerLevelMultiplier;
 @property (nonatomic) float probability;
+@property (nonatomic) int32_t roleTypePrimary;
+@property (nonatomic) int32_t roleTypeSecondary;
 @property (nonatomic) float scalePercent;
 @property (nonatomic) int32_t speed;
 @property (nonatomic) float speedLevelMultiplier;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic) int32_t willpower;
 @property (nonatomic) float willpowerLevelMultiplier;
-@property (nonatomic) int32_t roleTypePrimary;
-@property (nonatomic) int32_t roleTypeSecondary;
 
 @end

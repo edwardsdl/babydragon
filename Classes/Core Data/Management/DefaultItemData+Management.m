@@ -1,3 +1,4 @@
+#import "BaseData+Management.h"
 #import "CoreDataHelper.h"
 #import "DefaultItemData+Management.h"
 #import "NSManagedObjectContext+Management.h"
@@ -13,25 +14,18 @@ static NSString *entityName = @"DefaultItemData";
     return [managedObjectContext objectsForEntityName:entityName];
 }
 
-+ (DefaultItemData *)defaultMonsterDataWithName:(NSString *)name
++ (DefaultItemData *)defaultItemDataWithUUID:(NSString *)uuid
 {
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    
-    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetDefaultItemDataWithName"
-                                                                substitutionVariables:@{@"NAME": name}];
-    
-    return [results count] > 0
-    ? (DefaultItemData *)[results objectAtIndex:0]
-    : nil;
+    return (DefaultItemData *)[self baseDataWithUUID:uuid];
 }
 
-+ (DefaultItemData *)insertDefaultItemDataWithName:(NSString *)name
++ (DefaultItemData *)insertDefaultItemDataForType:(NSString *)type
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     
     DefaultItemData *defaultItemData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                                      inManagedObjectContext:managedObjectContext];
-    [defaultItemData setName:name];
+    [defaultItemData setType:type];
     
     return defaultItemData;
 }

@@ -2,8 +2,8 @@
 //  PartyData.m
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 11/16/13.
-//  Copyright (c) 2013 First Light Games. All rights reserved.
+//  Created by Dallas Edwards on 3/2/14.
+//  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
 #import "PartyData.h"
@@ -13,7 +13,6 @@
 @implementation PartyData
 
 @dynamic name;
-@dynamic uuid;
 @dynamic monsters;
 
 @end
