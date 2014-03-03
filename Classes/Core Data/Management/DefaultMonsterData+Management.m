@@ -20,7 +20,7 @@ static NSString *entityName = @"DefaultMonsterData";
     NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetDefaultMonsterAttributesForType"
                                                               substitutionVariables:@{@"TYPE": type}];
     
-    return [results count] > 0
+    return results.count > 0
         ? (DefaultMonsterData *)[results objectAtIndex:0]
         : nil;
 }
@@ -31,7 +31,7 @@ static NSString *entityName = @"DefaultMonsterData";
     
     DefaultMonsterData *defaultMonsterData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                                            inManagedObjectContext:managedObjectContext];
-    [defaultMonsterData setType:type];
+    defaultMonsterData.type = type;
     
     return defaultMonsterData;
 }

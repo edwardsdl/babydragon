@@ -5,9 +5,9 @@
 - (void)awakeFromInsert
 {
     CLLocationManager* locationManager = [[CLLocationManager alloc] init];
-    [locationManager setDelegate:self];
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyKilometer];
-    [locationManager setDistanceFilter:DBL_MAX];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    locationManager.distanceFilter = DBL_MAX;
     [locationManager startUpdatingLocation];
 }
 
@@ -17,8 +17,8 @@
 {
     CLLocation * location = [locations lastObject];
     
-    [self setLatitude:[location coordinate].latitude];
-    [self setLongitude:[location coordinate].longitude];
+    self.latitude = location.coordinate.latitude;
+    self.longitude = location.coordinate.longitude;
 }
 
 @end

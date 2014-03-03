@@ -25,7 +25,7 @@ static NSString *entityName = @"DefaultItemData";
     
     DefaultItemData *defaultItemData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                                      inManagedObjectContext:managedObjectContext];
-    [defaultItemData setType:type];
+    defaultItemData.type = type;
     
     return defaultItemData;
 }
