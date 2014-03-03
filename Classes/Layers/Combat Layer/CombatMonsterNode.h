@@ -24,6 +24,11 @@
     int turnCounter;
     
     float yShadowOffset;
+    float ySpriteOffset;
+    float yFlyingOffset;
+    float flyingVelocity;
+    BOOL isFlyingDown;
+    BOOL isJumping;
 };
 
 @property (nonatomic, retain) MonsterData *monsterData;

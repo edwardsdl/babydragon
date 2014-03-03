@@ -2,7 +2,7 @@
 //  DefaultMonsterData.m
 //  BabyDragon
 //
-//  Created by Eric Stenborg on 1/29/14.
+//  Created by Eric Stenborg on 2/26/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -13,6 +13,7 @@
 
 @dynamic abilityPoints;
 @dynamic abilityPointsLevelMultiplier;
+@dynamic attackType;
 @dynamic courage;
 @dynamic courageLevelMultiplier;
 @dynamic defense;
@@ -20,15 +21,18 @@
 @dynamic elementType;
 @dynamic healthPoints;
 @dynamic healthPointsLevelMultiplier;
+@dynamic isFlying;
 @dynamic isTranslucent;
-@dynamic probability;
-@dynamic speed;
-@dynamic speedLevelMultiplier;
 @dynamic power;
 @dynamic powerLevelMultiplier;
+@dynamic probability;
+@dynamic scalePercent;
+@dynamic speed;
+@dynamic speedLevelMultiplier;
 @dynamic type;
 @dynamic willpower;
 @dynamic willpowerLevelMultiplier;
-@dynamic attackType;
+@dynamic roleTypePrimary;
+@dynamic roleTypeSecondary;
 
 @end

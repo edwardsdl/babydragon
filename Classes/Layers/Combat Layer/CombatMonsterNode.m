@@ -19,6 +19,9 @@
         float yBarBorderOffset = -40.0;
         float yBarSpacing = -5.5;
         self->yShadowOffset = -33;
+        self->ySpriteOffset = 0.0f;
+        self->yFlyingOffset = 0.0f;
+        self->flyingVelocity = 0.0f;
         
         self.monsterData = data;
         self.partyNumber = partyNum;
@@ -43,6 +46,17 @@
         if (self.monsterData.isTranslucent)
             self->monsterSprite.opacity = 200;
         [self addChild:self->monsterSprite];
+        
+        //Factor in monster scale from monster data
+        self->monsterSprite.scaleX *= self.monsterData.scalePercent;
+        self->monsterSprite.scaleY *= self.monsterData.scalePercent;
+        self->shadowSprite.scaleX *= self.monsterData.scalePercent;
+        self->shadowSprite.scaleY *= self.monsterData.scalePercent;
+        if (self.monsterData.isFlying == NO)    //Flying monsters are still drawn center
+        {
+            self->ySpriteOffset = (32.5 - (32.5 * self.monsterData.scalePercent)) * -1.0f;
+            self->monsterSprite.position = ccp(0, self->ySpriteOffset);
+        }
         
         //Draw the health bar
         self->healthBar = [CCProgressTimer progressWithSprite:[CCSprite spriteWithFile:@"HealthBarFull.png"]];
@@ -83,8 +97,60 @@
         barBackgroundSprite = [CCSprite spriteWithFile:@"BarBackground.png"];
         barBackgroundSprite.position = ccp(0, yBarBorderOffset + (yBarSpacing * 2));
         [self addChild:barBackgroundSprite];
+        
+        //Begin a loop to handle flying monster's floating
+        if (self.monsterData.isFlying)
+        {
+            //Give the initial velocity some variability so that all the fliers arent floating
+            //on the same beat
+            int i = arc4random() % 100;
+            i = i - 50;
+            self->flyingVelocity = i / 10.0f;
+            
+            if (self->flyingVelocity > 0)
+                self->isFlyingDown = NO;
+            else
+                self->isFlyingDown = YES;
+            
+            self->isJumping = NO;
+            [self schedule:@selector(updateFlyingFloat:) interval:0];
+        }
     }
     return self;
+}
+
+-(void) updateFlyingFloat:(float)dt
+{
+    if (self->isJumping || [self isKoed])
+        return;
+    
+    float changeFactor = .15;
+    float maxVelocity = 5.5f;
+    
+    if (self->isFlyingDown == NO)
+    {
+        self->flyingVelocity = self->flyingVelocity + changeFactor;
+        
+        if (self->flyingVelocity > maxVelocity)
+        {
+            self->isFlyingDown = YES;
+        }
+    }
+    else
+    {
+        self->flyingVelocity = self->flyingVelocity - changeFactor;
+        
+        if (self->flyingVelocity < (maxVelocity * -1.0f))
+        {
+            self->isFlyingDown = NO;
+        }
+    }
+    
+    //Convert flying velocity to the final offset factoring in frame time for consistency
+    self->yFlyingOffset += flyingVelocity * dt;
+    
+    //Show the sprite in the final position
+    self->monsterSprite.position = ccp(0, self->ySpriteOffset + self->yFlyingOffset);
 }
 
 - (void)onEnter
@@ -190,12 +256,14 @@
 
 -(void) jumpTo:(CGPoint) newPosition
 {
+    self->isJumping = YES;
+    
     //Convert to node space
     newPosition = [self convertToNodeSpace:newPosition];
     
     //Setup bezier curve
     ccBezierConfig bezierTo;
-    bezierTo.endPosition = newPosition;
+    bezierTo.endPosition = ccp(newPosition.x, newPosition.y + self->ySpriteOffset);
     
     //Determine bezier control points
     float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));
@@ -216,7 +284,7 @@
 {
     //Setup bezier curve
     ccBezierConfig bezierTo;
-    bezierTo.endPosition = ccp(0, 0);
+    bezierTo.endPosition = ccp(0, self->ySpriteOffset);
     
     //Determine bezier control points
     float angle = atan2(((self->monsterSprite.position.x - bezierTo.endPosition.x) * -1.0f), (self->monsterSprite.position.y - bezierTo.endPosition.y));
@@ -226,8 +294,16 @@
     bezierTo.controlPoint_1 = ccp(midpoint.x + (40 * cos(angle)), midpoint.y + (40 * sin(angle)));
     bezierTo.controlPoint_2 = bezierTo.controlPoint_1;
     
-    //Run the bezier movement
-    [self->monsterSprite runAction:[CCBezierTo actionWithDuration:0.3 bezier:bezierTo]];
+    //Run the bezier movement, but use a sequence to flip the jumping flag when done
+    [self->monsterSprite runAction:
+     [CCSequence actions:
+      [CCBezierTo actionWithDuration:0.3 bezier:bezierTo],
+      [CCCallBlock actionWithBlock:^
+       {
+           self->isJumping = NO;
+       }], nil
+      ]
+     ];
     
     //Also move the shadow
     [self->shadowSprite runAction:[CCMoveTo actionWithDuration:0.3 position:ccp(0, self->yShadowOffset)]];
