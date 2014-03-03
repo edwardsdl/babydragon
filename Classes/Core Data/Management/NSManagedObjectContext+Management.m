@@ -16,7 +16,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:expression arguments:variadicArguments];
     va_end(variadicArguments);
     
-    [request setPredicate:predicate];
+    request.predicate = predicate;
     
     return [self executeFetchRequest:request error:nil];
 }
