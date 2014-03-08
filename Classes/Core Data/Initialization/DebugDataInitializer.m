@@ -69,6 +69,7 @@
     [[MonsterData anyMonsterWithName:@"Baby Dragon"] assignAbilitiesForLevel:1];
     [[MonsterData anyMonsterWithName:@"Fire Elemental"] assignAbilitiesForLevel:1];
     [[MonsterData anyMonsterWithName:@"Viper"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Hard Shell"] assignAbilitiesForLevel:1];
     
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
@@ -86,7 +87,7 @@
     
     NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Viper"],
                           [MonsterData anyMonsterWithName:@"Fox"],
-                          [MonsterData anyMonsterWithName:@"Fire Elemental"]];
+                          [MonsterData anyMonsterWithName:@"Hard Shell"]];
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     

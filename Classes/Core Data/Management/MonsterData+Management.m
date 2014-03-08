@@ -9,6 +9,7 @@
 #import "AbilityData+Management.h"
 #import "EffectType.h"
 #import "AttackType.h"
+#import "ElementType.h"
 
 @implementation MonsterData (Management)
 
@@ -135,75 +136,452 @@ static NSString *entityName = @"MonsterData";
     //Get the default monster data so we can lookup role types
     DefaultMonsterData *defaultMonsterData = [DefaultMonsterData defaultMonsterDataForType:self.type];
     
-    int rank = 0;
+    NSNumber* rank;
+    AbilityData* ability;
     
-    //Assigning Direct Damage Primary
+    float common = 1.0f;
+    float uncommon = 0.5f;
+    float rare = 0.2f;
+    float superRare = 0.1f;
+    float ultraRare = 0.05f;
+    
+    NSDictionary *primary4RankLevels = @{[NSNumber numberWithFloat:common] :
+                                            @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                              [NSNumber numberWithInt:9] : [NSNumber numberWithInt:2],
+                                              [NSNumber numberWithInt:18] : [NSNumber numberWithInt:3],
+                                              [NSNumber numberWithInt:27] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:uncommon] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:8] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:17] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:26] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:rare] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:7] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:16] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:25] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:superRare] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:6] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:15] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:24] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:ultraRare] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:5] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:14] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:23] : [NSNumber numberWithInt:4]}
+                                         };
+    
+    NSDictionary *secondary4RankLevels = @{[NSNumber numberWithFloat:common] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:12] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:21] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:30] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:uncommon] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:11] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:20] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:29] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:rare] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:10] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:19] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:28] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:superRare] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:9] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:18] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:27] : [NSNumber numberWithInt:4]},
+                                         [NSNumber numberWithFloat:ultraRare] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:8] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:17] : [NSNumber numberWithInt:3],
+                                               [NSNumber numberWithInt:26] : [NSNumber numberWithInt:4]}
+                                         };
+    
+    
+    
+    NSDictionary *primary3RankLevels = @{[NSNumber numberWithFloat:common] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:13] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:26] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:uncommon] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:12] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:25] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:rare] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:11] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:24] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:superRare] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:10] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:23] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:ultraRare] :
+                                             @{[NSNumber numberWithInt:1] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:9] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:22] : [NSNumber numberWithInt:3]}
+                                         };
+    
+    NSDictionary *secondary3RankLevels = @{[NSNumber numberWithFloat:common] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:16] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:30] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:uncommon] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:15] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:29] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:rare] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:14] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:28] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:superRare] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:13] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:27] : [NSNumber numberWithInt:3]},
+                                         [NSNumber numberWithFloat:ultraRare] :
+                                             @{[NSNumber numberWithInt:3] : [NSNumber numberWithInt:1],
+                                               [NSNumber numberWithInt:12] : [NSNumber numberWithInt:2],
+                                               [NSNumber numberWithInt:26] : [NSNumber numberWithInt:3]}
+                                         };
+
+    //-------------------------
+    //Primary Roles
+    //-------------------------
+    
+    //Assign Direct Damage Primary
     if (defaultMonsterData.roleTypePrimary == RoleTypeDirectDamage)
     {
-        //Assign 4 rank abilities
-        if (level == 1)
-            rank = 1;
-        else if (level == 9)
-            rank = 2;
-        else if (level == 18)
-            rank = 3;
-        else if (level == 27)
-            rank = 4;
-        else
-            rank = 0;
-        
-        if (rank != 0)
+        //Assign 4 rank ability
+        rank = [[primary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
         {
-            AbilityData* ability = [AbilityData abilityDataWithLevel:[NSNumber numberWithInt:rank]
-                                            andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
-                                            andEffectType:[NSNumber numberWithInt:EffectTypeAttack]
-                                            andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            ability = [AbilityData abilityDataWithLevel:rank
+                                         andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                          andEffectType:[NSNumber numberWithInt:EffectTypeAttack]
+                                          andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
             [self addAbilitiesObject:ability];
         }
         
-        //Assign 3 rank abilities for Magic type monsters
+        //Assign the 3 rank ability for magic type DDs
         if (defaultMonsterData.attackType == AttackTypeMagic)
         {
-            if (level == 1)
-                rank = 1;
-            else if (level == 13)
-                rank = 2;
-            else if (level == 26)
-                rank = 3;
-            else
-                rank = 0;
-            
-            if (rank != 0)
+            rank = [[primary3RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+            if (rank != nil)
             {
-                AbilityData* ability = [AbilityData abilityDataWithLevel:[NSNumber numberWithInt:rank]
-                                                andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
-                                                andEffectType:[NSNumber numberWithInt:EffectTypeGroupAttack]
-                                                andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+                ability = [AbilityData abilityDataWithLevel:rank
+                                             andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                              andEffectType:[NSNumber numberWithInt:EffectTypeGroupAttack]
+                                              andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
                 [self addAbilitiesObject:ability];
             }
         }
     }
+    //Assign Damage over Time Primary
     else if (defaultMonsterData.roleTypePrimary == RoleTypeDamageOverTime)
     {
-        if (level == 1)
-            rank = 1;
-        else if (level == 13)
-            rank = 2;
-        else if (level == 26)
-            rank = 3;
-        else
-            rank = 0;
-        
-        if (rank != 0)
+        //Assign 3 rank ability
+        rank = [[primary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
         {
-            AbilityData* ability = [AbilityData abilityDataWithLevel:[NSNumber numberWithInt:rank]
-                                                    andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
-                                                    andEffectType:[NSNumber numberWithInt:EffectTypeDamageOverTime]
-                                                    andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            ability = [AbilityData abilityDataWithLevel:rank
+                                         andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                          andEffectType:[NSNumber numberWithInt:EffectTypeDamageOverTime]
+                                          andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
             [self addAbilitiesObject:ability];
         }
     }
+    //Assign Heal Primary
+    else if (defaultMonsterData.roleTypePrimary == RoleTypeHeal)
+    {
+        //First assign 4 ranks for Cure(Magic)/Invigorate(Physcial)
+        rank = [[primary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.attackType == AttackTypeMagic)
+            {
+                ability = [AbilityData abilityDataWithName:@"Cure" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else
+            {
+                ability = [AbilityData abilityDataWithName:@"Invigorate" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+        
+        //Next assign 3 ranks for Restore(Magic)/Rally(Physical)
+        rank = [[primary3RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.attackType == AttackTypeMagic)
+            {
+                ability = [AbilityData abilityDataWithName:@"Restore" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else
+            {
+                ability = [AbilityData abilityDataWithName:@"Rally" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+        
+        //Next assign 4 ranks for Revive, but this uses the secondary rank tables
+        rank = [[secondary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            ability = [AbilityData abilityDataWithName:@"Revive" andLevel:rank];
+            [self addAbilitiesObject:ability];
+        }
+    }
+    //Assign Tank Primary
+    else if (defaultMonsterData.roleTypePrimary == RoleTypeTank)
+    {
+        //Assign 4 rank ability
+        rank = [[primary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            ability = [AbilityData abilityDataWithLevel:rank
+                                         andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                          andEffectType:[NSNumber numberWithInt:EffectTypeShield]
+                                          andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            [self addAbilitiesObject:ability];
+        }
+    }
+    //Assign Buffer Primary
+    else if (defaultMonsterData.roleTypePrimary == RoleTypeBuff)
+    {
+        //Assign 4 rank ability
+        rank = [[primary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.elementType == ElementTypeFire)
+            {
+                ability = [AbilityData abilityDataWithName:@"Haste" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeEarth)
+            {
+                ability = [AbilityData abilityDataWithName:@"Toughen" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeWater)
+            {
+                ability = [AbilityData abilityDataWithName:@"Fortify" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeHoly)
+            {
+                ability = [AbilityData abilityDataWithName:@"Embolden" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeDarkness)
+            {
+                ability = [AbilityData abilityDataWithName:@"Enhance" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+    }
+    //Assign Debuffer Primary
+    else if (defaultMonsterData.roleTypePrimary == RoleTypeDebuff)
+    {
+        //Assign 4 rank ability
+        rank = [[primary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.elementType == ElementTypeFire)
+            {
+                ability = [AbilityData abilityDataWithName:@"Slow" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeEarth)
+            {
+                ability = [AbilityData abilityDataWithName:@"Diminish" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeWater)
+            {
+                ability = [AbilityData abilityDataWithName:@"Daze" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeHoly)
+            {
+                ability = [AbilityData abilityDataWithName:@"Intimidate" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeDarkness)
+            {
+                ability = [AbilityData abilityDataWithName:@"Weaken" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+    }
     
+    //-------------------------
+    //Secondary Roles
+    //-------------------------
+    
+    //Assign Direct Damage Secondary
+    if (defaultMonsterData.roleTypeSecondary == RoleTypeDirectDamage)
+    {
+        //Assign 4 rank ability
+        rank = [[secondary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            ability = [AbilityData abilityDataWithLevel:rank
+                                         andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                          andEffectType:[NSNumber numberWithInt:EffectTypeAttack]
+                                          andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            [self addAbilitiesObject:ability];
+        }
+        
+        //Assign the 3 rank ability for magic type DDs
+        if (defaultMonsterData.attackType == AttackTypeMagic)
+        {
+            rank = [[secondary3RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+            if (rank != nil)
+            {
+                ability = [AbilityData abilityDataWithLevel:rank
+                                             andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                              andEffectType:[NSNumber numberWithInt:EffectTypeGroupAttack]
+                                              andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+                [self addAbilitiesObject:ability];
+            }
+        }
+    }
+    //Assign Damage over Time Secondary
+    else if (defaultMonsterData.roleTypeSecondary == RoleTypeDamageOverTime)
+    {
+        //Assign 3 rank ability
+        rank = [[secondary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            ability = [AbilityData abilityDataWithLevel:rank
+                                         andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                          andEffectType:[NSNumber numberWithInt:EffectTypeDamageOverTime]
+                                          andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            [self addAbilitiesObject:ability];
+        }
+    }
+    //Assign Heal Secondary
+    else if (defaultMonsterData.roleTypeSecondary == RoleTypeHeal)
+    {
+        //First assign 4 ranks for Cure(Magic)/Invigorate(Physcial)
+        rank = [[secondary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.attackType == AttackTypeMagic)
+            {
+                ability = [AbilityData abilityDataWithName:@"Cure" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else
+            {
+                ability = [AbilityData abilityDataWithName:@"Invigorate" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+        
+        //Next assign 3 ranks for Restore(Magic)/Rally(Physical)
+        rank = [[secondary3RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.attackType == AttackTypeMagic)
+            {
+                ability = [AbilityData abilityDataWithName:@"Restore" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else
+            {
+                ability = [AbilityData abilityDataWithName:@"Rally" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+        
+        //Secondary healers dont get Revive
+    }
+    //Assign Tank Secondary
+    else if (defaultMonsterData.roleTypeSecondary == RoleTypeTank)
+    {
+        //Assign 4 rank ability
+        rank = [[secondary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            ability = [AbilityData abilityDataWithLevel:rank
+                                         andElementType:[NSNumber numberWithInt:defaultMonsterData.elementType]
+                                          andEffectType:[NSNumber numberWithInt:EffectTypeShield]
+                                          andAttackType:[NSNumber numberWithInt:defaultMonsterData.attackType]];
+            [self addAbilitiesObject:ability];
+        }
+    }
+    //Assign Buffer Secondary
+    else if (defaultMonsterData.roleTypeSecondary == RoleTypeBuff)
+    {
+        //Assign 4 rank ability
+        rank = [[secondary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.elementType == ElementTypeFire)
+            {
+                ability = [AbilityData abilityDataWithName:@"Haste" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeEarth)
+            {
+                ability = [AbilityData abilityDataWithName:@"Toughen" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeWater)
+            {
+                ability = [AbilityData abilityDataWithName:@"Fortify" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeHoly)
+            {
+                ability = [AbilityData abilityDataWithName:@"Embolden" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeDarkness)
+            {
+                ability = [AbilityData abilityDataWithName:@"Enhance" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+    }
+    //Assign Debuffer Secondary
+    else if (defaultMonsterData.roleTypeSecondary== RoleTypeDebuff)
+    {
+        //Assign 4 rank ability
+        rank = [[secondary4RankLevels objectForKey:[NSNumber numberWithFloat:defaultMonsterData.probability]] objectForKey:[NSNumber numberWithInt:level]];
+        if (rank != nil)
+        {
+            if (defaultMonsterData.elementType == ElementTypeFire)
+            {
+                ability = [AbilityData abilityDataWithName:@"Slow" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeEarth)
+            {
+                ability = [AbilityData abilityDataWithName:@"Diminish" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeWater)
+            {
+                ability = [AbilityData abilityDataWithName:@"Daze" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeHoly)
+            {
+                ability = [AbilityData abilityDataWithName:@"Intimidate" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+            else if (defaultMonsterData.elementType == ElementTypeDarkness)
+            {
+                ability = [AbilityData abilityDataWithName:@"Weaken" andLevel:rank];
+                [self addAbilitiesObject:ability];
+            }
+        }
+    }
 }
 
 @end
