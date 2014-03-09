@@ -71,6 +71,12 @@
         self->hitSprite.visible = NO;
         [self addChild:self->hitSprite];
         
+        //Preload sounds
+        SimpleAudioEngine *sae = [SimpleAudioEngine sharedEngine];
+        if (sae != nil) {
+            [sae preloadEffect:@"physical_hit.wav"];
+        }
+        
         //Begin a game loop
         [self schedule:@selector(update:) interval:0];
         self->state = TurnCounting;
@@ -385,6 +391,7 @@
     {
         int damage = [CombatHelper CalculateFightDamageWithAttacker:self->activeMonster andDefender:self->targetMonster];
         [self assignDamage:damage ToMonster:self->targetMonster];
+        [[SimpleAudioEngine sharedEngine] playEffect:@"physical_hit.wav"];
     }];
     
     CCDelayTime *delay2 = [CCDelayTime actionWithDuration:1.25f];
