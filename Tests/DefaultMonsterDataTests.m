@@ -22,11 +22,6 @@
     [super tearDown];
 }
 
-- (void)testDefaultMonsterCanBeInserted
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
 - (void)testFetchingAllDefaultMonsters
 {
     NSArray *allDefaultMonsters = [DefaultMonsterData allDefaultMonsterData];
@@ -41,6 +36,16 @@
     
     XCTAssertNotNil(defaultMonster, @"Default monsters are able to be fetched.");
     XCTAssertTrue([defaultMonster.type isEqualToString: @"Baby_Dragon"], @"Default monster data for a baby dragon was fetched.");
+}
+
+- (void)testInsertingDefaultMonster
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testRemovingAllDefaultMonsters
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

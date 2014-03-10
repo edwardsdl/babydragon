@@ -21,11 +21,6 @@
     [super tearDown];
 }
 
-- (void)testDefaultItemCanBeInserted
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
 - (void)testFetchingAllDefaultItems
 {
     NSArray *allDefaultItems = [DefaultItemData allDefaultItemData];
@@ -35,6 +30,16 @@
 }
 
 - (void)testFetchingDefaultItem
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testInsertingDefaultItems
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testRemovingAllDefaultItems
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }

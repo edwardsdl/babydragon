@@ -28,7 +28,12 @@
     XCTAssertTrue([allMonsters count] > 0, @"At least one monster was fetched.");
 }
 
-- (void)testMonsterCanBeInserted
+- (void)testFetchingMonster
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testInsertingMonster
 {
     NSString *name = @"Baby Dragon Test";
     
@@ -42,6 +47,11 @@
     monsterData = [MonsterData monsterWithUUID:monsterData.uuid];
     
     XCTAssertNotNil(monsterData, @"The monster was fetched successfully.");
+}
+
+- (void)testRemovingAllMonsters
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end
