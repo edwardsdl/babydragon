@@ -27,41 +27,41 @@
     float probabilityOfOrange = 0.05;
     float probabilityOfPineapple = 0.20;
     
-    ProbabilityCollection * probabilityCollection = [[ProbabilityCollection alloc] init];
-    [probabilityCollection addObject:@"FirstObject" withProbability:probabilityOfApple];
-    [probabilityCollection addObject:@"SecondObject" withProbability:probabilityOfBanana];
-    [probabilityCollection addObject:@"ThirdObject" withProbability:probabilityOfGrapefruit];
-    [probabilityCollection addObject:@"FourthObject" withProbability:probabilityOfOrange];
-    [probabilityCollection addObject:@"FifthObject" withProbability:probabilityOfPineapple];
+    ProbabilityCollection *probabilityCollection = [[ProbabilityCollection alloc] init];
+    [probabilityCollection addObject:@"Apple" withProbability:probabilityOfApple];
+    [probabilityCollection addObject:@"Banana" withProbability:probabilityOfBanana];
+    [probabilityCollection addObject:@"Grapefruit" withProbability:probabilityOfGrapefruit];
+    [probabilityCollection addObject:@"Orange" withProbability:probabilityOfOrange];
+    [probabilityCollection addObject:@"Pineapple" withProbability:probabilityOfPineapple];
     
-    uint totalIterations = 1000000;
-    uint totalApplesRecieved = 0;
-    uint totalBananasRecieved = 0;
-    uint totalGrapefruitsRecieved = 0;
-    uint totalOrangesRecieved = 0;
-    uint totalFifthObjectsRecieved = 0;
-    for (uint i = 0; i < totalIterations; i++)
+    int totalIterations = 1000000;
+    int totalApplesRecieved = 0;
+    int totalBananasRecieved = 0;
+    int totalGrapefruitsRecieved = 0;
+    int totalOrangesRecieved = 0;
+    int totalPineapplesRecieved = 0;
+    for (int i = 0; i < totalIterations; i++)
     {
-        NSString * object = (NSString *)[probabilityCollection retrieveObject];
-        if ([object isEqualToString:@"FirstObject"])
+        NSString *object = (NSString *)[probabilityCollection retrieveObject];
+        if ([object isEqualToString:@"Apple"])
         {
             totalApplesRecieved++;
         }
-        else if ([object isEqualToString:@"SecondObject"])
+        else if ([object isEqualToString:@"Banana"])
         {
             totalBananasRecieved++;
         }
-        else if ([object isEqualToString:@"ThirdObject"])
+        else if ([object isEqualToString:@"Grapefruit"])
         {
             totalGrapefruitsRecieved++;
         }
-        else if ([object isEqualToString:@"FourthObject"])
+        else if ([object isEqualToString:@"Orange"])
         {
             totalOrangesRecieved++;
         }
-        else if ([object isEqualToString:@"FifthObject"])
+        else if ([object isEqualToString:@"Pineapple"])
         {
-            totalFifthObjectsRecieved++;
+            totalPineapplesRecieved++;
         }
     }
     
@@ -85,7 +85,7 @@
                        ofNumber:probabilityOfOrange],
                  @"Roughly the correct number oranges was recieved.");
     
-    XCTAssertTrue([self isNumber:totalFifthObjectsRecieved / (float)totalIterations
+    XCTAssertTrue([self isNumber:totalPineapplesRecieved / (float)totalIterations
                withinPercentage:0.005
                        ofNumber:probabilityOfPineapple],
                  @"Roughly the correct number of pineapples was recieved.");
@@ -108,7 +108,7 @@
     [probabilityCollection retrieveObject];
     
     BOOL isProbabilityCollectionNormalized = YES;
-    for (NSArray * item in [probabilityCollection valueForKey:@"_probabilityCollection"])
+    for (NSArray *item in [probabilityCollection valueForKey:@"_probabilityCollection"])
     {
         isProbabilityCollectionNormalized &= [[item objectAtIndex:0] doubleValue] == 0.25;
     }
