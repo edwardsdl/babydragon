@@ -20,7 +20,7 @@
     [super tearDown];
 }
 
-- (void)testAcquisitionFactoryGeneratesAcquisitions
+- (void)testGeneratingAcquisitions
 {
     int totalIterations = 1000;
     AcquisitionFactory *acquisitionFactory = [[AcquisitionFactory alloc] init];

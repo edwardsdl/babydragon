@@ -19,22 +19,7 @@
     [super tearDown];
 }
 
-- (void)testFetchingAllGold
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-- (void)testFetchingGold
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-- (void)testGoldCanBeInserted
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-- (void)testGoldGeneratedFromIdenticalBarcode
+- (void)testGeneratingIdenticalGold
 {
     BOOL isIdenticalGoldAmount = YES;
     GoldFactory *goldFactory = [[GoldFactory alloc] init];

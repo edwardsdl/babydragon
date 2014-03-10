@@ -18,7 +18,22 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testFetchingAllItems
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testFetchingItem
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testInsertingItem
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testRemovingAllItems
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }

@@ -23,7 +23,7 @@
     [super tearDown];
 }
 
-- (void)testMonstersGeneratedFromIdenticalBarcode
+- (void)testGeneratingIdenticalMonsters
 {
     BOOL isIdenticalMonster = YES;
     MonsterFactory *monsterFactory = [[MonsterFactory alloc] init];

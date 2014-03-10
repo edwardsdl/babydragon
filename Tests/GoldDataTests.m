@@ -1,39 +1,39 @@
-#import "CoreDataHelper.h"
-#import "PartyData+Management.h"
 #import <XCTest/XCTest.h>
 
-@interface PartyDataTests : XCTestCase
+@interface GoldDataTests : XCTestCase
 
 @end
 
-@implementation PartyDataTests
+@implementation GoldDataTests
 
 - (void)setUp
 {
     [super setUp];
+    // Put setup code here; it will be run once, before the first test case.
 }
 
 - (void)tearDown
 {
+    // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
 }
 
-- (void)testFetchingAllParties
+- (void)testFetchingAllGold
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
-- (void)testFetchingParty
+- (void)testFetchingGold
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
-- (void)testInsertingParty
+- (void)testInsertingGold
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
-- (void)testRemovingAllParties
+- (void)testRemovingAllGold
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }

@@ -18,7 +18,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testReset
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testSave
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
