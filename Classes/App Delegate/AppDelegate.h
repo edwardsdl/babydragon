@@ -25,7 +25,4 @@
 @property (readonly) MyNavigationController *navController;
 @property (readonly) CCDirectorIOS *director;
 
-- (void)saveContext;
-
-
 @end
