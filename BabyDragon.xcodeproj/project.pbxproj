@@ -52,6 +52,8 @@
 		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
 		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */; };
+		BC01041A18CD66500026E5A8 /* ItemDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041918CD66500026E5A8 /* ItemDataTests.m */; };
+		BC01041C18CD665D0026E5A8 /* CoreDataHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041B18CD665D0026E5A8 /* CoreDataHelperTests.m */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC1D87471885040800386142 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87461885040800386142 /* Tile.m */; };
 		BC1D874A1885042400386142 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87491885042400386142 /* Level.m */; };
@@ -417,6 +419,8 @@
 		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
 		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
 		BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultItemDataTests.m; sourceTree = "<group>"; };
+		BC01041918CD66500026E5A8 /* ItemDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDataTests.m; sourceTree = "<group>"; };
+		BC01041B18CD665D0026E5A8 /* CoreDataHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelperTests.m; sourceTree = "<group>"; };
 		BC0C754B17F912D10070D5BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BC1D87451885040800386142 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		BC1D87461885040800386142 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
@@ -1086,16 +1090,18 @@
 			isa = PBXGroup;
 			children = (
 				BC20AC0E17EC055C0095B125 /* AcquisitionFactoryTests.m */,
+				BC01041B18CD665D0026E5A8 /* CoreDataHelperTests.m */,
+				BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */,
 				BCA9E03E1809DE6E00FB3EFE /* DefaultMonsterDataTests.m */,
+				BC3F530418B2F7DD00EC2900 /* GoldFactoryTests.m */,
+				BC01041918CD66500026E5A8 /* ItemDataTests.m */,
 				BCA9E03F1809DE6E00FB3EFE /* MonsterDataTests.m */,
 				BCEF361B17F1FE8A008F7688 /* MonsterFactoryTests.m */,
+				BC4A9F1517E7D1CF008EDA70 /* Other Sources */,
 				BCA9E0401809DE6E00FB3EFE /* PartyDataTests.m */,
 				BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */,
-				BC629EA218386E3700D35C55 /* UUIDHelperTests.m */,
-				BC4A9F1517E7D1CF008EDA70 /* Other Sources */,
 				BC4A9F1717E7D1CF008EDA70 /* Resources */,
-				BC3F530418B2F7DD00EC2900 /* GoldFactoryTests.m */,
-				BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */,
+				BC629EA218386E3700D35C55 /* UUIDHelperTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -2125,7 +2131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC01041A18CD66500026E5A8 /* ItemDataTests.m in Sources */,
 				BC4A9F1B17E7D1CF008EDA70 /* ProbabilityCollectionTests.m in Sources */,
+				BC01041C18CD665D0026E5A8 /* CoreDataHelperTests.m in Sources */,
 				BC20AC0F17EC055C0095B125 /* AcquisitionFactoryTests.m in Sources */,
 				BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */,
 				BCA9E0441809DF4A00FB3EFE /* MonsterDataTests.m in Sources */,
@@ -2391,6 +2399,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"UNIT_TEST=1",
 				);
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "Tests/Resources/BabyDragonTests-Info.plist";
