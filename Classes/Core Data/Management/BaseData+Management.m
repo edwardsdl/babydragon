@@ -7,6 +7,8 @@
 
 - (void)awakeFromInsert
 {
+    [super awakeFromInsert];
+    
     if (self.dateCreated == 0)
     {
         self.dateCreated = [NSDate timeIntervalSinceReferenceDate];

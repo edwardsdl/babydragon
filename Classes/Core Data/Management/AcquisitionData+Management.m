@@ -4,6 +4,8 @@
 
 - (void)awakeFromInsert
 {
+    [super awakeFromInsert];
+    
     CLLocationManager* locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
