@@ -59,7 +59,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#ifndef UNIT_TEST
     [[CoreDataHelper sharedInstance] initializePersistentObjectStore];
+#endif
     
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
