@@ -13,7 +13,6 @@
 		070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 070672A2182FFD2300C1E5AA /* FLMenu.m */; };
 		072C5779189D4897005C4AA6 /* AbilityDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C5778189D4897005C4AA6 /* AbilityDataInitializer.m */; };
 		0733D9C6185F75E90018F555 /* ScrollingPartyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733D9C5185F75E90018F555 /* ScrollingPartyList.m */; };
-		0744526818CBEF2B00D33EAA /* physical_hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0744526718CBEF2B00D33EAA /* physical_hit.wav */; };
 		0765FCD6185F6EC700E15D1C /* MyPartiesLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */; };
 		0765FCD9185F6FA100E15D1C /* ScrollingMonstersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD8185F6FA100E15D1C /* ScrollingMonstersList.m */; };
 		076A48AA187A0E1C007305B8 /* PartyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A48A9187A0E1C007305B8 /* PartyNode.m */; };
@@ -48,6 +47,7 @@
 		07FB55A2187CD60C00316BA6 /* ScrollingMonsterSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */; };
 		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
 		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
+		BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC1D87471885040800386142 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87461885040800386142 /* Tile.m */; };
 		BC1D874A1885042400386142 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87491885042400386142 /* Level.m */; };
@@ -348,7 +348,6 @@
 		072DB24518BEBEA10094FF90 /* RoleType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleType.h; sourceTree = "<group>"; };
 		0733D9C4185F75E90018F555 /* ScrollingPartyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingPartyList.h; path = Classes/Layers/Management/ScrollingPartyList.h; sourceTree = SOURCE_ROOT; };
 		0733D9C5185F75E90018F555 /* ScrollingPartyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollingPartyList.m; path = Classes/Layers/Management/ScrollingPartyList.m; sourceTree = SOURCE_ROOT; };
-		0744526718CBEF2B00D33EAA /* physical_hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = physical_hit.wav; sourceTree = "<group>"; };
 		0765FCD4185F6EC700E15D1C /* MyPartiesLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPartiesLayer.h; path = Classes/Layers/Management/MyPartiesLayer.h; sourceTree = SOURCE_ROOT; };
 		0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPartiesLayer.m; path = Classes/Layers/Management/MyPartiesLayer.m; sourceTree = SOURCE_ROOT; };
 		0765FCD7185F6FA100E15D1C /* ScrollingMonstersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingMonstersList.h; path = Classes/Layers/Management/ScrollingMonstersList.h; sourceTree = SOURCE_ROOT; };
@@ -408,6 +407,7 @@
 		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
 		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
 		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
+		BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultItemDataTests.m; sourceTree = "<group>"; };
 		BC0C754B17F912D10070D5BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BC1D87451885040800386142 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		BC1D87461885040800386142 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
@@ -1085,6 +1085,7 @@
 				BC4A9F1517E7D1CF008EDA70 /* Other Sources */,
 				BC4A9F1717E7D1CF008EDA70 /* Resources */,
 				BC3F530418B2F7DD00EC2900 /* GoldFactoryTests.m */,
+				BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1279,7 +1280,6 @@
 		BCAF477617E559AE001A9B76 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				0744526718CBEF2B00D33EAA /* physical_hit.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -2079,7 +2079,6 @@
 				D7E20F4B17F1349F005AFB2C /* Ghost_Fighting.png in Resources */,
 				D7D6D48D17E6459C00D2ADB7 /* HealthBarFull.png in Resources */,
 				D7D6D49017E648F700D2ADB7 /* ActionBarFull.png in Resources */,
-				0744526818CBEF2B00D33EAA /* physical_hit.wav in Resources */,
 				D75CFA3A1829613C0077F814 /* Small_Blob_Fighting.png in Resources */,
 				D71EBA6018273D8F0029A494 /* Crab_Standing.png in Resources */,
 				D7437DDA180E26900023FA73 /* Marblu_KO.png in Resources */,
@@ -2126,6 +2125,7 @@
 			files = (
 				BC4A9F1B17E7D1CF008EDA70 /* ProbabilityCollectionTests.m in Sources */,
 				BC20AC0F17EC055C0095B125 /* AcquisitionFactoryTests.m in Sources */,
+				BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */,
 				BCA9E0441809DF4A00FB3EFE /* MonsterDataTests.m in Sources */,
 				BCEF361C17F1FE8A008F7688 /* MonsterFactoryTests.m in Sources */,
 				BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */,
