@@ -7,7 +7,7 @@
 
 @implementation DefaultItemDataInitializer
 
-+(void) initializeData
++ (void)initializeData
 {
     [DefaultItemData removeAll];
     
