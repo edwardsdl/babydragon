@@ -17,16 +17,21 @@
     [super tearDown];
 }
 
-- (void)testMonstersGeneratedFromIdenticalBarcode
+- (void)testGoldCanBeInserted
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testGoldGeneratedFromIdenticalBarcode
 {
     BOOL isIdenticalGoldAmount = YES;
     GoldFactory *goldFactory = [[GoldFactory alloc] init];
-    NSString * barcode = @"Apple";
+    NSString *barcode = @"Apple";
     
-    int amount = [(GoldData *)[goldFactory newAcquisitionFromBarcode:barcode] amount];
-    for (uint i = 0; i < 1000; i++)
+    int amount = ((GoldData *)[goldFactory newAcquisitionFromBarcode:barcode]).amount;
+    for (int i = 0; i < 1000; i++)
     {
-        isIdenticalGoldAmount &= [(GoldData *)[goldFactory newAcquisitionFromBarcode:barcode] amount] == amount;
+        isIdenticalGoldAmount &= ((GoldData *)[goldFactory newAcquisitionFromBarcode:barcode]).amount == amount;
     }
     
     XCTAssertTrue(isIdenticalGoldAmount, @"The generated gold amounts were identical.");

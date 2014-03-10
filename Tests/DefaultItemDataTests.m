@@ -17,19 +17,22 @@
     [super tearDown];
 }
 
-- (void)testFetchingAllDefaultItemData
+- (void)testDefaultItemCanBeInserted
 {
-    NSArray *allDefaultItemData = [DefaultItemData allDefaultItemData];
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testFetchingAllDefaultItems
+{
+    NSArray *allDefaultItems = [DefaultItemData allDefaultItemData];
     
-    if (allDefaultItemData != nil)
-    {
-        XCTAssertTrue([allDefaultItemData count] > 0,
-                      @"Default item data was fetched.");
-    }
-    else
-    {
-        XCTFail(@"Default item data was fetched.");
-    }
+    XCTAssertNotNil(allDefaultItems, @"Default items are able to be fetched.");
+    XCTAssertTrue([allDefaultItems count] > 0, @"At least one default item was fetched.");
+}
+
+- (void)testFetchingDefaultItem
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

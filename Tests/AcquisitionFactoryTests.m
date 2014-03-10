@@ -19,11 +19,11 @@
 
 - (void)testAcquisitionFactoryGeneratesAcquisitions
 {
-    uint totalIterations = 1000;
-    AcquisitionFactory * acquisitionFactory = [[AcquisitionFactory alloc] init];
-    for (uint i = 0; i < totalIterations; i++)
+    int totalIterations = 1000;
+    AcquisitionFactory *acquisitionFactory = [[AcquisitionFactory alloc] init];
+    for (int i = 0; i < totalIterations; i++)
     {
-        NSString * barcode = [NSString stringWithFormat:@"%d", i];
+        NSString *barcode = [NSString stringWithFormat:@"%d", i];
         
         XCTAssertNotNil([acquisitionFactory newAcquisitionFromBarcode:barcode], @"The barcode %@ generated an acquisition.", barcode);
     }

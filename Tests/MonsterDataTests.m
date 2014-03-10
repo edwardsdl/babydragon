@@ -3,10 +3,6 @@
 #import <XCTest/XCTest.h>
 
 @interface MonsterDataTests : XCTestCase
-{
-    CoreDataHelper *_coreDataHelper;
-    NSManagedObjectContext *_managedObjectContext;
-}
 
 @end
 
@@ -22,18 +18,26 @@
     [super tearDown];
 }
 
-- (void)testMonsterCanBeInsertedAndFetched
+- (void)testFetchingAllMonsters
+{
+    NSArray *allMonsters = [MonsterData allMonsters];
+    
+    XCTAssertNotNil(allMonsters, @"Monsters are able to be fetched successfully.");
+    XCTAssertTrue([allMonsters count] > 0, @"At least one monster was fetched.");
+}
+
+- (void)testMonsterCanBeInserted
 {
     NSString *name = @"Baby Dragon Test";
     
     MonsterData *monsterData = [MonsterData insertMonsterWithType:@"Baby_Dragon" barcode:@"No Barcode"];
-    [monsterData setName:name];
+    monsterData.name = name;
     
     BOOL wasSaveSuccessful = [[CoreDataHelper sharedInstance] save];
     
     XCTAssertTrue(wasSaveSuccessful, @"The monster was inserted successfully.");
     
-    monsterData = [MonsterData monsterWithUUID:[monsterData uuid]];
+    monsterData = [MonsterData monsterWithUUID:monsterData.uuid];
     
     XCTAssertNotNil(monsterData, @"The monster was fetched successfully.");
 }
