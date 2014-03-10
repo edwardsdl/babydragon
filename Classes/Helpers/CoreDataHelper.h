@@ -10,6 +10,7 @@ typedef void (^ ErrorBlock)(NSError *);
 
 - (NSURL *)applicationDocumentsDirectory;
 - (void)initializePersistentObjectStore;
+- (void)reset;
 - (BOOL)save;
 - (void)saveWithErrorBlock:(ErrorBlock)errorBlock;
 
