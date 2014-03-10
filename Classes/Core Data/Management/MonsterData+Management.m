@@ -42,6 +42,7 @@ static NSString *entityName = @"MonsterData";
                                                              inManagedObjectContext:managedObjectContext];
     
     DefaultMonsterData *defaultMonsterData = [DefaultMonsterData defaultMonsterDataForType:type];
+    // TODO: Blow up if default monster data is nil.
     
     // TODO: Set abilities
     monsterData.abilityPoints = defaultMonsterData.abilityPoints;
