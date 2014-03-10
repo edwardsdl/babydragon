@@ -20,6 +20,7 @@
 #import "EffectType.h"
 #import "StatusEffect.h"
 #import "StatusEffectType.h"
+#import "SimpleAudioEngine.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,

@@ -13,6 +13,7 @@
 		070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 070672A2182FFD2300C1E5AA /* FLMenu.m */; };
 		072C5779189D4897005C4AA6 /* AbilityDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C5778189D4897005C4AA6 /* AbilityDataInitializer.m */; };
 		0733D9C6185F75E90018F555 /* ScrollingPartyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733D9C5185F75E90018F555 /* ScrollingPartyList.m */; };
+		0744526818CBEF2B00D33EAA /* physical_hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0744526718CBEF2B00D33EAA /* physical_hit.wav */; };
 		0765FCD6185F6EC700E15D1C /* MyPartiesLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */; };
 		0765FCD9185F6FA100E15D1C /* ScrollingMonstersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD8185F6FA100E15D1C /* ScrollingMonstersList.m */; };
 		076A48AA187A0E1C007305B8 /* PartyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A48A9187A0E1C007305B8 /* PartyNode.m */; };
@@ -347,6 +348,7 @@
 		072DB24518BEBEA10094FF90 /* RoleType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleType.h; sourceTree = "<group>"; };
 		0733D9C4185F75E90018F555 /* ScrollingPartyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingPartyList.h; path = Classes/Layers/Management/ScrollingPartyList.h; sourceTree = SOURCE_ROOT; };
 		0733D9C5185F75E90018F555 /* ScrollingPartyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollingPartyList.m; path = Classes/Layers/Management/ScrollingPartyList.m; sourceTree = SOURCE_ROOT; };
+		0744526718CBEF2B00D33EAA /* physical_hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = physical_hit.wav; sourceTree = "<group>"; };
 		0765FCD4185F6EC700E15D1C /* MyPartiesLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPartiesLayer.h; path = Classes/Layers/Management/MyPartiesLayer.h; sourceTree = SOURCE_ROOT; };
 		0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPartiesLayer.m; path = Classes/Layers/Management/MyPartiesLayer.m; sourceTree = SOURCE_ROOT; };
 		0765FCD7185F6FA100E15D1C /* ScrollingMonstersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingMonstersList.h; path = Classes/Layers/Management/ScrollingMonstersList.h; sourceTree = SOURCE_ROOT; };
@@ -1277,6 +1279,7 @@
 		BCAF477617E559AE001A9B76 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				0744526718CBEF2B00D33EAA /* physical_hit.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -2076,6 +2079,7 @@
 				D7E20F4B17F1349F005AFB2C /* Ghost_Fighting.png in Resources */,
 				D7D6D48D17E6459C00D2ADB7 /* HealthBarFull.png in Resources */,
 				D7D6D49017E648F700D2ADB7 /* ActionBarFull.png in Resources */,
+				0744526818CBEF2B00D33EAA /* physical_hit.wav in Resources */,
 				D75CFA3A1829613C0077F814 /* Small_Blob_Fighting.png in Resources */,
 				D71EBA6018273D8F0029A494 /* Crab_Standing.png in Resources */,
 				D7437DDA180E26900023FA73 /* Marblu_KO.png in Resources */,
