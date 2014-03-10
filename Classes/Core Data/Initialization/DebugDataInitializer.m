@@ -39,7 +39,7 @@
     [MonsterData insertMonsterWithType:@"Crab" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Small_Blob" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Viper" barcode:@"No Barcode"];
-    [MonsterData insertMonsterWithType:@"Bear_Cub" barcode:@"No Barcode"];
+    [MonsterData insertMonsterWithType:@"Bear" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Fox" barcode:@"No Barcode"];
     
     [[CoreDataHelper sharedInstance] save];
@@ -63,6 +63,11 @@
     [[MonsterData anyMonsterWithName:@"Fire Elemental"] assignAbilitiesForLevel:1];
     [[MonsterData anyMonsterWithName:@"Viper"] assignAbilitiesForLevel:1];
     [[MonsterData anyMonsterWithName:@"Hard Shell"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Firebat"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Imp"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Bear"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Marblu"] assignAbilitiesForLevel:1];
+    [[MonsterData anyMonsterWithName:@"Crab"] assignAbilitiesForLevel:1];
     
     [[CoreDataHelper sharedInstance] save];
 }
@@ -71,14 +76,14 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Viper"],
+    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Firebat"],
                           [MonsterData anyMonsterWithName:@"Fox"],
-                          [MonsterData anyMonsterWithName:@"Hard Shell"]];
+                          [MonsterData anyMonsterWithName:@"Imp"]];
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     
-    monsters = @[[MonsterData anyMonsterWithName:@"Ghost"],
-                 [MonsterData anyMonsterWithName:@"Scorpion"],
+    monsters = @[[MonsterData anyMonsterWithName:@"Bear"],
+                 [MonsterData anyMonsterWithName:@"Marblu"],
                  [MonsterData anyMonsterWithName:@"Crab"]];
     
     [PartyData insertPartyWithName:@"AI Party" monsters:monsters];

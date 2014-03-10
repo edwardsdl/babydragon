@@ -39,6 +39,9 @@
 		07A3949918846911001A1C20 /* FightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A3949618846911001A1C20 /* FightIcon.png */; };
 		07A3949A18846911001A1C20 /* ManageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A3949718846911001A1C20 /* ManageIcon.png */; };
 		07A3949B18846911001A1C20 /* ScanIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A3949818846911001A1C20 /* ScanIcon.png */; };
+		07B0352E18CE249E00954FD3 /* Bear_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B0352B18CE249E00954FD3 /* Bear_Fighting.png */; };
+		07B0352F18CE249E00954FD3 /* Bear_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B0352C18CE249E00954FD3 /* Bear_KO.png */; };
+		07B0353018CE249E00954FD3 /* Bear_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B0352D18CE249E00954FD3 /* Bear_Standing.png */; };
 		07B7521418CD5609007FBE57 /* FLContainerDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B7521318CD5609007FBE57 /* FLContainerDebug.m */; };
 		07B7521718CD5B41007FBE57 /* FLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B7521618CD5B41007FBE57 /* FLButton.m */; };
 		07D25E4F18CD4D13005BD2C4 /* FLContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D25E4E18CD4D13005BD2C4 /* FLContainer.m */; };
@@ -304,9 +307,6 @@
 		D75CFA401829649B0077F814 /* Viper_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA3D1829649B0077F814 /* Viper_Fighting.png */; };
 		D75CFA411829649B0077F814 /* Viper_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA3E1829649B0077F814 /* Viper_KO.png */; };
 		D75CFA421829649B0077F814 /* Viper_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA3F1829649B0077F814 /* Viper_Standing.png */; };
-		D75CFA461829695D0077F814 /* Bear_Cub_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA431829695D0077F814 /* Bear_Cub_Fighting.png */; };
-		D75CFA471829695D0077F814 /* Bear_Cub_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA441829695D0077F814 /* Bear_Cub_KO.png */; };
-		D75CFA481829695D0077F814 /* Bear_Cub_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = D75CFA451829695D0077F814 /* Bear_Cub_Standing.png */; };
 		D76BDC8817EB7D8E008DFBB3 /* MathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D76BDC8717EB7D8E008DFBB3 /* MathHelpers.m */; };
 		D77E1F5617FF83CD00D182AD /* Button_254x74.png in Resources */ = {isa = PBXBuildFile; fileRef = D77E1F5517FF83CD00D182AD /* Button_254x74.png */; };
 		D7D2A52A17F9EA48001F39BF /* CombatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2A52917F9EA48001F39BF /* CombatHelper.m */; };
@@ -395,6 +395,9 @@
 		07A3949618846911001A1C20 /* FightIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FightIcon.png; path = Map/FightIcon.png; sourceTree = "<group>"; };
 		07A3949718846911001A1C20 /* ManageIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ManageIcon.png; path = Map/ManageIcon.png; sourceTree = "<group>"; };
 		07A3949818846911001A1C20 /* ScanIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScanIcon.png; path = Map/ScanIcon.png; sourceTree = "<group>"; };
+		07B0352B18CE249E00954FD3 /* Bear_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Fighting.png; path = Monsters/Bear_Fighting.png; sourceTree = "<group>"; };
+		07B0352C18CE249E00954FD3 /* Bear_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_KO.png; path = Monsters/Bear_KO.png; sourceTree = "<group>"; };
+		07B0352D18CE249E00954FD3 /* Bear_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Standing.png; path = Monsters/Bear_Standing.png; sourceTree = "<group>"; };
 		07B7521218CD5609007FBE57 /* FLContainerDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLContainerDebug.h; path = UI/FLContainerDebug.h; sourceTree = "<group>"; };
 		07B7521318CD5609007FBE57 /* FLContainerDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLContainerDebug.m; path = UI/FLContainerDebug.m; sourceTree = "<group>"; };
 		07B7521518CD5B41007FBE57 /* FLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLButton.h; path = UI/FLButton.h; sourceTree = "<group>"; };
@@ -891,9 +894,6 @@
 		D75CFA3D1829649B0077F814 /* Viper_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Viper_Fighting.png; path = Monsters/Viper_Fighting.png; sourceTree = "<group>"; };
 		D75CFA3E1829649B0077F814 /* Viper_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Viper_KO.png; path = Monsters/Viper_KO.png; sourceTree = "<group>"; };
 		D75CFA3F1829649B0077F814 /* Viper_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Viper_Standing.png; path = Monsters/Viper_Standing.png; sourceTree = "<group>"; };
-		D75CFA431829695D0077F814 /* Bear_Cub_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Cub_Fighting.png; path = Monsters/Bear_Cub_Fighting.png; sourceTree = "<group>"; };
-		D75CFA441829695D0077F814 /* Bear_Cub_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Cub_KO.png; path = Monsters/Bear_Cub_KO.png; sourceTree = "<group>"; };
-		D75CFA451829695D0077F814 /* Bear_Cub_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Cub_Standing.png; path = Monsters/Bear_Cub_Standing.png; sourceTree = "<group>"; };
 		D76BDC8617EB7D8E008DFBB3 /* MathHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathHelpers.h; sourceTree = "<group>"; };
 		D76BDC8717EB7D8E008DFBB3 /* MathHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathHelpers.m; sourceTree = "<group>"; };
 		D77E1F5517FF83CD00D182AD /* Button_254x74.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button_254x74.png; path = "UI Elements/Button_254x74.png"; sourceTree = "<group>"; };
@@ -1856,6 +1856,9 @@
 		D7D6D47D17E633C200D2ADB7 /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				07B0352B18CE249E00954FD3 /* Bear_Fighting.png */,
+				07B0352C18CE249E00954FD3 /* Bear_KO.png */,
+				07B0352D18CE249E00954FD3 /* Bear_Standing.png */,
 				079AEC3F188D93F7006E37BF /* Fox_KO.png */,
 				079AEC40188D93F7006E37BF /* Fox_Standing.png */,
 				079AEC41188D93F7006E37BF /* Fox_Fighting.png */,
@@ -1865,9 +1868,6 @@
 				D744B37B17F0A8100034A5E5 /* Baby_Dragon_Fighting.png */,
 				D744B37C17F0A8100034A5E5 /* Baby_Dragon_KO.png */,
 				D744B37D17F0A8100034A5E5 /* Baby_Dragon_Standing.png */,
-				D75CFA431829695D0077F814 /* Bear_Cub_Fighting.png */,
-				D75CFA441829695D0077F814 /* Bear_Cub_KO.png */,
-				D75CFA451829695D0077F814 /* Bear_Cub_Standing.png */,
 				D71EBA5518273C2D0029A494 /* Caterpillar_Fighting.png */,
 				D71EBA5618273C2D0029A494 /* Caterpillar_KO.png */,
 				D71EBA5718273C2D0029A494 /* Caterpillar_Standing.png */,
@@ -2081,17 +2081,19 @@
 				D7D6D48417E635EF00D2ADB7 /* BattleBackground_Test.png in Resources */,
 				07A3949A18846911001A1C20 /* ManageIcon.png in Resources */,
 				D7D6D48517E635EF00D2ADB7 /* Monster_Selection.png in Resources */,
+				07B0352F18CE249E00954FD3 /* Bear_KO.png in Resources */,
 				07F1EE1C185A2B3E006579FA /* FLMenuBackgroundHighlighted.png in Resources */,
 				07A3949918846911001A1C20 /* FightIcon.png in Resources */,
+				07B0353018CE249E00954FD3 /* Bear_Standing.png in Resources */,
 				D7D6D48817E63E1700D2ADB7 /* BarsBackground.png in Resources */,
 				D7E20F4B17F1349F005AFB2C /* Ghost_Fighting.png in Resources */,
+				07B0352E18CE249E00954FD3 /* Bear_Fighting.png in Resources */,
 				D7D6D48D17E6459C00D2ADB7 /* HealthBarFull.png in Resources */,
 				D7D6D49017E648F700D2ADB7 /* ActionBarFull.png in Resources */,
 				D75CFA3A1829613C0077F814 /* Small_Blob_Fighting.png in Resources */,
 				D71EBA6018273D8F0029A494 /* Crab_Standing.png in Resources */,
 				D7437DDA180E26900023FA73 /* Marblu_KO.png in Resources */,
 				D7DE49DB17F506FD00479BC5 /* MonsterShadow.png in Resources */,
-				D75CFA481829695D0077F814 /* Bear_Cub_Standing.png in Resources */,
 				D7F6ACD717F1F4F6002EFBCB /* StatusBarBackground.png in Resources */,
 				D7D6D49117E648F700D2ADB7 /* TurnBarFull.png in Resources */,
 				D71EBA45182736410029A494 /* Firebat_KO.png in Resources */,
@@ -2099,12 +2101,10 @@
 				D72ED1D81811C268005C98CD /* Angler_Fighting.png in Resources */,
 				D71EBA40182735220029A494 /* Imp_Standing.png in Resources */,
 				D726F52F181DAAC700569947 /* Fire_Elemental_Fighting.png in Resources */,
-				D75CFA471829695D0077F814 /* Bear_Cub_KO.png in Resources */,
 				D722770618201E2600864928 /* Wisp_Fighting.png in Resources */,
 				D75CFA421829649B0077F814 /* Viper_Standing.png in Resources */,
 				07A3948B1884578A001A1C20 /* Map.png in Resources */,
 				D71EBA5E18273D8F0029A494 /* Crab_Fighting.png in Resources */,
-				D75CFA461829695D0077F814 /* Bear_Cub_Fighting.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

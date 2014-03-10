@@ -272,8 +272,8 @@
     [monster setRoleTypePrimary:RoleTypeHeal];
     [monster setRoleTypeSecondary:RoleTypeBuff];
     
-    //Bear Cub
-    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Bear_Cub"];
+    //Bear
+    monster = [DefaultMonsterData insertDefaultMonsterAttributesForType:@"Bear"];
     [monster setElementType:ElementTypeEarth];
     [monster setProbability:superRare];
     [monster setAttackType:AttackTypePhysical];
@@ -295,7 +295,7 @@
     [monster setWillpowerLevelMultiplier:1];
     
     [monster setIsTranslucent:NO];
-    [monster setScalePercent:0.75];
+    [monster setScalePercent:0.9];
     [monster setIsFlying:NO];
     [monster setRoleTypePrimary:RoleTypeTank];
     [monster setRoleTypeSecondary:RoleTypeDirectDamage];
@@ -435,7 +435,7 @@
     [monster setWillpowerLevelMultiplier:1];
     
     [monster setIsTranslucent:NO];
-    [monster setScalePercent:0.75];
+    [monster setScalePercent:0.6];
     [monster setIsFlying:NO];
     [monster setRoleTypePrimary:RoleTypeHeal];
     [monster setRoleTypeSecondary:RoleTypeDirectDamage];
@@ -523,8 +523,14 @@
     [monster setIsFlying:YES];
     [monster setRoleTypePrimary:RoleTypeHeal];
     [monster setRoleTypeSecondary:RoleTypeDamageOverTime];
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    [managedObjectContext save:&error];
     
-    [[CoreDataHelper sharedInstance] save];
+    if (error != nil)
+    {
+        NSLog(@"Failed to initialize default monster data.");
+    }
 }
 
 @end
