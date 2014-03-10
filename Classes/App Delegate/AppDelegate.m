@@ -59,7 +59,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-#ifndef UNIT_TEST
+#ifndef TESTING
     [[CoreDataHelper sharedInstance] initializePersistentObjectStore];
 #endif
     
