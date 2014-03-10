@@ -53,8 +53,7 @@ static NSString *entityName = @"ItemData";
         [managedObjectContext deleteObject:defaultItemData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

@@ -42,14 +42,7 @@
     [MonsterData insertMonsterWithType:@"Bear_Cub" barcode:@"No Barcode"];
     [MonsterData insertMonsterWithType:@"Fox" barcode:@"No Barcode"];
     
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    [managedObjectContext save:&error];
-    
-    if (error != nil)
-    {
-        NSLog(@"Failed to initialize monster data.");
-    }
+    [[CoreDataHelper sharedInstance] save];
 }
 
 + (void)initializeMonsterAbilities
@@ -71,14 +64,7 @@
     [[MonsterData anyMonsterWithName:@"Viper"] assignAbilitiesForLevel:1];
     [[MonsterData anyMonsterWithName:@"Hard Shell"] assignAbilitiesForLevel:1];
     
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    [managedObjectContext save:&error];
-    
-    if (error != nil)
-    {
-        NSLog(@"Failed to initialize monster ability data.");
-    }
+    [[CoreDataHelper sharedInstance] save];
 }
 
 + (void)initializePartyData
@@ -97,14 +83,7 @@
     
     [PartyData insertPartyWithName:@"AI Party" monsters:monsters];
     
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    [managedObjectContext save:&error];
-    
-    if (error != nil)
-    {
-        NSLog(@"Failed to initialize party data.");
-    }
+    [[CoreDataHelper sharedInstance] save];
 }
 
 + (void) initializeMapNodeData
@@ -153,14 +132,7 @@
     mapNode.touchWidth = defaultTouchWidth;
     mapNode.touchHeight = defaultTouchHeight;
     
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    [managedObjectContext save:&error];
-    
-    if (error != nil)
-    {
-        NSLog(@"Failed to initialize map node data.");
-    }
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

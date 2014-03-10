@@ -25,7 +25,7 @@ static NSString *entityName = @"DefaultItemData";
     
     DefaultItemData *defaultItemData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                                      inManagedObjectContext:managedObjectContext];
-    [defaultItemData setType:type];
+    defaultItemData.type = type;
     
     return defaultItemData;
 }
@@ -39,8 +39,7 @@ static NSString *entityName = @"DefaultItemData";
         [managedObjectContext deleteObject:defaultItemData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

@@ -29,7 +29,7 @@ static NSString *entityName = @"MonsterData";
     NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetAnyMonsterWithName"
                                                                 substitutionVariables:@{@"NAME": name}];
     
-    return [results count] > 0
+    return results.count > 0
         ? (MonsterData *)[results objectAtIndex:0]
         : nil;
 }
@@ -44,25 +44,23 @@ static NSString *entityName = @"MonsterData";
     DefaultMonsterData *defaultMonsterData = [DefaultMonsterData defaultMonsterDataForType:type];
     
     // TODO: Set abilities
-    [monsterData setAbilityPoints:[defaultMonsterData abilityPoints]];
-    [monsterData setBarcode:barcode];
-    [monsterData setCourage:[defaultMonsterData courage]];
-    [monsterData setDefense:[defaultMonsterData defense]];
-    [monsterData setElementType:[defaultMonsterData elementType]];
-    [monsterData setExperiencePoints:0];
-    [monsterData setHealthPoints:[defaultMonsterData healthPoints]];
-    [monsterData setIsTranslucent:[defaultMonsterData isTranslucent]];
-    [monsterData setIsFlying:[defaultMonsterData isFlying]];
-    [monsterData setScalePercent:[defaultMonsterData scalePercent]];
-    // TODO: Set latitude
-    [monsterData setLevel:1];
-    // TODO: Set longitude
-    [monsterData setName:[type stringByReplacingOccurrencesOfString:@"_" withString:@" "]];
-    [monsterData setSpeed:[defaultMonsterData speed]];
-    [monsterData setPower:[defaultMonsterData power]];
-    [monsterData setType:type];
-    [monsterData setWillpower:[defaultMonsterData willpower]];
-    [monsterData setAttackType:[defaultMonsterData attackType]];
+    monsterData.abilityPoints = defaultMonsterData.abilityPoints;
+    monsterData.attackType = defaultMonsterData.attackType;
+    monsterData.barcode = barcode;
+    monsterData.courage = defaultMonsterData.courage;
+    monsterData.defense = defaultMonsterData.defense;
+    monsterData.elementType = defaultMonsterData.elementType;
+    monsterData.experiencePoints = 0;
+    monsterData.healthPoints = defaultMonsterData.healthPoints;
+    monsterData.isTranslucent = defaultMonsterData.isTranslucent;
+    monsterData.isFlying = defaultMonsterData.isFlying;
+    monsterData.scalePercent = defaultMonsterData.scalePercent;
+    monsterData.level = 1;
+    monsterData.name = [type stringByReplacingOccurrencesOfString:@"_" withString:@" "];
+    monsterData.speed = defaultMonsterData.speed;
+    monsterData.power = defaultMonsterData.power;
+    monsterData.type = type;
+    monsterData.willpower = defaultMonsterData.willpower;
     
     return monsterData;
 }
@@ -81,41 +79,40 @@ static NSString *entityName = @"MonsterData";
         [managedObjectContext deleteObject:monsterData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
-- (int) trueCourage
+- (int)trueCourage
 {
     return floor(self.courage);
 }
 
-- (int) trueDefense
+- (int)trueDefense
 {
     return floor(self.defense);
 }
 
-- (int) trueSpeed
+- (int)trueSpeed
 {
     return floor(self.speed);
 }
 
-- (int) truePower
+- (int)truePower
 {
     return floor(self.power);
 }
 
-- (int) trueWillpower
+- (int)trueWillpower
 {
     return floor(self.willpower);
 }
 
-- (void) levelUp
+- (void)levelUp
 {
     [self levelUp:1];
 }
 
-- (void) levelUp:(int) levelsGained
+- (void)levelUp:(int)levelsGained
 {
     //Get the default monster data so we know how much to increase each stat
     DefaultMonsterData *defaultMonsterData = [DefaultMonsterData defaultMonsterDataForType:self.type];
@@ -128,10 +125,10 @@ static NSString *entityName = @"MonsterData";
     self.willpower += defaultMonsterData.willpowerLevelMultiplier * levelsGained;
     self.level += levelsGained;
     
-    [[CoreDataHelper.sharedInstance managedObjectContext] save:nil];
+    [[CoreDataHelper sharedInstance] save];
 }
 
-- (void) assignAbilitiesForLevel:(int) level
+- (void)assignAbilitiesForLevel:(int)level
 {
     //Get the default monster data so we can lookup role types
     DefaultMonsterData *defaultMonsterData = [DefaultMonsterData defaultMonsterDataForType:self.type];

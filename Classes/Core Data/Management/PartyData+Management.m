@@ -22,7 +22,7 @@ static NSString *entityName = @"PartyData";
     NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetAnyPartyWithName"
                                                                 substitutionVariables:@{@"NAME": name}];
     
-    return [results count] > 0
+    return results.count > 0
         ? (PartyData *)[results objectAtIndex:0]
         : nil;
 }
@@ -33,7 +33,7 @@ static NSString *entityName = @"PartyData";
     
     PartyData *partyData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                          inManagedObjectContext:managedObjectContext];
-    [partyData setName:name];
+    partyData.name = name;
     [partyData addMonsters:[NSSet setWithArray:monsters]];
     
     return partyData;
@@ -53,13 +53,7 @@ static NSString *entityName = @"PartyData";
         [managedObjectContext deleteObject:partyData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
-    
-    if (error != nil)
-    {
-        NSLog(@"Failed to remove all parties.");
-    }
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

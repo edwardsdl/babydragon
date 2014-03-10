@@ -122,14 +122,19 @@
     [[self managedObjectContext] unlock];
 }
 
-- (void)save
+- (BOOL)save
 {
+    __block BOOL wasSaveSuccessful = YES;
+    
     [self saveWithErrorBlock:^(NSError *error) {
         if (error != nil)
         {
+            wasSaveSuccessful = NO;
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         }
     }];
+    
+    return wasSaveSuccessful;
 }
 
 - (void)saveWithErrorBlock:(ErrorBlock)errorBlock

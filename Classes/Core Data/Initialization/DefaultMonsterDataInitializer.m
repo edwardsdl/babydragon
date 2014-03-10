@@ -523,14 +523,8 @@
     [monster setIsFlying:YES];
     [monster setRoleTypePrimary:RoleTypeHeal];
     [monster setRoleTypeSecondary:RoleTypeDamageOverTime];
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    [managedObjectContext save:&error];
     
-    if (error != nil)
-    {
-        NSLog(@"Failed to initialize default monster data.");
-    }
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

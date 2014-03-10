@@ -35,7 +35,8 @@
         //Get a monster from the scan number
         MonsterFactory *monsterFactory = [MonsterFactory new];
         MonsterData *monster = (MonsterData*)[monsterFactory newAcquisitionFromBarcode:number];
-        [[[CoreDataHelper sharedInstance] managedObjectContext] save:nil];
+
+        [[CoreDataHelper sharedInstance] save];
         
         CCLabelTTF *label = [CCLabelTTF labelWithString:@"You got...." fontName:@"Arial Rounded MT Bold" fontSize:24];
         label.position = ccp(size.width / 2, 300);

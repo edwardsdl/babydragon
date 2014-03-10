@@ -1808,14 +1808,7 @@
     [ability setEffectType:EffectTypeAlterPower];
     [ability setValue:-0.25];
     
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
-    [managedObjectContext save:&error];
-    
-    if (error != nil)
-    {
-        NSLog(@"Failed to initialize ability data.");
-    }
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

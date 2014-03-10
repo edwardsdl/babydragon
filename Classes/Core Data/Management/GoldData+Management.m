@@ -19,7 +19,7 @@ static NSString *entityName = @"GoldData";
     
     GoldData *goldData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                        inManagedObjectContext:managedObjectContext];
-    [goldData setAmount:amount];
+    goldData.amount = amount;
     
     return goldData;
 }
@@ -33,8 +33,7 @@ static NSString *entityName = @"GoldData";
         [managedObjectContext deleteObject:goldData];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 @end

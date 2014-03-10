@@ -26,12 +26,12 @@ static NSString *entityName = @"SinglePlayerContentData";
     
     SinglePlayerContentData *singlePlayerContentData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                                                      inManagedObjectContext:managedObjectContext];
-    [singlePlayerContentData setBarcode:barcode];
-    [singlePlayerContentData setEnvironmentType:environmentType];
-    [singlePlayerContentData setLootQuality:lootQuality];
-    [singlePlayerContentData setMaximumMonsterLevel:maximumMonsterLevel];
-    [singlePlayerContentData setMinimumMonsterLevel:minimumMonsterLevel];
-    [singlePlayerContentData setSeed:seed];
+    singlePlayerContentData.barcode = barcode;
+    singlePlayerContentData.environmentType = environmentType;
+    singlePlayerContentData.lootQuality = lootQuality;
+    singlePlayerContentData.maximumMonsterLevel = maximumMonsterLevel;
+    singlePlayerContentData.minimumMonsterLevel = minimumMonsterLevel;
+    singlePlayerContentData.seed = seed;
 
     return singlePlayerContentData;
 }
@@ -45,8 +45,7 @@ static NSString *entityName = @"SinglePlayerContentData";
         [managedObjectContext deleteObject:singlePlayerContent];
     }
     
-    NSError *error = nil;
-    [managedObjectContext save:&error];
+    [[CoreDataHelper sharedInstance] save];
 }
 
 + (SinglePlayerContentData *)singlePlayerContentWithSeed:(int)seed
@@ -56,7 +55,7 @@ static NSString *entityName = @"SinglePlayerContentData";
     NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetSinglePlayerContentWithSeed"
                                                                 substitutionVariables:@{@"seed": [NSNumber numberWithInt:seed]}];
     
-    return [results count] > 0
+    return results.count > 0
     ? (SinglePlayerContentData *)[results objectAtIndex:0]
     : nil;
 }

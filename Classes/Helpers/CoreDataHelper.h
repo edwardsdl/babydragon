@@ -1,11 +1,3 @@
-//
-//  CoreDataHelper.h
-//  BabyDragon
-//
-//  Created by Eric Stenborg on 1/29/14.
-//  Copyright (c) 2014 First Light Games. All rights reserved.
-//
-
 @interface CoreDataHelper : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -18,6 +10,7 @@ typedef void (^ ErrorBlock)(NSError *);
 
 - (NSURL *)applicationDocumentsDirectory;
 - (void)initializePersistentObjectStore;
+- (BOOL)save;
 - (void)saveWithErrorBlock:(ErrorBlock)errorBlock;
 
 @end
