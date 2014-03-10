@@ -11,6 +11,8 @@
 - (void)setUp
 {
     [super setUp];
+    [[CoreDataHelper sharedInstance] reset];
+    [[CoreDataHelper sharedInstance] initializePersistentObjectStore];
 }
 
 - (void)tearDown

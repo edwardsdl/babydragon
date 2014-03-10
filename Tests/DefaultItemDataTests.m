@@ -1,4 +1,6 @@
+#import "CoreDataHelper.h"
 #import "DefaultItemData+Management.h"
+#import "DefaultItemDataInitializer.h"
 #import <XCTest/XCTest.h>
 
 @interface DefaultItemDataTests : XCTestCase
@@ -10,6 +12,8 @@
 - (void)setUp
 {
     [super setUp];
+    [[CoreDataHelper sharedInstance] reset];
+    [DefaultItemDataInitializer initializeData];
 }
 
 - (void)tearDown

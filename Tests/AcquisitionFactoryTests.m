@@ -1,4 +1,5 @@
 #import "AcquisitionFactory.h"
+#import "CoreDataHelper.h"
 #import <XCTest/XCTest.h>
 
 @interface AcquisitionFactoryTests : XCTestCase
@@ -10,6 +11,8 @@
 - (void)setUp
 {
     [super setUp];
+    [[CoreDataHelper sharedInstance] reset];
+    [[CoreDataHelper sharedInstance] initializePersistentObjectStore];
 }
 
 - (void)tearDown

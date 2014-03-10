@@ -1,3 +1,4 @@
+#import "CoreDataHelper.h"
 #import "GoldFactory.h"
 #import <XCTest/XCTest.h>
 
@@ -10,11 +11,22 @@
 - (void)setUp
 {
     [super setUp];
+    [[CoreDataHelper sharedInstance] reset];
 }
 
 - (void)tearDown
 {
     [super tearDown];
+}
+
+- (void)testFetchingAllGold
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testFetchingGold
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 - (void)testGoldCanBeInserted
