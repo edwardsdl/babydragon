@@ -54,6 +54,7 @@
 		BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */; };
 		BC01041A18CD66500026E5A8 /* ItemDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041918CD66500026E5A8 /* ItemDataTests.m */; };
 		BC01041C18CD665D0026E5A8 /* CoreDataHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041B18CD665D0026E5A8 /* CoreDataHelperTests.m */; };
+		BC01042218CD8F720026E5A8 /* AbilityData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01042118CD8F720026E5A8 /* AbilityData.m */; };
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC1D87471885040800386142 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87461885040800386142 /* Tile.m */; };
 		BC1D874A1885042400386142 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87491885042400386142 /* Level.m */; };
@@ -81,7 +82,6 @@
 		BC91AA4618C4413E008BFFBC /* EquipmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4518C4413E008BFFBC /* EquipmentData.m */; };
 		BC91AA4918C4413E008BFFBC /* PartyData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4818C4413E008BFFBC /* PartyData.m */; };
 		BC91AA4C18C4413F008BFFBC /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4B18C4413F008BFFBC /* MonsterData.m */; };
-		BC91AA4F18C4413F008BFFBC /* AbilityData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4E18C4413F008BFFBC /* AbilityData.m */; };
 		BC91AA5218C4413F008BFFBC /* GoldData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5118C4413F008BFFBC /* GoldData.m */; };
 		BC91AA5818C4413F008BFFBC /* AcquisitionData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5718C4413F008BFFBC /* AcquisitionData.m */; };
 		BC91AA5B18C4413F008BFFBC /* EnhancementData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5A18C4413F008BFFBC /* EnhancementData.m */; };
@@ -421,6 +421,8 @@
 		BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultItemDataTests.m; sourceTree = "<group>"; };
 		BC01041918CD66500026E5A8 /* ItemDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDataTests.m; sourceTree = "<group>"; };
 		BC01041B18CD665D0026E5A8 /* CoreDataHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelperTests.m; sourceTree = "<group>"; };
+		BC01042018CD8F720026E5A8 /* AbilityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbilityData.h; sourceTree = "<group>"; };
+		BC01042118CD8F720026E5A8 /* AbilityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbilityData.m; sourceTree = "<group>"; };
 		BC0C754B17F912D10070D5BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BC1D87451885040800386142 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		BC1D87461885040800386142 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
@@ -469,8 +471,6 @@
 		BC91AA4818C4413E008BFFBC /* PartyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyData.m; sourceTree = "<group>"; };
 		BC91AA4A18C4413F008BFFBC /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
 		BC91AA4B18C4413F008BFFBC /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
-		BC91AA4D18C4413F008BFFBC /* AbilityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbilityData.h; sourceTree = "<group>"; };
-		BC91AA4E18C4413F008BFFBC /* AbilityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbilityData.m; sourceTree = "<group>"; };
 		BC91AA5018C4413F008BFFBC /* GoldData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldData.h; sourceTree = "<group>"; };
 		BC91AA5118C4413F008BFFBC /* GoldData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldData.m; sourceTree = "<group>"; };
 		BC91AA5618C4413F008BFFBC /* AcquisitionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionData.h; sourceTree = "<group>"; };
@@ -1731,8 +1731,8 @@
 		BCEEEA92180BA73800BC20E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				BC91AA4D18C4413F008BFFBC /* AbilityData.h */,
-				BC91AA4E18C4413F008BFFBC /* AbilityData.m */,
+				BC01042018CD8F720026E5A8 /* AbilityData.h */,
+				BC01042118CD8F720026E5A8 /* AbilityData.m */,
 				BC91AA5618C4413F008BFFBC /* AcquisitionData.h */,
 				BC91AA5718C4413F008BFFBC /* AcquisitionData.m */,
 				BC91AA4118C4413E008BFFBC /* BaseData.h */,
@@ -2148,6 +2148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC01042218CD8F720026E5A8 /* AbilityData.m in Sources */,
 				BCEEEAC0180BA73800BC20E9 /* DefaultMonsterData+Management.m in Sources */,
 				BC91AA4918C4413E008BFFBC /* PartyData.m in Sources */,
 				BCEEEAC1180BA73800BC20E9 /* MonsterData+Management.m in Sources */,
@@ -2171,7 +2172,6 @@
 				BC91AA4318C4413E008BFFBC /* BaseData.m in Sources */,
 				07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */,
 				BCAF495617E55ECB001A9B76 /* CCActionGrid.m in Sources */,
-				BC91AA4F18C4413F008BFFBC /* AbilityData.m in Sources */,
 				BCAF495717E55ECB001A9B76 /* CCActionGrid3D.m in Sources */,
 				BCAF495817E55ECB001A9B76 /* CCActionInstant.m in Sources */,
 				BCAF495917E55ECB001A9B76 /* CCActionInterval.m in Sources */,

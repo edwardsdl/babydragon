@@ -8,7 +8,7 @@
         <attribute name="level" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" attributeType="String" minValueString="1" syncable="YES"/>
         <attribute name="targetType" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <attribute name="value" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" attributeType="Float" syncable="YES"/>
     </entity>
     <entity name="AcquisitionData" representedClassName="AcquisitionData" isAbstract="YES" parentEntity="BaseData" syncable="YES">
         <attribute name="barcode" attributeType="String" syncable="YES"/>
