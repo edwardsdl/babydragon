@@ -15,7 +15,7 @@
 
 -(id) initWithDimensions:(CGSize) initialDimensions
 {
-    if( (self=[super init]))
+    if( (self=[super initWithDimensions:initialDimensions]))
     {
         //Draw and size up the menu background
         [self setBackgroundWithFile:@"FLMenuBackground.png"];

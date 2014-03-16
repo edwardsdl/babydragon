@@ -14,6 +14,7 @@
 #import "PartyData.h"
 #import "PartyData+Management.h"
 #import "CombatLayer.h"
+#import "LevelLayer.h"
 
 @interface MapMenu : CCNode <CCTouchOneByOneDelegate>
 {

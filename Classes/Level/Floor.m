@@ -7,7 +7,7 @@
 {
     if (self = [super init])
     {
-        NSMutableArray *tiles = [NSMutableArray array];
+        self.tiles = [NSMutableArray array];
         
         for (int i = 0; i < size.width; i++)
         {
@@ -17,7 +17,7 @@
                 [column addObject:[[Tile alloc] init]];
             }
             
-            [tiles addObject:column];
+            [self.tiles addObject:column];
         }
     }
     

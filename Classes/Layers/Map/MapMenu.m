@@ -14,6 +14,7 @@
     CCSprite* scanIconSprite;
     CCSprite* manageIconSprite;
     CCSprite* fightIconSprite;
+    CCSprite* levelIconSprite;
 }
 
 //----------------------------------------------------------------------------------
@@ -35,8 +36,9 @@
         fightIconSprite.position = ccp(0, -45 * 2);
         [self addChild:fightIconSprite];
         
-        
-        
+        levelIconSprite = [CCSprite spriteWithFile:@"FightIcon.png"];
+        levelIconSprite.position = ccp(0, -45 * 3);
+        [self addChild:levelIconSprite];
     }
     return self;
 }
@@ -82,6 +84,11 @@
                                                     scene:[CombatLayer sceneWithPartyOne:partyOne
                                                                 andPartyTwo:partyTwo
                                                                 withBackgroundNamed:@"Test"]]];
+        return YES;
+    }
+    else if (CGRectContainsPoint(levelIconSprite.boundingBox, position))
+    {
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer scene] ]];
         return YES;
     }
     

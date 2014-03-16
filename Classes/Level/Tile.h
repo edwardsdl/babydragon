@@ -3,7 +3,7 @@
 
 @interface Tile : NSObject
 
-@property (nonatomic, readonly) TileType tileType;
+@property (nonatomic) TileType tileType;
 
 // Designated initializer
 - (id)initWithTileType:(TileType)tileType;

@@ -2,8 +2,8 @@
 
 @interface Floor : NSObject
 
-@property (nonatomic, readonly, strong) NSArray *rooms;
-@property (nonatomic, readonly, strong) NSArray *tiles;
+@property (nonatomic, retain, strong) NSMutableArray *rooms;
+@property (nonatomic, retain, strong) NSMutableArray *tiles;
 
 // Designated initializer
 - (id)initWithSize:(CGSize)size;

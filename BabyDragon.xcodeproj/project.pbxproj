@@ -9,17 +9,21 @@
 /* Begin PBXBuildFile section */
 		070326561833F1EA00685CD3 /* CombatStatusNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 070326551833F1EA00685CD3 /* CombatStatusNode.m */; };
 		070326591833F89900685CD3 /* CombatConfirmNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 070326581833F89900685CD3 /* CombatConfirmNode.m */; };
+		07045F0418D635A2006D01BC /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 07045F0318D635A2006D01BC /* Player.png */; };
 		0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706729E182FFC5500C1E5AA /* FLMenuBackground.png */; };
 		070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 070672A2182FFD2300C1E5AA /* FLMenu.m */; };
 		07133CF318CD618E0043BC6C /* FLButtonDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 07133CF218CD618E0043BC6C /* FLButtonDebug.m */; };
 		072C5779189D4897005C4AA6 /* AbilityDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C5778189D4897005C4AA6 /* AbilityDataInitializer.m */; };
 		0733D9C6185F75E90018F555 /* ScrollingPartyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733D9C5185F75E90018F555 /* ScrollingPartyList.m */; };
+		0759984318D6272F00D4D3EB /* FloorRenderContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0759984118D6272F00D4D3EB /* FloorRenderContainer.m */; };
 		0765FCD6185F6EC700E15D1C /* MyPartiesLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */; };
 		0765FCD9185F6FA100E15D1C /* ScrollingMonstersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765FCD8185F6FA100E15D1C /* ScrollingMonstersList.m */; };
 		076A48AA187A0E1C007305B8 /* PartyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A48A9187A0E1C007305B8 /* PartyNode.m */; };
 		07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7A182C86C200ABF08B /* CombatLayer.m */; };
 		07746E7E182C8A2B00ABF08B /* CombatMonsterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */; };
 		07746E80182C9AFA00ABF08B /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 07746E7F182C9AFA00ABF08B /* BarBackground.png */; };
+		0786CADE18D5E7090056D4FB /* TileSheet_Debug.png in Resources */ = {isa = PBXBuildFile; fileRef = 0786CADD18D5E7090056D4FB /* TileSheet_Debug.png */; };
+		0786CAE218D5E8610056D4FB /* LevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786CAE118D5E8610056D4FB /* LevelLayer.m */; };
 		078B35E4188C648B0068C34D /* MapNodeData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B35E3188C648B0068C34D /* MapNodeData+Management.m */; };
 		078B35EC188C6D1D0068C34D /* MapNodeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B35EB188C6D1D0068C34D /* MapNodeMenu.m */; };
 		07908911183310D200FC3D8C /* CombatMenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07908910183310D200FC3D8C /* CombatMenuNode.m */; };
@@ -344,6 +348,7 @@
 		070326551833F1EA00685CD3 /* CombatStatusNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatStatusNode.m; path = "Combat Layer/CombatStatusNode.m"; sourceTree = "<group>"; };
 		070326571833F89900685CD3 /* CombatConfirmNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatConfirmNode.h; path = "Combat Layer/CombatConfirmNode.h"; sourceTree = "<group>"; };
 		070326581833F89900685CD3 /* CombatConfirmNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatConfirmNode.m; path = "Combat Layer/CombatConfirmNode.m"; sourceTree = "<group>"; };
+		07045F0318D635A2006D01BC /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Player.png; path = Levels/Player.png; sourceTree = "<group>"; };
 		0706729E182FFC5500C1E5AA /* FLMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FLMenuBackground.png; path = "UI Elements/FLMenuBackground.png"; sourceTree = "<group>"; };
 		070672A1182FFD2300C1E5AA /* FLMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMenu.h; path = UI/FLMenu.h; sourceTree = "<group>"; };
 		070672A2182FFD2300C1E5AA /* FLMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMenu.m; path = UI/FLMenu.m; sourceTree = "<group>"; };
@@ -355,6 +360,8 @@
 		072DB24518BEBEA10094FF90 /* RoleType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleType.h; sourceTree = "<group>"; };
 		0733D9C4185F75E90018F555 /* ScrollingPartyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingPartyList.h; path = Classes/Layers/Management/ScrollingPartyList.h; sourceTree = SOURCE_ROOT; };
 		0733D9C5185F75E90018F555 /* ScrollingPartyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollingPartyList.m; path = Classes/Layers/Management/ScrollingPartyList.m; sourceTree = SOURCE_ROOT; };
+		0759984118D6272F00D4D3EB /* FloorRenderContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FloorRenderContainer.m; path = Levels/FloorRenderContainer.m; sourceTree = "<group>"; };
+		0759984218D6272F00D4D3EB /* FloorRenderContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloorRenderContainer.h; path = Levels/FloorRenderContainer.h; sourceTree = "<group>"; };
 		0765FCD4185F6EC700E15D1C /* MyPartiesLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPartiesLayer.h; path = Classes/Layers/Management/MyPartiesLayer.h; sourceTree = SOURCE_ROOT; };
 		0765FCD5185F6EC700E15D1C /* MyPartiesLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPartiesLayer.m; path = Classes/Layers/Management/MyPartiesLayer.m; sourceTree = SOURCE_ROOT; };
 		0765FCD7185F6FA100E15D1C /* ScrollingMonstersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingMonstersList.h; path = Classes/Layers/Management/ScrollingMonstersList.h; sourceTree = SOURCE_ROOT; };
@@ -366,6 +373,9 @@
 		07746E7C182C8A2B00ABF08B /* CombatMonsterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMonsterNode.h; path = "Combat Layer/CombatMonsterNode.h"; sourceTree = "<group>"; };
 		07746E7D182C8A2B00ABF08B /* CombatMonsterNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMonsterNode.m; path = "Combat Layer/CombatMonsterNode.m"; sourceTree = "<group>"; };
 		07746E7F182C9AFA00ABF08B /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Combat/BarBackground.png; sourceTree = "<group>"; };
+		0786CADD18D5E7090056D4FB /* TileSheet_Debug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TileSheet_Debug.png; path = Levels/TileSheet_Debug.png; sourceTree = "<group>"; };
+		0786CAE018D5E8610056D4FB /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelLayer.h; path = Levels/LevelLayer.h; sourceTree = "<group>"; };
+		0786CAE118D5E8610056D4FB /* LevelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelLayer.m; path = Levels/LevelLayer.m; sourceTree = "<group>"; };
 		078B35E2188C648B0068C34D /* MapNodeData+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MapNodeData+Management.h"; sourceTree = "<group>"; };
 		078B35E3188C648B0068C34D /* MapNodeData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MapNodeData+Management.m"; sourceTree = "<group>"; };
 		078B35EA188C6D1D0068C34D /* MapNodeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapNodeMenu.h; path = Map/MapNodeMenu.h; sourceTree = "<group>"; };
@@ -998,6 +1008,26 @@
 			name = "Combat Layer";
 			sourceTree = "<group>";
 		};
+		0786CADC18D5E6C80056D4FB /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				07045F0318D635A2006D01BC /* Player.png */,
+				0786CADD18D5E7090056D4FB /* TileSheet_Debug.png */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		0786CADF18D5E78C0056D4FB /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				0759984218D6272F00D4D3EB /* FloorRenderContainer.h */,
+				0786CAE018D5E8610056D4FB /* LevelLayer.h */,
+				0759984118D6272F00D4D3EB /* FloorRenderContainer.m */,
+				0786CAE118D5E8610056D4FB /* LevelLayer.m */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
 		079DB27B18AE8A7F005DF02D /* Representations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1235,6 +1265,7 @@
 				BCAF464F17E559AD001A9B76 /* ScanAcquisitionLayer.m */,
 				BCAF465117E559AD001A9B76 /* ScanMenuLayer.m */,
 				0774C1D6182C84F500CBA9D5 /* Combat Layer */,
+				0786CADF18D5E78C0056D4FB /* Levels */,
 				BC07D36D18158DA30053C630 /* Management */,
 				07A3948C188457A0001A1C20 /* Map */,
 			);
@@ -1284,6 +1315,7 @@
 				BCAF477117E559AD001A9B76 /* Icon@2x.png */,
 				BCAF477317E559AD001A9B76 /* MenuBackground.png */,
 				D7D6D48017E635BC00D2ADB7 /* Combat */,
+				0786CADC18D5E6C80056D4FB /* Levels */,
 				07A3948918845756001A1C20 /* Map */,
 				D7D6D47D17E633C200D2ADB7 /* Monsters */,
 				D77E1F5417FF839300D182AD /* UI Elements */,
@@ -2067,6 +2099,7 @@
 				D7E20F4D17F1349F005AFB2C /* Ghost_Standing.png in Resources */,
 				D7E20F4C17F1349F005AFB2C /* Ghost_KO.png in Resources */,
 				D75CFA401829649B0077F814 /* Viper_Fighting.png in Resources */,
+				0786CADE18D5E7090056D4FB /* TileSheet_Debug.png in Resources */,
 				D726F530181DAAC700569947 /* Fire_Elemental_KO.png in Resources */,
 				BCAF49B217E55ECB001A9B76 /* README.md in Resources */,
 				BCAF49B417E55ECB001A9B76 /* LICENSE_Kazmath.txt in Resources */,
@@ -2077,6 +2110,7 @@
 				D744B38417F0A8100034A5E5 /* Hard_Shell_Fighting.png in Resources */,
 				BCAF49C517E55ECB001A9B76 /* zbar-back.png in Resources */,
 				D71EBA5F18273D8F0029A494 /* Crab_KO.png in Resources */,
+				07045F0418D635A2006D01BC /* Player.png in Resources */,
 				BCAF49C617E55ECB001A9B76 /* zbar-help.html in Resources */,
 				D744B38317F0A8100034A5E5 /* Baby_Dragon_Standing.png in Resources */,
 				079AEC44188D93F7006E37BF /* Fox_Fighting.png in Resources */,
@@ -2182,6 +2216,7 @@
 				BCAF495617E55ECB001A9B76 /* CCActionGrid.m in Sources */,
 				BCAF495717E55ECB001A9B76 /* CCActionGrid3D.m in Sources */,
 				BCAF495817E55ECB001A9B76 /* CCActionInstant.m in Sources */,
+				0786CAE218D5E8610056D4FB /* LevelLayer.m in Sources */,
 				BCAF495917E55ECB001A9B76 /* CCActionInterval.m in Sources */,
 				07A3949518846425001A1C20 /* MapMenu.m in Sources */,
 				BCFA7B331839A9400055C73C /* CCDirector+Utilities.m in Sources */,
@@ -2343,6 +2378,7 @@
 				BCAF49C217E55ECB001A9B76 /* vec3.c in Sources */,
 				D7D2A52A17F9EA48001F39BF /* CombatHelper.m in Sources */,
 				07B7521718CD5B41007FBE57 /* FLButton.m in Sources */,
+				0759984318D6272F00D4D3EB /* FloorRenderContainer.m in Sources */,
 				07F1EE1F185A2D25006579FA /* MonsterNode.m in Sources */,
 				BCAF49C317E55ECB001A9B76 /* vec4.c in Sources */,
 				07A39492188458C4001A1C20 /* MapNode.m in Sources */,

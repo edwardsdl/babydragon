@@ -16,4 +16,6 @@
 
 -(id) initWithDimensions:(CGSize) initialDimensions text:(NSString*) text parent:(id) parent selector:(SEL) selector;
 
+-(id) initWithDimensions:(CGSize) initialDimensions parent:(id) parent selector:(SEL) selector;
+
 @end
