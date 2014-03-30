@@ -83,12 +83,14 @@
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0
                                                     scene:[CombatLayer sceneWithPartyOne:partyOne
                                                                 andPartyTwo:partyTwo
-                                                                withBackgroundNamed:@"Test"]]];
+                                                                withBackgroundNamed:@"Test"
+                                                                nextLayer:CombatNextLayerMap]]];
         return YES;
     }
     else if (CGRectContainsPoint(levelIconSprite.boundingBox, position))
     {
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer scene] ]];
+        Level* level = [DebugLevelFactory createDebugLevel];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer sceneWithNewLevel:level] ]];
         return YES;
     }
     

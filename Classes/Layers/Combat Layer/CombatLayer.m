@@ -8,13 +8,17 @@
 
 #import "CombatLayer.h"
 
+@class LevelLayer;
 
 @implementation CombatLayer
+{
+    CombatNextLayer nextLayerAfterCombat;
+}
 
-+(CCScene *) sceneWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName
++(CCScene *) sceneWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName nextLayer:(CombatNextLayer) nextLayer
 {
 	CCScene *scene = [CCScene node];
-	CombatLayer *layer = [[CombatLayer alloc] initWithPartyOne: party1 andPartyTwo: party2 withBackgroundNamed:backgroundName];
+	CombatLayer *layer = [[CombatLayer alloc] initWithPartyOne: party1 andPartyTwo: party2 withBackgroundNamed:backgroundName nextLayer: nextLayer];
 	[scene addChild: layer];
 	return scene;
 }
@@ -23,11 +27,13 @@
 // Initialization Methods
 //-----------------------------------------------------------------------
 
--(id) initWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName
+-(id) initWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName nextLayer:(CombatNextLayer) nextLayer
 {
     if( (self=[super init]))
     {
         self.touchEnabled = true;
+        
+        nextLayerAfterCombat = nextLayer;
         
         //Store the window size
         self->winSize = [[CCDirector sharedDirector] winSize];
@@ -718,7 +724,15 @@
 -(void) endCombat
 {
     [self pauseSchedulerAndActions];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MapLayer scene] ]];
+    
+    if (nextLayerAfterCombat == CombatNextLayerMap)
+    {
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MapLayer scene] ]];
+    }
+    else if (nextLayerAfterCombat == CombatNextLayerLevel)
+    {
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[LevelLayer sceneWithExistingLevelState] ]];
+    }
 }
 
 -(void) assignAlterEffectToTarget:(int) originalValue type:(StatusEffectType) effectType

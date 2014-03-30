@@ -85,7 +85,8 @@
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0
                                                                                  scene:[CombatLayer sceneWithPartyOne:partyOne
                                                                                                           andPartyTwo:partyTwo
-                                                                                                  withBackgroundNamed:@"Test"]]];
+                                                                                                  withBackgroundNamed:@"Test"
+                                                                                        nextLayer:CombatNextLayerMap]]];
 }
 
 @end

@@ -11,11 +11,17 @@
 #import "FLButton.h"
 #import "LevelState.h"
 #import "Level.h"
+#import "PartyData.h"
+#import "PartyData+Management.h"
+#import "CombatLayer.h"
+#import "CombatNextLayer.h"
 
 @interface LevelLayer : CCLayer
 
-+(CCScene *) scene;
++(CCScene*) sceneWithNewLevel:(Level*) level;
++(CCScene*) sceneWithExistingLevelState;
 
--(id) initWithLevelState:(LevelState*) levelState;
+-(id) initWithNewLevel:(Level*) level;
+-(id) initWithExistingLevelState;
 
 @end

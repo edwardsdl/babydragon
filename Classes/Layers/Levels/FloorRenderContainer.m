@@ -15,15 +15,14 @@
     CCSpriteBatchNode *tilesSpriteBatch;
     CCSprite *playerSprite;
     BOOL isMoving;
-    CGPoint playerTile;
 }
 
--(id) initWithFloor:(Floor*) floorToRender playerPosition:(CGPoint) playerPosition
+-(id) initWithFloor:(Floor*) floorToRender playerPosition:(CGPoint) startingPlayerTile
 {
 	if( (self=[super init]) )
     {
         isMoving = NO;
-        playerTile = ccp(0, 0);
+        self.playerTile = ccp(0, 0);
         
         //Store the window size
         self->winSize = [[CCDirector sharedDirector] winSize];
@@ -40,27 +39,9 @@
         [self addChild:playerSprite];
         
         //Jump to the given player position
-        [self JumpPlayerToTileX:playerPosition.x Y:playerPosition.y];
+        [self JumpPlayerToTileX:startingPlayerTile.x Y:startingPlayerTile.y];
     }
     return self;
-}
-
--(void) CreateFloor
-{
-    floor = [[Floor new] initWithSize:CGSizeMake(50, 50)];
-    for (int i = 0; i < [floor.tiles count]; i++)
-    {
-        NSMutableArray* columnArray = [floor.tiles objectAtIndex:i];
-        for (int j = 0; j < [columnArray count]; j++)
-        {
-            Tile* tile = [columnArray objectAtIndex:j];
-            
-            if (i == 0 || j == 0 || i == 49 || j == 49)
-                tile.tileType = Wall;
-            else
-                tile.tileType = Open;
-        }
-    }
 }
 
 -(void) PrepareTileSprites
@@ -95,39 +76,39 @@
 -(void) JumpPlayerToTileX:(int) x Y:(int) y
 {
     tilesSpriteBatch.position = ccp(((x * 32) * -1) + winSize.width / 2, ((y * 32) * -1)+ winSize.height / 2);
-    playerTile = ccp(x, y);
+    self.playerTile = ccp(x, y);
 }
 
 -(void) MovePlayerUp
 {
-    if ([self GetTileAtPositionX:playerTile.x Y:playerTile.y + 1].tileType == Wall)
+    if ([self GetTileAtPositionX:self.playerTile.x Y:self.playerTile.y + 1].tileType == Wall)
         return;
     
-    [self MovePlayerToTileX:playerTile.x Y:playerTile.y + 1];
+    [self MovePlayerToTileX:self.playerTile.x Y:self.playerTile.y + 1];
 }
 
 -(void) MovePlayerDown
 {
-    if ([self GetTileAtPositionX:playerTile.x Y:playerTile.y - 1].tileType == Wall)
+    if ([self GetTileAtPositionX:self.playerTile.x Y:self.playerTile.y - 1].tileType == Wall)
         return;
     
-    [self MovePlayerToTileX:playerTile.x Y:playerTile.y - 1];
+    [self MovePlayerToTileX:self.playerTile.x Y:self.playerTile.y - 1];
 }
 
 -(void) MovePlayerLeft
 {
-    if ([self GetTileAtPositionX:playerTile.x - 1 Y:playerTile.y].tileType == Wall)
+    if ([self GetTileAtPositionX:self.playerTile.x - 1 Y:self.playerTile.y].tileType == Wall)
         return;
     
-    [self MovePlayerToTileX:playerTile.x - 1 Y:playerTile.y];
+    [self MovePlayerToTileX:self.playerTile.x - 1 Y:self.playerTile.y];
 }
 
 -(void) MovePlayerRight
 {
-    if ([self GetTileAtPositionX:playerTile.x + 1 Y:playerTile.y].tileType == Wall)
+    if ([self GetTileAtPositionX:self.playerTile.x + 1 Y:self.playerTile.y].tileType == Wall)
         return;
     
-    [self MovePlayerToTileX:playerTile.x + 1 Y:playerTile.y];
+    [self MovePlayerToTileX:self.playerTile.x + 1 Y:self.playerTile.y];
 }
 
 -(void) MovePlayerToTileX:(int) x Y:(int) y
@@ -145,7 +126,7 @@
     
     [tilesSpriteBatch runAction:[CCSequence actions:moveTo, delay, flipMovingFlag, nil]];
 
-    playerTile = ccp(x, y);
+    self.playerTile = ccp(x, y);
 }
 
 -(Tile*) GetTileAtPositionX:(int) x Y:(int) y

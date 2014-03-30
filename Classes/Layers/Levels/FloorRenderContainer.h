@@ -16,7 +16,9 @@
 
 }
 
--(id) initWithFloor:(Floor*) floorToRender  playerPosition:(CGPoint) playerPosition;
+@property (nonatomic) CGPoint playerTile;
+
+-(id) initWithFloor:(Floor*) floorToRender  playerPosition:(CGPoint) startingPlayerTile;
 
 -(void) MovePlayerUp;
 

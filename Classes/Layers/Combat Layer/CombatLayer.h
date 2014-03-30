@@ -21,6 +21,8 @@
 #import "StatusEffect.h"
 #import "StatusEffectType.h"
 #import "SimpleAudioEngine.h"
+#import "LevelLayer.h"
+#import "CombatNextLayer.h"
 
 typedef NS_ENUM(NSInteger, CombatState) {
     TurnCounting,
@@ -60,9 +62,9 @@ typedef NS_ENUM(NSInteger, ActionSelected) {
     CombatConfirmNode *combatConfirm;
 }
 
-+(CCScene *) sceneWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName;
++(CCScene *) sceneWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName nextLayer:(CombatNextLayer) nextLayer;
 
--(id) initWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName;
+-(id) initWithPartyOne:(PartyData*) party1 andPartyTwo:(PartyData*) party2 withBackgroundNamed:(NSString*) backgroundName nextLayer:(CombatNextLayer) nextLayer;
 
 -(void) beginFight;
 

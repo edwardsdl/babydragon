@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Level.h"
+#import "Floor.h"
+#import "Tile.h"
 
 @interface DebugLevelFactory : NSObject
 
-+(Level*) CreateDebugLevel;
++(Level*) createDebugLevel;
 
 @end

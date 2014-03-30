@@ -386,6 +386,7 @@
 		078B35EB188C6D1D0068C34D /* MapNodeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapNodeMenu.m; path = Map/MapNodeMenu.m; sourceTree = "<group>"; };
 		078F669718E867A600E66965 /* DebugLevelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLevelFactory.h; path = Levels/DebugLevelFactory.h; sourceTree = "<group>"; };
 		078F669818E867A600E66965 /* DebugLevelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugLevelFactory.m; path = Levels/DebugLevelFactory.m; sourceTree = "<group>"; };
+		078F669A18E874E400E66965 /* CombatNextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombatNextLayer.h; sourceTree = "<group>"; };
 		0790890F183310D200FC3D8C /* CombatMenuNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMenuNode.h; path = "Combat Layer/CombatMenuNode.h"; sourceTree = "<group>"; };
 		07908910183310D200FC3D8C /* CombatMenuNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMenuNode.m; path = "Combat Layer/CombatMenuNode.m"; sourceTree = "<group>"; };
 		079089121833116700FC3D8C /* CombatMenuButtonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMenuButtonNode.h; path = "Combat Layer/CombatMenuButtonNode.h"; sourceTree = "<group>"; };
@@ -1761,17 +1762,18 @@
 		BCE563E618030C5C001A744B /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
-				BCE563E718030C5C001A744B /* ElementType.h */,
-				BCA9E0461809F91500FB3EFE /* EffectType.h */,
-				BCA9E0471809F95000FB3EFE /* TargetType.h */,
-				BCEEEA91180BA69300BC20E9 /* TraitAttributeType.h */,
-				BC9AF4F8185F6EE0006822D1 /* TileType.h */,
-				BC434470188D98FC00ED3198 /* EnvironmentType.h */,
 				07F8C6011899EF440000FAAB /* AttackType.h */,
-				BCDC1342189F1F1E00CBED42 /* LootQualityType.h */,
+				078F669A18E874E400E66965 /* CombatNextLayer.h */,
+				BCA9E0461809F91500FB3EFE /* EffectType.h */,
+				BCE563E718030C5C001A744B /* ElementType.h */,
+				BC434470188D98FC00ED3198 /* EnvironmentType.h */,
 				BCDC1343189F1FA400CBED42 /* LevelSizeType.h */,
-				079DB27A18AE8A09005DF02D /* StatusEffectType.h */,
+				BCDC1342189F1F1E00CBED42 /* LootQualityType.h */,
 				072DB24518BEBEA10094FF90 /* RoleType.h */,
+				079DB27A18AE8A09005DF02D /* StatusEffectType.h */,
+				BCA9E0471809F95000FB3EFE /* TargetType.h */,
+				BC9AF4F8185F6EE0006822D1 /* TileType.h */,
+				BCEEEA91180BA69300BC20E9 /* TraitAttributeType.h */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";

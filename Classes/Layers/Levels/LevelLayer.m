@@ -8,6 +8,8 @@
 
 #import "LevelLayer.h"
 
+@class CombatLevel;
+
 @implementation LevelLayer
 {
     CGSize winSize;
@@ -20,37 +22,49 @@
 
 static LevelState* currentLevelState = nil;
 
-+(CCScene *) scene
++(CCScene*) sceneWithNewLevel:(Level*) level
 {
 	CCScene *scene = [CCScene node];
-	LevelLayer *layer = [LevelLayer node];
+	LevelLayer *layer = [[LevelLayer alloc] initWithNewLevel:level];
 	[scene addChild: layer];
 	return scene;
 }
 
--(id) initWithLevelState:(Level*) level
++(CCScene*) sceneWithExistingLevelState
 {
-	if( (self=[super init]) )
+    CCScene *scene = [CCScene node];
+	LevelLayer *layer = [[LevelLayer alloc] initWithExistingLevelState];
+	[scene addChild: layer];
+	return scene;
+}
+
+-(id) initWithNewLevel:(Level*) level
+{
+    if( (self=[super init]) )
     {
-        //If a new level was passed in then create and store a new state for it,
-        //otherwise just use the current one
-        if (level != nil)
-        {
-            currentLevelState = [LevelState new];
-            currentLevelState.Level = level;
-            currentLevelState.PlayerFloor = 0;
-            currentLevelState.PlayerTile = ccp(4, 4); //Just start at 4, 4 right now
-        }
+        currentLevelState = [LevelState new];
+        currentLevelState.Level = level;
+        currentLevelState.PlayerFloor = 0;
+        currentLevelState.PlayerTile = ccp(4, 4); //Just start at 4, 4 right now
         
+        self = [self initWithExistingLevelState];
+    }
+    return self;
+}
+
+-(id) initWithExistingLevelState
+{
+    if( (self=[super init]) )
+    {
         //Store the window size
         self->winSize = [[CCDirector sharedDirector] winSize];
         
         //Add a render container for the floor
         floorRenderContainer = [[FloorRenderContainer alloc]
-                                    initWithFloor:
-                                        [currentLevelState.Level.floors objectAtIndex:currentLevelState.PlayerFloor]
-                                    playerPosition:
-                                        currentLevelState.PlayerTile];
+                                initWithFloor:
+                                [currentLevelState.Level.floors objectAtIndex:currentLevelState.PlayerFloor]
+                                playerPosition:
+                                currentLevelState.PlayerTile];
         [self addChild:floorRenderContainer];
         
         //Add the invisible buttons that will trigger the player to move
@@ -76,20 +90,47 @@ static LevelState* currentLevelState = nil;
 -(void) movePlayerUp
 {
     [floorRenderContainer MovePlayerUp];
+    currentLevelState.PlayerTile = floorRenderContainer.playerTile;
+    [self checkForCombat];
 }
 
 -(void) movePlayerDown
 {
     [floorRenderContainer MovePlayerDown];
+    currentLevelState.PlayerTile = floorRenderContainer.playerTile;
+    [self checkForCombat];
 }
 
 -(void) movePlayerLeft
 {
     [floorRenderContainer MovePlayerLeft];
+    currentLevelState.PlayerTile = floorRenderContainer.playerTile;
+    [self checkForCombat];
 }
+
 -(void) movePlayerRight
 {
     [floorRenderContainer MovePlayerRight];
+    currentLevelState.PlayerTile = floorRenderContainer.playerTile;
+    [self checkForCombat];
+}
+
+-(void) checkForCombat
+{
+    //Crude logic for now: 10% change of combat per move
+    int combatRoll = arc4random() % 100;
+    if (combatRoll < 10)
+    {
+        //This one is purely for debug
+        PartyData *partyOne = [PartyData anyPartyWithName:@"Player Party"];
+        PartyData *partyTwo = [PartyData anyPartyWithName:@"AI Party"];
+        
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0
+                                                    scene:[CombatLayer sceneWithPartyOne:partyOne
+                                                            andPartyTwo:partyTwo
+                                                            withBackgroundNamed:@"Test"
+                                                            nextLayer:CombatNextLayerLevel]]];
+    }
 }
 
 @end
