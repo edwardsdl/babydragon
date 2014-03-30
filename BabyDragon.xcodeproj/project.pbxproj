@@ -12,6 +12,7 @@
 		07045F0418D635A2006D01BC /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 07045F0318D635A2006D01BC /* Player.png */; };
 		0706729F182FFC5500C1E5AA /* FLMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0706729E182FFC5500C1E5AA /* FLMenuBackground.png */; };
 		070672A3182FFD2300C1E5AA /* FLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 070672A2182FFD2300C1E5AA /* FLMenu.m */; };
+		070EB8D218D72F51004516C6 /* LevelState.m in Sources */ = {isa = PBXBuildFile; fileRef = 070EB8D118D72F51004516C6 /* LevelState.m */; };
 		07133CF318CD618E0043BC6C /* FLButtonDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 07133CF218CD618E0043BC6C /* FLButtonDebug.m */; };
 		072C5779189D4897005C4AA6 /* AbilityDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C5778189D4897005C4AA6 /* AbilityDataInitializer.m */; };
 		0733D9C6185F75E90018F555 /* ScrollingPartyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733D9C5185F75E90018F555 /* ScrollingPartyList.m */; };
@@ -26,6 +27,7 @@
 		0786CAE218D5E8610056D4FB /* LevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786CAE118D5E8610056D4FB /* LevelLayer.m */; };
 		078B35E4188C648B0068C34D /* MapNodeData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B35E3188C648B0068C34D /* MapNodeData+Management.m */; };
 		078B35EC188C6D1D0068C34D /* MapNodeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B35EB188C6D1D0068C34D /* MapNodeMenu.m */; };
+		078F669918E867A600E66965 /* DebugLevelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F669818E867A600E66965 /* DebugLevelFactory.m */; };
 		07908911183310D200FC3D8C /* CombatMenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07908910183310D200FC3D8C /* CombatMenuNode.m */; };
 		079089141833116700FC3D8C /* CombatMenuButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 079089131833116700FC3D8C /* CombatMenuButtonNode.m */; };
 		0790891618331E2200FC3D8C /* RightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0790891518331E2200FC3D8C /* RightArrow.png */; };
@@ -352,6 +354,8 @@
 		0706729E182FFC5500C1E5AA /* FLMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FLMenuBackground.png; path = "UI Elements/FLMenuBackground.png"; sourceTree = "<group>"; };
 		070672A1182FFD2300C1E5AA /* FLMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMenu.h; path = UI/FLMenu.h; sourceTree = "<group>"; };
 		070672A2182FFD2300C1E5AA /* FLMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMenu.m; path = UI/FLMenu.m; sourceTree = "<group>"; };
+		070EB8D018D72F51004516C6 /* LevelState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelState.h; path = Levels/LevelState.h; sourceTree = "<group>"; };
+		070EB8D118D72F51004516C6 /* LevelState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelState.m; path = Levels/LevelState.m; sourceTree = "<group>"; };
 		07133CF018CD5EDA0043BC6C /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		07133CF118CD618E0043BC6C /* FLButtonDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLButtonDebug.h; path = UI/FLButtonDebug.h; sourceTree = "<group>"; };
 		07133CF218CD618E0043BC6C /* FLButtonDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLButtonDebug.m; path = UI/FLButtonDebug.m; sourceTree = "<group>"; };
@@ -380,6 +384,8 @@
 		078B35E3188C648B0068C34D /* MapNodeData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MapNodeData+Management.m"; sourceTree = "<group>"; };
 		078B35EA188C6D1D0068C34D /* MapNodeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapNodeMenu.h; path = Map/MapNodeMenu.h; sourceTree = "<group>"; };
 		078B35EB188C6D1D0068C34D /* MapNodeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapNodeMenu.m; path = Map/MapNodeMenu.m; sourceTree = "<group>"; };
+		078F669718E867A600E66965 /* DebugLevelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLevelFactory.h; path = Levels/DebugLevelFactory.h; sourceTree = "<group>"; };
+		078F669818E867A600E66965 /* DebugLevelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugLevelFactory.m; path = Levels/DebugLevelFactory.m; sourceTree = "<group>"; };
 		0790890F183310D200FC3D8C /* CombatMenuNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMenuNode.h; path = "Combat Layer/CombatMenuNode.h"; sourceTree = "<group>"; };
 		07908910183310D200FC3D8C /* CombatMenuNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatMenuNode.m; path = "Combat Layer/CombatMenuNode.m"; sourceTree = "<group>"; };
 		079089121833116700FC3D8C /* CombatMenuButtonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatMenuButtonNode.h; path = "Combat Layer/CombatMenuButtonNode.h"; sourceTree = "<group>"; };
@@ -1020,10 +1026,14 @@
 		0786CADF18D5E78C0056D4FB /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				078F669718E867A600E66965 /* DebugLevelFactory.h */,
 				0759984218D6272F00D4D3EB /* FloorRenderContainer.h */,
 				0786CAE018D5E8610056D4FB /* LevelLayer.h */,
+				070EB8D018D72F51004516C6 /* LevelState.h */,
+				078F669818E867A600E66965 /* DebugLevelFactory.m */,
 				0759984118D6272F00D4D3EB /* FloorRenderContainer.m */,
 				0786CAE118D5E8610056D4FB /* LevelLayer.m */,
+				070EB8D118D72F51004516C6 /* LevelState.m */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -2230,6 +2240,7 @@
 				BCAF496117E55ECB001A9B76 /* CCAtlasNode.m in Sources */,
 				BC98602417F0DA0900F9E159 /* BabyDragon.xcdatamodeld in Sources */,
 				BCAF496217E55ECB001A9B76 /* CCCamera.m in Sources */,
+				070EB8D218D72F51004516C6 /* LevelState.m in Sources */,
 				BCAF496317E55ECB001A9B76 /* CCClippingNode.m in Sources */,
 				07B7521418CD5609007FBE57 /* FLContainerDebug.m in Sources */,
 				076A48AA187A0E1C007305B8 /* PartyNode.m in Sources */,
@@ -2324,6 +2335,7 @@
 				BCAF499917E55ECB001A9B76 /* CCGLView.m in Sources */,
 				BCAF499A17E55ECB001A9B76 /* CCTouchDispatcher.m in Sources */,
 				BCAF499B17E55ECB001A9B76 /* CCTouchHandler.m in Sources */,
+				078F669918E867A600E66965 /* DebugLevelFactory.m in Sources */,
 				BCAF499C17E55ECB001A9B76 /* CCDirectorMac.m in Sources */,
 				BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */,
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,

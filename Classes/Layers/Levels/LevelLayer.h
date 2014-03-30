@@ -9,9 +9,13 @@
 #import "cocos2d.h"
 #import "FloorRenderContainer.h"
 #import "FLButton.h"
+#import "LevelState.h"
+#import "Level.h"
 
 @interface LevelLayer : CCLayer
 
 +(CCScene *) scene;
+
+-(id) initWithLevelState:(LevelState*) levelState;
 
 @end

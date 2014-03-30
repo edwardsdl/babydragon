@@ -18,7 +18,7 @@
     CGPoint playerTile;
 }
 
--(id) init
+-(id) initWithFloor:(Floor*) floorToRender playerPosition:(CGPoint) playerPosition
 {
 	if( (self=[super init]) )
     {
@@ -28,8 +28,8 @@
         //Store the window size
         self->winSize = [[CCDirector sharedDirector] winSize];
         
-        //For now, create a floor for testing
-        [self CreateFloor];
+        //Store the floor
+        self->floor = floorToRender;
         
         //Create the sprites and the sprite batch for drawing the tiles
         [self PrepareTileSprites];
@@ -39,8 +39,8 @@
         playerSprite.position = ccp(winSize.width/2, winSize.height/2);
         [self addChild:playerSprite];
         
-        //Lets use tile 4, 4, as a starting point for now
-        [self JumpPlayerToTileX:4 Y:4];
+        //Jump to the given player position
+        [self JumpPlayerToTileX:playerPosition.x Y:playerPosition.y];
     }
     return self;
 }

@@ -18,6 +18,8 @@
     FLButton* rightButton;
 }
 
+static LevelState* currentLevelState = nil;
+
 +(CCScene *) scene
 {
 	CCScene *scene = [CCScene node];
@@ -26,15 +28,29 @@
 	return scene;
 }
 
--(id) init
+-(id) initWithLevelState:(Level*) level
 {
 	if( (self=[super init]) )
     {
+        //If a new level was passed in then create and store a new state for it,
+        //otherwise just use the current one
+        if (level != nil)
+        {
+            currentLevelState = [LevelState new];
+            currentLevelState.Level = level;
+            currentLevelState.PlayerFloor = 0;
+            currentLevelState.PlayerTile = ccp(4, 4); //Just start at 4, 4 right now
+        }
+        
         //Store the window size
         self->winSize = [[CCDirector sharedDirector] winSize];
         
         //Add a render container for the floor
-        floorRenderContainer = [FloorRenderContainer new];
+        floorRenderContainer = [[FloorRenderContainer alloc]
+                                    initWithFloor:
+                                        [currentLevelState.Level.floors objectAtIndex:currentLevelState.PlayerFloor]
+                                    playerPosition:
+                                        currentLevelState.PlayerTile];
         [self addChild:floorRenderContainer];
         
         //Add the invisible buttons that will trigger the player to move

@@ -16,6 +16,8 @@
 
 }
 
+-(id) initWithFloor:(Floor*) floorToRender  playerPosition:(CGPoint) playerPosition;
+
 -(void) MovePlayerUp;
 
 -(void) MovePlayerDown;
