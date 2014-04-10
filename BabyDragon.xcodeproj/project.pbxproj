@@ -1184,14 +1184,14 @@
 			children = (
 				BC9B23B4180A661200D1ECEF /* Acquiring.h */,
 				BC9B23B5180A661200D1ECEF /* AcquisitionFactory.h */,
-				BC9B23B6180A661200D1ECEF /* AcquisitionFactory.m */,
 				BC9B23B7180A661200D1ECEF /* GoldFactory.h */,
-				BC9B23B8180A661200D1ECEF /* GoldFactory.m */,
 				BC5B9CA118C4042900EE73A7 /* ItemFactory.h */,
-				BC5B9CA218C4042900EE73A7 /* ItemFactory.m */,
 				BC9B23B9180A661200D1ECEF /* MonsterFactory.h */,
-				BC9B23BA180A661200D1ECEF /* MonsterFactory.m */,
 				BC9B23BB180A661200D1ECEF /* SinglePlayerContentFactory.h */,
+				BC9B23B6180A661200D1ECEF /* AcquisitionFactory.m */,
+				BC9B23B8180A661200D1ECEF /* GoldFactory.m */,
+				BC5B9CA218C4042900EE73A7 /* ItemFactory.m */,
+				BC9B23BA180A661200D1ECEF /* MonsterFactory.m */,
 				BC9B23BC180A661200D1ECEF /* SinglePlayerContentFactory.m */,
 			);
 			path = "Acquisition Factories";
