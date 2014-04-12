@@ -156,7 +156,7 @@ static LevelState* currentLevelState = nil;
 
 -(void) checkForCombat
 {
-    return;
+    //return;  //For debugging
     
     //Crude logic for now: 10% change of combat per move
     int combatRoll = arc4random() % 100;

@@ -2,7 +2,7 @@
 //  DefaultMonsterData.m
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 3/2/14.
+//  Created by Eric Stenborg on 4/12/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -34,5 +34,6 @@
 @dynamic type;
 @dynamic willpower;
 @dynamic willpowerLevelMultiplier;
+@dynamic rarity;
 
 @end

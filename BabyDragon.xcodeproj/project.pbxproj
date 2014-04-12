@@ -58,6 +58,7 @@
 		07F8C6001899ECB90000FAAB /* DefaultMonsterDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8C5FF1899ECB90000FAAB /* DefaultMonsterDataInitializer.m */; };
 		07FB559F187CD21F00316BA6 /* ManagePartyLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB559E187CD21F00316BA6 /* ManagePartyLayer.m */; };
 		07FB55A2187CD60C00316BA6 /* ScrollingMonsterSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */; };
+		07FC01C218F9A8DC0043FB2F /* DefaultMonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC01C118F9A8DC0043FB2F /* DefaultMonsterData.m */; };
 		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
 		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */; };
@@ -97,7 +98,6 @@
 		BC91AA5818C4413F008BFFBC /* AcquisitionData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5718C4413F008BFFBC /* AcquisitionData.m */; };
 		BC91AA5B18C4413F008BFFBC /* EnhancementData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5A18C4413F008BFFBC /* EnhancementData.m */; };
 		BC91AA5E18C4413F008BFFBC /* MapNodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5D18C4413F008BFFBC /* MapNodeData.m */; };
-		BC91AA6118C4413F008BFFBC /* DefaultMonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA6018C4413F008BFFBC /* DefaultMonsterData.m */; };
 		BC91AA6A18C45740008BFFBC /* ItemData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA6918C45740008BFFBC /* ItemData+Management.m */; };
 		BC91AA7618C46176008BFFBC /* DefaultItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA7518C46176008BFFBC /* DefaultItemData.m */; };
 		BC91AA7918C46176008BFFBC /* ItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA7818C46176008BFFBC /* ItemData.m */; };
@@ -437,6 +437,9 @@
 		07FB559E187CD21F00316BA6 /* ManagePartyLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagePartyLayer.m; path = Classes/Layers/Management/ManagePartyLayer.m; sourceTree = SOURCE_ROOT; };
 		07FB55A0187CD60C00316BA6 /* ScrollingMonsterSelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingMonsterSelectionList.h; path = "Classes/Layers/Combat Layer/ScrollingMonsterSelectionList.h"; sourceTree = SOURCE_ROOT; };
 		07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollingMonsterSelectionList.m; path = "Classes/Layers/Combat Layer/ScrollingMonsterSelectionList.m"; sourceTree = SOURCE_ROOT; };
+		07FC01BC18F9A7490043FB2F /* Rarity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rarity.h; sourceTree = "<group>"; };
+		07FC01C018F9A8DC0043FB2F /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
+		07FC01C118F9A8DC0043FB2F /* DefaultMonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMonsterData.m; sourceTree = "<group>"; };
 		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
 		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
 		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
@@ -503,8 +506,6 @@
 		BC91AA5A18C4413F008BFFBC /* EnhancementData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnhancementData.m; sourceTree = "<group>"; };
 		BC91AA5C18C4413F008BFFBC /* MapNodeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNodeData.h; sourceTree = "<group>"; };
 		BC91AA5D18C4413F008BFFBC /* MapNodeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNodeData.m; sourceTree = "<group>"; };
-		BC91AA5F18C4413F008BFFBC /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
-		BC91AA6018C4413F008BFFBC /* DefaultMonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMonsterData.m; sourceTree = "<group>"; };
 		BC91AA6818C45740008BFFBC /* ItemData+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ItemData+Management.h"; sourceTree = "<group>"; };
 		BC91AA6918C45740008BFFBC /* ItemData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ItemData+Management.m"; sourceTree = "<group>"; };
 		BC91AA7418C46176008BFFBC /* DefaultItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultItemData.h; sourceTree = "<group>"; };
@@ -1769,6 +1770,7 @@
 				BC434470188D98FC00ED3198 /* EnvironmentType.h */,
 				BCDC1343189F1FA400CBED42 /* LevelSizeType.h */,
 				BCDC1342189F1F1E00CBED42 /* LootQualityType.h */,
+				07FC01BC18F9A7490043FB2F /* Rarity.h */,
 				072DB24518BEBEA10094FF90 /* RoleType.h */,
 				079DB27A18AE8A09005DF02D /* StatusEffectType.h */,
 				BCA9E0471809F95000FB3EFE /* TargetType.h */,
@@ -1782,35 +1784,35 @@
 			isa = PBXGroup;
 			children = (
 				BC01042018CD8F720026E5A8 /* AbilityData.h */,
-				BC01042118CD8F720026E5A8 /* AbilityData.m */,
 				BC91AA5618C4413F008BFFBC /* AcquisitionData.h */,
-				BC91AA5718C4413F008BFFBC /* AcquisitionData.m */,
 				BC91AA4118C4413E008BFFBC /* BaseData.h */,
-				BC91AA4218C4413E008BFFBC /* BaseData.m */,
 				BC91AA7418C46176008BFFBC /* DefaultItemData.h */,
-				BC91AA7518C46176008BFFBC /* DefaultItemData.m */,
-				BC91AA5F18C4413F008BFFBC /* DefaultMonsterData.h */,
-				BC91AA6018C4413F008BFFBC /* DefaultMonsterData.m */,
+				07FC01C018F9A8DC0043FB2F /* DefaultMonsterData.h */,
 				BC91AA5918C4413F008BFFBC /* EnhancementData.h */,
-				BC91AA5A18C4413F008BFFBC /* EnhancementData.m */,
 				BC91AA4418C4413E008BFFBC /* EquipmentData.h */,
-				BC91AA4518C4413E008BFFBC /* EquipmentData.m */,
 				BC91AA5018C4413F008BFFBC /* GoldData.h */,
-				BC91AA5118C4413F008BFFBC /* GoldData.m */,
-				07F8C5F71899E7220000FAAB /* Initialization */,
 				BC91AA7718C46176008BFFBC /* ItemData.h */,
-				BC91AA7818C46176008BFFBC /* ItemData.m */,
 				BC91AA3B18C4413E008BFFBC /* LevelData.h */,
-				BC91AA3C18C4413E008BFFBC /* LevelData.m */,
-				BCEEEAA3180BA73800BC20E9 /* Management */,
 				BC91AA5C18C4413F008BFFBC /* MapNodeData.h */,
-				BC91AA5D18C4413F008BFFBC /* MapNodeData.m */,
 				BC91AA4A18C4413F008BFFBC /* MonsterData.h */,
-				BC91AA4B18C4413F008BFFBC /* MonsterData.m */,
 				BC91AA4718C4413E008BFFBC /* PartyData.h */,
-				BC91AA4818C4413E008BFFBC /* PartyData.m */,
 				BC91AA3E18C4413E008BFFBC /* SinglePlayerContentData.h */,
+				BC01042118CD8F720026E5A8 /* AbilityData.m */,
+				BC91AA5718C4413F008BFFBC /* AcquisitionData.m */,
+				BC91AA4218C4413E008BFFBC /* BaseData.m */,
+				BC91AA7518C46176008BFFBC /* DefaultItemData.m */,
+				07FC01C118F9A8DC0043FB2F /* DefaultMonsterData.m */,
+				BC91AA5A18C4413F008BFFBC /* EnhancementData.m */,
+				BC91AA4518C4413E008BFFBC /* EquipmentData.m */,
+				BC91AA5118C4413F008BFFBC /* GoldData.m */,
+				BC91AA7818C46176008BFFBC /* ItemData.m */,
+				BC91AA3C18C4413E008BFFBC /* LevelData.m */,
+				BC91AA5D18C4413F008BFFBC /* MapNodeData.m */,
+				BC91AA4B18C4413F008BFFBC /* MonsterData.m */,
+				BC91AA4818C4413E008BFFBC /* PartyData.m */,
 				BC91AA3F18C4413E008BFFBC /* SinglePlayerContentData.m */,
+				07F8C5F71899E7220000FAAB /* Initialization */,
+				BCEEEAA3180BA73800BC20E9 /* Management */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -2274,7 +2276,6 @@
 				BCEEEABF180BA73800BC20E9 /* BaseData+Management.m in Sources */,
 				BC91AA5E18C4413F008BFFBC /* MapNodeData.m in Sources */,
 				BCFA7B361839BD8B0055C73C /* CGSizeHelper.m in Sources */,
-				BC91AA6118C4413F008BFFBC /* DefaultMonsterData.m in Sources */,
 				BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */,
 				BCAF497417E55ECB001A9B76 /* CCMenuItem.m in Sources */,
 				BCAF497517E55ECB001A9B76 /* CCMotionStreak.m in Sources */,
@@ -2291,6 +2292,7 @@
 				BCAF497E17E55ECB001A9B76 /* CCPhysicsSprite.mm in Sources */,
 				BCAF497F17E55ECB001A9B76 /* CCProgressTimer.m in Sources */,
 				BC91AA6A18C45740008BFFBC /* ItemData+Management.m in Sources */,
+				07FC01C218F9A8DC0043FB2F /* DefaultMonsterData.m in Sources */,
 				BC9B23BE180A661200D1ECEF /* GoldFactory.m in Sources */,
 				BCAF498017E55ECB001A9B76 /* CCRenderTexture.m in Sources */,
 				BC91AA3D18C4413E008BFFBC /* LevelData.m in Sources */,
