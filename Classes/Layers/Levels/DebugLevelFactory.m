@@ -7,12 +7,16 @@
 //
 
 #import "DebugLevelFactory.h"
+#import "ElementType.h"
 
 @implementation DebugLevelFactory
 
 +(Level*) createDebugLevel
 {
     Level* level = [[Level alloc] initWithFloorCount:0];
+    level.elementType = ElementTypeFire;
+    level.minLevel = 1;
+    level.maxLevel = 2;
     
     //Create the debug floor 0
     Floor* floor = [[Floor new] initWithSize:CGSizeMake(20, 20)];

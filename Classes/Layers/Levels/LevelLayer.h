@@ -15,6 +15,7 @@
 #import "PartyData+Management.h"
 #import "CombatLayer.h"
 #import "CombatNextLayer.h"
+#import "EnemyPartyFactory.h"
 
 @interface LevelLayer : CCLayer
 

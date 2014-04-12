@@ -76,9 +76,9 @@
 {
     [PartyData removeAll];
     
-    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Firebat"],
-                          [MonsterData anyMonsterWithName:@"Fox"],
-                          [MonsterData anyMonsterWithName:@"Imp"]];
+    NSArray *monsters = @[[MonsterData anyMonsterWithName:@"Bear"],
+                          [MonsterData anyMonsterWithName:@"Marblu"],
+                          [MonsterData anyMonsterWithName:@"Fox"]];
     
     [PartyData insertPartyWithName:@"Player Party" monsters:monsters];
     

@@ -59,6 +59,7 @@
 		07FB559F187CD21F00316BA6 /* ManagePartyLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB559E187CD21F00316BA6 /* ManagePartyLayer.m */; };
 		07FB55A2187CD60C00316BA6 /* ScrollingMonsterSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */; };
 		07FC01C218F9A8DC0043FB2F /* DefaultMonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC01C118F9A8DC0043FB2F /* DefaultMonsterData.m */; };
+		07FC01C518F9AC150043FB2F /* EnemyPartyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC01C418F9AC150043FB2F /* EnemyPartyFactory.m */; };
 		07FEE6461830288600FA6F5A /* CombatInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEE6451830288600FA6F5A /* CombatInfoNode.m */; };
 		07FEE6481830313200FA6F5A /* IconFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6471830313200FA6F5A /* IconFrame.png */; };
 		BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */; };
@@ -440,6 +441,8 @@
 		07FC01BC18F9A7490043FB2F /* Rarity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rarity.h; sourceTree = "<group>"; };
 		07FC01C018F9A8DC0043FB2F /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
 		07FC01C118F9A8DC0043FB2F /* DefaultMonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMonsterData.m; sourceTree = "<group>"; };
+		07FC01C318F9AC150043FB2F /* EnemyPartyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyPartyFactory.h; path = Levels/EnemyPartyFactory.h; sourceTree = "<group>"; };
+		07FC01C418F9AC150043FB2F /* EnemyPartyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyPartyFactory.m; path = Levels/EnemyPartyFactory.m; sourceTree = "<group>"; };
 		07FEE6441830288600FA6F5A /* CombatInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CombatInfoNode.h; path = "Combat Layer/CombatInfoNode.h"; sourceTree = "<group>"; };
 		07FEE6451830288600FA6F5A /* CombatInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CombatInfoNode.m; path = "Combat Layer/CombatInfoNode.m"; sourceTree = "<group>"; };
 		07FEE6471830313200FA6F5A /* IconFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconFrame.png; path = "UI Elements/IconFrame.png"; sourceTree = "<group>"; };
@@ -1029,10 +1032,12 @@
 			isa = PBXGroup;
 			children = (
 				078F669718E867A600E66965 /* DebugLevelFactory.h */,
+				07FC01C318F9AC150043FB2F /* EnemyPartyFactory.h */,
 				0759984218D6272F00D4D3EB /* FloorRenderContainer.h */,
 				0786CAE018D5E8610056D4FB /* LevelLayer.h */,
 				070EB8D018D72F51004516C6 /* LevelState.h */,
 				078F669818E867A600E66965 /* DebugLevelFactory.m */,
+				07FC01C418F9AC150043FB2F /* EnemyPartyFactory.m */,
 				0759984118D6272F00D4D3EB /* FloorRenderContainer.m */,
 				0786CAE118D5E8610056D4FB /* LevelLayer.m */,
 				070EB8D118D72F51004516C6 /* LevelState.m */,
@@ -2235,6 +2240,7 @@
 				07A3949518846425001A1C20 /* MapMenu.m in Sources */,
 				BCFA7B331839A9400055C73C /* CCDirector+Utilities.m in Sources */,
 				BCAF495A17E55ECB001A9B76 /* CCActionManager.m in Sources */,
+				07FC01C518F9AC150043FB2F /* EnemyPartyFactory.m in Sources */,
 				BCAF495B17E55ECB001A9B76 /* CCActionPageTurn3D.m in Sources */,
 				BCAF495C17E55ECB001A9B76 /* CCActionProgressTimer.m in Sources */,
 				BCAF495D17E55ECB001A9B76 /* CCActionTiledGrid.m in Sources */,

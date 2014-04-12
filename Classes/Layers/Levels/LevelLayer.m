@@ -163,12 +163,15 @@ static LevelState* currentLevelState = nil;
     if (combatRoll < 10)
     {
         //This one is purely for debug
-        PartyData *partyOne = [PartyData anyPartyWithName:@"Player Party"];
-        PartyData *partyTwo = [PartyData anyPartyWithName:@"AI Party"];
+        PartyData *playerParty = [PartyData anyPartyWithName:@"Player Party"];
+        //PartyData *partyTwo = [PartyData anyPartyWithName:@"AI Party"];
+        PartyData* enemyParty = [EnemyPartyFactory CreateEnemyPartyOfElement:currentLevelState.Level.elementType
+                                                                MinLevel:currentLevelState.Level.minLevel
+                                                                MaxLevel:currentLevelState.Level.maxLevel];
         
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0
-                                                    scene:[CombatLayer sceneWithPartyOne:partyOne
-                                                            andPartyTwo:partyTwo
+                                                    scene:[CombatLayer sceneWithPartyOne:playerParty
+                                                            andPartyTwo:enemyParty
                                                             withBackgroundNamed:@"Test"
                                                             nextLayer:CombatNextLayerLevel]]];
     }

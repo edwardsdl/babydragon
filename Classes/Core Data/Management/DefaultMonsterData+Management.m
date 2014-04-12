@@ -25,7 +25,7 @@ static NSString *entityName = @"DefaultMonsterData";
         : nil;
 }
 
-+ (NSArray *) monsterDataByElement:(NSNumber*) element AndRarity:(NSNumber*) rarity
++ (NSArray *) defaultMonsterDataByElement:(NSNumber*) element AndRarity:(NSNumber*) rarity
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     
