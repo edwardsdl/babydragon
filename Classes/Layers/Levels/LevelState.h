@@ -17,4 +17,6 @@
 
 @property (nonatomic) CGPoint PlayerTile;
 
+@property (nonatomic) int XpEarned;
+
 @end

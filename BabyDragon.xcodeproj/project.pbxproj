@@ -27,6 +27,7 @@
 		0786CAE218D5E8610056D4FB /* LevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786CAE118D5E8610056D4FB /* LevelLayer.m */; };
 		078B35E4188C648B0068C34D /* MapNodeData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B35E3188C648B0068C34D /* MapNodeData+Management.m */; };
 		078B35EC188C6D1D0068C34D /* MapNodeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B35EB188C6D1D0068C34D /* MapNodeMenu.m */; };
+		078EB85518FB102C00A6A3AC /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EB85418FB102C00A6A3AC /* MonsterData.m */; };
 		078F669918E867A600E66965 /* DebugLevelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F669818E867A600E66965 /* DebugLevelFactory.m */; };
 		07908911183310D200FC3D8C /* CombatMenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07908910183310D200FC3D8C /* CombatMenuNode.m */; };
 		079089141833116700FC3D8C /* CombatMenuButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 079089131833116700FC3D8C /* CombatMenuButtonNode.m */; };
@@ -94,7 +95,6 @@
 		BC91AA4318C4413E008BFFBC /* BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4218C4413E008BFFBC /* BaseData.m */; };
 		BC91AA4618C4413E008BFFBC /* EquipmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4518C4413E008BFFBC /* EquipmentData.m */; };
 		BC91AA4918C4413E008BFFBC /* PartyData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4818C4413E008BFFBC /* PartyData.m */; };
-		BC91AA4C18C4413F008BFFBC /* MonsterData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4B18C4413F008BFFBC /* MonsterData.m */; };
 		BC91AA5218C4413F008BFFBC /* GoldData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5118C4413F008BFFBC /* GoldData.m */; };
 		BC91AA5818C4413F008BFFBC /* AcquisitionData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5718C4413F008BFFBC /* AcquisitionData.m */; };
 		BC91AA5B18C4413F008BFFBC /* EnhancementData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA5A18C4413F008BFFBC /* EnhancementData.m */; };
@@ -385,6 +385,8 @@
 		078B35E3188C648B0068C34D /* MapNodeData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MapNodeData+Management.m"; sourceTree = "<group>"; };
 		078B35EA188C6D1D0068C34D /* MapNodeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapNodeMenu.h; path = Map/MapNodeMenu.h; sourceTree = "<group>"; };
 		078B35EB188C6D1D0068C34D /* MapNodeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapNodeMenu.m; path = Map/MapNodeMenu.m; sourceTree = "<group>"; };
+		078EB85318FB102C00A6A3AC /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
+		078EB85418FB102C00A6A3AC /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
 		078F669718E867A600E66965 /* DebugLevelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLevelFactory.h; path = Levels/DebugLevelFactory.h; sourceTree = "<group>"; };
 		078F669818E867A600E66965 /* DebugLevelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugLevelFactory.m; path = Levels/DebugLevelFactory.m; sourceTree = "<group>"; };
 		078F669A18E874E400E66965 /* CombatNextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombatNextLayer.h; sourceTree = "<group>"; };
@@ -499,8 +501,6 @@
 		BC91AA4518C4413E008BFFBC /* EquipmentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentData.m; sourceTree = "<group>"; };
 		BC91AA4718C4413E008BFFBC /* PartyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyData.h; sourceTree = "<group>"; };
 		BC91AA4818C4413E008BFFBC /* PartyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyData.m; sourceTree = "<group>"; };
-		BC91AA4A18C4413F008BFFBC /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
-		BC91AA4B18C4413F008BFFBC /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
 		BC91AA5018C4413F008BFFBC /* GoldData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldData.h; sourceTree = "<group>"; };
 		BC91AA5118C4413F008BFFBC /* GoldData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldData.m; sourceTree = "<group>"; };
 		BC91AA5618C4413F008BFFBC /* AcquisitionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquisitionData.h; sourceTree = "<group>"; };
@@ -1799,7 +1799,7 @@
 				BC91AA7718C46176008BFFBC /* ItemData.h */,
 				BC91AA3B18C4413E008BFFBC /* LevelData.h */,
 				BC91AA5C18C4413F008BFFBC /* MapNodeData.h */,
-				BC91AA4A18C4413F008BFFBC /* MonsterData.h */,
+				078EB85318FB102C00A6A3AC /* MonsterData.h */,
 				BC91AA4718C4413E008BFFBC /* PartyData.h */,
 				BC91AA3E18C4413E008BFFBC /* SinglePlayerContentData.h */,
 				BC01042118CD8F720026E5A8 /* AbilityData.m */,
@@ -1813,7 +1813,7 @@
 				BC91AA7818C46176008BFFBC /* ItemData.m */,
 				BC91AA3C18C4413E008BFFBC /* LevelData.m */,
 				BC91AA5D18C4413F008BFFBC /* MapNodeData.m */,
-				BC91AA4B18C4413F008BFFBC /* MonsterData.m */,
+				078EB85418FB102C00A6A3AC /* MonsterData.m */,
 				BC91AA4818C4413E008BFFBC /* PartyData.m */,
 				BC91AA3F18C4413E008BFFBC /* SinglePlayerContentData.m */,
 				07F8C5F71899E7220000FAAB /* Initialization */,
@@ -2304,6 +2304,7 @@
 				BC91AA3D18C4413E008BFFBC /* LevelData.m in Sources */,
 				BCAF498117E55ECB001A9B76 /* CCScene.m in Sources */,
 				BC5B9CA318C4042900EE73A7 /* ItemFactory.m in Sources */,
+				078EB85518FB102C00A6A3AC /* MonsterData.m in Sources */,
 				079DB27E18AE8B73005DF02D /* StatusEffect.m in Sources */,
 				BCAF498217E55ECB001A9B76 /* CCScheduler.m in Sources */,
 				BCAF498317E55ECB001A9B76 /* CCShaderCache.m in Sources */,
@@ -2316,7 +2317,6 @@
 				0765FCD6185F6EC700E15D1C /* MyPartiesLayer.m in Sources */,
 				07746E7B182C86C200ABF08B /* CombatLayer.m in Sources */,
 				BCAF498817E55ECB001A9B76 /* CCSpriteFrameCache.m in Sources */,
-				BC91AA4C18C4413F008BFFBC /* MonsterData.m in Sources */,
 				BC3F52FD189F425600EC2900 /* AcquisitionData+Management.m in Sources */,
 				BCAF498917E55ECB001A9B76 /* CCTexture2D.m in Sources */,
 				0796B52D185507E30024048E /* ManageLayer.m in Sources */,

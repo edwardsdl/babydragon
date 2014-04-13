@@ -14,6 +14,7 @@
 - (int) truePower;
 - (int) trueWillpower;
 
+-(int) xpValue;
 - (void) levelUp;
 - (void) levelUp:(int) levelsGained;
 - (void) assignAbilitiesForLevel:(int) level;

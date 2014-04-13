@@ -731,7 +731,26 @@
     }
     else if (nextLayerAfterCombat == CombatNextLayerLevel)
     {
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[LevelLayer sceneWithExistingLevelState] ]];
+        //Determine xp gained
+        int xpGained = 0;
+        for (CombatMonsterNode* monster in self->monsters)
+        {
+            if (monster.partyNumber == 2)
+                xpGained += [[monster monsterData] xpValue];
+        }
+        
+        if ([self checkForAllKo:1])
+        {
+            //Party 1 is Koed, player lost
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MapLayer scene] ]];
+        }
+        else
+        {
+            //Party 2 is Koed, player won
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[LevelLayer sceneWithExistingLevelStateAndXpGain: xpGained] ]];
+        }
+        
+        
     }
 }
 

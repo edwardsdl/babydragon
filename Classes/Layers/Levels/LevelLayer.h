@@ -16,13 +16,14 @@
 #import "CombatLayer.h"
 #import "CombatNextLayer.h"
 #import "EnemyPartyFactory.h"
+#import "CoreDataHelper.h"
 
 @interface LevelLayer : CCLayer
 
 +(CCScene*) sceneWithNewLevel:(Level*) level;
-+(CCScene*) sceneWithExistingLevelState;
++(CCScene*) sceneWithExistingLevelStateAndXpGain:(int) xpGain;
 
 -(id) initWithNewLevel:(Level*) level;
--(id) initWithExistingLevelState;
+-(id) initWithExistingLevelStateAndXpGain:(int) xpGain;
 
 @end

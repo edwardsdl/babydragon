@@ -18,6 +18,7 @@
     FLButton* downButton;
     FLButton* leftButton;
     FLButton* rightButton;
+    int randomCombatPercent;
 }
 
 static LevelState* currentLevelState = nil;
@@ -30,10 +31,10 @@ static LevelState* currentLevelState = nil;
 	return scene;
 }
 
-+(CCScene*) sceneWithExistingLevelState
++(CCScene*) sceneWithExistingLevelStateAndXpGain:(int) xpGain
 {
     CCScene *scene = [CCScene node];
-	LevelLayer *layer = [[LevelLayer alloc] initWithExistingLevelState];
+	LevelLayer *layer = [[LevelLayer alloc] initWithExistingLevelStateAndXpGain: xpGain];
 	[scene addChild: layer];
 	return scene;
 }
@@ -45,21 +46,28 @@ static LevelState* currentLevelState = nil;
         currentLevelState = [LevelState new];
         currentLevelState.Level = level;
         currentLevelState.PlayerFloor = 0;
+        currentLevelState.XpEarned = 0;
         
         //Set the current player tile to the start tile of the floor
         currentLevelState.PlayerTile = [self findTileOfType:Start];
         
-        self = [self initWithExistingLevelState];
+        self = [self initWithExistingLevelStateAndXpGain:0];
     }
     return self;
 }
 
--(id) initWithExistingLevelState
+-(id) initWithExistingLevelStateAndXpGain:(int) xpGain
 {
     if( (self=[super init]) )
     {
         //Store the window size
         self->winSize = [[CCDirector sharedDirector] winSize];
+        
+        //Add in the XP gain that was passed in
+        currentLevelState.XpEarned += xpGain;
+        
+        //Random combat percent starts at 0
+        randomCombatPercent = 0;
         
         //Add a render container for the floor
         floorRenderContainer = [[FloorRenderContainer alloc]
@@ -94,6 +102,10 @@ static LevelState* currentLevelState = nil;
     [floorRenderContainer MovePlayerUp];
     currentLevelState.PlayerTile = floorRenderContainer.playerTile;
     
+    randomCombatPercent++;
+    if (randomCombatPercent > 20)
+        randomCombatPercent = 20;
+    
     if (![self checkForFloorTransition])
         [self checkForCombat];
 }
@@ -102,6 +114,10 @@ static LevelState* currentLevelState = nil;
 {
     [floorRenderContainer MovePlayerDown];
     currentLevelState.PlayerTile = floorRenderContainer.playerTile;
+    
+    randomCombatPercent++;
+    if (randomCombatPercent > 20)
+        randomCombatPercent = 20;
     
     if (![self checkForFloorTransition])
         [self checkForCombat];
@@ -112,6 +128,10 @@ static LevelState* currentLevelState = nil;
     [floorRenderContainer MovePlayerLeft];
     currentLevelState.PlayerTile = floorRenderContainer.playerTile;
     
+    randomCombatPercent++;
+    if (randomCombatPercent > 20)
+        randomCombatPercent = 20;
+    
     if (![self checkForFloorTransition])
         [self checkForCombat];
 }
@@ -120,6 +140,10 @@ static LevelState* currentLevelState = nil;
 {
     [floorRenderContainer MovePlayerRight];
     currentLevelState.PlayerTile = floorRenderContainer.playerTile;
+    
+    randomCombatPercent++;
+    if (randomCombatPercent > 20)
+        randomCombatPercent = 20;
     
     if (![self checkForFloorTransition])
         [self checkForCombat];
@@ -134,9 +158,9 @@ static LevelState* currentLevelState = nil;
     if (tile.tileType == End && currentLevelState.PlayerFloor + 1 != [currentLevelState.Level.floors count])
     {
         //Update the player floor, find the new tile on the new floor then transition
-        currentLevelState.PlayerFloor++;
+        currentLevelState.PlayerFloor++;	
         currentLevelState.PlayerTile = [self findTileOfType:Start];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[LevelLayer sceneWithExistingLevelState] ]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[LevelLayer sceneWithExistingLevelStateAndXpGain:0] ]];
         return YES;
     }
     
@@ -146,10 +170,25 @@ static LevelState* currentLevelState = nil;
         //Update the player floor, find the new tile on the new floor then transition
         currentLevelState.PlayerFloor--;
         currentLevelState.PlayerTile = [self findTileOfType:End];
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[LevelLayer sceneWithExistingLevelState] ]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[LevelLayer sceneWithExistingLevelStateAndXpGain:0] ]];
         return YES;
     }
 
+    //DEBUG: end the level if the player steps on the end of the last floor
+    if (tile.tileType == End && currentLevelState.PlayerFloor + 1 == [currentLevelState.Level.floors count])
+    {
+        //Assigned earned xp (this will be on a success screen later
+        PartyData *playerParty = [PartyData anyPartyWithName:@"Player Party"];
+        for (MonsterData *monsterData in playerParty.monsters)
+        {
+            monsterData.experiencePoints += currentLevelState.XpEarned;
+        }
+        [[CoreDataHelper sharedInstance] save];
+        
+        
+        //Return to the map for now
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.5 scene:[MapLayer scene] ]];
+    }
     
     return NO;
 }
@@ -160,15 +199,17 @@ static LevelState* currentLevelState = nil;
     
     //Crude logic for now: 10% change of combat per move
     int combatRoll = arc4random() % 100;
-    if (combatRoll < 10)
+    if (combatRoll < randomCombatPercent)
     {
-        //This one is purely for debug
+        //Pull the standard player party for now
         PartyData *playerParty = [PartyData anyPartyWithName:@"Player Party"];
-        //PartyData *partyTwo = [PartyData anyPartyWithName:@"AI Party"];
+        
+        //Create a new enemy party
         PartyData* enemyParty = [EnemyPartyFactory CreateEnemyPartyOfElement:currentLevelState.Level.elementType
                                                                 MinLevel:currentLevelState.Level.minLevel
                                                                 MaxLevel:currentLevelState.Level.maxLevel];
         
+        //Begin combat layer
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0
                                                     scene:[CombatLayer sceneWithPartyOne:playerParty
                                                             andPartyTwo:enemyParty
