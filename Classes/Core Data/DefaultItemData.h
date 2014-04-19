@@ -2,7 +2,7 @@
 //  DefaultItemData.h
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 3/3/14.
+//  Created by Eric Stenborg on 4/19/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -13,12 +13,13 @@
 
 @interface DefaultItemData : BaseData
 
-@property (nonatomic) int32_t attackType;
-@property (nonatomic) int32_t effectType;
-@property (nonatomic) int32_t elementType;
-@property (nonatomic, retain) NSString * type;
-@property (nonatomic) int32_t targetType;
-@property (nonatomic) float value;
+@property (nonatomic) int32_t itemId;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * descriptionText;
 @property (nonatomic) float probability;
+@property (nonatomic) int32_t effect;
+@property (nonatomic, retain) NSString * type;
+@property (nonatomic) int32_t cost;
+@property (nonatomic) int32_t value;
 
 @end

@@ -2,7 +2,7 @@
 //  DefaultItemData.m
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 3/3/14.
+//  Created by Eric Stenborg on 4/19/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -11,12 +11,13 @@
 
 @implementation DefaultItemData
 
-@dynamic attackType;
-@dynamic effectType;
-@dynamic elementType;
-@dynamic type;
-@dynamic targetType;
-@dynamic value;
+@dynamic itemId;
+@dynamic name;
+@dynamic descriptionText;
 @dynamic probability;
+@dynamic effect;
+@dynamic type;
+@dynamic cost;
+@dynamic value;
 
 @end

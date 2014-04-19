@@ -1,6 +1,5 @@
 #import "BarcodeHelper.h"
 #import "DefaultItemData+Management.h"
-#import "ItemData+Management.h"
 #import "ItemFactory.h"
 #import "NSData+ByteUtilities.h"
 #import "ProbabilityCollection.h"
@@ -30,7 +29,7 @@
 }
 
 #pragma mark - Public methods
-
+/*
 - (ItemData *)newItemFromBarcode:(NSString *)barcode
 {
     uint8_t byte = [[BarcodeHelper hashForBarcode:barcode] byteAtIndex:1];
@@ -39,12 +38,13 @@
     
     return [ItemData insertItemDataWithDefaultItemDataUUID:uuid];
 }
-
+*/
 #pragma mark - Acquiring protocol methods
 
 - (AcquisitionData *)newAcquisitionFromBarcode:(NSString *)barcode
 {
-    return [self newItemFromBarcode:barcode];
+    //return [self newItemFromBarcode:barcode];
+    return nil;
 }
 
 #pragma mark - Private methods

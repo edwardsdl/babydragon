@@ -4,7 +4,7 @@
 
 + (NSArray *)allDefaultItemData;
 + (DefaultItemData *)defaultItemDataWithUUID:(NSString *)uuid;
-+ (DefaultItemData *)insertDefaultItemDataForType:(NSString *)type;
++ (DefaultItemData *)insertDefaultItemData;
 + (void)removeAll;
 
 @end
