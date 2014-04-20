@@ -3,6 +3,8 @@
 #import "DebugDataInitializer.h"
 #import "DefaultMonsterDataInitializer.h"
 #import "DefaultItemDataInitializer.h"
+#import "DefaultEquipmentDataInitializer.h"
+#import "DefaultTraitDataInitializer.h"
 
 @implementation CoreDataHelper
 
@@ -49,6 +51,8 @@
     [DefaultMonsterDataInitializer initializeData];
     [DebugDataInitializer initializeData];
     [DefaultItemDataInitializer initializeData];
+    [DefaultEquipmentDataInitializer initialize];
+    [DefaultTraitDataInitializer initialize];
 }
 
 - (NSManagedObjectContext *)managedObjectContext

@@ -49,6 +49,9 @@
 		07A5DE7F190456E400A889A5 /* DefaultEquipmentData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DE7E190456E400A889A5 /* DefaultEquipmentData+Management.m */; };
 		07A5DE82190457E200A889A5 /* DefaultEquipmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DE81190457E200A889A5 /* DefaultEquipmentData.m */; };
 		07A5DE861904596F00A889A5 /* DefaultEquipmentDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DE851904596F00A889A5 /* DefaultEquipmentDataInitializer.m */; };
+		07A5DE8919045D1400A889A5 /* DefaultTraitData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DE8819045D1400A889A5 /* DefaultTraitData.m */; };
+		07A5DE8C19045D3D00A889A5 /* DefaultTraitData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DE8B19045D3D00A889A5 /* DefaultTraitData+Management.m */; };
+		07A5DE8F19045DFF00A889A5 /* DefaultTraitDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DE8E19045DFF00A889A5 /* DefaultTraitDataInitializer.m */; };
 		07B0352E18CE249E00954FD3 /* Bear_Fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B0352B18CE249E00954FD3 /* Bear_Fighting.png */; };
 		07B0352F18CE249E00954FD3 /* Bear_KO.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B0352C18CE249E00954FD3 /* Bear_KO.png */; };
 		07B0353018CE249E00954FD3 /* Bear_Standing.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B0352D18CE249E00954FD3 /* Bear_Standing.png */; };
@@ -425,6 +428,13 @@
 		07A5DE83190458B200A889A5 /* EquipmentEffectType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquipmentEffectType.h; sourceTree = "<group>"; };
 		07A5DE841904596F00A889A5 /* DefaultEquipmentDataInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultEquipmentDataInitializer.h; path = Initialization/DefaultEquipmentDataInitializer.h; sourceTree = "<group>"; };
 		07A5DE851904596F00A889A5 /* DefaultEquipmentDataInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefaultEquipmentDataInitializer.m; path = Initialization/DefaultEquipmentDataInitializer.m; sourceTree = "<group>"; };
+		07A5DE8719045D1400A889A5 /* DefaultTraitData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultTraitData.h; sourceTree = "<group>"; };
+		07A5DE8819045D1400A889A5 /* DefaultTraitData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultTraitData.m; sourceTree = "<group>"; };
+		07A5DE8A19045D3D00A889A5 /* DefaultTraitData+Management.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DefaultTraitData+Management.h"; sourceTree = "<group>"; };
+		07A5DE8B19045D3D00A889A5 /* DefaultTraitData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DefaultTraitData+Management.m"; sourceTree = "<group>"; };
+		07A5DE8D19045DFF00A889A5 /* DefaultTraitDataInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultTraitDataInitializer.h; path = Initialization/DefaultTraitDataInitializer.h; sourceTree = "<group>"; };
+		07A5DE8E19045DFF00A889A5 /* DefaultTraitDataInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefaultTraitDataInitializer.m; path = Initialization/DefaultTraitDataInitializer.m; sourceTree = "<group>"; };
+		07A5DE9019045E1C00A889A5 /* TraitEffectType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TraitEffectType.h; sourceTree = "<group>"; };
 		07B0352B18CE249E00954FD3 /* Bear_Fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Fighting.png; path = Monsters/Bear_Fighting.png; sourceTree = "<group>"; };
 		07B0352C18CE249E00954FD3 /* Bear_KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_KO.png; path = Monsters/Bear_KO.png; sourceTree = "<group>"; };
 		07B0352D18CE249E00954FD3 /* Bear_Standing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bear_Standing.png; path = Monsters/Bear_Standing.png; sourceTree = "<group>"; };
@@ -1094,11 +1104,13 @@
 				07A5DE841904596F00A889A5 /* DefaultEquipmentDataInitializer.h */,
 				BCCCD16618B302B800F22C52 /* DefaultItemDataInitializer.h */,
 				07F8C5FE1899ECB90000FAAB /* DefaultMonsterDataInitializer.h */,
+				07A5DE8D19045DFF00A889A5 /* DefaultTraitDataInitializer.h */,
 				072C5778189D4897005C4AA6 /* AbilityDataInitializer.m */,
 				07F8C5F91899E7640000FAAB /* DebugDataInitializer.m */,
 				07A5DE851904596F00A889A5 /* DefaultEquipmentDataInitializer.m */,
 				BCCCD16718B302B800F22C52 /* DefaultItemDataInitializer.m */,
 				07F8C5FF1899ECB90000FAAB /* DefaultMonsterDataInitializer.m */,
+				07A5DE8E19045DFF00A889A5 /* DefaultTraitDataInitializer.m */,
 			);
 			name = Initialization;
 			sourceTree = "<group>";
@@ -1790,6 +1802,7 @@
 				BCA9E0471809F95000FB3EFE /* TargetType.h */,
 				BC9AF4F8185F6EE0006822D1 /* TileType.h */,
 				BCEEEA91180BA69300BC20E9 /* TraitAttributeType.h */,
+				07A5DE9019045E1C00A889A5 /* TraitEffectType.h */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -1803,6 +1816,7 @@
 				07A5DE80190457E200A889A5 /* DefaultEquipmentData.h */,
 				07D4CCD11902FBBF00AF5B8C /* DefaultItemData.h */,
 				07FC01C018F9A8DC0043FB2F /* DefaultMonsterData.h */,
+				07A5DE8719045D1400A889A5 /* DefaultTraitData.h */,
 				BC91AA5918C4413F008BFFBC /* EnhancementData.h */,
 				BC91AA4418C4413E008BFFBC /* EquipmentData.h */,
 				BC91AA5018C4413F008BFFBC /* GoldData.h */,
@@ -1817,6 +1831,7 @@
 				07A5DE81190457E200A889A5 /* DefaultEquipmentData.m */,
 				07D4CCD21902FBBF00AF5B8C /* DefaultItemData.m */,
 				07FC01C118F9A8DC0043FB2F /* DefaultMonsterData.m */,
+				07A5DE8819045D1400A889A5 /* DefaultTraitData.m */,
 				BC91AA5A18C4413F008BFFBC /* EnhancementData.m */,
 				BC91AA4518C4413E008BFFBC /* EquipmentData.m */,
 				BC91AA5118C4413F008BFFBC /* GoldData.m */,
@@ -1840,6 +1855,7 @@
 				07A5DE7D190456E400A889A5 /* DefaultEquipmentData+Management.h */,
 				BC98651018B305E000AD0B3C /* DefaultItemData+Management.h */,
 				BCEEEAA8180BA73800BC20E9 /* DefaultMonsterData+Management.h */,
+				07A5DE8A19045D3D00A889A5 /* DefaultTraitData+Management.h */,
 				BC3F530118B2978B00EC2900 /* GoldData+Management.h */,
 				078B35E2188C648B0068C34D /* MapNodeData+Management.h */,
 				BCEEEAAA180BA73800BC20E9 /* MonsterData+Management.h */,
@@ -1852,6 +1868,7 @@
 				07A5DE7E190456E400A889A5 /* DefaultEquipmentData+Management.m */,
 				BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */,
 				BCEEEAA9180BA73800BC20E9 /* DefaultMonsterData+Management.m */,
+				07A5DE8B19045D3D00A889A5 /* DefaultTraitData+Management.m */,
 				BC3F530218B2978B00EC2900 /* GoldData+Management.m */,
 				078B35E3188C648B0068C34D /* MapNodeData+Management.m */,
 				BCEEEAAB180BA73800BC20E9 /* MonsterData+Management.m */,
@@ -2308,6 +2325,7 @@
 				BCAF497E17E55ECB001A9B76 /* CCPhysicsSprite.mm in Sources */,
 				BCAF497F17E55ECB001A9B76 /* CCProgressTimer.m in Sources */,
 				07A5DE7F190456E400A889A5 /* DefaultEquipmentData+Management.m in Sources */,
+				07A5DE8919045D1400A889A5 /* DefaultTraitData.m in Sources */,
 				07FC01C218F9A8DC0043FB2F /* DefaultMonsterData.m in Sources */,
 				BC9B23BE180A661200D1ECEF /* GoldFactory.m in Sources */,
 				BCAF498017E55ECB001A9B76 /* CCRenderTexture.m in Sources */,
@@ -2392,8 +2410,10 @@
 				BCAF49AF17E55ECB001A9B76 /* CDXPropertyModifierAction.m in Sources */,
 				BCAF49B017E55ECB001A9B76 /* CocosDenshion.m in Sources */,
 				BCAF49B317E55ECB001A9B76 /* SimpleAudioEngine.m in Sources */,
+				07A5DE8C19045D3D00A889A5 /* DefaultTraitData+Management.m in Sources */,
 				BC303080180F81FB0014F64E /* CCScene+Utilities.m in Sources */,
 				BCAF49B517E55ECB001A9B76 /* aabb.c in Sources */,
+				07A5DE8F19045DFF00A889A5 /* DefaultTraitDataInitializer.m in Sources */,
 				BCAF49B817E55ECB001A9B76 /* mat4stack.c in Sources */,
 				BC91AA5B18C4413F008BFFBC /* EnhancementData.m in Sources */,
 				BCAF49B917E55ECB001A9B76 /* matrix.c in Sources */,

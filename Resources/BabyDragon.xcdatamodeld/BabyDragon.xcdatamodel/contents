@@ -64,6 +64,12 @@
         <attribute name="willpower" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="willpowerLevelMultiplier" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="DefaultTraitData" representedClassName="DefaultTraitData" parentEntity="BaseData" syncable="YES">
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="effect" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="EnhancementData" representedClassName="EnhancementData" parentEntity="AcquisitionData" syncable="YES"/>
     <entity name="EquipmentData" representedClassName="EquipmentData" parentEntity="AcquisitionData" syncable="YES">
         <attribute name="type" attributeType="String" minValueString="1" syncable="YES"/>
@@ -145,5 +151,6 @@
         <element name="PartyData" positionX="0" positionY="0" width="128" height="75"/>
         <element name="SinglePlayerContentData" positionX="0" positionY="0" width="128" height="120"/>
         <element name="DefaultEquipmentData" positionX="9" positionY="180" width="128" height="148"/>
+        <element name="DefaultTraitData" positionX="18" positionY="162" width="128" height="105"/>
     </elements>
 </model>
