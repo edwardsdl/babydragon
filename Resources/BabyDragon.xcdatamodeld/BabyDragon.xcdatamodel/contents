@@ -20,6 +20,15 @@
         <attribute name="dateUpdated" attributeType="Date" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="DefaultEquipmentData" representedClassName="DefaultEquipmentData" parentEntity="BaseData" syncable="YES">
+        <attribute name="cost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="effect" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="elementType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="probability" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="DefaultItemData" representedClassName="DefaultItemData" parentEntity="BaseData" syncable="YES">
         <attribute name="cost" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="descriptionText" attributeType="String" syncable="YES"/>
@@ -135,5 +144,6 @@
         <element name="MonsterData" positionX="0" positionY="0" width="128" height="360"/>
         <element name="PartyData" positionX="0" positionY="0" width="128" height="75"/>
         <element name="SinglePlayerContentData" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="DefaultEquipmentData" positionX="9" positionY="180" width="128" height="148"/>
     </elements>
 </model>

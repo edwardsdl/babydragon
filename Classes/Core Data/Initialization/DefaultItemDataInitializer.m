@@ -4,7 +4,7 @@
 #import "AbilityData+Management.h"
 #import "ItemEffectType.h"
 
-@implementation ItemDataInitializer
+@implementation DefaultItemDataInitializer
 
 +(void) initializeData
 {
@@ -151,7 +151,7 @@
     
     if (error != nil)
     {
-        NSLog(@"Failed to initialize ability data.");
+        NSLog(@"Failed to initialize item data.");
     }
 }
 

@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface DefaultItemDataInitializer : NSObject
+@interface DefaultEquipmentDataInitializer : NSObject
 
 +(void) initializeData;
 
