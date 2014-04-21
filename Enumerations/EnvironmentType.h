@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, EnvironmentType) {
+typedef NS_ENUM(int32_t, EnvironmentType)
+{
     Cave,
     Forest,
     

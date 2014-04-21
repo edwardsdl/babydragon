@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, ElementType) {
+typedef NS_ENUM(int32_t, ElementType)
+{
     ElementTypeNone,
     ElementTypeDarkness,
     ElementTypeEarth,

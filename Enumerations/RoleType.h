@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, RoleType) {
+typedef NS_ENUM(int32_t, RoleType)
+{
     RoleTypeDirectDamage,
     RoleTypeDamageOverTime,
     RoleTypeBuff,

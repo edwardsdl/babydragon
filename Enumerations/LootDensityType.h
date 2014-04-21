@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, LootDensityType) {
+typedef NS_ENUM(int32_t, LootDensityType)
+{
     LowLootDensity,
     MediumLootDensity,
     HighLootDensity,

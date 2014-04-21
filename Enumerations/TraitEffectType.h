@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, TraitEffectType) {
+typedef NS_ENUM(int32_t, TraitEffectType)
+{
     TraitEffectTypeMoreHealthPerLevel,
     TraitEffectTypeMoreApPerLevel,
     TraitEffectTypeMoreCouragePerLevel,

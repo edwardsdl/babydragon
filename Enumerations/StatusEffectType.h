@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, StatusEffectType) {
+typedef NS_ENUM(int32_t, StatusEffectType)
+{
     StatusEffectTypeDamageOverTime,
     StatusEffectTypeAlterSpeed,
     StatusEffectTypeAlterCourage,

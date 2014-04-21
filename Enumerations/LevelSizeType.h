@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, LevelSizeType) {
+typedef NS_ENUM(int32_t, LevelSizeType)
+{
     SmallLevelSize,
     MediumLevelSize,
     LargeLevelSize,

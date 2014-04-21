@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, ItemEffectType) {
+typedef NS_ENUM(int32_t, ItemEffectType)
+{
     ItemEffectTypeRestoreHealth,
     ItemEffectTypeRestoreAP,
     ItemEffectTypeReviveAlly,

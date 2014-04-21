@@ -1815,20 +1815,21 @@
 		BCEEEA92180BA73800BC20E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				BC4D550A1904D3230032EE45 /* DefaultItemData.h */,
-				BC4D550B1904D3230032EE45 /* DefaultMonsterData.h */,
-				BC4D550C1904D3230032EE45 /* MonsterData.h */,
 				BC01042018CD8F720026E5A8 /* AbilityData.h */,
 				BC91AA5618C4413F008BFFBC /* AcquisitionData.h */,
 				BC91AA4118C4413E008BFFBC /* BaseData.h */,
 				07A5DE80190457E200A889A5 /* DefaultEquipmentData.h */,
+				BC4D550A1904D3230032EE45 /* DefaultItemData.h */,
+				BC4D550B1904D3230032EE45 /* DefaultMonsterData.h */,
 				07A5DE8719045D1400A889A5 /* DefaultTraitData.h */,
 				BC91AA5918C4413F008BFFBC /* EnhancementData.h */,
 				BC91AA4418C4413E008BFFBC /* EquipmentData.h */,
 				BC91AA5018C4413F008BFFBC /* GoldData.h */,
 				BC91AA3B18C4413E008BFFBC /* LevelData.h */,
 				BC91AA5C18C4413F008BFFBC /* MapNodeData.h */,
+				BC4D550C1904D3230032EE45 /* MonsterData.h */,
 				BC91AA4718C4413E008BFFBC /* PartyData.h */,
+				BC4D55071904C99D0032EE45 /* SinglePlayerContentData.h */,
 				BC01042118CD8F720026E5A8 /* AbilityData.m */,
 				BC91AA5718C4413F008BFFBC /* AcquisitionData.m */,
 				BC91AA4218C4413E008BFFBC /* BaseData.m */,
@@ -1843,10 +1844,9 @@
 				BC91AA5D18C4413F008BFFBC /* MapNodeData.m */,
 				078EB85418FB102C00A6A3AC /* MonsterData.m */,
 				BC91AA4818C4413E008BFFBC /* PartyData.m */,
+				BC4D55081904C99D0032EE45 /* SinglePlayerContentData.m */,
 				07F8C5F71899E7220000FAAB /* Initialization */,
 				BCEEEAA3180BA73800BC20E9 /* Management */,
-				BC4D55071904C99D0032EE45 /* SinglePlayerContentData.h */,
-				BC4D55081904C99D0032EE45 /* SinglePlayerContentData.m */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";

@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, LevelBonusType) {
+typedef NS_ENUM(int32_t, LevelBonusType)
+{
     NoBonus,
     SmallGoldBonus,
     MediumGoldBonus,

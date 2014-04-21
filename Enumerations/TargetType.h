@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, TargetType) {
+typedef NS_ENUM(int32_t, TargetType)
+{
     TargetTypeSingleHostile,
     TargetTypeAllHostile,
     TargetTypeSingleFriendly,

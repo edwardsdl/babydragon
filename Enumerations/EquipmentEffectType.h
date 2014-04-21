@@ -1,4 +1,5 @@
-typedef NS_ENUM(int32_t, EquipmentEffectType) {
+typedef NS_ENUM(int32_t, EquipmentEffectType)
+{
     EquipmentEffectTypeIncreaseElementalAttack,
     EquipmentEffectTypeIncreaseElementalDefense,
     EquipmentEffectTypeIncreaseHealth,
