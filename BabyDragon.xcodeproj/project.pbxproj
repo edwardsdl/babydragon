@@ -390,7 +390,6 @@
 		078B35E3188C648B0068C34D /* MapNodeData+Management.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MapNodeData+Management.m"; sourceTree = "<group>"; };
 		078B35EA188C6D1D0068C34D /* MapNodeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapNodeMenu.h; path = Map/MapNodeMenu.h; sourceTree = "<group>"; };
 		078B35EB188C6D1D0068C34D /* MapNodeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapNodeMenu.m; path = Map/MapNodeMenu.m; sourceTree = "<group>"; };
-		078EB85318FB102C00A6A3AC /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
 		078EB85418FB102C00A6A3AC /* MonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterData.m; sourceTree = "<group>"; };
 		078F669718E867A600E66965 /* DebugLevelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLevelFactory.h; path = Levels/DebugLevelFactory.h; sourceTree = "<group>"; };
 		078F669818E867A600E66965 /* DebugLevelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugLevelFactory.m; path = Levels/DebugLevelFactory.m; sourceTree = "<group>"; };
@@ -445,7 +444,6 @@
 		07B7521618CD5B41007FBE57 /* FLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLButton.m; path = UI/FLButton.m; sourceTree = "<group>"; };
 		07D25E4D18CD4D13005BD2C4 /* FLContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLContainer.h; path = UI/FLContainer.h; sourceTree = "<group>"; };
 		07D25E4E18CD4D13005BD2C4 /* FLContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLContainer.m; path = UI/FLContainer.m; sourceTree = "<group>"; };
-		07D4CCD11902FBBF00AF5B8C /* DefaultItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultItemData.h; sourceTree = "<group>"; };
 		07D4CCD21902FBBF00AF5B8C /* DefaultItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultItemData.m; sourceTree = "<group>"; };
 		07D4CCD41902FD8800AF5B8C /* ItemEffectType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemEffectType.h; sourceTree = "<group>"; };
 		07F1EE1B185A2B3E006579FA /* FLMenuBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FLMenuBackgroundHighlighted.png; path = "UI Elements/FLMenuBackgroundHighlighted.png"; sourceTree = "<group>"; };
@@ -463,7 +461,6 @@
 		07FB55A0187CD60C00316BA6 /* ScrollingMonsterSelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollingMonsterSelectionList.h; path = "Classes/Layers/Combat Layer/ScrollingMonsterSelectionList.h"; sourceTree = SOURCE_ROOT; };
 		07FB55A1187CD60C00316BA6 /* ScrollingMonsterSelectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollingMonsterSelectionList.m; path = "Classes/Layers/Combat Layer/ScrollingMonsterSelectionList.m"; sourceTree = SOURCE_ROOT; };
 		07FC01BC18F9A7490043FB2F /* Rarity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rarity.h; sourceTree = "<group>"; };
-		07FC01C018F9A8DC0043FB2F /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
 		07FC01C118F9A8DC0043FB2F /* DefaultMonsterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMonsterData.m; sourceTree = "<group>"; };
 		07FC01C318F9AC150043FB2F /* EnemyPartyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyPartyFactory.h; path = Levels/EnemyPartyFactory.h; sourceTree = "<group>"; };
 		07FC01C418F9AC150043FB2F /* EnemyPartyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyPartyFactory.m; path = Levels/EnemyPartyFactory.m; sourceTree = "<group>"; };
@@ -512,6 +509,9 @@
 		BC4D55031904AE560032EE45 /* LevelBonusType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelBonusType.h; sourceTree = "<group>"; };
 		BC4D55071904C99D0032EE45 /* SinglePlayerContentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayerContentData.h; sourceTree = "<group>"; };
 		BC4D55081904C99D0032EE45 /* SinglePlayerContentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayerContentData.m; sourceTree = "<group>"; };
+		BC4D550A1904D3230032EE45 /* DefaultItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultItemData.h; sourceTree = "<group>"; };
+		BC4D550B1904D3230032EE45 /* DefaultMonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMonsterData.h; sourceTree = "<group>"; };
+		BC4D550C1904D3230032EE45 /* MonsterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterData.h; sourceTree = "<group>"; };
 		BC5B9CA118C4042900EE73A7 /* ItemFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemFactory.h; sourceTree = "<group>"; };
 		BC5B9CA218C4042900EE73A7 /* ItemFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemFactory.m; sourceTree = "<group>"; };
 		BC629E9F18386AFD00D35C55 /* UUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDHelper.h; sourceTree = "<group>"; };
@@ -1815,22 +1815,20 @@
 		BCEEEA92180BA73800BC20E9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				BC4D550A1904D3230032EE45 /* DefaultItemData.h */,
+				BC4D550B1904D3230032EE45 /* DefaultMonsterData.h */,
+				BC4D550C1904D3230032EE45 /* MonsterData.h */,
 				BC01042018CD8F720026E5A8 /* AbilityData.h */,
 				BC91AA5618C4413F008BFFBC /* AcquisitionData.h */,
 				BC91AA4118C4413E008BFFBC /* BaseData.h */,
 				07A5DE80190457E200A889A5 /* DefaultEquipmentData.h */,
-				BC91AA7418C46176008BFFBC /* DefaultItemData.h */,
-				BC91AA5F18C4413F008BFFBC /* DefaultMonsterData.h */,
 				07A5DE8719045D1400A889A5 /* DefaultTraitData.h */,
 				BC91AA5918C4413F008BFFBC /* EnhancementData.h */,
 				BC91AA4418C4413E008BFFBC /* EquipmentData.h */,
 				BC91AA5018C4413F008BFFBC /* GoldData.h */,
-				BC91AA7718C46176008BFFBC /* ItemData.h */,
 				BC91AA3B18C4413E008BFFBC /* LevelData.h */,
 				BC91AA5C18C4413F008BFFBC /* MapNodeData.h */,
-				BC91AA4A18C4413F008BFFBC /* MonsterData.h */,
 				BC91AA4718C4413E008BFFBC /* PartyData.h */,
-				BC91AA3E18C4413E008BFFBC /* SinglePlayerContentData.h */,
 				BC01042118CD8F720026E5A8 /* AbilityData.m */,
 				BC91AA5718C4413F008BFFBC /* AcquisitionData.m */,
 				BC91AA4218C4413E008BFFBC /* BaseData.m */,
@@ -1864,7 +1862,6 @@
 				BCEEEAA8180BA73800BC20E9 /* DefaultMonsterData+Management.h */,
 				07A5DE8A19045D3D00A889A5 /* DefaultTraitData+Management.h */,
 				BC3F530118B2978B00EC2900 /* GoldData+Management.h */,
-				BC91AA6818C45740008BFFBC /* ItemData+Management.h */,
 				078B35E2188C648B0068C34D /* MapNodeData+Management.h */,
 				BCEEEAAA180BA73800BC20E9 /* MonsterData+Management.h */,
 				BCEEEAAC180BA73800BC20E9 /* NSManagedObjectContext+Management.h */,
