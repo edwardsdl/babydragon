@@ -2,7 +2,7 @@
 //  SinglePlayerContentData.m
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 3/2/14.
+//  Created by Dallas Edwards on 4/20/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -11,10 +11,10 @@
 
 @implementation SinglePlayerContentData
 
-@dynamic environmentType;
-@dynamic lootQuality;
-@dynamic maximumMonsterLevel;
-@dynamic minimumMonsterLevel;
-@dynamic seed;
+@dynamic primaryElementType;
+@dynamic lootDensityType;
+@dynamic levelSizeType;
+@dynamic secondaryElementType;
+@dynamic levelBonusType;
 
 @end

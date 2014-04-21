@@ -2,7 +2,7 @@
 //  SinglePlayerContentData.h
 //  BabyDragon
 //
-//  Created by Dallas Edwards on 3/2/14.
+//  Created by Dallas Edwards on 4/20/14.
 //  Copyright (c) 2014 First Light Games. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 
 @interface SinglePlayerContentData : AcquisitionData
 
-@property (nonatomic) int32_t environmentType;
-@property (nonatomic) int32_t lootQuality;
-@property (nonatomic) int32_t maximumMonsterLevel;
-@property (nonatomic) int32_t minimumMonsterLevel;
-@property (nonatomic) int32_t seed;
+@property (nonatomic) int32_t primaryElementType;
+@property (nonatomic) int32_t lootDensityType;
+@property (nonatomic) int32_t levelSizeType;
+@property (nonatomic) int32_t secondaryElementType;
+@property (nonatomic) int32_t levelBonusType;
 
 @end
