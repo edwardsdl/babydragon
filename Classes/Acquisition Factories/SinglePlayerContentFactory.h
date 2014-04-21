@@ -4,6 +4,6 @@
 
 @interface SinglePlayerContentFactory : NSObject <Acquiring>
 
-- (SinglePlayerContentData *) newSinglePlayerContentFromHash:(NSData *)hash;
+- (SinglePlayerContentData *)newSinglePlayerContentFromBarcode:(NSString *)barcode;
 
 @end

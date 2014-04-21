@@ -1,36 +1,47 @@
 #import "BarcodeHelper.h"
-#import "EnvironmentType.h"
+#import "ElementType.h"
+#import "LevelBonusType.h"
 #import "LevelSizeType.h"
-#import "LootQualityType.h"
+#import "LootDensityType.h"
+#import "NSData+ByteUtilities.h"
 #import "ProbabilityCollection.h"
+#import "SinglePlayerContentData+Management.h"
 #import "SinglePlayerContentFactory.h"
 #import "Tile.h"
 
 @interface SinglePlayerContentFactory()
 {
-    ProbabilityCollection *_environmentProbabilityCollection;
-    ProbabilityCollection *_sizeProbabilityCollection;
-    ProbabilityCollection *_lootProbabilityCollection;
+    ProbabilityCollection *_elementTypeProbabilityCollection;
+    ProbabilityCollection *_levelSizeProbabilityCollection;
+    ProbabilityCollection *_lootDensityProbabilityCollection;
+    ProbabilityCollection *_levelBonusProbabilityCollection;
 }
 
-- (void)populateEnvironmentProbabilityCollection;
-- (void)populateSizeProbabilityCollection;
-- (void)populateLootQualityProbabilityCollection;
+- (void)populateElementTypeProbabilityCollection;
+- (void)populateLootDensityProbabilityCollection;
+- (void)populateLevelSizeProbabilityCollection;
+- (void)populateLevelBonusProbabilityCollection;
 
 @end
 
 @implementation SinglePlayerContentFactory
-{
-    CGSize _floorSize;
-}
 
 #pragma mark - Initializers
 - (id)init
 {
     if (self = [super init])
     {
-        _sizeProbabilityCollection = [[ProbabilityCollection alloc] init];
-        [self populateSizeProbabilityCollection];
+        _elementTypeProbabilityCollection = [[ProbabilityCollection alloc] init];
+        [self populateElementTypeProbabilityCollection];
+        
+        _lootDensityProbabilityCollection = [[ProbabilityCollection alloc] init];
+        [self populateLootDensityProbabilityCollection];
+        
+        _levelSizeProbabilityCollection = [[ProbabilityCollection alloc] init];
+        [self populateLevelSizeProbabilityCollection];
+        
+        _levelBonusProbabilityCollection = [[ProbabilityCollection alloc] init];
+        [self populateLevelBonusProbabilityCollection];
     }
     
     return self;
@@ -38,41 +49,63 @@
 
 #pragma mark - Public methods
 
-- (SinglePlayerContentData *)newSinglePlayerContentFromHash:(NSData *)hash
+- (SinglePlayerContentData *)newSinglePlayerContentFromBarcode:(NSString *)barcode
 {
-    return nil;
+    NSData *barcodeHash = [BarcodeHelper hashForBarcode:barcode];
+    
+    uint8_t byte = [barcodeHash byteAtIndex:1];
+    ElementType primaryElementType = (ElementType)[_elementTypeProbabilityCollection retrieveObjectUsingRandomFloat:byte / 255.0];
+    
+    byte = [barcodeHash byteAtIndex:2];
+    ElementType secondaryElementType = (ElementType)[_elementTypeProbabilityCollection retrieveObjectUsingRandomFloat:byte / 255.0];
+    
+    byte = [barcodeHash byteAtIndex:3];
+    LevelSizeType levelSizeType = (LevelSizeType)[_levelSizeProbabilityCollection retrieveObjectUsingRandomFloat:byte / 255.0];
+    
+    byte = [barcodeHash byteAtIndex:4];
+    LootDensityType lootDensityType = (LootDensityType)[_lootDensityProbabilityCollection retrieveObjectUsingRandomFloat:byte / 255.0];
+
+    byte = [barcodeHash byteAtIndex:5];
+    LevelBonusType levelBonusType = (LevelBonusType)[_levelBonusProbabilityCollection retrieveObjectUsingRandomFloat:byte / 255.0];
+    
+    return [SinglePlayerContentData insertSinglePlayerContentWithPrimaryElementType:primaryElementType
+                                                               secondaryElementType:secondaryElementType
+                                                                     levelBonusType:levelBonusType
+                                                                               size:levelSizeType
+                                                                        lootDensity:lootDensityType
+                                                                            barcode:barcode];
 }
 
 #pragma mark - Acquiring protocol methods
 
 - (AcquisitionData *)newAcquisitionFromBarcode:(NSString *)barcode
 {
-    return [self newSinglePlayerContentFromHash:[BarcodeHelper hashForBarcode:barcode]];
+    return [self newSinglePlayerContentFromBarcode:barcode];
 }
 
 #pragma mark - Private methods
 
-- (void)populateEnvironmentProbabilityCollection
+- (void)populateElementTypeProbabilityCollection
 {
-    for (int i = 0; i < EnvironmentTypeCount; i++)
+    for (int i = 1; i < ElementTypeCount; i++)
     {
-        [_environmentProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
+        [_elementTypeProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
     }
 }
 
-- (void)populateSizeProbabilityCollection
+- (void)populateLevelSizeProbabilityCollection
 {
     for (int i = 0; i < LevelSizeTypeCount; i++)
     {
-        [_sizeProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
+        [_levelSizeProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
     }
 }
 
-- (void)populateLootQualityProbabilityCollection
+- (void)populateLootDensityProbabilityCollection
 {
-    for (int i = 0; i < LootQualityTypeCount; i++)
+    for (int i = 0; i < LootDensityTypeCount; i++)
     {
-        [_lootProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
+        [_lootDensityProbabilityCollection addObject:[NSNumber numberWithInt:i] withProbability:1.0];
     }
 }
 

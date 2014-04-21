@@ -84,11 +84,12 @@
 		BC4A9EE917E7D038008EDA70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E973017DA438E00DC8A74 /* Foundation.framework */; };
 		BC4A9F1B17E7D1CF008EDA70 /* ProbabilityCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4A9F1417E7D1CF008EDA70 /* ProbabilityCollectionTests.m */; };
 		BC4A9F2117E7D1DB008EDA70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC4A9F1F17E7D1DB008EDA70 /* InfoPlist.strings */; };
+		BC4D550218FC3F4D0032EE45 /* SinglePlayerContentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4D550118FC3F4D0032EE45 /* SinglePlayerContentTests.m */; };
+		BC4D55091904C99D0032EE45 /* SinglePlayerContentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4D55081904C99D0032EE45 /* SinglePlayerContentData.m */; };
 		BC5B9CA318C4042900EE73A7 /* ItemFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5B9CA218C4042900EE73A7 /* ItemFactory.m */; };
 		BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA018386AFD00D35C55 /* UUIDHelper.m */; };
 		BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC629EA218386E3700D35C55 /* UUIDHelperTests.m */; };
 		BC91AA3D18C4413E008BFFBC /* LevelData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA3C18C4413E008BFFBC /* LevelData.m */; };
-		BC91AA4018C4413E008BFFBC /* SinglePlayerContentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA3F18C4413E008BFFBC /* SinglePlayerContentData.m */; };
 		BC91AA4318C4413E008BFFBC /* BaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4218C4413E008BFFBC /* BaseData.m */; };
 		BC91AA4618C4413E008BFFBC /* EquipmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4518C4413E008BFFBC /* EquipmentData.m */; };
 		BC91AA4918C4413E008BFFBC /* PartyData.m in Sources */ = {isa = PBXBuildFile; fileRef = BC91AA4818C4413E008BFFBC /* PartyData.m */; };
@@ -478,6 +479,10 @@
 		BC4A9F1817E7D1CF008EDA70 /* BabyDragonTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BabyDragonTests-Info.plist"; sourceTree = "<group>"; };
 		BC4A9F1A17E7D1CF008EDA70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BC4A9F2017E7D1DB008EDA70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		BC4D550118FC3F4D0032EE45 /* SinglePlayerContentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayerContentTests.m; sourceTree = "<group>"; };
+		BC4D55031904AE560032EE45 /* LevelBonusType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelBonusType.h; sourceTree = "<group>"; };
+		BC4D55071904C99D0032EE45 /* SinglePlayerContentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayerContentData.h; sourceTree = "<group>"; };
+		BC4D55081904C99D0032EE45 /* SinglePlayerContentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayerContentData.m; sourceTree = "<group>"; };
 		BC5B9CA118C4042900EE73A7 /* ItemFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemFactory.h; sourceTree = "<group>"; };
 		BC5B9CA218C4042900EE73A7 /* ItemFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemFactory.m; sourceTree = "<group>"; };
 		BC629E9F18386AFD00D35C55 /* UUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDHelper.h; sourceTree = "<group>"; };
@@ -485,8 +490,6 @@
 		BC629EA218386E3700D35C55 /* UUIDHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelperTests.m; sourceTree = "<group>"; };
 		BC91AA3B18C4413E008BFFBC /* LevelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelData.h; sourceTree = "<group>"; };
 		BC91AA3C18C4413E008BFFBC /* LevelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelData.m; sourceTree = "<group>"; };
-		BC91AA3E18C4413E008BFFBC /* SinglePlayerContentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayerContentData.h; sourceTree = "<group>"; };
-		BC91AA3F18C4413E008BFFBC /* SinglePlayerContentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayerContentData.m; sourceTree = "<group>"; };
 		BC91AA4118C4413E008BFFBC /* BaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseData.h; sourceTree = "<group>"; };
 		BC91AA4218C4413E008BFFBC /* BaseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseData.m; sourceTree = "<group>"; };
 		BC91AA4418C4413E008BFFBC /* EquipmentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentData.h; sourceTree = "<group>"; };
@@ -835,7 +838,7 @@
 		BCAF495117E55ECB001A9B76 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
 		BCCCD16618B302B800F22C52 /* DefaultItemDataInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultItemDataInitializer.h; path = Initialization/DefaultItemDataInitializer.h; sourceTree = "<group>"; };
 		BCCCD16718B302B800F22C52 /* DefaultItemDataInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefaultItemDataInitializer.m; path = Initialization/DefaultItemDataInitializer.m; sourceTree = "<group>"; };
-		BCDC1342189F1F1E00CBED42 /* LootQualityType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LootQualityType.h; sourceTree = "<group>"; };
+		BCDC1342189F1F1E00CBED42 /* LootDensityType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LootDensityType.h; sourceTree = "<group>"; };
 		BCDC1343189F1FA400CBED42 /* LevelSizeType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelSizeType.h; sourceTree = "<group>"; };
 		BCE563E718030C5C001A744B /* ElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementType.h; sourceTree = "<group>"; };
 		BCEEEA88180A81BE00BC20E9 /* NSData+ByteUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ByteUtilities.h"; sourceTree = "<group>"; };
@@ -1134,6 +1137,7 @@
 		BC4A9F1217E7D1CF008EDA70 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BC4D550118FC3F4D0032EE45 /* SinglePlayerContentTests.m */,
 				BC20AC0E17EC055C0095B125 /* AcquisitionFactoryTests.m */,
 				BC01041B18CD665D0026E5A8 /* CoreDataHelperTests.m */,
 				BC01041718CD52960026E5A8 /* DefaultItemDataTests.m */,
@@ -1768,12 +1772,13 @@
 				BCE563E718030C5C001A744B /* ElementType.h */,
 				BC434470188D98FC00ED3198 /* EnvironmentType.h */,
 				BCDC1343189F1FA400CBED42 /* LevelSizeType.h */,
-				BCDC1342189F1F1E00CBED42 /* LootQualityType.h */,
+				BCDC1342189F1F1E00CBED42 /* LootDensityType.h */,
 				072DB24518BEBEA10094FF90 /* RoleType.h */,
 				079DB27A18AE8A09005DF02D /* StatusEffectType.h */,
 				BCA9E0471809F95000FB3EFE /* TargetType.h */,
 				BC9AF4F8185F6EE0006822D1 /* TileType.h */,
 				BCEEEA91180BA69300BC20E9 /* TraitAttributeType.h */,
+				BC4D55031904AE560032EE45 /* LevelBonusType.h */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -1782,35 +1787,35 @@
 			isa = PBXGroup;
 			children = (
 				BC01042018CD8F720026E5A8 /* AbilityData.h */,
-				BC01042118CD8F720026E5A8 /* AbilityData.m */,
 				BC91AA5618C4413F008BFFBC /* AcquisitionData.h */,
-				BC91AA5718C4413F008BFFBC /* AcquisitionData.m */,
 				BC91AA4118C4413E008BFFBC /* BaseData.h */,
-				BC91AA4218C4413E008BFFBC /* BaseData.m */,
 				BC91AA7418C46176008BFFBC /* DefaultItemData.h */,
-				BC91AA7518C46176008BFFBC /* DefaultItemData.m */,
 				BC91AA5F18C4413F008BFFBC /* DefaultMonsterData.h */,
-				BC91AA6018C4413F008BFFBC /* DefaultMonsterData.m */,
 				BC91AA5918C4413F008BFFBC /* EnhancementData.h */,
-				BC91AA5A18C4413F008BFFBC /* EnhancementData.m */,
 				BC91AA4418C4413E008BFFBC /* EquipmentData.h */,
-				BC91AA4518C4413E008BFFBC /* EquipmentData.m */,
 				BC91AA5018C4413F008BFFBC /* GoldData.h */,
-				BC91AA5118C4413F008BFFBC /* GoldData.m */,
-				07F8C5F71899E7220000FAAB /* Initialization */,
 				BC91AA7718C46176008BFFBC /* ItemData.h */,
-				BC91AA7818C46176008BFFBC /* ItemData.m */,
 				BC91AA3B18C4413E008BFFBC /* LevelData.h */,
-				BC91AA3C18C4413E008BFFBC /* LevelData.m */,
-				BCEEEAA3180BA73800BC20E9 /* Management */,
 				BC91AA5C18C4413F008BFFBC /* MapNodeData.h */,
-				BC91AA5D18C4413F008BFFBC /* MapNodeData.m */,
 				BC91AA4A18C4413F008BFFBC /* MonsterData.h */,
-				BC91AA4B18C4413F008BFFBC /* MonsterData.m */,
 				BC91AA4718C4413E008BFFBC /* PartyData.h */,
+				BC01042118CD8F720026E5A8 /* AbilityData.m */,
+				BC91AA5718C4413F008BFFBC /* AcquisitionData.m */,
+				BC91AA4218C4413E008BFFBC /* BaseData.m */,
+				BC91AA7518C46176008BFFBC /* DefaultItemData.m */,
+				BC91AA6018C4413F008BFFBC /* DefaultMonsterData.m */,
+				BC91AA5A18C4413F008BFFBC /* EnhancementData.m */,
+				BC91AA4518C4413E008BFFBC /* EquipmentData.m */,
+				BC91AA5118C4413F008BFFBC /* GoldData.m */,
+				BC91AA7818C46176008BFFBC /* ItemData.m */,
+				BC91AA3C18C4413E008BFFBC /* LevelData.m */,
+				BC91AA5D18C4413F008BFFBC /* MapNodeData.m */,
+				BC91AA4B18C4413F008BFFBC /* MonsterData.m */,
 				BC91AA4818C4413E008BFFBC /* PartyData.m */,
-				BC91AA3E18C4413E008BFFBC /* SinglePlayerContentData.h */,
-				BC91AA3F18C4413E008BFFBC /* SinglePlayerContentData.m */,
+				07F8C5F71899E7220000FAAB /* Initialization */,
+				BCEEEAA3180BA73800BC20E9 /* Management */,
+				BC4D55071904C99D0032EE45 /* SinglePlayerContentData.h */,
+				BC4D55081904C99D0032EE45 /* SinglePlayerContentData.m */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -1819,28 +1824,28 @@
 			isa = PBXGroup;
 			children = (
 				BCEEEAA4180BA73800BC20E9 /* AbilityData+Management.h */,
-				BCEEEAA5180BA73800BC20E9 /* AbilityData+Management.m */,
 				BC3F52FB189F425600EC2900 /* AcquisitionData+Management.h */,
-				BC3F52FC189F425600EC2900 /* AcquisitionData+Management.m */,
 				BCEEEAA6180BA73800BC20E9 /* BaseData+Management.h */,
-				BCEEEAA7180BA73800BC20E9 /* BaseData+Management.m */,
 				BC98651018B305E000AD0B3C /* DefaultItemData+Management.h */,
-				BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */,
 				BCEEEAA8180BA73800BC20E9 /* DefaultMonsterData+Management.h */,
-				BCEEEAA9180BA73800BC20E9 /* DefaultMonsterData+Management.m */,
 				BC3F530118B2978B00EC2900 /* GoldData+Management.h */,
-				BC3F530218B2978B00EC2900 /* GoldData+Management.m */,
 				BC91AA6818C45740008BFFBC /* ItemData+Management.h */,
-				BC91AA6918C45740008BFFBC /* ItemData+Management.m */,
 				078B35E2188C648B0068C34D /* MapNodeData+Management.h */,
-				078B35E3188C648B0068C34D /* MapNodeData+Management.m */,
 				BCEEEAAA180BA73800BC20E9 /* MonsterData+Management.h */,
-				BCEEEAAB180BA73800BC20E9 /* MonsterData+Management.m */,
 				BCEEEAAC180BA73800BC20E9 /* NSManagedObjectContext+Management.h */,
-				BCEEEAAD180BA73800BC20E9 /* NSManagedObjectContext+Management.m */,
 				BCEEEAAE180BA73800BC20E9 /* PartyData+Management.h */,
-				BCEEEAAF180BA73800BC20E9 /* PartyData+Management.m */,
 				BC9ED4CC184F792D00A6E8E3 /* SinglePlayerContentData+Management.h */,
+				BCEEEAA5180BA73800BC20E9 /* AbilityData+Management.m */,
+				BC3F52FC189F425600EC2900 /* AcquisitionData+Management.m */,
+				BCEEEAA7180BA73800BC20E9 /* BaseData+Management.m */,
+				BC98651118B305E000AD0B3C /* DefaultItemData+Management.m */,
+				BCEEEAA9180BA73800BC20E9 /* DefaultMonsterData+Management.m */,
+				BC3F530218B2978B00EC2900 /* GoldData+Management.m */,
+				BC91AA6918C45740008BFFBC /* ItemData+Management.m */,
+				078B35E3188C648B0068C34D /* MapNodeData+Management.m */,
+				BCEEEAAB180BA73800BC20E9 /* MonsterData+Management.m */,
+				BCEEEAAD180BA73800BC20E9 /* NSManagedObjectContext+Management.m */,
+				BCEEEAAF180BA73800BC20E9 /* PartyData+Management.m */,
 				BC9ED4CD184F792D00A6E8E3 /* SinglePlayerContentData+Management.m */,
 			);
 			path = Management;
@@ -2190,6 +2195,7 @@
 				BC20AC0F17EC055C0095B125 /* AcquisitionFactoryTests.m in Sources */,
 				BC01041818CD52960026E5A8 /* DefaultItemDataTests.m in Sources */,
 				BCA9E0441809DF4A00FB3EFE /* MonsterDataTests.m in Sources */,
+				BC4D550218FC3F4D0032EE45 /* SinglePlayerContentTests.m in Sources */,
 				BCEF361C17F1FE8A008F7688 /* MonsterFactoryTests.m in Sources */,
 				BC629EA318386E3700D35C55 /* UUIDHelperTests.m in Sources */,
 				BC01042618CE25F80026E5A8 /* ItemDataFactoryTests.m in Sources */,
@@ -2255,7 +2261,6 @@
 				BCAF496717E55ECB001A9B76 /* CCDrawingPrimitives.m in Sources */,
 				BCAF496817E55ECB001A9B76 /* CCDrawNode.m in Sources */,
 				BCAF496917E55ECB001A9B76 /* CCFontDefinition.m in Sources */,
-				BC91AA4018C4413E008BFFBC /* SinglePlayerContentData.m in Sources */,
 				07FB55A2187CD60C00316BA6 /* ScrollingMonsterSelectionList.m in Sources */,
 				BCAF496A17E55ECB001A9B76 /* ccFPSImages.m in Sources */,
 				BCAF496B17E55ECB001A9B76 /* CCGLProgram.m in Sources */,
@@ -2339,6 +2344,7 @@
 				BCAF499B17E55ECB001A9B76 /* CCTouchHandler.m in Sources */,
 				078F669918E867A600E66965 /* DebugLevelFactory.m in Sources */,
 				BCAF499C17E55ECB001A9B76 /* CCDirectorMac.m in Sources */,
+				BC4D55091904C99D0032EE45 /* SinglePlayerContentData.m in Sources */,
 				BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */,
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,
 				BCAF499E17E55ECB001A9B76 /* CCGLView.m in Sources */,
