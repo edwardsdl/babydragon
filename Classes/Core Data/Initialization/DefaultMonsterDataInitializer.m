@@ -5,6 +5,7 @@
 #import "ElementType.h"
 #import "AttackType.h"
 #import "RoleType.h"
+#import "Rarity.h"
 
 @implementation DefaultMonsterDataInitializer
 
@@ -25,6 +26,7 @@
     [monster setElementType:ElementTypeFire];
     [monster setProbability:common];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:24];
@@ -53,6 +55,7 @@
     [monster setElementType:ElementTypeFire];
     [monster setProbability:common];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:22];
@@ -81,6 +84,7 @@
     [monster setElementType:ElementTypeFire];
     [monster setProbability:uncommon];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:Uncommon];
     
     [monster setHealthPoints:24];
     [monster setAbilityPoints:16];
@@ -109,6 +113,7 @@
     [monster setElementType:ElementTypeFire];
     [monster setProbability:common];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:22];
@@ -137,6 +142,7 @@
     [monster setElementType:ElementTypeFire];
     [monster setProbability:rare];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:Rare];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:22];
@@ -165,6 +171,7 @@
     [monster setElementType:ElementTypeEarth];
     [monster setProbability:common];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:24];
@@ -193,6 +200,7 @@
     [monster setElementType:ElementTypeEarth];
     [monster setProbability:common];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:24];
     [monster setAbilityPoints:18];
@@ -221,6 +229,7 @@
     [monster setElementType:ElementTypeEarth];
     [monster setProbability:uncommon];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Uncommon];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:24];
@@ -249,6 +258,7 @@
     [monster setElementType:ElementTypeEarth];
     [monster setProbability:uncommon];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Uncommon];
     
     [monster setHealthPoints:16];
     [monster setAbilityPoints:28];
@@ -277,6 +287,7 @@
     [monster setElementType:ElementTypeEarth];
     [monster setProbability:superRare];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:SuperRare];
     
     [monster setHealthPoints:26];
     [monster setAbilityPoints:16];
@@ -305,6 +316,7 @@
     [monster setElementType:ElementTypeWater];
     [monster setProbability:common];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:24];
     [monster setAbilityPoints:16];
@@ -333,6 +345,7 @@
     [monster setElementType:ElementTypeWater];
     [monster setProbability:uncommon];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:Uncommon];
     
     [monster setHealthPoints:26];
     [monster setAbilityPoints:20];
@@ -361,6 +374,7 @@
     [monster setElementType:ElementTypeWater];
     [monster setProbability:rare];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Rare];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:24];
@@ -389,6 +403,7 @@
     [monster setElementType:ElementTypeHoly];
     [monster setProbability:common];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:24];
@@ -417,6 +432,7 @@
     [monster setElementType:ElementTypeHoly];
     [monster setProbability:common];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:22];
@@ -445,6 +461,7 @@
     [monster setElementType:ElementTypeDarkness];
     [monster setProbability:common];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:22];
@@ -473,6 +490,7 @@
     [monster setElementType:ElementTypeDarkness];
     [monster setProbability:common];
     [monster setAttackType:AttackTypePhysical];
+    [monster setRarity:Common];
     
     [monster setHealthPoints:20];
     [monster setAbilityPoints:22];
@@ -501,6 +519,7 @@
     [monster setElementType:ElementTypeDarkness];
     [monster setProbability:uncommon];
     [monster setAttackType:AttackTypeMagic];
+    [monster setRarity:Uncommon];
     
     [monster setHealthPoints:18];
     [monster setAbilityPoints:24];

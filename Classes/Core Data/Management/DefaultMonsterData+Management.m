@@ -25,6 +25,14 @@ static NSString *entityName = @"DefaultMonsterData";
         : nil;
 }
 
++ (NSArray *) defaultMonsterDataByElement:(NSNumber*) element AndRarity:(NSNumber*) rarity
+{
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    
+     return [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetDefaultMonsterByElementAndRarity"
+                                                                substitutionVariables:@{@"ELEMENTTYPE": element, @"RARITY": rarity}];
+}
+
 + (DefaultMonsterData *)insertDefaultMonsterAttributesForType:(NSString *)type
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];

@@ -44,6 +44,18 @@ static NSString *entityName = @"PartyData";
     return (PartyData *)[self baseDataWithUUID:uuid];
 }
 
++ (void)removeWithName:(NSString*) name
+{
+    NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
+    NSArray * results = [managedObjectContext objectsFromFetchRequestTemplateWithName:@"GetAnyPartyWithName"
+                                                                substitutionVariables:@{@"NAME": name}];
+    
+    if (results.count == 0)
+        return;
+ 
+    [managedObjectContext deleteObject:(PartyData *)[results objectAtIndex:0]];
+}
+
 + (void)removeAll
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];

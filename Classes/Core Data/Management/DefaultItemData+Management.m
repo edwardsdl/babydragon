@@ -19,13 +19,12 @@ static NSString *entityName = @"DefaultItemData";
     return (DefaultItemData *)[self baseDataWithUUID:uuid];
 }
 
-+ (DefaultItemData *)insertDefaultItemDataForType:(NSString *)type
++ (DefaultItemData *)insertDefaultItemData
 {
     NSManagedObjectContext *managedObjectContext = [[CoreDataHelper sharedInstance] managedObjectContext];
     
     DefaultItemData *defaultItemData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                                      inManagedObjectContext:managedObjectContext];
-    defaultItemData.type = type;
     
     return defaultItemData;
 }

@@ -10,6 +10,7 @@
 #import "EffectType.h"
 #import "AttackType.h"
 #import "ElementType.h"
+#import "Rarity.h"
 
 @implementation MonsterData (Management)
 
@@ -40,7 +41,6 @@ static NSString *entityName = @"MonsterData";
     
     MonsterData *monsterData = [NSEntityDescription insertNewObjectForEntityForName:entityName
                                                              inManagedObjectContext:managedObjectContext];
-    
     DefaultMonsterData *defaultMonsterData = [DefaultMonsterData defaultMonsterDataForType:type];
     // TODO: Blow up if default monster data is nil.
     
@@ -62,6 +62,7 @@ static NSString *entityName = @"MonsterData";
     monsterData.power = defaultMonsterData.power;
     monsterData.type = type;
     monsterData.willpower = defaultMonsterData.willpower;
+    monsterData.rarity = defaultMonsterData.rarity;
     
     return monsterData;
 }
@@ -106,6 +107,23 @@ static NSString *entityName = @"MonsterData";
 - (int)trueWillpower
 {
     return floor(self.willpower);
+}
+
+-(int) xpValue
+{
+    //Temporary logic for now, but final logic will use level and rarity to detemine the value of this monster in XP
+    int xpValue = 10;
+    xpValue += 5 * self.level;
+    if (self.rarity == Uncommon)
+        xpValue += 5;
+    else if (self.rarity == Rare)
+        xpValue += 10;
+    else if (self.rarity == SuperRare)
+        xpValue += 15;
+    else if (self.rarity == UltraRare)
+        xpValue += 20;
+    
+    return xpValue;
 }
 
 - (void)levelUp

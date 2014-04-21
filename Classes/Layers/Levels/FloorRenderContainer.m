@@ -69,6 +69,24 @@
                 sprite.position = ccp(i * 32, j * 32);
                 [tilesSpriteBatch addChild:sprite];
             }
+            else if (tile.tileType == Treasure)
+            {
+                CCSprite* sprite = [CCSprite spriteWithFile:@"TileSheet_Debug.png" rect:CGRectMake(64, 0, 32, 32)];
+                sprite.position = ccp(i * 32, j * 32);
+                [tilesSpriteBatch addChild:sprite];
+            }
+            else if (tile.tileType == Start)
+            {
+                CCSprite* sprite = [CCSprite spriteWithFile:@"TileSheet_Debug.png" rect:CGRectMake(96, 0, 32, 32)];
+                sprite.position = ccp(i * 32, j * 32);
+                [tilesSpriteBatch addChild:sprite];
+            }
+            else if (tile.tileType == End)
+            {
+                CCSprite* sprite = [CCSprite spriteWithFile:@"TileSheet_Debug.png" rect:CGRectMake(128, 0, 32, 32)];
+                sprite.position = ccp(i * 32, j * 32);
+                [tilesSpriteBatch addChild:sprite];
+            }
         }
     }
 }
