@@ -3,10 +3,12 @@
 @interface ProbabilityCollection()
 {
     BOOL _isCollectionNormalized;
-    NSMutableArray * _probabilityCollection;
+    NSMutableArray *_probabilityCollection;
 }
 
 - (void)normalizeProbabilities;
+- (NSArray *)retrieveObjectAndProbability;
+- (NSArray *)retrieveObjectAndProbabilityUsingRandomFloat:(float)randomFloat;
 
 @end
 
@@ -46,23 +48,7 @@
 
 - (NSObject *)retrieveObjectUsingRandomFloat:(float)randomFloat
 {
-    if (!_isCollectionNormalized)
-    {
-        [self normalizeProbabilities];
-    }
-    
-    // TODO: Document this code
-    float cumulativeProbability = 0.0;
-    for (NSArray * object in _probabilityCollection)
-    {
-        cumulativeProbability += [(NSNumber *)[object objectAtIndex:0] doubleValue];
-        if (cumulativeProbability >= randomFloat)
-        {
-            return [object objectAtIndex:1];
-        }
-    }
-    
-    return nil;
+    return [[self retrieveObjectAndProbabilityUsingRandomFloat:randomFloat] objectAtIndex:1];
 }
 
 - (NSObject *)retrieveAndRemoveObject
@@ -72,12 +58,12 @@
         [self normalizeProbabilities];
     }
     
-    NSObject * object = [self retrieveObject];
-    [_probabilityCollection removeObject:object];
+    NSArray *array = [self retrieveObjectAndProbability];
+    [_probabilityCollection removeObject:array];
     
     _isCollectionNormalized = NO;
     
-    return object;
+    return [array objectAtIndex:1];
 }
 
 #pragma mark -  Private methods
@@ -85,7 +71,7 @@
 - (void)normalizeProbabilities
 {
     double cumulativeProbability = 0.0;
-    for (NSArray * object in _probabilityCollection)
+    for (NSArray *object in _probabilityCollection)
     {
         cumulativeProbability += [(NSNumber *)[object objectAtIndex:0] doubleValue];
     }
@@ -93,7 +79,7 @@
     if (cumulativeProbability != 1.0)
     {
         double offset = (1.0 - cumulativeProbability) / [_probabilityCollection count];
-        for (NSMutableArray * object in _probabilityCollection)
+        for (NSMutableArray *object in _probabilityCollection)
         {
             double currentProbability = [[object objectAtIndex:0] doubleValue];
             [object setObject:@(currentProbability + offset) atIndexedSubscript:0];
@@ -101,6 +87,35 @@
     }
     
     _isCollectionNormalized = YES;
+}
+
+- (NSArray *)retrieveObjectAndProbability
+{
+    return [self retrieveObjectAndProbabilityUsingRandomFloat:arc4random_uniform(UINT32_MAX) / (float)UINT32_MAX];
+}
+
+- (NSArray *)retrieveObjectAndProbabilityUsingRandomFloat:(float)randomFloat
+{
+    if (!_isCollectionNormalized)
+    {
+        [self normalizeProbabilities];
+    }
+    
+    // Each item in the collection has two parts: a probability that it will be selected and the value associated with
+    // that probability. This iterates through the items in the collection summing the probabilities until that sum
+    // meets or exceeds the random number passed into the method. Finally, the object containing both the probability
+    // and the object it represents is returned.
+    float cumulativeProbability = 0.0;
+    for (NSArray *object in _probabilityCollection)
+    {
+        cumulativeProbability += [(NSNumber *)[object objectAtIndex:0] doubleValue];
+        if (cumulativeProbability >= randomFloat)
+        {
+            return object;
+        }
+    }
+    
+    return nil;
 }
 
 @end
