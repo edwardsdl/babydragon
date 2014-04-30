@@ -16,17 +16,17 @@
 
 - (CGPoint)getRandomLocation
 {
-    return CGPointMake(arc4random_uniform(self.size.width), arc4random_uniform(self.size.height));
+    return CGPointMake(arc4random_uniform(_size.width), arc4random_uniform(_size.height));
 }
 
 - (Tile *)getTileAtLocation:(CGPoint)location
 {
-    return (Tile *)[[self.tiles objectAtIndex:location.x] objectAtIndex:location.y];
+    return (Tile *)[[_tiles objectAtIndex:location.x] objectAtIndex:location.y];
 }
 
 - (BOOL)isFloorEdgeAtLocation:(CGPoint)location
 {
-    return location.x <= 0 || location.y <= 0 || location.x >= self.size.width - 1 || location.y >= self.size.height - 1;
+    return location.x <= 0 || location.y <= 0 || location.x >= _size.width - 1 || location.y >= _size.height - 1;
 }
 
 @end

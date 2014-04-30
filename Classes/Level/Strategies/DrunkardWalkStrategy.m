@@ -12,9 +12,10 @@
 }
 
 - (CGPoint)getLocationInCardinalDirection:(CardinalDirection)cardinalDirection ofLocation:(CGPoint)location;
-- (CGPoint)getValidStartingLocation;
 - (ProbabilityCollection *)getValidUntraversedNeighborsForLocation:(CGPoint)location;
 - (BOOL)isValidUntraversedNeighbor:(CGPoint)location;
+- (CGPoint)setRandomEndLocation;
+- (CGPoint)setRandomStartLocation;
 - (void)walkDunkenlyFromLocation:(CGPoint)location;
 
 @end
@@ -36,13 +37,14 @@
 
 - (void)generateFloorWithTiles:(NSArray *)tiles size:(CGSize)size lootDensity:(LootDensityType)lootDensityType;
 {
-    self.size = size;
-    self.tiles = tiles;
+    _size = size;
+    _tiles = tiles;
     
-    _totalNumberOfTiles = self.size.height * self.size.width;
+    _totalNumberOfTiles = _size.height * _size.width;
     
-    CGPoint startingLocation = [self getValidStartingLocation];
-    [self walkDunkenlyFromLocation:startingLocation];
+    CGPoint startLocation = [self setRandomStartLocation];
+    [self walkDunkenlyFromLocation:startLocation];
+    [self setRandomEndLocation];
 }
 
 - (CGPoint)getLocationInCardinalDirection:(CardinalDirection)cardinalDirection ofLocation:(CGPoint)location
@@ -58,18 +60,6 @@
         case West:
             return CGPointMake(location.x - 1, location.y);
     }
-}
-
-- (CGPoint)getValidStartingLocation
-{
-    CGPoint startingLocation;
-    do
-    {
-        startingLocation = [self getRandomLocation];
-    }
-    while ([[self getValidUntraversedNeighborsForLocation:startingLocation] count] == 0);
-    
-    return startingLocation;
 }
 
 - (ProbabilityCollection *)getValidUntraversedNeighborsForLocation:(CGPoint)location
@@ -103,6 +93,36 @@
     return validUntraversedNeighborsForLocation;
 }
 
+- (CGPoint)setRandomEndLocation
+{
+    CGPoint endLocation;
+    Tile *tile = nil;
+    do
+    {
+        endLocation = [self getRandomLocation];
+        tile = [self getTileAtLocation:endLocation];
+    }
+    while (tile.tileType != Open);
+    
+    tile.tileType = End;
+    
+    return endLocation;
+}
+
+- (CGPoint)setRandomStartLocation
+{
+    CGPoint startLocation;
+    do
+    {
+        startLocation = [self getRandomLocation];
+    }
+    while ([[self getValidUntraversedNeighborsForLocation:startLocation] count] == 0);
+    
+    [self getTileAtLocation:startLocation].tileType = Start;
+    
+    return startLocation;
+}
+
 - (BOOL)isValidUntraversedNeighbor:(CGPoint)location
 {
     BOOL isValidUntraversedNeighbor = NO;
@@ -124,11 +144,12 @@
     ProbabilityCollection *validUntraversedNeighbors = [self getValidUntraversedNeighborsForLocation:location];
     while ([validUntraversedNeighbors count] > 0 && _percentageOfOpenTiles < _percentageOfOpenTilesDesired)
     {
-        // If no open tiles have be placed it means this is the first call to this method. Instead of an open tile,
-        // a start tile should be placed.
-        [self getTileAtLocation:location].tileType = _totalNumberOfOpenTiles == 0
-        ? Start
-        : Open;
+        // If there are 0 open tiles it means this is the first call to this method and the current location will
+        // contain the start tile. Overwriting the start tile causes bad things to happen.
+        if (_totalNumberOfOpenTiles > 0)
+        {
+            [self getTileAtLocation:location].tileType = Open;
+        }
         
         _totalNumberOfOpenTiles++;
         _percentageOfOpenTiles = (float)_totalNumberOfOpenTiles / (float)_totalNumberOfTiles;
