@@ -205,7 +205,7 @@ static LevelState* currentLevelState = nil;
         PartyData *playerParty = [PartyData anyPartyWithName:@"Player Party"];
         
         //Create a new enemy party
-        PartyData* enemyParty = [EnemyPartyFactory CreateEnemyPartyOfElement:currentLevelState.Level.elementType
+        PartyData* enemyParty = [EnemyPartyFactory CreateEnemyPartyOfElement:currentLevelState.Level.primaryElementType
                                                                 MinLevel:currentLevelState.Level.minLevel
                                                                 MaxLevel:currentLevelState.Level.maxLevel];
         

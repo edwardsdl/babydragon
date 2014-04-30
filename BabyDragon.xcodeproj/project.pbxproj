@@ -78,7 +78,6 @@
 		BC0C754C17F912D10070D5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C754B17F912D10070D5BA /* CoreData.framework */; };
 		BC1D87471885040800386142 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87461885040800386142 /* Tile.m */; };
 		BC1D874A1885042400386142 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D87491885042400386142 /* Level.m */; };
-		BC1D874D1885043B00386142 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D874C1885043B00386142 /* Room.m */; };
 		BC1D87501885044800386142 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D874F1885044800386142 /* Floor.m */; };
 		BC20AC0817EB8E620095B125 /* ProbabilityCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0717EB8E620095B125 /* ProbabilityCollection.m */; };
 		BC20AC0B17EB8E9E0095B125 /* BarcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20AC0A17EB8E9E0095B125 /* BarcodeHelper.m */; };
@@ -253,6 +252,8 @@
 		BCAF49C617E55ECB001A9B76 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = BCAF494F17E55ECB001A9B76 /* zbar-help.html */; };
 		BCAF49C717E55ECB001A9B76 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */; };
 		BCAF49C817E55ECB001A9B76 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAF495117E55ECB001A9B76 /* zbar-samples.png */; };
+		BCC5B3DF190F6E81005C5D20 /* DrunkardWalkStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5B3DE190F6E81005C5D20 /* DrunkardWalkStrategy.m */; };
+		BCC5B3E3190F7003005C5D20 /* BaseFloorGenerationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC5B3E2190F7003005C5D20 /* BaseFloorGenerationStrategy.m */; };
 		BCCCD16818B302B800F22C52 /* DefaultItemDataInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCCD16718B302B800F22C52 /* DefaultItemDataInitializer.m */; };
 		BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEA89180A81BE00BC20E9 /* NSData+ByteUtilities.m */; };
 		BCEEEABE180BA73800BC20E9 /* AbilityData+Management.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEEEAA5180BA73800BC20E9 /* AbilityData+Management.m */; };
@@ -476,8 +477,6 @@
 		BC1D87461885040800386142 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		BC1D87481885042400386142 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		BC1D87491885042400386142 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
-		BC1D874B1885043B00386142 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
-		BC1D874C1885043B00386142 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 		BC1D874E1885044800386142 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
 		BC1D874F1885044800386142 /* Floor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Floor.m; sourceTree = "<group>"; };
 		BC20AC0617EB8E620095B125 /* ProbabilityCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProbabilityCollection.h; sourceTree = "<group>"; };
@@ -852,6 +851,12 @@
 		BCAF494F17E55ECB001A9B76 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		BCAF495017E55ECB001A9B76 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		BCAF495117E55ECB001A9B76 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		BCC5B3D8190F5A47005C5D20 /* CardinalDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardinalDirection.h; sourceTree = "<group>"; };
+		BCC5B3DD190F6E81005C5D20 /* DrunkardWalkStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrunkardWalkStrategy.h; sourceTree = "<group>"; };
+		BCC5B3DE190F6E81005C5D20 /* DrunkardWalkStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrunkardWalkStrategy.m; sourceTree = "<group>"; };
+		BCC5B3E0190F6F2F005C5D20 /* FloorGenerating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorGenerating.h; sourceTree = "<group>"; };
+		BCC5B3E1190F7003005C5D20 /* BaseFloorGenerationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFloorGenerationStrategy.h; sourceTree = "<group>"; };
+		BCC5B3E2190F7003005C5D20 /* BaseFloorGenerationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseFloorGenerationStrategy.m; sourceTree = "<group>"; };
 		BCCCD16618B302B800F22C52 /* DefaultItemDataInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultItemDataInitializer.h; path = Initialization/DefaultItemDataInitializer.h; sourceTree = "<group>"; };
 		BCCCD16718B302B800F22C52 /* DefaultItemDataInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefaultItemDataInitializer.m; path = Initialization/DefaultItemDataInitializer.m; sourceTree = "<group>"; };
 		BCDC1342189F1F1E00CBED42 /* LootDensityType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LootDensityType.h; sourceTree = "<group>"; };
@@ -1142,13 +1147,12 @@
 		BC1D8744188503D600386142 /* Level */ = {
 			isa = PBXGroup;
 			children = (
+				BCC5B3DC190F6E81005C5D20 /* Strategies */,
 				BC1D874E1885044800386142 /* Floor.h */,
 				BC1D87481885042400386142 /* Level.h */,
-				BC1D874B1885043B00386142 /* Room.h */,
 				BC1D87451885040800386142 /* Tile.h */,
 				BC1D874F1885044800386142 /* Floor.m */,
 				BC1D87491885042400386142 /* Level.m */,
-				BC1D874C1885043B00386142 /* Room.m */,
 				BC1D87461885040800386142 /* Tile.m */,
 			);
 			path = Level;
@@ -1783,6 +1787,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BCC5B3DC190F6E81005C5D20 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				BCC5B3DD190F6E81005C5D20 /* DrunkardWalkStrategy.h */,
+				BCC5B3DE190F6E81005C5D20 /* DrunkardWalkStrategy.m */,
+				BCC5B3E0190F6F2F005C5D20 /* FloorGenerating.h */,
+				BCC5B3E1190F7003005C5D20 /* BaseFloorGenerationStrategy.h */,
+				BCC5B3E2190F7003005C5D20 /* BaseFloorGenerationStrategy.m */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
 		BCE563E618030C5C001A744B /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1803,6 +1819,7 @@
 				BCEEEA91180BA69300BC20E9 /* TraitAttributeType.h */,
 				BC4D55031904AE560032EE45 /* LevelBonusType.h */,
 				07A5DE9019045E1C00A889A5 /* TraitEffectType.h */,
+				BCC5B3D8190F5A47005C5D20 /* CardinalDirection.h */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -2306,6 +2323,7 @@
 				BCAF497217E55ECB001A9B76 /* CCLayer.m in Sources */,
 				BCAF497317E55ECB001A9B76 /* CCMenu.m in Sources */,
 				BCEEEABF180BA73800BC20E9 /* BaseData+Management.m in Sources */,
+				BCC5B3DF190F6E81005C5D20 /* DrunkardWalkStrategy.m in Sources */,
 				BC91AA5E18C4413F008BFFBC /* MapNodeData.m in Sources */,
 				BCFA7B361839BD8B0055C73C /* CGSizeHelper.m in Sources */,
 				BCEEEA8A180A81BE00BC20E9 /* NSData+ByteUtilities.m in Sources */,
@@ -2379,11 +2397,11 @@
 				BC629EA118386AFD00D35C55 /* UUIDHelper.m in Sources */,
 				BCAF499D17E55ECB001A9B76 /* CCEventDispatcher.m in Sources */,
 				BCAF499E17E55ECB001A9B76 /* CCGLView.m in Sources */,
-				BC1D874D1885043B00386142 /* Room.m in Sources */,
 				BCAF499F17E55ECB001A9B76 /* CCWindow.m in Sources */,
 				BCAF49A017E55ECB001A9B76 /* base64.c in Sources */,
 				BCAF49A117E55ECB001A9B76 /* CCArray.m in Sources */,
 				BCAF49A217E55ECB001A9B76 /* ccCArray.m in Sources */,
+				BCC5B3E3190F7003005C5D20 /* BaseFloorGenerationStrategy.m in Sources */,
 				BC1D87471885040800386142 /* Tile.m in Sources */,
 				BCAF49A317E55ECB001A9B76 /* CCFileUtils.m in Sources */,
 				BC9B23BF180A661200D1ECEF /* MonsterFactory.m in Sources */,
