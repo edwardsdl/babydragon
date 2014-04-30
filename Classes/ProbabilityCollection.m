@@ -34,6 +34,11 @@
     }
 }
 
+- (NSUInteger)count
+{
+    return [_probabilityCollection count];
+}
+
 - (NSObject *)retrieveObject
 {
     return [self retrieveObjectUsingRandomFloat:arc4random_uniform(UINT32_MAX) / (float)UINT32_MAX];
