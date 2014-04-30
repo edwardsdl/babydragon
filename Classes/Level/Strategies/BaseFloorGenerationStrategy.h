@@ -3,11 +3,8 @@
 #import "Tile.h"
 
 @interface BaseFloorGenerationStrategy : NSObject <FloorGenerating>
-{
-    @protected
-    CGSize size;
-}
 
+@property (nonatomic) CGSize size;
 @property (nonatomic, retain, strong) NSArray *tiles;
 
 - (Tile *)getTileAtLocation:(CGPoint)location;
