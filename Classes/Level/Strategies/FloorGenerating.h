@@ -3,6 +3,6 @@
 
 @protocol FloorGenerating <NSObject>
 
-- (void)generateFloorWithTiles:(NSArray *)tiles lootDensity:(LootDensityType)lootDensityType;
+- (void)generateFloorWithTiles:(NSArray *)tiles size:(CGSize)size lootDensity:(LootDensityType)lootDensityType;
 
 @end
