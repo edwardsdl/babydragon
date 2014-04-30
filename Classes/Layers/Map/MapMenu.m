@@ -6,6 +6,9 @@
 //  Copyright 2014 First Light Games. All rights reserved.
 //
 
+#import "ElementType.h"
+#import "LevelBonusType.h"
+#import "LootDensityType.h"
 #import "MapMenu.h"
 
 
@@ -89,7 +92,13 @@
     }
     else if (CGRectContainsPoint(levelIconSprite.boundingBox, position))
     {
-        Level* level = [DebugLevelFactory createDebugLevel];
+        Level *level = [[Level alloc] initWithLevelBonusType:MediumGoldBonus
+                                                   levelSize:SmallLevelSize
+                                                 lootDensity:MediumLootDensity
+                                                    maxLevel:1
+                                                    minLevel:3
+                                          primaryElementType:ElementTypeFire
+                                        secondaryElementType:ElementTypeEarth];
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[LevelLayer sceneWithNewLevel:level] ]];
         return YES;
     }
